@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Elements/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="logo">
+            <p>Plateforme <span class="orange">E</span>-<span class="bleu">learning</span></p>
+        </div>
+        <div class="rubriques">
+            <ul>
+                <li>
+                    <a href=""><i class="fa-solid fa-book"></i> Cours <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="menu_deroulant">
+                        <li><a href="">Mes cours</a></li>
+                        <li><a href="">Mes fichiers de cours</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href=""><i class="fa-slab fa-regular fa-clipboard"></i> Évaluation <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="menu_deroulant">
+                        <li><a href="">Exercices</a></li>
+                        <li><a href="">Corrections d'exercices</a></li>
+                    </ul>
+                </li>
+                <li><a href=""><i class="fa-solid fa-video"></i> Visioconférence</a></li>
+                <li><a href=""><i class="fa-solid fa-person-chalkboard"></i> Formateurs</a></li>
+            </ul>
+        </div>
+        <div class="profil">
+            <ul>
+                <li>
+                    <a href="" class="profil-btn">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <div class="menu_deroulant_profil">
+                        <p class="statut">Vous êtes connecté en tant que :</p>
+                        <p class="nom-utilisateur">Barou Edmond</p>
+                        <hr>
+                        <a href=""><i class="fa-solid fa-gear"></i> Modifier mon profil</a>
+                        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Se déconnecter</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="top">
+            <div class="titre_et_desc">
+                <h2>Liste des cours</h2>
+                <p>Consultez les modules dispensés par nos formateurs.</p>
+            </div>
+            <div>
+                <div class="barre_recherche">
+                    <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher un cours...">
+                </div>
+                <div class="Filtre">
+                    <label for="">Filtre :</label>
+                    <select name="filtre">
+                        <option value="">Anglais</option>
+                        <option value="">Informatique</option>
+                        <option value="">Billeterie</option>
+                        <option value="">Art plastique</option>
+                        <option value="">Histoire-Géographie</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="grid_content">
+            <div class="element">
+                <div class="image"></div>
+                <div class="infos_cours">
+                    <p class="titre">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi perspiciatis nam repellat nesciunt vel, dolorem consectetur suscipit, aliquid illo adipisci harum quis quos, laboriosam blanditiis veniam soluta quibusdam voluptatibus.</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut ut minus? Inventore porro nobis quos modi distinctio facere, beatae quasi praesentium tempora numquam eligendi, in qui cum eum ea!</p>
+                </div>
+                <div class="infos_formateur"></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
