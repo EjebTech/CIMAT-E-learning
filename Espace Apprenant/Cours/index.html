@@ -12,30 +12,31 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="" alt="logo">
-            <p>Plateforme <span class="orange">E</span>-<span class="bleu">learning</span></p>
-        </div>
-        <div class="rubriques">
-            <ul>
-                <li>
-                    <a href=""><i class="fa-solid fa-book"></i> Cours <i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="menu_deroulant">
-                        <li><a href="">Mes cours</a></li>
-                        <li><a href="">Mes fichiers de cours</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href=""><i class="fa-slab fa-regular fa-clipboard"></i> Évaluation <i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="menu_deroulant">
-                        <li><a href="">Exercices</a></li>
-                        <li><a href="">Corrections d'exercices</a></li>
-                    </ul>
-                </li>
-                <li><a href=""><i class="fa-solid fa-video"></i> Visioconférence</a></li>
-                <li><a href=""><i class="fa-solid fa-person-chalkboard"></i> Formateurs</a></li>
-            </ul>
-        </div>
+        <section>
+            <div class="logo">
+                <p>Plateforme <span class="orange">E</span>-<span class="bleu">learning</span></p>
+            </div>
+            <div class="rubriques">
+                <ul>
+                    <li>
+                        <a class="rubrique" href="index.html"><i class="fa-solid fa-book"></i> Cours <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="menu_deroulant">
+                            <li><a href="index.html">Mes cours</a></li>
+                            <li><a href="Mes_fichiers_de_cours.html">Mes fichiers de cours</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="rubrique" href="../Evaluation/Exercices.html"><i class="fa-slab fa-regular fa-clipboard"></i> Évaluation <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="menu_deroulant">
+                            <li><a href="../Evaluation/Exercices.html">Exercices</a></li>
+                            <li><a href="../Evaluation/Corrections.html">Corrections d'exercices</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="rubrique" href="../Visioconférence/visio.html"><i class="fa-solid fa-video"></i> Visioconférence</a></li>
+                    <li><a class="rubrique" href="../Formateur/liste_formateurs.html"><i class="fa-solid fa-person-chalkboard"></i> Formateurs</a></li>
+                </ul>
+            </div>
+        </section>
         <div class="profil">
             <ul>
                 <li>
@@ -59,13 +60,14 @@
                 <h2>Liste des cours</h2>
                 <p>Consultez les modules dispensés par nos formateurs.</p>
             </div>
-            <div>
+            <div class="recherche_filtre">
                 <div class="barre_recherche">
                     <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher un cours...">
                 </div>
                 <div class="Filtre">
                     <label for="">Filtre :</label>
                     <select name="filtre">
+                        <option value="" selected>Tous les cours</option>
                         <option value="">Anglais</option>
                         <option value="">Informatique</option>
                         <option value="">Billeterie</option>
@@ -78,14 +80,94 @@
         <hr>
         <div class="grid_content">
             <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/british-flag-union-3840x2160-9445.jpg" alt="image du module">
+                    <p class="nom_cours">Anglais</p>
+                </div>
+                <div class="infos_cours">
+                    <p class="titre">PRETERIT</p>
+                    <p class="description">Cette formation consiste à donner une connaissance sur les préterits </p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    
+                    <p class="initiales_formateur">JD</p>
+                    
+                    <section>
+                        <p class="nom_formateur">John Doe</p>
+                        <p class="specialite_formateur">Formateur en Anglais</p>
+                    </section>
+                </div>
+            </div>
+            <div class="element">
                 <div class="image"></div>
                 <div class="infos_cours">
                     <p class="titre">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi perspiciatis nam repellat nesciunt vel, dolorem consectetur suscipit, aliquid illo adipisci harum quis quos, laboriosam blanditiis veniam soluta quibusdam voluptatibus.</p>
                     <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut ut minus? Inventore porro nobis quos modi distinctio facere, beatae quasi praesentium tempora numquam eligendi, in qui cum eum ea!</p>
                 </div>
-                <div class="infos_formateur"></div>
+                <hr>
+                <div class="infos_formateur">
+                    <img src="" class="img_formateur" alt="image du formateur">
+                    <p class="nom_formateur">John Doe</p>
+                    <p class="specialite_formateur">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas saepe architecto, obcaecati est deserunt molestias velit at! Culpa, sunt. Impedit velit, est vero recusandae a neque rerum illo laudantium delectus?</p>
+                </div>
+            </div>
+            <div class="element">
+                <div class="image"></div>
+                <div class="infos_cours">
+                    <p class="titre">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi perspiciatis nam repellat nesciunt vel, dolorem consectetur suscipit, aliquid illo adipisci harum quis quos, laboriosam blanditiis veniam soluta quibusdam voluptatibus.</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut ut minus? Inventore porro nobis quos modi distinctio facere, beatae quasi praesentium tempora numquam eligendi, in qui cum eum ea!</p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    <img src="" class="img_formateur" alt="image du formateur">
+                    <p class="nom_formateur">John Doe</p>
+                    <p class="specialite_formateur">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas saepe architecto, obcaecati est deserunt molestias velit at! Culpa, sunt. Impedit velit, est vero recusandae a neque rerum illo laudantium delectus?</p>
+                </div>
+            </div>
+            <div class="element">
+                <div class="image"></div>
+                <div class="infos_cours">
+                    <p class="titre">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi perspiciatis nam repellat nesciunt vel, dolorem consectetur suscipit, aliquid illo adipisci harum quis quos, laboriosam blanditiis veniam soluta quibusdam voluptatibus.</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut ut minus? Inventore porro nobis quos modi distinctio facere, beatae quasi praesentium tempora numquam eligendi, in qui cum eum ea!</p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    <img src="" class="img_formateur" alt="image du formateur">
+                    <p class="nom_formateur">John Doe</p>
+                    <p class="specialite_formateur">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas saepe architecto, obcaecati est deserunt molestias velit at! Culpa, sunt. Impedit velit, est vero recusandae a neque rerum illo laudantium delectus?</p>
+                </div>
+            </div>
+            <div class="element">
+                <div class="image"></div>
+                <div class="infos_cours">
+                    <p class="titre">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi perspiciatis nam repellat nesciunt vel, dolorem consectetur suscipit, aliquid illo adipisci harum quis quos, laboriosam blanditiis veniam soluta quibusdam voluptatibus.</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut ut minus? Inventore porro nobis quos modi distinctio facere, beatae quasi praesentium tempora numquam eligendi, in qui cum eum ea!</p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    <img src="" class="img_formateur" alt="image du formateur">
+                    <p class="nom_formateur">John Doe</p>
+                    <p class="specialite_formateur">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas saepe architecto, obcaecati est deserunt molestias velit at! Culpa, sunt. Impedit velit, est vero recusandae a neque rerum illo laudantium delectus?</p>
+                </div>
+            </div>
+            <div class="element">
+                <div class="image"></div>
+                <div class="infos_cours">
+                    <p class="titre">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis commodi perspiciatis nam repellat nesciunt vel, dolorem consectetur suscipit, aliquid illo adipisci harum quis quos, laboriosam blanditiis veniam soluta quibusdam voluptatibus.</p>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aut ut minus? Inventore porro nobis quos modi distinctio facere, beatae quasi praesentium tempora numquam eligendi, in qui cum eum ea!</p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    <img src="" class="img_formateur" alt="image du formateur">
+                    <p class="nom_formateur">John Doe</p>
+                    <p class="specialite_formateur">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas saepe architecto, obcaecati est deserunt molestias velit at! Culpa, sunt. Impedit velit, est vero recusandae a neque rerum illo laudantium delectus?</p>
+                </div>
             </div>
         </div>
     </main>
+    <footer>
+        <p>Created by <a href="https://komptech-cimat.net/">@GROUPE KOMPTECH CIMAT</a> | 2026 Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
