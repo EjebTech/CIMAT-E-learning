@@ -34,6 +34,11 @@ footer{
     color: var(--text-main);
 }
 
+footer a{
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
 header section{
     display: flex;
     flex-direction: row;
@@ -214,6 +219,9 @@ main hr{
 .Filtre{
     display: flex;
     gap: 12px;
+}
+.Filtre label{
+    margin-top: 10px;
 }
 
 .Filtre .element_filtre{
@@ -455,8 +463,19 @@ main .contenu_cours:hover {
     background-color: #e05e00; 
 }
 
+.visio .infos .date_heure{
+    background-color:#dbe3fa;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    width: 40%;
+}
 
 .visio .infos .date_heure p {
-    color: var(--primary-co
-    lor);
+    color: var(--primary-color);
+}
+.visio .infos .date_heure span{
+    color: black;
+    font-weight: bold;
+    
 }
