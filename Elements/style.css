@@ -318,6 +318,10 @@ main hr{
     gap: 12px;
 }
 
+.grid_content .element .infos_formateur i{
+    color: var(--accent-color);
+}
+
 .grid_content .element .infos_formateur .initiales_formateur{
     background-color: var(--accent-color);
     padding: 20px;
