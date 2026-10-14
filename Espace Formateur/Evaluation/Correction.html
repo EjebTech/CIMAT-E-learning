@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Elements/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section>
+            <div class="logo">
+                <p>CIMAT <span class="orange">E</span>-<span class="bleu">learning</span></p>
+                <p class="description">Espace Formateur</p>
+            </div>
+            <nav class="rubriques">
+                <ul>
+                    <li>
+                        <a class="rubrique" href="../Dashboard/Dashboard.html"><i class="fa-solid fa-chart-column"></i> Dashboard </a>
+                    </li>
+                    <li>
+                        <a class="rubrique" href="#"><i class="fa-solid fa-book"></i> Formation & Cours <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="menu_deroulant">
+                            <li><a href="../Formations et Cours/cours.html">Cours</a></li>
+                            <li><a href="../Formations et Cours/fichier_de_cours.html">Fichiers de Cours</a></li>
+                            <li><a href="../Formations et Cours/Video_de_cours.html">Vidéos de Cours</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="rubrique" href="#"><i class="fa-slab fa-regular fa-clipboard"></i> Évaluation <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="menu_deroulant">
+                            <li><a href="../Evaluation/Exercice.html">Exercices</a></li>
+                            <li><a href="../Evaluation/Correction.html">Corrections d'exercices</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="rubrique" href="../Visioconférence/visio.html"><i class="fa-solid fa-video"></i> Visioconférence</a></li>
+                    <li><a class="rubrique" href="../Groupes/groupes.html"><i class="fa-solid fa-users-between-lines"></i> Groupes</a></li>
+                </ul>
+            </nav>
+        </section>
+        <div class="profil">
+            <ul>
+                <li>
+                    <a href="" class="profil-btn">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <div class="menu_deroulant_profil">
+                        <p class="statut">Vous êtes connecté en tant que :</p>
+                        <p class="nom-utilisateur">Barou Edmond</p>
+                        <hr>
+                        <a href=""><i class="fa-solid fa-gear"></i> Modifier mon profil</a>
+                        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Se déconnecter</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="top">
+            <h2>Liste des corrections d'exercices</h2>
+            <div class="recherche_filtre">
+                <div class="barre_recherche">
+                    <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher un fichier...">
+                </div>
+                <div class="Filtre">
+                        <label for="">Filtre :</label>
+                        <select name="filtre">
+                            <option value="" selected>Toutes les corrections</option>
+                            <option value="">Anglais</option>
+                            <option value="">Informatique</option>
+                            <option value="">Billeterie</option>
+                            <option value="">Art plastique</option>
+                            <option value="">Histoire-Géographie</option>
+                        </select>
+                </div>
+            </div>
+            <a class="btn_ajout" href="../Evaluation/form_ajout_correction.html">Ajouter une correction</a>
+        </div>
+        <div class="liste">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NUMÉRO</th>
+                        <th>COURS</th>
+                        <th>TITRE</th>
+                        <th>DESCRIPTION</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Histoire-Géographie</td>
+                        <td>Les réseaux de production et d'échanges mondialisés</td>
+                        <td>Exercices pour comprendre la chaîne logistique mondiale, le fret aérien et le transport des marchandises</td>
+                        <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir l'exercice</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Billeterie</td>
+                        <td>Gestion des Modifications, Re-routing et Remboursements</td>
+                        <td></td>
+                        <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir l'exercice</a>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>Created by <a href="https://komptech-CIMAT .net/">@GROUPE KOMPTECH CIMAT </a> | 2026 Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
