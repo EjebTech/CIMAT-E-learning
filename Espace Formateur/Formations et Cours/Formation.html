@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Elements/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section>
+            <div class="logo">
+                <p>Plateforme <span class="orange">E</span>-<span class="bleu">learning</span></p>
+                <p class="description">Espace Formateur</p>
+            </div>
+            <nav class="rubriques">
+                <ul>
+                    <li>
+                        <a class="rubrique" href="../Dashboard/Dashboard.html"><i class="fa-solid fa-chart-column"></i> Dashboard </a>
+                    <li>
+                        <a class="rubrique" href="#"><i class="fa-solid fa-book"></i> Formation & Cours <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="menu_deroulant">
+                            <li><a href="../Formations et Cours/Formation.html">Formations</a></li>
+                            <li><a href="../Formations et Cours/cours.html">Cours</a></li>
+                            <li><a href="../Formations et Cours/fichier_de_cours.html">Fichiers de Cours</a></li>
+                            <li><a href="../Formations et Cours/Video_de_cours.html">Vidéos de Cours</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="rubrique" href="#"><i class="fa-slab fa-regular fa-clipboard"></i> Évaluation <i class="fa-solid fa-angle-down"></i></a>
+                        <ul class="menu_deroulant">
+                            <li><a href="../Evaluation/Exercice.html">Exercices</a></li>
+                            <li><a href="../Evaluation/Correction.html">Corrections d'exercices</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="rubrique" href="../Visioconférence/visio.html"><i class="fa-solid fa-video"></i> Visioconférence</a></li>
+                    <li><a class="rubrique" href="../Groupes/groupes.html"><i class="fa-solid fa-users-between-lines"></i> Groupes</a></li>
+                </ul>
+            </nav>
+        </section>
+        <div class="profil">
+            <ul>
+                <li>
+                    <a href="" class="profil-btn">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <div class="menu_deroulant_profil">
+                        <p class="statut">Vous êtes connecté en tant que :</p>
+                        <p class="nom-utilisateur">Barou Edmond</p>
+                        <hr>
+                        <a href=""><i class="fa-solid fa-gear"></i> Modifier mon profil</a>
+                        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Se déconnecter</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="top">
+            <div class="titre_et_desc">
+                <h2>Liste des cours</h2>
+                <p>Consultez les modules dispensés par nos formateurs.</p>
+            </div>
+            <div class="recherche_filtre">
+                <div class="barre_recherche">
+                    <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher un cours...">
+                </div>
+                <div class="Filtre">
+                    <label for="">Filtre :</label>
+                    <select name="filtre">
+                        <option value="" selected>Tous les cours</option>
+                        <option value="">Anglais</option>
+                        <option value="">Informatique</option>
+                        <option value="">Billeterie</option>
+                        <option value="">Art plastique</option>
+                        <option value="">Histoire-Géographie</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="grid_content">
+            <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/cours/british-flag-union-3840x2160-9445.jpg" alt="image du module">
+                </div>
+                <div class="infos_cours">
+                    <p class="titre">FORMATION EN ANGLAIS</p>
+                    <p class="description">Perfectionnement de l'anglais professionnel à travers le vocabulaire technique, la phraséologie standardisée de l'aviation et la pratique des annonces micro.</p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    <section>
+                        <p class="nom_formateur">Groupe : </p>
+                        <p class="specialite_formateur">Formateur en Anglais</p>
+                    </section>
+                </div>
+            </div>
+            <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/cours/microsoft-office-1920x1080-12053.jpg" alt="">
+                    <p class="nom_cours">Informatique</p>
+                </div>
+                <div class="infos_cours">
+                    <p class="titre">BUREAUTQUE SPECIALISÉE ET TRAITEMENT DE DONNÉES</p>
+                    <p class="description">Maîtrise des outils informatiques (Excel, Word, PowerPoint) appliqués à la création de tableaux de suivi de vols, à la gestion de plannings et à l'automatisation de documents administratifs.</p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    
+                    <p class="initiales_formateur">BG</p>
+                    
+                    <section>
+                        <p class="nom_formateur">Blehoue Gervais</p>
+                        <p class="specialite_formateur">Formateur spécialisé en bureautique professionnelle</p>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/cours/world-map-atlas-1920x1080-16642.jpg" alt="image du module">
+                    <p class="nom_cours">Histoire-Géographie</p>
+                </div>
+                <div class="infos_cours">
+                    <p class="titre">GÉOGRAPHIE TOURISTIQUE ET CARTOGRAPHIE MONDIALE</p>
+                    <p class="description">Étude des grandes destinations mondiales, des flux touristiques, des fuseaux horaires (GMT/UTC) et des particularités climatiques. Les étudiants apprennent à repérer rapidement les codes IATA des aéroports et les principaux itinéraires aériens et maritimes. </p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    
+                    <p class="initiales_formateur">AF</p>
+                    
+                    <section>
+                        <p class="nom_formateur">Antibo Faga</p>
+                        <p class="specialite_formateur">Enseignante-Chercheuse en Géographie du Tourisme</p>
+                    </section>
+                </div>
+            </div>
+            <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/cours/7407421c-8cb9-47ec-8f5f-86a2a94ca0cb.jpg" alt="">
+                    <p class="nom_cours">Arts plastiques</p>
+                </div>
+                <div class="infos_cours">
+                    <p class="titre">ARTS PLASTIQUES & DESIGN D'ESPACES AÉRIENS ET TOURISTIQUES</p>
+                    <p class="description">nitiation aux éléments de composition visuelle, aux théories de la couleur et aux formes appliquées à l'aménagement intérieur (cabines d'avions, salons VIP, halls d'accueil) et à l'expérience visuelle du voyageur.</p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    
+                    <p class="initiales_formateur">HE</p>
+                    
+                    <section>
+                        <p class="nom_formateur">Hans Emmanuel</p>
+                        <p class="specialite_formateur">Enseignant en Arts Appliqués</p>
+                    </section>
+                </div>
+            </div>
+            
+            <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/cours/premium_photo-1718674394245-9f270c5fd2b3.avif" alt="image du module">
+                    <p class="nom_cours">Billeterie</p>
+                </div>
+                <div class="infos_cours">
+                    <p class="titre">ÉMISSION ET CALCUL TARIFAIRE AÉRIEN</p>
+                    <p class="description">Apprentissage de la construction des tarifs complexes, du calcul des taxes et de la délivrance des billets électroniques. </p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    
+                    <p class="initiales_formateur">CC</p>
+                    
+                    <section>
+                        <p class="nom_formateur">Charles Clovanny</p>
+                        <p class="specialite_formateur">Spécialiste Billetterie & Tarification IATA</p>
+                    </section>
+                </div>
+            </div>
+            <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/cours/microsoft-office-1920x1080-12053.jpg" alt="">
+                    <p class="nom_cours">Informatique</p>
+                </div>
+                <div class="infos_cours">
+                    <p class="titre">PRISE EN CHARGE DES OUTILS BUREAUTIQUES MS</p>
+                    <p class="description">Formation visant à avoir une notion sur les outils microsoft tels que Word, Excel, Powerpoint...</p>
+                </div>
+                <hr>
+                <div class="infos_formateur">
+                    
+                    <p class="initiales_formateur">BG</p>
+                    
+                    <section>
+                        <p class="nom_formateur">Blehoue Gervais</p>
+                        <p class="specialite_formateur">Formateur spécialisé en bureautique professionnelle</p>
+                    </section>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+        <p>Created by <a href="https://komptech-cimat.net/">@GROUPE KOMPTECH CIMAT</a> | 2026 Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
