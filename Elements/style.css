@@ -355,7 +355,6 @@ main table td,main table th{
 main table th{
     background-color: var(--primary-color);
     color: white;
-    text-align: center;
 }
 main table{
     border-collapse: collapse;
@@ -515,6 +514,7 @@ main .contenu_cours:hover {
     gap: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 650px;
+    border-radius: 8px;
 }
 
 .grid_content_dashboard .statistiques .stat{
@@ -566,4 +566,117 @@ main .contenu_cours:hover {
     grid-row-start: 1;
     grid-row-end: 3;
     height: 100%;
+}
+
+main .btn_ajout {
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    background-color: var(--accent-color);
+    color: var(--bg-header);
+    padding: 10px;
+    
+    font-weight: 500;
+}
+
+main .btn_ajout:hover{
+    background-color: #e15e00;
+}
+/* formulaire */
+
+.form_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.form_header h2{
+    color: var(--text-main);
+}
+
+.formulaire_creation{
+    border: 1px solid var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    padding: 25px;
+    align-items: stretch;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group input , .form-group select{
+    width: 100%;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.form_header h2 i{
+    color: var(--text-main);
+}
+
+.form_header a{
+    color: var(--bg-header);
+    background-color: var(--accent-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+
+}
+
+
+.form-row button[type=submit]{
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--text-white);
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.form-row button[type=submit]:hover{
+    transform: scale(1.0765);
+}
+
+.form-row button[type=reset]{
+    background-color: var(--bg-dark);
+    border: none;
+    color: var(--text-white);
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.form-row button[type=reset]:hover{
+    transform: scale(1.0765);
+}
+
+.form-group input:focus , .form-group select:focus{
+    border: 2px solid var(--text-muted);
 }
