@@ -661,7 +661,6 @@ main .btn_ajout:hover{
     padding: 10px;
     border-radius: 7px;
     transition: background-color 0.3s ease;
-
 }
 
 
@@ -699,7 +698,7 @@ main .btn_ajout:hover{
     border: 2px solid var(--text-muted);
 }
 
-/* Dashboard administrateur */
+
 .dashboard_container .dashboard {
     flex: 1;                  
     padding: 30px;
@@ -760,7 +759,7 @@ main .btn_ajout:hover{
 }
 
 .sous_menu ul a li:hover {
-    background-color: var(--accent-color); /* Fond orange au survol */
+    background-color: var(--accent-color); 
     color: #FFFFFF;
 }
 
@@ -829,9 +828,6 @@ main .btn_ajout:hover{
 }
 
 
-
-
-
 .flux_activite {
     background-color: var(--bg-header);
     border-radius: 16px;
@@ -864,7 +860,7 @@ main .btn_ajout:hover{
 }
 
 
-/* Style du Tableau */
+
 .flux_activite table {
     border-collapse: collapse;
     width: 100%;
@@ -905,7 +901,6 @@ main .btn_ajout:hover{
     border-bottom: none;
 }
 
-/* Badges de Type d'Événement */
 .type_event {
     display: inline-flex;
     align-items: center;
@@ -917,4 +912,101 @@ main .btn_ajout:hover{
 }
 
 
+.header_actions_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
+.boutons_action_groupe {
+    display: flex;
+    gap: 12px;
+}
+
+.btn_ajout_unique {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn_ajout_unique:hover {
+    background-color: #e05e00;
+    transform: translateY(-2px);
+}
+
+.btn_cours {
+    background-color: var(--primary-color);
+}
+
+.btn_cours:hover {
+    background-color: #1745c4;
+}
+
+/* Titres internes des blocs de listes */
+.section_title {
+    color: var(--text-main);
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section_title i {
+    color: var(--primary-color);
+}
+
+/* Espacement entre les tableaux */
+.dashboard .liste {
+    margin-bottom: 10px;
+}
+
+
+.liste div{
+    padding: 17px;
+    border-radius: 15px;
+}
+
+.liste table td,.liste table th{
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+    
+}
+.liste table th{
+    background-color: var(--primary-color);
+    color: white;
+}
+.liste table{
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.liste table tr{
+    background-color: var(--bg-header);
+}
+
+.liste a{
+    background-color: var(--accent-color);
+    color: var(--bg-header);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 8px;
+    width: 100%;
+}
