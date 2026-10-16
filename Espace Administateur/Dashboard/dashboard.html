@@ -84,47 +84,74 @@
                 </div>
                 
             </div>
-            <div class="historique_connexion">
-                <h3>Historique des connexions récentes</h3>
+            <div class="flux_activite">
+                <div class="flux_header">
+                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Flux d'activité récente</h3>
+                </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>Utilisateur</th>
+                            <th>Type d'événement</th>
+                            <th>Description</th>
                             <th>Rôle</th>
                             <th>Date & Heure</th>
-                            <th>Statut</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Jean Dupont</td>
-                            <td>Participant</td>
-                            <td>24 Fév 2026 - 14:30</td>
-                            <td><span class="badge_succes">En ligne</span></td>
+                            <td>
+                                <span class="event_inscription">
+                                    <i class="fa-solid fa-user-plus"></i> Inscription
+                                </span>
+                            </td>
+                            <td><strong>Jean Dupont</strong> s'est inscrit sur la plateforme</td>
+                            <td><span class="role_tag role_participant">Participant</span></td>
+                            <td>24 Fév 2026 - 14:32</td>
                         </tr>
                         <tr>
-                            <td>Marie Curie</td>
-                            <td>Formateur</td>
+                            <td>
+                                <span class="event_cours">
+                                    <i class="fa-solid fa-file-circle-plus"></i> Contenu
+                                </span>
+                            </td>
+                            <td><strong>Marie Curie</strong> a publié un nouveau fichier de cours</td>
+                            <td><span class="role_tag role_formateur">Formateur</span></td>
                             <td>24 Fév 2026 - 13:15</td>
-                            <td><span class="badge_neutre">Hors ligne</span></td>
                         </tr>
                         <tr>
-                            <td>Komptech Admin</td>
-                            <td>Administrateur</td>
+                            <td>
+                                <span class="event_connexion">
+                                    <i class="fa-solid fa-right-to-bracket"></i> Connexion
+                                </span>
+                            </td>
+                            <td><strong>Komptech Admin</strong> s'est connecté au système</td>
+                            <td><span class="role_tag role_admin">Administrateur</span></td>
                             <td>24 Fév 2026 - 11:00</td>
-                            <td><span class="badge_succes">En ligne</span></td>
                         </tr>
                         <tr>
-                            <td>Alexandre Martin</td>
-                            <td>Participant</td>
-                            <td>23 Fév 2026 - 18:45</td>
-                            <td><span class="badge badge_neutre">Hors ligne</span></td>
+                            <td>
+                                <span class="event_cours">
+                                    <i class="fa-solid fa-graduation-cap"></i> Formation
+                                </span>
+                            </td>
+                            <td>Création de la formation <strong>"Développement Web Avancé"</strong></td>
+                            <td><span class="role_tag role_admin">Administrateur</span></td>
+                            <td>23 Fév 2026 - 16:45</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="event_connexion">
+                                    <i class="fa-solid fa-right-to-bracket"></i> Connexion
+                                </span>
+                            </td>
+                            <td><strong>Alexandre Martin</strong> s'est connecté</td>
+                            <td><span class="role_tag role_participant">Participant</span></td>
+                            <td>23 Fév 2026 - 10:20</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </section>
-    </div>
+        </div>    
     <footer>
         <p>Created by <a href="https://komptech-CIMAT .net/">@GROUPE KOMPTECH CIMAT </a> | 2026 Tous droits réservés.</p>
         <div class="reseau_social">

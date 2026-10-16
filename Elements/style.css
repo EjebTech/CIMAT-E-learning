@@ -830,7 +830,9 @@ main .btn_ajout:hover{
 
 
 
-.historique_connexion {
+
+
+.flux_activite {
     background-color: var(--bg-header);
     border-radius: 16px;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
@@ -838,17 +840,32 @@ main .btn_ajout:hover{
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    flex: 1;
 }
 
-.historique_connexion h3 {
+.flux_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flux_header h3 {
     color: var(--text-main);
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.historique_connexion table {
+.flux_header h3 i {
+    color: var(--primary-color);
+}
+
+
+/* Style du Tableau */
+.flux_activite table {
     border-collapse: collapse;
     width: 100%;
     overflow: hidden;
@@ -856,7 +873,7 @@ main .btn_ajout:hover{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.historique_connexion table th {
+.flux_activite table th {
     background-color: var(--primary-color);
     color: #FFFFFF;
     padding: 14px 18px;
@@ -867,7 +884,7 @@ main .btn_ajout:hover{
     letter-spacing: 0.5px;
 }
 
-.historique_connexion table td {
+.flux_activite table td {
     padding: 14px 18px;
     text-align: left;
     border-bottom: 1px solid var(--border-color);
@@ -875,40 +892,29 @@ main .btn_ajout:hover{
     font-size: 14px;
 }
 
-.historique_connexion table tr {
+.flux_activite table tr {
     background-color: #FFFFFF;
     transition: background-color 0.2s ease;
 }
 
-.historique_connexion table tbody tr:hover {
+.flux_activite table tbody tr:hover {
     background-color: #F8FAFC;
 }
 
-.historique_connexion table tbody tr:last-child td {
+.flux_activite table tbody tr:last-child td {
     border-bottom: none;
 }
 
-
-.badge_succes {
-    background-color: #E6F4EA;
-    color: #137333;
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
+/* Badges de Type d'Événement */
+.type_event {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    border-radius: 6px;
     font-size: 12px;
     font-weight: bold;
-    text-align: center;
 }
 
-.badge_neutre {
-    background-color: #F1F3F4;
-    color: var(--text-muted);
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-}
 
 
