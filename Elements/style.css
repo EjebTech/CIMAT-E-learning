@@ -32,11 +32,25 @@ footer{
     padding: 20px;
     text-align: center;
     color: var(--text-main);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 footer a{
     color: var(--accent-color);
     text-decoration: none;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .reseau_social a{
+    color: var(--text-main);
+}
+
+footer .reseau_social a:hover{
+    color: var(--accent-color);
 }
 
 header section{
