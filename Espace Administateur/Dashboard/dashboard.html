@@ -11,14 +11,128 @@
     <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
+    <div class="dashboard_container">
         <section class="menu">
-            <ul>
-                <a href=""><li>Dashboard</li></a>
-                <a href=""><li></li></a>
-            </ul>
+            <div class="sous_menu">
+                <p>MENU</p>
+                <ul>
+                    <a href="../Dashboard/dashboard.html"><li>DASHBOARD</li></a>
+                    <a href="../Formation et cours/Formation.html"><li>FORMATION</li></a>
+                    <a href="../Formation et cours/Cours.html"><li>COURS</li></a>
+                    <a href="../Formation et cours/fichier_de_cours.html"><li>FICHIERS DE COURS</li></a>
+                </ul>
+            </div>
+            <div class="sous_menu">
+                <p>SESSION DE COURS</p>
+                <ul>
+                    <a href="../Visioconférence/visio.html"><li>VISIOCONFÉRENCE</li></a>
+                    <a href="../Exercice/Exercice.html"><li>EXERCICES</li></a>
+                    <a href="../Groupe/liste_groupes.html"><li>GROUPES</li></a>
+                </ul>
+            </div>
+            <div class="sous_menu">
+                <p>CONNEXION</p>
+                <ul>
+                    <a href="../Utilisateurs/Administrateur/Ajout.html"><li>ADMINISTRATEUR</li></a>
+                    <a href="../Utilisateurs/Formateur/Ajout.html"><li>FORMATEUR</li></a>
+                    <a href="../Utilisateurs/Participant/Ajout.html"><li>PARTICIPANT</li></a>
+                </ul>
+            </div>
         </section>
-        <section class="dashboard"></section>
-    </main>
+        <section class="dashboard">
+            <div class="statistiques">
+                
+                <div class="stat">
+                    <div class="chiffres">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <p>7</p>
+                    </div>
+                    <div class="titre">
+                        <h3>PARTICIPANTS INSCRITS</h3>
+                        <a href="">Parcourir</a>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="chiffres">
+                        <i class="fa-solid fa-book"></i> 
+                        <p>7</p>
+                    </div>
+                    <div class="titre">
+                        <h3>NOMBRE DE FORMATION</h3>
+                        <a href="">Parcourir</a>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="chiffres">
+                        <i class="fa-solid fa-users-between-lines"></i> 
+                        <p>9</p>
+                    </div>
+                    <div class="titre">
+                        <h3>GROUPES</h3>
+                        <a href="">Parcourir</a>
+                    </div>
+                </div>
+                <div class="stat">
+                    <div class="chiffres">
+                        <i class="fa-solid fa-person-chalkboard"></i>
+                        <p>13</p>
+                    </div>
+                    <div class="titre">
+                        <h3>FORMATEURS INSCRITS</h3>
+                        <a href="">Parcourir</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="historique_connexion">
+                <h3>Historique des connexions récentes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Utilisateur</th>
+                            <th>Rôle</th>
+                            <th>Date & Heure</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jean Dupont</td>
+                            <td>Participant</td>
+                            <td>24 Fév 2026 - 14:30</td>
+                            <td><span class="badge_succes">En ligne</span></td>
+                        </tr>
+                        <tr>
+                            <td>Marie Curie</td>
+                            <td>Formateur</td>
+                            <td>24 Fév 2026 - 13:15</td>
+                            <td><span class="badge_neutre">Hors ligne</span></td>
+                        </tr>
+                        <tr>
+                            <td>Komptech Admin</td>
+                            <td>Administrateur</td>
+                            <td>24 Fév 2026 - 11:00</td>
+                            <td><span class="badge_succes">En ligne</span></td>
+                        </tr>
+                        <tr>
+                            <td>Alexandre Martin</td>
+                            <td>Participant</td>
+                            <td>23 Fév 2026 - 18:45</td>
+                            <td><span class="badge badge_neutre">Hors ligne</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Created by <a href="https://komptech-CIMAT .net/">@GROUPE KOMPTECH CIMAT </a> | 2026 Tous droits réservés.</p>
+        <div class="reseau_social">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
