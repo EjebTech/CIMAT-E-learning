@@ -27,6 +27,11 @@ header{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+header .logo img{
+    width: 150px;
+    height: 40px;
+}
+
 footer {
     background-color: var(--bg-header);
     padding: 20px;
@@ -266,13 +271,12 @@ main hr{
     color: black;
 }
 
-.grid_content{
+.grid_content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    align-items: start;
+    align-items: stretch; 
 }
-
 .grid_content .element{
     border: var(--border-color);
     background-color: var(--bg-header);
@@ -1010,3 +1014,6 @@ main .btn_ajout:hover{
     border-radius: 8px;
     width: 100%;
 }
+
+
+
