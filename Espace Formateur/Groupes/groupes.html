@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Document</title>
+    <title>Liste des groupes - Espace Formateur</title>
     <link rel="stylesheet" href="../../Elements/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
     <header>
         <section>
             <div class="logo">
-                <img src="../../Elements/images/logo.png" alt="">
+                <img src="../../Elements/images/logo.png" alt="Logo CIMAT">
                 <p>Plateforme <span class="orange">E</span>-<span class="bleu">learning</span></p>
                 <p class="description">Espace Formateur</p>
             </div>
@@ -33,7 +33,8 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="rubrique" href="#"><i class="fa-slab fa-regular fa-clipboard"></i> Évaluation <i class="fa-solid fa-angle-down"></i></a>
+                        <a class="rubrique" href="#">
+                            <i class="fa-slab fa-regular fa-clipboard"></i> Évaluation <i class="fa-solid fa-angle-down"></i></a>
                         <ul class="menu_deroulant">
                             <li><a href="../Evaluation/Exercice.html">Exercices</a></li>
                             <li><a href="../Evaluation/Correction.html">Corrections d'exercices</a></li>
@@ -66,9 +67,8 @@
             <h2>Liste des groupes</h2>
             <div class="recherche_filtre">
                 <div class="barre_recherche">
-                    <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher un fichier...">
+                    <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher un groupe...">
                 </div>
-               
             </div>
         </div>
         <div class="liste">
@@ -86,28 +86,33 @@
                         <td>1</td>
                         <td>Groupe 1</td>
                         <td>9 participant(s)</td>
-                        <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir la liste de ce groupe</a>
-                        </td>
+                        <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir la liste de ce groupe</a></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Groupe 2</td>
                         <td>11 participant(s)</td>
-                        
-                        <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir la liste de ce groupe</a>
+                        <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir la liste de ce groupe</a></td>
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>Groupe 3</td>
                         <td>14 participant(s)</td>
-                        <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir la liste de ce groupe</a>
+                        <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir la liste de ce groupe</a></td>
                     </tr>
                 </tbody>
             </table>
+            <div class="pagination">
+                <div class="pages_links">
+                    <a href="#" class="btn_page"><i class="fa-solid fa-angle-left"></i> Précédent</a>
+                    <a href="#" class="btn_page active">1</a>
+                    <a href="#" class="btn_page">Suivant <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
         </div>
     </main>
-   <footer>
-        <p>Crée par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
+    <footer>
+        <p>Créé par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
         <div class="reseau_social">
             <a href=""><i class="fa-brands fa-facebook-f"></i></a>
             <a href=""><i class="fa-brands fa-youtube"></i></a>
