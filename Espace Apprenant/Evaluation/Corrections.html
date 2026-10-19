@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Document</title>
+    <title>Corrections d'exercices - Espace Étudiant</title>
     <link rel="stylesheet" href="../../Elements/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,18 +59,15 @@
             <h2>Liste des corrections d'exercices</h2>
             <div class="recherche_filtre">
                 <div class="barre_recherche">
-                    <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher un fichier...">
+                    <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher une correction...">
                 </div>
                 <div class="Filtre">
-                        <label for="">Filtre :</label>
-                        <select name="filtre">
-                            <option value="" selected>Toutes les corrections d'exercices</option>
-                            <option value="">Anglais</option>
-                            <option value="">Informatique</option>
-                            <option value="">Billeterie</option>
-                            <option value="">Art plastique</option>
-                            <option value="">Histoire-Géographie</option>
-                        </select>
+                    <label for="">Filtre :</label>
+                    <select name="filtre">
+                        <option value="" selected>Toutes les formations</option>
+                        <option value="">ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</option>
+                        <option value="">FRET AÉRIEN</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -79,41 +76,61 @@
                 <thead>
                     <tr>
                         <th>NUMÉRO</th>
+                        <th>FORMATION</th>
                         <th>COURS</th>
-                        <th>TITRE</th>
-                        <th>DESCRIPTION</th>
+                        <th>TITRE DE LA CORRECTION</th>
+                        <th>EXERCICE ASSOCIÉ</th>
                         <th>ACTION</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Histoire-Géographie</td>
-                        <td>Les réseaux de production et d'échanges mondialisés</td>
-                        <td>Exercices pour comprendre la chaîne logistique mondiale, le fret aérien et le transport des marchandises</td>
-                        <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir la correction</a>
-                        </td>
+                        <td>ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</td>
+                        <td>PHRASÉOLOGIE STANDARDISÉE DE L'AVIATION</td>
+                        <td>Correction type & Transcription des annonces micro</td>
+                        <td>Mise en situation : Annonces micro en aérogare</td>
+                        <td class="contenu_cours"><a href="#"><i class="fa-solid fa-eye"></i> Voir la correction</a></td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Billeterie</td>
-                        <td>Gestion des Modifications, Re-routing et Remboursements</td>
-                        <td></td>
-                        <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir la correction</a>
+                        <td>FRET AÉRIEN</td>
+                        <td>TRAITEMENT ET DOCUMENTATION DES MARCHANDISES</td>
+                        <td>Corrigé détaillé et modèle d'encodage LTA IATA</td>
+                        <td>Établissement d'une Lettre de Transport Aérien (LTA)</td>
+                        <td class="contenu_cours"><a href="#"><i class="fa-solid fa-eye"></i> Voir la correction</a></td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>FRET AÉRIEN</td>
+                        <td>CALCUL TARIFAIRE DU FRET</td>
+                        <td>Barème de correction & Formules de calcul du poids volumétrique</td>
+                        <td>Détermination du poids taxable et calcul de devis</td>
+                        <td class="contenu_cours"><a href="#"><i class="fa-solid fa-eye"></i> Voir la correction</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</td>
+                        <td>ANGLAIS DE L'ACCUEIL ET DU SERVICE CLIENT</td>
+                        <td>Guide de réponse type et lexique de résolution de litiges</td>
+                        <td>Gestion de réclamations passagers au comptoir</td>
+                        <td class="contenu_cours"><a href="#"><i class="fa-solid fa-eye"></i> Voir la correction</a></td>
                     </tr>
                 </tbody>
             </table>
+
+            <!-- Pagination alignée en bas à droite -->
+            <div class="pagination">
+                <div class="pages_links">
+                    <a href="#" class="btn_page"><i class="fa-solid fa-angle-left"></i> Précédent</a>
+                    <a href="#" class="btn_page active">1</a>
+                    <a href="#" class="btn_page">Suivant <i class="fa-solid fa-angle-right"></i></a>
+                </div>
+            </div>
         </div>
     </main>
    <footer>
-        <p>Crée par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
+        <p>Créé par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
         <div class="reseau_social">
             <a href=""><i class="fa-brands fa-facebook-f"></i></a>
             <a href=""><i class="fa-brands fa-youtube"></i></a>

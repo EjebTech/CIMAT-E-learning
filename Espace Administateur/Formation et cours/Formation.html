@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Document</title>
+    <title>Gestion des Formations et Cours - Espace Administrateur</title>
     <link rel="stylesheet" href="../../Elements/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,6 @@
                 <ul>
                     <a href="../Dashboard/dashboard.html"><li>DASHBOARD</li></a>
                     <a href="../Formation et cours/Formation.html"><li>FORMATION & COURS</li></a>
-
                     <a href="../Formation et cours/fichier_de_cours.html"><li>FICHIERS DE COURS</li></a>
                 </ul>
             </div>
@@ -39,6 +38,7 @@
                 </ul>
             </div>
         </section>
+        
         <section class="dashboard">
             <!-- En-tête avec les 2 boutons d'ajout -->
             <div class="header_actions_container">
@@ -52,6 +52,7 @@
                 </div>
             </div>
 
+            <!-- Table 1 : Liste des Formations -->
             <div class="liste">
                 <h3 class="section_title"><i class="fa-solid fa-graduation-cap"></i> Liste des Formations</h3>
                 <table>
@@ -65,23 +66,46 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Billetterie</td>
-                            <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir les cours</a></td>
+                            <td>ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</td>
+                            <td class="contenu_cours"><a href="#"><i class="fa-solid fa-trash"></i> Supprimer</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Anglais</td>
-                            <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir les cours</a></td>
+                            <td>FRET AÉRIEN</td>
+                            <td class="contenu_cours"><a href="#"><i class="fa-solid fa-trash"></i> Supprimer</a></td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Informatique</td>
-                            <td class="contenu_cours"><a href=""><i class="fa-solid fa-eye"></i> Voir les cours</a></td>
+                            <td>BILLETERIE-TRANSPORT AÉRIEN ET TOURISME</td>
+                            <td class="contenu_cours"><a href="#"><i class="fa-solid fa-trash"></i> Supprimer</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>PERSONNEL NAVIGANT COMMERCIAL</td>
+                            <td class="contenu_cours"><a href="#"><i class="fa-solid fa-trash"></i> Supprimer</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>LOGICIELS DE RESERVATION GDS AMADEUS / SABRE / GALILEO</td>
+                            <td class="contenu_cours"><a href="#"><i class="fa-solid fa-trash"></i> Supprimer</a></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>AGENT DE VOYAGE SPÉCIALISÉ DIGITAL MARKETING</td>
+                            <td class="contenu_cours"><a href="#"><i class="fa-solid fa-trash"></i> Supprimer</a></td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="pagination">
+                    <div class="pages_links">
+                        <a href="#" class="btn_page"><i class="fa-solid fa-angle-left"></i> Précédent</a>
+                        <a href="#" class="btn_page active">1</a>
+                        <a href="#" class="btn_page">Suivant <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
             </div>
 
+            <!-- Table 2 : Liste des Cours -->
             <div class="liste">
                 <h3 class="section_title"><i class="fa-solid fa-book"></i> Liste des Cours</h3>
                 <table>
@@ -96,31 +120,43 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Introduction à la billetterie en ligne</td>
-                            <td>Billetterie</td>
-                            <td class="contenu_cours"><a href="form_modif_formation.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                            <td>PHRASÉOLOGIE STANDARDISÉE DE L'AVIATION</td>
+                            <td>ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</td>
+                            <td class="contenu_cours"><a href="form_modif_cours.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Grammaire et vocabulaire de base</td>
-                            <td>Anglais</td>
-                            <td class="contenu_cours"><a href="form_modif_formation.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                            <td>TRAITEMENT ET DOCUMENTATION DES MARCHANDISES</td>
+                            <td>FRET AÉRIEN</td>
+                            <td class="contenu_cours"><a href="form_modif_cours.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Bases de données et requêtes SQL</td>
-                            <td>Informatique</td>
-                            <td class="contenu_cours"><a href="form_modif_formation.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                            <td>CALCUL TARIFAIRE DU FRET</td>
+                            <td>FRET AÉRIEN</td>
+                            <td class="contenu_cours"><a href="form_modif_cours.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>ANGLAIS DE L'ACCUEIL ET DU SERVICE CLIENT</td>
+                            <td>ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</td>
+                            <td class="contenu_cours"><a href="form_modif_cours.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="pagination">
+                    <div class="pages_links">
+                        <a href="#" class="btn_page"><i class="fa-solid fa-angle-left"></i> Précédent</a>
+                        <a href="#" class="btn_page active">1</a>
+                        <a href="#" class="btn_page">Suivant <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
             </div>
         </section>
-        
     </div>
     
-   <footer>
-        <p>Crée par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
+    <footer>
+        <p>Créé par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
         <div class="reseau_social">
             <a href=""><i class="fa-brands fa-facebook-f"></i></a>
             <a href=""><i class="fa-brands fa-youtube"></i></a>

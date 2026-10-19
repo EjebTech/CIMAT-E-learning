@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,13 +51,34 @@
             </div>
 
             <div class="liste">
-                <h3 class="section_title"><i class="fa-solid fa-folder-open"></i> Liste des fichiers disponibles</h3>
+                <div class="top">
+                    <h3 class="section_title"><i class="fa-solid fa-folder-open"></i> Liste des fichiers disponibles</h3>
+                    <div class="recherche_filtre">
+                        <div class="barre_recherche">
+                            <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher un fichier...">
+                        </div>
+                        <div class="Filtre">
+                            <label for="">Filtre :</label>
+                            <select name="filtre">
+                                <option value="" selected>Toutes les formations</option>
+                                <option value="1">ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</option>
+                                <option value="2">FRET AÉRIEN</option>
+                                <option value="3">BILLETERIE-TRANSPORT AÉRIEN ET TOURISME</option>
+                                <option value="4">PERSONNEL NAVIGANT COMMERCIAL</option>
+                                <option value="5">LOGICIELS DE RESERVATION GDS AMADEUS</option>
+                                <option value="6">AGENT DE VOYAGE SPÉCIALISÉ DIGITAL MARKETING</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
                 <table>
                     <thead>
                         <tr>
                             <th>NUMÉRO</th>
+                            <th>FORMATION</th>
+                            <th>COURS</th>
                             <th>NOM DU FICHIER</th>
-                            <th>FORMATION / COURS</th>
                             <th>FORMAT</th>
                             <th>ACTION</th>
                         </tr>
@@ -65,40 +86,60 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Support_Cours_Billetterie_V1.pdf</td>
-                            <td>Billetterie</td>
+                            <td>ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</td>
+                            <td>PHRASÉOLOGIE STANDARDISÉE DE L'AVIATION</td>
+                            <td>Support_Phraseologie_Aviation.pdf</td>
                             <td><span class="badge_format format_pdf">PDF</span></td>
-                            <td class="contenu_cours"><a href="#"><i class="fa-solid fa-download"></i> Télécharger</a></td>
+                            <td class="contenu_cours"><a href="#"> Télécharger</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Grammaire_Anglaise_Avancee.docx</td>
-                            <td>Anglais</td>
-                            <td><span class="badge_format format_doc">DOCX</span></td>
-                            <td class="contenu_cours"><a href="#"><i class="fa-solid fa-download"></i> Télécharger</a></td>
+                            <td>FRET AÉRIEN</td>
+                            <td>TRAITEMENT ET DOCUMENTATION DES MARCHANDISES</td>
+                            <td>Manuel_Traitement_Marchandises.pdf</td>
+                            <td><span class="badge_format format_pdf">PDF</span></td>
+                            <td class="contenu_cours"><a href="#"> Télécharger</a></td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>Architecture_Bases_Donnees_SQL.pdf</td>
-                            <td>Informatique</td>
-                            <td><span class="badge_format format_pdf">PDF</span></td>
-                            <td class="contenu_cours"><a href="#"><i class="fa-solid fa-download"></i> Télécharger</a></td>
+                            <td>BILLETERIE-TRANSPORT AÉRIEN ET TOURISME</td>
+                            <td>ÉMISSION ET TARIFICATION DE BILLETS</td>
+                            <td>Guide_Tarification_Billetterie.docx</td>
+                            <td><span class="badge_format format_doc">DOCX</span></td>
+                            <td class="contenu_cours"><a href="#"> Télécharger</a></td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>Exercices_Pratiques_Requetes.zip</td>
-                            <td>Informatique</td>
+                            <td>PERSONNEL NAVIGANT COMMERCIAL</td>
+                            <td>SÉCURITÉ ET SAUVETAGE EN CABINE</td>
+                            <td>Procedures_Securite_PNC.pdf</td>
+                            <td><span class="badge_format format_pdf">PDF</span></td>
+                            <td class="contenu_cours"><a href="#"> Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>LOGICIELS DE RESERVATION GDS AMADEUS</td>
+                            <td>RÉSERVATION ET ENCODAGE AMADEUS</td>
+                            <td>Exercices_Encodage_Amadeus.zip</td>
                             <td><span class="badge_format format_zip">ZIP</span></td>
-                            <td class="contenu_cours"><a href="#"><i class="fa-solid fa-download"></i> Télécharger</a></td>
+                            <td class="contenu_cours"><a href="#"> Télécharger</a></td>
                         </tr>
                     </tbody>
                 </table>
+
+                <div class="pagination">
+                    <div class="pages_links">
+                        <a href="#" class="btn_page"><i class="fa-solid fa-angle-left"></i> Précédent</a>
+                        <a href="#" class="btn_page active">1</a>
+                        <a href="#" class="btn_page">Suivant <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
     
    <footer>
-        <p>Crée par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
+        <p>Créé par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
         <div class="reseau_social">
             <a href=""><i class="fa-brands fa-facebook-f"></i></a>
             <a href=""><i class="fa-brands fa-youtube"></i></a>
