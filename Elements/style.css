@@ -395,20 +395,30 @@ main table td:nth-child(4){
 }
 
 main .contenu_cours a{
+   display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     background-color: var(--accent-color);
     color: var(--bg-header);
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 15px;
+    font-size: 13px;
+    padding: 8px 16px;
     border-radius: 8px;
-    width: 100%;
+    width: auto; 
+    box-sizing: border-box;
+    transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
 main .contenu_cours{
+    width: 180px;
+    text-align: center;
+    white-space: nowrap;
     transition: transform 0.3s;
 }
 
-main .contenu_cours:hover {
+main .contenu_cours a:hover {
     transform: scale(1.05);
 }
 
