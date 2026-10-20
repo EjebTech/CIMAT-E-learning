@@ -234,13 +234,14 @@ main hr{
 
 .barre_recherche{
     border-radius: 10px;
-    padding: 5px;
+    padding: 15px;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     max-width: 250px ;
     width: 100% ;
     display: inline-flex;
     align-items: center;
+    gap: 9px;
     
 }
 
