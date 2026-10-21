@@ -1225,6 +1225,27 @@ main .btn_ajout:hover{
     overflow-wrap: anywhere;
 }
 
+.table_corrections_container {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0 !important;
+}
+
+.table_corrections {
+    min-width: 920px;
+}
+
+.dashboard_tableaux_admin .liste .table_corrections th,
+.dashboard_tableaux_admin .liste .table_corrections td {
+    padding: 16px 24px;
+    line-height: 1.5;
+}
+
+.dashboard_tableaux_admin .liste .table_corrections th:first-child,
+.dashboard_tableaux_admin .liste .table_corrections td:first-child {
+    width: 25%;
+}
+
 .dashboard .statistiques section{
     padding: 20px 12px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -1574,6 +1595,9 @@ table.table_compact {
 .barre_attribution_groupe {
     background-color: var(--bg-header);
     padding: 15px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
     border-radius: var(--global-radius);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -1589,10 +1613,16 @@ table.table_compact {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex: 1 1 420px;
+    min-width: 0;
 }
 
 .select_groupe_container select {
     padding: 10px 14px;
+    max-width: 100%;
+    min-width: 0;
+    flex: 1 1 auto;
+    box-sizing: border-box;
     border-radius: var(--global-radius);
     border: 1px solid #cbd5e1;
     font-size: 15px;
@@ -1610,6 +1640,8 @@ table.table_compact {
     font-size: 15px;
     cursor: pointer;
     display: inline-flex;
+    max-width: 100%;
+    box-sizing: border-box;
     align-items: center;
     gap: 8px;
     transition: background-color 0.25s ease, transform 0.2s ease;
