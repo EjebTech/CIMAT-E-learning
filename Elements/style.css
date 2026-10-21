@@ -670,21 +670,29 @@ main .contenu_cours a:hover {
 }
 
 
-.grid_content_dashboard .fichier_recents .table-responsive,
-.grid_content_dashboard .groupes .table-responsive {
-    width: 100%;
-    overflow-x: auto; 
-    -webkit-overflow-scrolling: touch;
+/* CARTES DU DASHBOARD FORMATEUR */
+.grid_content_dashboard .fichier_recents,
+.grid_content_dashboard .groupes,
+.grid_content_dashboard .flux_activite,
+.grid_content_dashboard .sessions_visio_a_venir {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* TABLEAUX DU DASHBOARD FORMATEUR */
 .grid_content_dashboard table {
     width: 100%;
-    border-collapse: collapse;
     margin: 0;
+    border-collapse: collapse;
 }
 
-.grid_content_dashboard .flux_activite {
-    min-width: 0;
+.grid_content_dashboard .liste table {
+    table-layout: fixed;
+}
+
+.grid_content_dashboard .liste table th,
+.grid_content_dashboard .liste table td {
+    white-space: normal;
+    overflow-wrap: anywhere;
 }
 
 .grid_content_dashboard .flux_activite table {
@@ -698,40 +706,71 @@ main .contenu_cours a:hover {
     overflow-wrap: anywhere;
 }
 
-.grid_content_dashboard .activity_type,
-.grid_content_dashboard .role_tag {
+/* FLUX D'ACTIVITÉ */
+.grid_content_dashboard .flux_activite {
+    min-width: 0;
+}
+
+.grid_content_dashboard .entete_flux_activite h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-main);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.grid_content_dashboard .entete_flux_activite h3 i {
+    color: var(--primary-color);
+}
+
+.grid_content_dashboard .type_evenement,
+.grid_content_dashboard .role_formateur {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     font-weight: 600;
 }
 
-.grid_content_dashboard .activity_content {
+.grid_content_dashboard .evenement_contenu {
     color: #147d64;
 }
 
-.grid_content_dashboard .activity_evaluation {
+.grid_content_dashboard .evenement_evaluation {
     color: #a15c00;
 }
 
-.grid_content_dashboard .activity_visio {
+.grid_content_dashboard .evenement_visio {
     color: var(--primary-color);
 }
 
-.grid_content_dashboard .role_tag {
+.grid_content_dashboard .role_formateur {
     color: var(--text-muted);
 }
 
-.grid_content_dashboard .sessions_a_venir {
+/* LISTE DES PROCHAINES VISIOS */
+.grid_content_dashboard .sessions_visio_a_venir {
     min-width: 0;
-    padding: 25px;
     background-color: var(--bg-header);
     border: 1px solid var(--border-color);
     border-radius: var(--global-radius);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
 }
 
-.grid_content_dashboard .dashboard_session {
+.grid_content_dashboard .titre_sessions_visio {
+    margin-bottom: 15px;
+    color: var(--text-main);
+    font-size: 15px;
+}
+
+.grid_content_dashboard .liste_sessions_visio {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.grid_content_dashboard .session_visio {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -740,28 +779,28 @@ main .contenu_cours a:hover {
     border-bottom: 1px solid var(--border-color);
 }
 
-.grid_content_dashboard .dashboard_session:last-child {
+.grid_content_dashboard .session_visio:last-child {
     border-bottom: 0;
 }
 
-.grid_content_dashboard .dashboard_session h4 {
+.grid_content_dashboard .infos_session_visio h4 {
     margin-bottom: 10px;
     color: var(--text-main);
     font-size: 14px;
 }
 
-.grid_content_dashboard .dashboard_session p {
+.grid_content_dashboard .infos_session_visio p {
     margin-top: 5px;
     color: var(--text-muted);
     font-size: 13px;
 }
 
-.grid_content_dashboard .dashboard_session p i {
+.grid_content_dashboard .infos_session_visio p i {
     width: 18px;
     color: var(--primary-color);
 }
 
-.grid_content_dashboard .dashboard_session a {
+.grid_content_dashboard .bouton_session_visio {
     display: inline-flex;
     flex: 0 0 40px;
     width: 40px;
@@ -1233,12 +1272,6 @@ table.table_compact {
     white-space: nowrap;
 }
 
-.grid_content_dashboard .liste table {
-    table-layout: fixed;
-}
-
-.grid_content_dashboard .liste table th,
-.grid_content_dashboard .liste table td,
 .liste_eval_formateur table th,
 .liste_eval_formateur table td {
     white-space: normal;

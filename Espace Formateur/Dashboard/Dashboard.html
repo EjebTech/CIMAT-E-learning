@@ -190,7 +190,7 @@
             </section>
 
             <section class="flux_activite">
-                <div class="flux_header">
+                <div class="entete_flux_activite">
                     <h3><i class="fa-solid fa-clock-rotate-left"></i> Flux d'activités récents</h3>
                 </div>
                 <table>
@@ -204,45 +204,47 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><span class="activity_type activity_content"><i class="fa-solid fa-file-circle-plus"></i> Contenu</span></td>
+                            <td><span class="type_evenement evenement_contenu"><i class="fa-solid fa-file-circle-plus"></i> Contenu</span></td>
                             <td><strong>Support PDF GDS</strong> ajouté aux fichiers du cours Amadeus</td>
-                            <td><span>Formateur</span></td>
+                            <td><span class="role_formateur">Formateur</span></td>
                             <td>21 Oct 2026 - 09:40</td>
                         </tr>
                         <tr>
-                            <td><span class="activity_type activity_evaluation"><i class="fa-solid fa-clipboard-check"></i> Évaluation</span></td>
+                            <td><span class="type_evenement evenement_evaluation"><i class="fa-solid fa-clipboard-check"></i> Évaluation</span></td>
                             <td>Nouvel exercice publié : <strong>Annonces micro en aérogare</strong></td>
-                            <td><span>Formateur</span></td>
+                            <td><span class="role_formateur">Formateur</span></td>
                             <td>21 Oct 2026 - 08:55</td>
                         </tr>
                         <tr>
-                            <td><span class="activity_type activity_visio"><i class="fa-solid fa-video"></i> Visioconférence</span></td>
+                            <td><span class="type_evenement evenement_visio"><i class="fa-solid fa-video"></i> Visioconférence</span></td>
                             <td>Session planifiée : <strong>Architecture logicielle moderne & Microservices</strong></td>
-                            <td><span>Formateur</span></td>
+                            <td><span class="role_formateur">Formateur</span></td>
                             <td>20 Oct 2026 - 16:10</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
-            <section class="sessions_a_venir">
-                <h3 class="section_title"><i class="fa-solid fa-calendar-days"></i> Prochaines sessions de visio</h3>
-                <article class="dashboard_session">
-                    <div>
-                        <h4>Architecture logicielle moderne & Microservices</h4>
-                        <p><i class="fa-regular fa-calendar"></i> 24 octobre 2026</p>
-                        <p><i class="fa-regular fa-clock"></i> 14:00 · Durée : 1h30</p>
-                    </div>
-                    <a href="../Visioconférence/visio.html" aria-label="Organiser la session Architecture logicielle moderne et Microservices"><i class="fa-solid fa-video"></i></a>
-                </article>
-                <article class="dashboard_session">
-                    <div>
-                        <h4>Anglais Commercial & Vente de Prestations Touristiques</h4>
-                        <p><i class="fa-regular fa-calendar"></i> 11 novembre 2026</p>
-                        <p><i class="fa-regular fa-clock"></i> 09:00 · Durée : 2h</p>
-                    </div>
-                    <a href="../Visioconférence/visio.html" aria-label="Organiser la session Anglais Commercial et Vente de Prestations Touristiques"><i class="fa-solid fa-video"></i></a>
-                </article>
+            <section class="sessions_visio_a_venir">
+                <h3 class="titre_sessions_visio"><i class="fa-solid fa-calendar-days"></i> Prochaines sessions de visio</h3>
+                <ul class="liste_sessions_visio">
+                    <li class="session_visio">
+                        <div class="infos_session_visio">
+                            <h4>Architecture logicielle moderne & Microservices</h4>
+                            <p><i class="fa-regular fa-calendar"></i> 24 octobre 2026</p>
+                            <p><i class="fa-regular fa-clock"></i> 14:00 · Durée : 1h30</p>
+                        </div>
+                        <a class="bouton_session_visio" href="../Visioconférence/visio.html" aria-label="Organiser la session Architecture logicielle moderne et Microservices"><i class="fa-solid fa-video"></i></a>
+                    </li>
+                    <li class="session_visio">
+                        <div class="infos_session_visio">
+                            <h4>Anglais Commercial & Vente de Prestations Touristiques</h4>
+                            <p><i class="fa-regular fa-calendar"></i> 11 novembre 2026</p>
+                            <p><i class="fa-regular fa-clock"></i> 09:00 · Durée : 2h</p>
+                        </div>
+                        <a class="bouton_session_visio" href="../Visioconférence/visio.html" aria-label="Organiser la session Anglais Commercial et Vente de Prestations Touristiques"><i class="fa-solid fa-video"></i></a>
+                    </li>
+                </ul>
             </section>
         </div>
     </main>
