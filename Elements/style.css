@@ -360,6 +360,10 @@ main hr{
     font-size: 15px;
 }
 
+.cours_apprenant .infos_cours .description {
+    margin-top: 8px;
+}
+
 .grid_content .element .nom_formateur{
     color: var(--text-main);
     font-weight: bold;
@@ -1270,6 +1274,25 @@ table.table_compact {
     font-size: 15px;
     vertical-align: middle;
     white-space: nowrap;
+}
+
+/* Tables d'exercices et de corrections : apprenant et formateur */
+.liste_evaluation table {
+    table-layout: fixed;
+}
+
+.liste_evaluation table th,
+.liste_evaluation table td {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.liste_evaluation td.contenu_cours {
+    width: 16%;
+}
+
+.liste_evaluation td.contenu_cours a {
+    white-space: normal !important;
 }
 
 .liste_eval_formateur table th,
