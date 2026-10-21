@@ -1009,6 +1009,53 @@ main .btn_ajout:hover{
     color: #FFFFFF;
 }
 
+/* SIDEBAR ADMINISTRATEUR */
+.dashboard_container > .menu {
+    width: 250px;
+    padding: 24px 14px;
+    gap: 28px;
+    background-color: #FFFFFF;
+    border-right: 1px solid var(--border-color);
+    box-shadow: 2px 0 12px rgba(3, 24, 80, 0.06);
+}
+
+.dashboard_container > .menu > img {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+    margin-bottom: 8px;
+}
+
+.dashboard_container > .menu .sous_menu p {
+    padding: 0 12px 8px;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.dashboard_container > .menu .sous_menu ul a li {
+    padding: 11px 12px;
+    color: var(--text-main);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dashboard_container > .menu .sous_menu ul a:hover li {
+    color: var(--primary-color);
+    background-color: #EEF3FF;
+}
+
+.dashboard_container > .menu .sous_menu ul a li i {
+    display: inline-block;
+    width: 20px;
+    margin-right: 6px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
 .dashboard {
     flex: 1;
     padding: 30px;
@@ -1061,11 +1108,121 @@ main .btn_ajout:hover{
     font-size: 15px;
 }
 
+/* STATISTIQUES DASHBOARD ADMINISTRATEUR */
+.dashboard_admin .statistiques {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    padding: 0;
+    box-shadow: none;
+}
+
+.dashboard_admin .statistiques .stat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    min-width: 0;
+    height: auto;
+    padding: 18px 12px;
+    gap: 12px;
+    box-sizing: border-box;
+    background-color: var(--bg-header);
+}
+
+.dashboard_admin .statistiques .stat .chiffres {
+    flex-shrink: 0;
+    gap: 10px;
+    font-size: 28px;
+}
+
+.dashboard_admin .statistiques .stat .titre {
+    flex: 1;
+    min-width: 0;
+}
+
+.dashboard_admin .statistiques .stat .titre h3 {
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.dashboard_admin .statistiques .stat .titre p {
+    font-size: 20px;
+}
+
+.dashboard_admin .statistiques .stat .titre a {
+    font-size: 13px;
+}
+
 .dashboard .fichier_recents{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var(--bg-header);
     border-radius: var(--global-radius);
     
+}
+
+/* TABLEAUX ADMINISTRATEUR : FICHIERS, EXERCICES ET GROUPES */
+.dashboard_container > .dashboard_tableaux_admin {
+    min-width: 0;
+}
+
+.dashboard_tableaux_admin .liste {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.dashboard_tableaux_admin .liste > .top {
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.dashboard_tableaux_admin .liste > .top .recherche_filtre {
+    flex: 1 1 420px;
+    min-width: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.dashboard_tableaux_admin .liste > .top .Filtre {
+    min-width: 0;
+}
+
+.dashboard_tableaux_admin .liste > .top .Filtre select {
+    max-width: 320px;
+    min-width: 0;
+}
+
+.dashboard_tableaux_admin .liste > .top .barre_recherche {
+    flex: 0 1 250px;
+    min-width: 0;
+}
+
+.dashboard_tableaux_admin .liste > .top .barre_recherche input {
+    min-width: 0;
+}
+
+.dashboard_tableaux_admin .liste table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+}
+
+.dashboard_tableaux_admin .liste table th,
+.dashboard_tableaux_admin .liste table td {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.dashboard_tableaux_admin .liste table td.contenu_cours {
+    width: 16%;
+}
+
+.dashboard_tableaux_admin .liste table td.contenu_cours a {
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
 }
 
 .dashboard .statistiques section{
