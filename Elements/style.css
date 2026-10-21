@@ -29,11 +29,13 @@ header{
     top: 0;
     z-index: 1000;              
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    
 }
 
 header .logo img{
     width: 150px;
     height: 40px;
+
 }
 
 footer {
@@ -70,6 +72,7 @@ header section{
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-size: 16px;
 }
 .logo{
     padding:  18px;
@@ -84,6 +87,7 @@ header section{
 .profil{
     padding: 10px 20px;
 }
+
 ul{
     list-style: none;
     
