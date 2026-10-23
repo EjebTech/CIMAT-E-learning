@@ -37,7 +37,7 @@
                 <p>CONNEXION</p>
                 <ul>
                     <a href="../Utilisateurs/Administrateur/liste_administrateur.html"><li></i> ADMINISTRATEUR</li></a>
-                    <a href="../../Espace Administateur/Utilisateurs/Formateur/liste_formateur.html"><li> FORMATEUR</li></a>
+                    <a href="../../Espace Administrateur/Utilisateurs/Formateur/liste_formateur.html"><li> FORMATEUR</li></a>
                     <a href="../Utilisateurs/Participant/liste_participant.html"><li></i> PARTICIPANT</li></a>
                 </ul>
             </div>

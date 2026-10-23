@@ -37,7 +37,7 @@
                 <p>CONNEXION</p>
                 <ul>
                     <a href="../Utilisateurs/Administrateur/liste_administrateur.html"><li></i> ADMINISTRATEUR</li></a>
-                    <a href="../../Espace Administateur/Utilisateurs/Formateur/liste_formateur.html"><li> FORMATEUR</li></a>
+                    <a href="../../Espace Administrateur/Utilisateurs/Formateur/liste_formateur.html"><li> FORMATEUR</li></a>
                     <a href="../Utilisateurs/Participant/liste_participant.html"><li></i> PARTICIPANT</li></a>
                 </ul>
             </div>
@@ -48,7 +48,7 @@
             <main style="padding: 0; flex: none;">
                 <div class="formulaire_creation" style="width: 100%; box-sizing: border-box;">
                     <div class="form_header">
-                        <h2><i class="fa-solid fa-pen-to-square"></i> Modifier l'exercice</h2>
+                        <h2><i class="fa-solid fa-pen-to-square"></i> Ajouter un exercice</h2>
                         <a href="../Exercice/Exercice.html"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</a>
                     </div>
                     
@@ -82,7 +82,7 @@
 
                         <div class="form-group">
                             <label>Titre de l'exercice *</label>
-                            <input type="text" name="titre_exercice" placeholder="Ex: Établissement d'une Lettre de Transport Aérien (LTA)" required>
+                            <input type="text" name="titre_exercice"  required>
                         </div>
 
                         <div class="form-group">
@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Fichier d'exercice (Sujet / Consignes)</label>
+                            <label>Fichier d'exercice</label>
                             <input type="file" name="fichier_exercice" accept=".pdf,.docx,.txt">
                         </div>
                         <p style="font-size: 13px; color: var(--text-muted);">NB : Formats acceptés : pdf, docx, txt</p>

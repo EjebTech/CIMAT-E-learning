@@ -1659,3 +1659,133 @@ table input[type="checkbox"] {
     cursor: pointer;
     accent-color: var(--primary-color);
 }
+
+
+
+
+
+
+
+/* =================================================================ive
+   RESPONSIVE DESIGN - CIMAT E-LEARNING
+   =================================================================== */
+
+/* --- TABLETTES ET PETITS ÉCRANS (Max 1024px) --- */
+@media screen and (max-width: 1024px) {
+    /* Le dashboard passe d'une grille à 2 colonnes à 1 seule colonne */
+    .grid_content_dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    /* Les cartes de statistiques s'adaptent mieux */
+    .grid_content_dashboard .statistiques {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    /* Le formulaire de création prend plus de place sur tablette */
+    .formulaire_creation {
+        width: 80%;
+    }
+}
+
+/* --- SMARTPHONES ET MOBILES (Max 768px) --- */
+@media screen and (max-width: 768px) {
+    /* En-tête : passage en colonne pour éviter les débordements */
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    header section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav.rubriques ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    header nav.rubriques ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav.rubriques ul li a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /* Le menu déroulant du profil s'adapte au mobile */
+    .profil {
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profil .menu_deroulant_profil {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+
+    /* Grille des cours (espaces apprenants) : 1 seule colonne */
+    .grid_content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Statistiques du dashboard en colonne unique sur mobile */
+    .grid_content_dashboard .statistiques {
+        grid-template-columns: 1fr;
+    }
+
+    /* Formulaires en plein écran sur mobile */
+    .formulaire_creation {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /* Padding général de la page réduit */
+    main {
+        padding: 20px 10px;
+    }
+
+    /* Footer aligné en colonne */
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    footer .reseau_social {
+        justify-content: center;
+        display: flex;
+        gap: 15px;
+    }
+}
+
+/* --- TRÈS PETITS MOBILES (Max 480px) --- */
+@media screen and (max-width: 480px) {
+    .grid_content_dashboard .statistiques .stat {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .grid_content_dashboard .statistiques .stat .chiffres {
+        font-size: 40px;
+    }
+
+    /* Ajustement des boutons d'action dans les tableaux */
+    .liste table td a {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}

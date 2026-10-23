@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Ajouter un exercice - Groupe Komptech Cimat</title>
+    <title>Ajouter une correction - Groupe Komptech Cimat</title>
     <link rel="stylesheet" href="../../Elements/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,7 +37,7 @@
                 <p>CONNEXION</p>
                 <ul>
                     <a href="../Utilisateurs/Administrateur/liste_administrateur.html"><li></i> ADMINISTRATEUR</li></a>
-                    <a href="../../Espace Administateur/Utilisateurs/Formateur/liste_formateur.html"><li> FORMATEUR</li></a>
+                    <a href="../../Espace Administrateur/Utilisateurs/Formateur/liste_formateur.html"><li> FORMATEUR</li></a>
                     <a href="../Utilisateurs/Participant/liste_participant.html"><li></i> PARTICIPANT</li></a>
                 </ul>
             </div>
@@ -48,56 +48,36 @@
             <main style="padding: 0; flex: none;">
                 <div class="formulaire_creation" style="width: 100%; box-sizing: border-box;">
                     <div class="form_header">
-                        <h2><i class="fa-solid fa-pen-to-square"></i> Ajouter un exercice</h2>
-                        <a href="../Exercice/Exercice.html"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</a>
+                        <h2><i class="fa-solid fa-file-circle-check"></i> Ajouter une correction</h2>
+                        <a href="../Exercice/Correction.html"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</a>
                     </div>
                     
                     <form action="" class="form" method="post" enctype="multipart/form-data">
-                        <!-- Sélection de la Formation -->
+                        <!-- Sélection de l'Exercice -->
                         <div class="form-group">
-                            <label>Formation *</label>
-                            <select name="formation" required>
-                                <option value="" disabled selected>Sélectionnez une formation</option>
-                                <option value="1">ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</option>
-                                <option value="2">FRET AÉRIEN</option>
-                                <option value="3">BILLETERIE-TRANSPORT AÉRIEN ET TOURISME</option>
-                                <option value="4">PERSONNEL NAVIGANT COMMERCIAL</option>
-                                <option value="5">LOGICIELS DE RESERVATION GDS AMADEUS / SABRE / GALILEO</option>
-                                <option value="6">AGENT DE VOYAGE SPÉCIALISÉ DIGITAL MARKETING</option>
-                            </select>
-                        </div>
-
-                        <!-- Sélection du Cours -->
-                        <div class="form-group">
-                            <label>Cours rattaché *</label>
-                            <select name="cours" required>
-                                <option value="" disabled selected>Sélectionnez le cours associé</option>
-                                <option value="1">PHRASÉOLOGIE STANDARDISÉE DE L'AVIATION</option>
-                                <option value="2">TRAITEMENT ET DOCUMENTATION DES MARCHANDISES</option>
-                                <option value="3">ÉMISSION ET TARIFICATION DE BILLETS</option>
-                                <option value="4">SÉCURITÉ ET SAUVETAGE EN CABINE</option>
-                                <option value="5">RÉSERVATION ET ENCODAGE AMADEUS</option>
+                            <label>Exercice concerné *</label>
+                            <select name="exercice" required>
+                                <option value="" disabled selected>Sélectionnez l'exercice à corriger</option>
+                                <option value="1">Mise en situation : Annonces micro en aérogare</option>
+                                <option value="2">Établissement d'une Lettre de Transport Aérien (LTA)</option>
+                                <option value="3">Détermination du poids taxable et calcul de devis</option>
+                                <option value="4">Création d'un dossier PNR et tarification itinéraire</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label>Titre de l'exercice *</label>
-                            <input type="text" name="titre_exercice"  required>
+                            <label>Titre de la correction *</label>
+                            <input type="text" name="titre_correction" >
                         </div>
 
                         <div class="form-group">
-                            <label>Date d'échéance *</label>
-                            <input type="date" name="date_echeance" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Fichier d'exercice</label>
-                            <input type="file" name="fichier_exercice" accept=".pdf,.docx,.txt">
+                            <label>Fichier de correction (Document) *</label>
+                            <input type="file" name="fichier_correction" accept=".pdf,.docx,.txt" required>
                         </div>
                         <p style="font-size: 13px; color: var(--text-muted);">NB : Formats acceptés : pdf, docx, txt</p>
 
                         <div class="form-row">    
-                            <button type="submit"><i class="fa-solid fa-floppy-disk"></i> Enregistrer l'exercice</button>
+                            <button type="submit"><i class="fa-solid fa-floppy-disk"></i> Enregistrer la correction</button>
                         </div>
                     </form>
                 </div>
