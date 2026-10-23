@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class DashboardAdminController extends Controller
 {
     public function DashboardAdmin(){
-        return view("FrontEnd/Espace Administateur/Dashboard/index");
+        return view("Espace Administateur/Dashboard/index");
     }
 }
