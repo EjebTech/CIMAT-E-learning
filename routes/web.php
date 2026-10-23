@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,49 +17,49 @@ Route::get('/', function () {
 
 
 Route::get('accueil', [AccueilController::class,'index']);
-//                                      Administrateur                                  //
+//                                             **************Administrateur***********************//
 
 //Exercice
 Route::get('DashboardAdmin', [AdminController::class, 'DashboardAdmin']);
 
-Route::get('Insert-exercise', [AdminController::class, 'InsertExercise']);
+Route::get('Admin-Insert-exercise', [AdminController::class, 'InsertExercise']);
 
-Route::get('Update-exercise', [AdminController::class, 'UpdateExercise']);
+Route::get('Admin-Update-exercise', [AdminController::class, 'UpdateExercise']);
 
-Route::get('Insert-correction', [AdminController::class, 'InsertCorrection']);
+Route::get('Admin-Insert-correction', [AdminController::class, 'InsertCorrection']);
 
-Route::get('List-exercise', [AdminController::class, 'ListExercise']);
+Route::get('Admin-List-exercise', [AdminController::class, 'ListExercise']);
 
 //Formation et cours
 
-Route::get('Courses', [AdminController::class, 'Courses']);
+Route::get('Admin-Courses', [AdminController::class, 'Courses']);
 
-Route::get('Insert-courses', [AdminController::class, 'InsertCourses']);
+Route::get('Admin-Insert-courses', [AdminController::class, 'InsertCourses']);
 
-Route::get('Update-courses', [AdminController::class, 'UpdateCourses']);
+Route::get('Admin-Update-courses', [AdminController::class, 'UpdateCourses']);
 
 
-Route::get('Programs', [AdminController::class, 'Programs']);
+Route::get('Admin-Programs', [AdminController::class, 'Programs']);
 
-Route::get('Insert-programs', [AdminController::class, 'InsertPrograms']);
+Route::get('Admin-Insert-programs', [AdminController::class, 'InsertPrograms']);
 
-Route::get('Update-programs', [AdminController::class, 'UpdatePrograms']);
+Route::get('Admin-Update-programs', [AdminController::class, 'UpdatePrograms']);
 
 //Fichiers de cours
 
-Route::get('Courses-file', [AdminController::class, 'CoursesFile']);
+Route::get('Admin-Courses-file', [AdminController::class, 'CoursesFile']);
 
-Route::get('Insert-Courses-File', [AdminController::class, 'InsertCoursesFile']);
+Route::get('Admin-Insert-Courses-File', [AdminController::class, 'InsertCoursesFile']);
 
 //Groupes
 
-Route::get('Groups', [AdminController::class, 'Groups']);
+Route::get('Admin-Groups', [AdminController::class, 'Groups']);
 
-Route::get('Insert-groups', [AdminController::class, 'InsertGroups']);
+Route::get('Admin-Insert-groups', [AdminController::class, 'InsertGroups']);
 
-Route::get('Update-groups', [AdminController::class, 'UpdateGroups']);
+Route::get('Admin-Update-groups', [AdminController::class, 'UpdateGroups']);
 
-Route::get('Assign-student', [AdminController::class, 'AssignStudents']);
+Route::get('Admin-Assign-student', [AdminController::class, 'AssignStudents']);
 
 
 //Utilisateurs
@@ -87,3 +88,25 @@ Route::get('Update-student', [AdminController::class, 'UpdateStudent']);
 Route::get('Videoconference', [AdminController::class, 'VideoConference']);
 
 Route::get('Organize-Videoconference', [AdminController::class, 'InsertVideoConference']);
+
+
+
+
+//                                             **************Apprenant***********************//
+
+//Cours
+Route::get('Student-Courses', [StudentController::class, 'Courses']);
+
+Route::get('Student-Courses_file', [StudentController::class, 'CoursesFile']);
+
+//Evaluation
+Route::get('Student-Exercise', [StudentController::class, 'Exercises']);
+
+Route::get('Student-Corrections', [StudentController::class, 'Corrections']);
+
+//Formateur
+Route::get('Student-List_Teachers', [StudentController::class, 'Teachers']);
+
+//Visioconférence
+Route::get('Student-Videoconference', [StudentController::class, 'Videoconference']);
+
