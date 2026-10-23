@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Elements/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section>
+            <div class="logo">
+                <img src="../../Elements/images/logo.png" alt="">
+            </div>
+
+            <nav class="rubriques">
+                <ul>
+                    <li>
+                        <a class="rubrique" href="../Cours/index.html">Cours <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="menu_deroulant">
+                            <li><a href="../../Espace Apprenant/Cours/index.html">Mes cours</a></li>
+                            <li><a href="../Cours/Mes_fichiers_de_cours.html">Mes fichiers de cours</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="rubrique" href="../Evaluation/Exercices.html">Évaluation <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="menu_deroulant">
+                            <li><a href="../Evaluation/Exercices.html">Exercices</a></li>
+                            <li><a href="../Evaluation/Corrections.html">Corrections d'exercices</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="rubrique" href="../Visioconférence/visio.html">Visioconférence</a></li>
+                    <li><a class="rubrique" href="../Formateur/liste_formateurs.html">Formateurs</a></li>
+                </ul>
+            </nav>
+        </section>
+        <div class="profil">
+            <ul>
+                <li>
+                    <a href="" class="profil-btn">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    <div class="menu_deroulant_profil">
+                        <p class="statut">Vous êtes connecté en tant que :</p>
+                        <p class="nom-utilisateur">Barou Edmond</p>
+                        <hr>
+                        <a href=""><i class="fa-solid fa-gear"></i> Modifier mon profil</a>
+                        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Se déconnecter</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="top">
+            <div class="titre_et_desc">
+                <h2>Liste des formateurs</h2>
+                <p>Consultez et recherchez l'ensemble des formateurs référencés.</p>
+            </div>
+            <div class="recherche_filtre">
+                <div class="barre_recherche">
+                    <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher un formateur...">
+                </div>
+                <div class="Filtre">
+                    <label for="">Filtre par formations :</label>
+                    <select name="filtre">
+                        <option value="" selected>Toutes les formations</option>
+                        <option value="">Anglais</option>
+                        <option value="">Informatique</option>
+                        <option value="">Billeterie</option>
+                        <option value="">Art plastique</option>
+                        <option value="">Histoire-Géographie</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="grid_content">
+            <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/formateurs/photo-1783012039560-5690190a9b9b.avif" alt="image du module">
+                    
+                </div>
+                <div class="infos_formateur">
+                    
+                    <p class="initiales_formateur">CC</p>
+                    <section>
+                        <p class="nom_formateur">Charles Clovanny</p>
+                        <p class="specialite_formateur">Spécialiste Billetterie & Tarification IATA</p>
+                    </section>
+                    
+                </div>
+                <hr>
+                <section class="infos_formateur">
+                    <i class="fa-solid fa-envelope"></i> <p>CharlesClovanny@gmail.com</p>
+                    
+                    <i class="fa-solid fa-phone"></i> <p>+225 xxxxxxxxx</p>
+                </section>
+            </div>
+            <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/formateurs/istockphoto-2218333101-612x612.webp" alt="image du module">
+                    
+                </div>
+                <div class="infos_formateur">
+                    
+                    <p class="initiales_formateur">HE</p>
+                    <section>
+                        <p class="nom_formateur">Hans Emmanuel</p>
+                        <p class="specialite_formateur">Enseignant en Arts Appliqués</p>
+                    </section>
+                    
+                </div>
+                <hr>
+                <section class="infos_formateur">
+                    <i class="fa-solid fa-envelope"></i> <p>HansEmmanuel@gmail.com</p>
+                    
+                    <i class="fa-solid fa-phone"></i> <p>+225 xxxxxxxxx</p>
+                </section>
+            </div>
+            <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/formateurs/photo-1632765854612-9b02b6ec2b15.avif" alt="image du module">
+                    
+                </div>
+                <div class="infos_formateur">
+                    
+                    <p class="initiales_formateur">AF</p>
+                    <section>
+                        <p class="nom_formateur">Antibo Faga</p>
+                        <p class="specialite_formateur">Enseignante-Chercheuse en Géographie du Tourisme</p>
+                    </section>
+                    
+                </div>
+                <hr>
+                <section class="infos_formateur">
+                    <i class="fa-solid fa-envelope"></i> <p>AntiboFaga@gmail.com</p>
+                    
+                    <i class="fa-solid fa-phone"></i> <p>+225 xxxxxxxxx</p>
+                </section>
+            </div>
+            <div class="element">
+                <div class="image">
+                    <img src="../../Elements/images/formateurs/istockphoto-2192499195-612x612.webp" alt="image du module">
+                    
+                </div>
+                <div class="infos_formateur">
+                    
+                    <p class="initiales_formateur">BG</p>
+                    <section>
+                        <p class="nom_formateur">Blehoue Gervais</p>
+                        <p class="specialite_formateur">Formateur spécialisé en bureautique professionnelle</p>
+                    </section>
+                    
+                </div>
+                <hr>
+                <section class="infos_formateur">
+                    <i class="fa-solid fa-envelope"></i> <p>BlehoueGervais@gmail.com</p>
+                    
+                    <i class="fa-solid fa-phone"></i> <p>+225 xxxxxxxxx</p>
+                </section>
+            </div>
+            
+            
+        </div>
+    </main>
+   <footer>
+        <p>Crée par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
+        <div class="reseau_social">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
