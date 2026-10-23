@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -110,3 +111,48 @@ Route::get('Student-List_Teachers', [StudentController::class, 'Teachers']);
 //Visioconférence
 Route::get('Student-Videoconference', [StudentController::class, 'Videoconference']);
 
+
+//                                             **************Formateur***********************//
+
+//Evaluation
+Route::get('DashboardTeacher', [TeacherController::class, 'DashboardTeacher']);
+
+Route::get('Teacher-Insert_correction', [TeacherController::class, 'ListCorrection']);
+
+Route::get('Teacher-Insert_exercise', [TeacherController::class, 'InsertExercise']);
+
+//Evaluation
+Route::get('Teacher-Exercise', [TeacherController::class, 'ListExercise']);
+
+Route::get('Teacher-Corrections', [TeacherController::class, 'ListCorrection']);
+
+
+
+//Formation et cours
+
+Route::get('Teacher-Courses', [TeacherController::class, 'Courses']);
+
+Route::get('Teacher-Insert-courses', [TeacherController::class, 'InsertCourses']);
+
+Route::get('Teacher-Programs', [TeacherController::class, 'Programs']);
+
+Route::get('Teacher-Course_file', [TeacherController::class, 'CoursesFIle']);
+
+Route::get('Teacher-Insert-Courses_File', [TeacherController::class, 'InsertCoursesFile']);
+
+Route::get('Teacher-Video', [TeacherController::class, 'Video']);
+
+Route::get('Teacher-Insert-Video', [TeacherController::class, 'InsertVideo']);
+
+
+
+//Groupe
+
+Route::get('Teacher-Groups', [TeacherController::class, 'Groups']);
+
+
+//Visioconférence
+
+Route::get('Teacher-Videoconference', [TeacherController::class, 'Videoconference']);
+
+Route::get('Teacher-Insert_Videoconference', [TeacherController::class, 'InsertVideoconference']);
