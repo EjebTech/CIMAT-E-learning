@@ -1,99 +1,99 @@
 <?php
 
-use App\Http\Controllers\AccueilController;
+
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-// Route::get('accueil', function () {
-//     return view('index');
-// });
 
 
 
-Route::get('accueil', [AccueilController::class,'index']);
+
+Route::get('/', [LoginController::class,'Connexion'])->name('Connexion');
+
+Route::get('Inscription', [LoginController::class,'Inscription'])->name('Inscription');
 //                                             **************Administrateur***********************//
 
 //Exercice
-Route::get('Admin/Dashboard', [AdminController::class, 'DashboardAdmin']);
+Route::prefix('Admin')->name('Admin.')->group(function (){
 
-Route::get('Admin/Insert-exercise', [AdminController::class, 'InsertExercise']);
+    Route::get('/Dashboard', [AdminController::class, 'DashboardAdmin'])->name('dashboard');
 
-Route::get('Admin/Update-exercise', [AdminController::class, 'UpdateExercise']);
+    Route::get('/Insert-exercise', [AdminController::class, 'InsertExercise'])->name('insert-exercise');
 
-Route::get('Admin/Insert-correction', [AdminController::class, 'InsertCorrection']);
+    Route::get('/Update-exercise', [AdminController::class, 'UpdateExercise'])->name('update-exercise');
 
-Route::get('Admin/List-exercise', [AdminController::class, 'ListExercise']);
+    Route::get('/Insert-correction', [AdminController::class, 'InsertCorrection'])->name('insert-correction');
 
-//Formation et cours
+    Route::get('/List-exercise', [AdminController::class, 'ListExercise'])->name('list-exercise');
 
-Route::get('Admin/Courses', [AdminController::class, 'Courses']);
+    Route::get('/List-correction', [AdminController::class, 'ListCorrection'])->name('list-correction');
 
-Route::get('Admin/Insert-courses', [AdminController::class, 'InsertCourses']);
+    //Formation et cours
 
-Route::get('Admin/Update-courses', [AdminController::class, 'UpdateCourses']);
+    Route::get('/Courses', [AdminController::class, 'Courses'])->name('courses');
 
+    Route::get('/Insert-courses', [AdminController::class, 'InsertCourses'])->name('insert-courses');
 
-Route::get('Admin/Programs', [AdminController::class, 'Programs']);
-
-Route::get('Admin/Insert-programs', [AdminController::class, 'InsertPrograms']);
-
-Route::get('Admin/Update-programs', [AdminController::class, 'UpdatePrograms']);
-
-//Fichiers de cours
-
-Route::get('Admin/Courses-file', [AdminController::class, 'CoursesFile']);
-
-Route::get('Admin/Insert-Courses-File', [AdminController::class, 'InsertCoursesFile']);
-
-//Groupes
-
-Route::get('Admin/Groups', [AdminController::class, 'Groups']);
-
-Route::get('Admin/Insert-groups', [AdminController::class, 'InsertGroups']);
-
-Route::get('Admin/Update-groups', [AdminController::class, 'UpdateGroups']);
-
-Route::get('Admin/Assign-student', [AdminController::class, 'AssignStudents']);
+    Route::get('/Update-courses', [AdminController::class, 'UpdateCourses'])->name('update-courses');
 
 
-//Utilisateurs
+    Route::get('/Programs', [AdminController::class, 'Programs'])->name('programs');
 
-Route::get('Admin/Insert-admin', [AdminController::class, 'InsertAdmin']);
+    Route::get('/Insert-programs', [AdminController::class, 'InsertPrograms'])->name('insert-programs');
 
-Route::get('Admin/List-admin', [AdminController::class, 'ListAdmin']);
+    Route::get('/Update-programs', [AdminController::class, 'UpdatePrograms'])->name('update-programs');
 
-Route::get('Update-admin', [AdminController::class, 'UpdateAdmin']);
+    //Fichiers de cours
 
-Route::get('Admin/Insert-teacher', [AdminController::class, 'InsertTeacher']);
+    Route::get('/Courses-file', [AdminController::class, 'CoursesFile'])->name('courses-file');
 
-Route::get('Admin/List-teacher', [AdminController::class, 'ListTeacher']);
+    Route::get('/Insert-Courses-File', [AdminController::class, 'InsertCoursesFile'])->name('insert-couses-file');
 
-Route::get('Admin/Update-teacher', [AdminController::class, 'UpdateTeacher']);
+    //Groupes
 
-Route::get('Admin/Insert-student', [AdminController::class, 'InsertStudent']);
+    Route::get('/Groups', [AdminController::class, 'Groups'])->name('groups');
 
-Route::get('Admin/List-student', [AdminController::class, 'ListStudent']);
+    Route::get('/Insert-groups', [AdminController::class, 'InsertGroups'])->name('insert-groups');
 
-Route::get('Admin/Update-student', [AdminController::class, 'UpdateStudent']);
+    Route::get('/Update-groups', [AdminController::class, 'UpdateGroups'])->name('update-groups');
 
-
-//Visioconférece
-
-Route::get('Admin/Videoconference', [AdminController::class, 'VideoConference']);
-
-Route::get('Admin/Organize-Videoconference', [AdminController::class, 'InsertVideoConference']);
+    Route::get('/Assign-student', [AdminController::class, 'AssignStudents'])->name('assign-student');
 
 
+    //Utilisateurs
+
+    Route::get('/Insert-admin', [AdminController::class, 'InsertAdmin'])->name('insert-admin');
+
+    Route::get('/List-admin', [AdminController::class, 'ListAdmin'])->name('list-admin');
+
+    Route::get('/Update-admin', [AdminController::class, 'UpdateAdmin'])->name('update-admin');
+
+    Route::get('/Insert-teacher', [AdminController::class, 'InsertTeacher'])->name('insert-teacher');
+
+    Route::get('/List-teacher', [AdminController::class, 'ListTeacher'])->name('list-teacher');
+
+    Route::get('/Update-teacher', [AdminController::class, 'UpdateTeacher'])->name('update-teacher');
+
+    Route::get('/Insert-student', [AdminController::class, 'InsertStudent'])->name('insert-student');
+
+    Route::get('/List-student', [AdminController::class, 'ListStudent'])->name('list-student');
+
+    Route::get('/Update-student', [AdminController::class, 'UpdateStudent'])->name('update-student');
 
 
-//                                             **************Apprenant***********************//
+    //Visioconférece
+
+    Route::get('/Videoconference', [AdminController::class, 'VideoConference'])->name('videoconference');
+
+    Route::get('/Organize-Videoconference', [AdminController::class, 'InsertVideoConference'])->name('organize-videoconference');
+
+});
+
+
+//      **************Apprenant***********************//
 
 //Cours
 Route::get('Student/Courses', [StudentController::class, 'Courses']);

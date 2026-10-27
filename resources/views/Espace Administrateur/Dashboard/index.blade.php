@@ -17,34 +17,34 @@
             <div class="sous_menu">
                 <p>MENU</p>
                 <ul>
-                    <a href="../Dashboard/dashboard.html"><li>DASHBOARD</li></a>
-                    <a href="../Formation et cours/Formation.html"><li>FORMATIONS</li></a>
-                    <a href="../Formation et cours/Cours.html"><li>COURS</li></a>
+                    <a href="{{route('Admin.dashboard')}}"><li>DASHBOARD</li></a>
+                    <a href="{{route('Admin.programs')}}"><li>FORMATIONS</li></a>
+                    <a href="{{route('Admin.courses')}}"><li>COURS</li></a>
 
-                    <a href="../Formation et cours/fichier_de_cours.html"><li>FICHIERS DE COURS</li></a>
+                    <a href="{{route('Admin.courses-file')}}"><li>FICHIERS DE COURS</li></a>
                 </ul>
             </div>
             <div class="sous_menu">
                 <p>SESSION DE COURS</p>
                 <ul>
-                    <a href="../Visioconférence/visio.html"><li>VISIOCONFÉRENCE</li></a>
-                    <a href="../Exercice/Exercice.html"><li>EXERCICES</li></a>
-                    <a href="../Exercice/Correction.html"><li>CORRECTIONS</li></a>
-                    <a href="../Groupe/liste_groupes.html"><li>GROUPES</li></a>
+                    <a href="{{route('Admin.videoconference')}}"><li>VISIOCONFÉRENCE</li></a>
+                    <a href="{{route('Admin.list-exercise')}}"><li>EXERCICES</li></a>
+                    <a href="{{route('Admin.list-correction')}}"><li>CORRECTIONS</li></a>
+                    <a href="{{route('Admin.groups')}}"><li>GROUPES</li></a>
                 </ul>
             </div>
             <div class="sous_menu">
                 <p>CONNEXION</p>
                 <ul>
-                    <a href="../Utilisateurs/Administrateur/liste_administrateur.html"><li> ADMINISTRATEUR</li></a>
-                    <a href="../Utilisateurs/Formateur/liste_formateur.html"><li>FORMATEUR</li></a>
-                    <a href="../Utilisateurs/Participant/liste_participant.html"><li> PARTICIPANT</li></a>
+                    <a href="{{route('Admin.list-admin')}}"><li> ADMINISTRATEUR</li></a>
+                    <a href="{{route('Admin.list-teacher')}}"><li>FORMATEUR</li></a>
+                    <a href="{{route('Admin.list-student')}}"><li> PARTICIPANT</li></a>
                 </ul>
             </div>
         </section>
         <section class="dashboard dashboard_admin">
             <div class="statistiques">
-                
+
                 <div class="stat">
                     <div class="chiffres">
                         <i class="fa-solid fa-user-graduate"></i>
@@ -52,17 +52,17 @@
                     </div>
                     <div class="titre">
                         <h3>PARTICIPANTS INSCRITS</h3>
-                        <a href="">Parcourir</a>
+                        <a href="{{route('Admin.list-student')}}">Parcourir</a>
                     </div>
                 </div>
                 <div class="stat">
                     <div class="chiffres">
-                        <i class="fa-solid fa-book"></i> 
+                        <i class="fa-solid fa-book"></i>
                         <p>7</p>
                     </div>
                     <div class="titre">
                         <h3>NOMBRE DE FORMATIONS</h3>
-                        <a href="">Parcourir</a>
+                        <a href="{{route('Admin.programs')}}">Parcourir</a>
                     </div>
                 </div>
                 <div class="stat">
@@ -72,17 +72,17 @@
                     </div>
                     <div class="titre">
                         <h3>NOMBRE DE COURS</h3>
-                        <a href="../Formation et cours/Cours.html">Parcourir</a>
+                        <a href="{{route('Admin.courses')}}">Parcourir</a>
                     </div>
                 </div>
                 <div class="stat">
                     <div class="chiffres">
-                        <i class="fa-solid fa-users-between-lines"></i> 
+                        <i class="fa-solid fa-users-between-lines"></i>
                         <p>9</p>
                     </div>
                     <div class="titre">
                         <h3>GROUPES</h3>
-                        <a href="">Parcourir</a>
+                        <a href="{{route('Admin.groups')}}">Parcourir</a>
                     </div>
                 </div>
                 <div class="stat">
@@ -92,10 +92,10 @@
                     </div>
                     <div class="titre">
                         <h3>FORMATEURS INSCRITS</h3>
-                        <a href="">Parcourir</a>
+                        <a href="{{route('Admin.list-teacher')}}">Parcourir</a>
                     </div>
                 </div>
-                
+
             </div>
             <div class="flux_activite">
                 <div class="flux_header">
@@ -163,13 +163,13 @@
                         </tr>
                     </tbody>
                 </table>
-                
+
             </div>
-            
-        </section>   
-        
+
+        </section>
+
     </div>
-    
+
    <footer>
         <p>Crée par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
         <div class="reseau_social">

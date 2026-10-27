@@ -17,19 +17,19 @@
             <div class="sous_menu">
                 <p>MENU</p>
                 <ul>
-                    <a href="../Dashboard/dashboard.html"><li>DASHBOARD</li></a>
-                    <a href="../Formation et cours/Formation.html"><li>FORMATIONS</li></a>
-                    <a href="../Formation et cours/Cours.html"><li>COURS</li></a>
-                    <a href="../Formation et cours/fichier_de_cours.html"><li>FICHIERS DE COURS</li></a>
+                    <a href="{{route('Admin.dashboard')}}"><li>DASHBOARD</li></a>
+                    <a href="{{route('Admin.programs')}}"><li>FORMATIONS</li></a>
+                    <a href="{{route('Admin.courses')}}"><li>COURS</li></a>
+                    <a href="{{route('Admin.courses-file')}}"><li>FICHIERS DE COURS</li></a>
                 </ul>
             </div>
             <div class="sous_menu">
                 <p>SESSION DE COURS</p>
                 <ul>
-                    <a href="../Visioconférence/visio.html"><li>VISIOCONFÉRENCE</li></a>
-                    <a href="../Exercice/Exercice.html"><li>EXERCICES</li></a>
-                    <a href="../Exercice/Correction.html"><li>CORRECTIONS</li></a>
-                    <a href="../Groupe/liste_groupes.html"><li>GROUPES</li></a>
+                    <a href="{{route('Admin.videoconference')}}"><li>VISIOCONFÉRENCE</li></a>
+                    <a href="{{route('Admin.list-exercise')}}"><li>EXERCICES</li></a>
+                    <a href="{{route('Admin.list-correction')}}"><li>CORRECTIONS</li></a>
+                    <a href="{{route('Admin.groups')}}"><li>GROUPES</li></a>
                 </ul>
             </div>
             <div class="sous_menu">

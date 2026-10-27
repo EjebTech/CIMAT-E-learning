@@ -18,6 +18,9 @@ class AdminController extends Controller
     public function InsertCorrection(){
         return view("Espace Administrateur.Exercice.ajout_correction");
     }
+    public function InsertExercise(){
+        return view("Espace Administrateur.Exercice.ajout_exercice");
+    }
     public function ListExercise(){
         return view("Espace Administrateur.Exercice.Exercice");
     }

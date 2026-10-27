@@ -18,31 +18,31 @@
             <div class="sous_menu">
                 <p>MENU</p>
                 <ul>
-                    <a href="../Dashboard/dashboard.html"><li>DASHBOARD</li></a>
-                    <a href="../Formation et cours/Formation.html"><li>FORMATIONS</li></a>
-                    <a href="../Formation et cours/Cours.html"><li>COURS</li></a>
-                    <a href="../Formation et cours/fichier_de_cours.html"><li>FICHIERS DE COURS</li></a>
+                    <a href="{{route('Admin.dashboard')}}"><li>DASHBOARD</li></a>
+                    <a href="{{route('Admin.programs')}}"><li>FORMATIONS</li></a>
+                    <a href="{{route('Admin.courses')}}"><li>COURS</li></a>
+                    <a href="{{route('Admin.courses-file')}}"><li>FICHIERS DE COURS</li></a>
                 </ul>
             </div>
             <div class="sous_menu">
                 <p>SESSION DE COURS</p>
                 <ul>
-                    <a href="../Visioconférence/visio.html"><li>VISIOCONFÉRENCE</li></a>
-                    <a href="../Exercice/Exercice.html"><li>EXERCICES</li></a>
-                    <a href="../Exercice/Correction.html"><li>CORRECTIONS</li></a>
-                    <a href="../Groupe/liste_groupes.html"><li>GROUPES</li></a>
+                    <a href="{{route('Admin.videoconference')}}"><li>VISIOCONFÉRENCE</li></a>
+                    <a href="{{route('Admin.list-exercise')}}"><li>EXERCICES</li></a>
+                    <a href="{{route('Admin.list-correction')}}"><li>CORRECTIONS</li></a>
+                    <a href="{{route('Admin.groups')}}"><li>GROUPES</li></a>
                 </ul>
             </div>
             <div class="sous_menu">
                 <p>CONNEXION</p>
                 <ul>
-                    <a href="../Utilisateurs/Administrateur/liste_administrateur.html"><li></i> ADMINISTRATEUR</li></a>
-                    <a href="../../Espace Administrateur/Utilisateurs/Formateur/liste_formateur.html"><li> FORMATEUR</li></a>
-                    <a href="../Utilisateurs/Participant/liste_participant.html"><li></i> PARTICIPANT</li></a>
+                    <a href="{{route('Admin.list-admin')}}"><li></i> ADMINISTRATEUR</li></a>
+                    <a href="{{route('Admin.list-teacher')}}"><li> FORMATEUR</li></a>
+                    <a href="{{route('Admin.list-student')}}"><li></i> PARTICIPANT</li></a>
                 </ul>
             </div>
         </section>
-        
+
         <!-- Contenu principal -->
         <section class="dashboard">
             <main style="padding: 0; flex: none;">
@@ -51,7 +51,7 @@
                         <h2><i class="fa-solid fa-file-circle-check"></i> Ajouter une correction</h2>
                         <a href="../Exercice/Correction.html"><i class="fa-solid fa-arrow-left"></i> Retour à la liste</a>
                     </div>
-                    
+
                     <form action="" class="form" method="post" enctype="multipart/form-data">
                         <!-- Sélection de l'Exercice -->
                         <div class="form-group">
@@ -76,7 +76,7 @@
                         </div>
                         <p style="font-size: 13px; color: var(--text-muted);">NB : Formats acceptés : pdf, docx, txt</p>
 
-                        <div class="form-row">    
+                        <div class="form-row">
                             <button type="submit"><i class="fa-solid fa-floppy-disk"></i> Enregistrer la correction</button>
                         </div>
                     </form>
@@ -84,7 +84,7 @@
             </main>
         </section>
     </div>
-    
+
     <footer>
         <p>Créé par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
         <div class="reseau_social">

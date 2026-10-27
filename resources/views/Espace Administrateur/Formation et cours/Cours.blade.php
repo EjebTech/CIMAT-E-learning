@@ -26,10 +26,10 @@
             <div class="sous_menu">
                 <p>SESSION DE COURS</p>
                 <ul>
-                    <a href="../Visioconférence/visio.html"><li>VISIOCONFÉRENCE</li></a>
-                    <a href="../Exercice/Exercice.html"><li>EXERCICES</li></a>
-                    <a href="../Exercice/Correction.html"><li>CORRECTIONS</li></a>
-                    <a href="../Groupe/liste_groupes.html"><li>GROUPES</li></a>
+                    <a href="{{route('Admin.videoconference')}}"><li>VISIOCONFÉRENCE</li></a>
+                    <a href="{{route('Admin.list-exercise')}}"><li>EXERCICES</li></a>
+                    <a href="{{route('Admin.list-correction')}}"><li>CORRECTIONS</li></a>
+                    <a href="{{route('Admin.groups')}}"><li>GROUPES</li></a>
                 </ul>
             </div>
             <div class="sous_menu">
