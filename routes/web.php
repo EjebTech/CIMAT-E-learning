@@ -21,7 +21,7 @@ Route::get('Inscription', [LoginController::class,'Inscription'])->name('Inscrip
 //Exercice
 Route::prefix('Admin')->name('Admin.')->group(function (){
 
-    Route::get('/Dashboard', [AdminController::class, 'DashboardAdmin'])->name('dashboard');
+    Route::get('/', [AdminController::class, 'DashboardAdmin'])->name('dashboard');
 
     Route::get('/Insert-exercise', [AdminController::class, 'InsertExercise'])->name('insert-exercise');
 
@@ -99,7 +99,7 @@ Route::prefix('Admin')->name('Admin.')->group(function (){
 
 //Cours
 Route::prefix('Student')->name('Student.')->group(function(){
-    Route::get('/Courses', [StudentController::class, 'Courses'])->name('courses');
+    Route::get('/', [StudentController::class, 'Courses'])->name('courses');
 
     Route::get('/Courses-file', [StudentController::class, 'CoursesFile'])->name('courses-file');
 
@@ -122,7 +122,7 @@ Route::prefix('Student')->name('Student.')->group(function(){
 
 //Evaluation
 Route::prefix('Teacher')->name('Teacher.')->group(function(){
-    Route::get('/Dashboard', [TeacherController::class, 'DashboardTeacher'])->name('dashboard');
+    Route::get('/', [TeacherController::class, 'DashboardTeacher'])->name('dashboard');
 
     Route::get('/Insert-correction', [TeacherController::class, 'ListCorrection'])->name('list-correction');
 
@@ -132,6 +132,8 @@ Route::prefix('Teacher')->name('Teacher.')->group(function(){
     Route::get('/Exercise', [TeacherController::class, 'ListExercise'])->name('exercise');
 
     Route::get('/Corrections', [TeacherController::class, 'ListCorrection'])->name('corrections');
+
+    Route::get('/Insert-correction', [TeacherController::class, 'InsertCorrection'])->name('insert-correction');
 
 
 

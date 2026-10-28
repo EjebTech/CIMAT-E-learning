@@ -1,64 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../Elements/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <section>
-            <div class="logo">
-                <img src="../../Elements/images/logo.png" alt="">
-            </div>
-            <nav class="rubriques">
-                <ul>
-                    <li>
-                        <a class="rubrique" href="../Dashboard/Dashboard.html">Dashboard</a>
-                    </li>
-                    <li>
-                        <a class="rubrique" href="#">Formation & Cours <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="menu_deroulant">
-                            <li><a href="../Formations et Cours/formations.html">Formations</a></li>
-                            <li><a href="../Formations et Cours/cours.html">Cours</a></li>
-                            <li><a href="../Formations et Cours/fichier_de_cours.html">Fichiers de Cours</a></li>
-                            <li><a href="../Formations et Cours/Video_de_cours.html">Vidéos de Cours</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="rubrique" href="#">Évaluation <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="menu_deroulant">
-                            <li><a href="../Evaluation/Exercice.html">Exercices</a></li>
-                            <li><a href="../Evaluation/Correction.html">Corrections d'exercices</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="rubrique" href="../Visioconférence/visio.html">Visioconférence</a></li>
-                    <li><a class="rubrique" href="../Groupes/groupes.html">Groupes</a></li>
-                </ul>
-            </nav>
-        </section>
-        <div class="profil">
-            <ul>
-                <li>
-                    <a href="" class="profil-btn">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                    <div class="menu_deroulant_profil">
-                        <p class="statut">Vous êtes connecté en tant que :</p>
-                        <p class="nom-utilisateur">Barou Edmond</p>
-                        <hr>
-                        <a href=""><i class="fa-solid fa-gear"></i> Modifier mon profil</a>
-                        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Se déconnecter</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </header>
+@extends('template-tecaher')
+@section('content-teacher')
     <main>
         <div class="top">
             <div class="titre_et_desc">
@@ -70,14 +11,14 @@
                     <i class="fa-solid fa-search"></i><input type="text" name="search" placeholder="Rechercher un cours">
                 </div>
             </div>
-            <a class="btn_ajout" href="form_ajout_cours.html">Ajouter un cours</a>
+            <a class="btn_ajout" href="{{route('Teacher.insert-courses')}}">Ajouter un cours</a>
         </div>
-        
+
         <hr>
         <div class="grid_content">
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/cours/british-flag-union-3840x2160-9445.jpg" alt="image du module">
+                    <img src="{{asset('Elements/images/cours/british-flag-union-3840x2160-9445.jpg')}}" alt="image du module">
                     <p class="nom_cours">Anglais de spécialité voyage et tourisme</p>
                 </div>
                 <div class="infos_cours">
@@ -88,7 +29,7 @@
 
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/cours/OIP-1322717868.jpg" alt="">
+                    <img src="{{asset('Elements/images/cours/OIP-1322717868.jpg')}}" alt="">
                     <p class="nom_cours">Fret aérien</p>
                 </div>
                 <div class="infos_cours">
@@ -96,10 +37,10 @@
                     <p class="description">Maîtrise des outils informatiques et des procédures appliquées à la création de tableaux de suivi de vols et à la gestion de plannings de fret.</p>
                 </div>
             </div>
-            
+
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/cours/world-map-atlas-1920x1080-16642.jpg" alt="image du module">
+                    <img src="{{asset('Elements/images/cours/world-map-atlas-1920x1080-16642.jpg')}}" alt="image du module">
                     <p class="nom_cours">Fret aérien</p>
                 </div>
                 <div class="infos_cours">
@@ -110,7 +51,7 @@
 
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/cours/7407421c-8cb9-47ec-8f5f-86a2a94ca0cb.jpg" alt="">
+                    <img src="{{asset('Elements/images/cours/7407421c-8cb9-47ec-8f5f-86a2a94ca0cb.jpg')}}" alt="">
                     <p class="nom_cours">Anglais de spécialité voyage et tourisme</p>
                 </div>
                 <div class="infos_cours">
@@ -118,8 +59,8 @@
                     <p class="description">Perfectionnement de l'expression orale et écrite pour l'accueil des clients en milieu aéroportuaire et touristique. Apprenez à gérer les demandes des passagers, à orienter la clientèle et à résoudre efficacement les situations d'attente ou de réclamation en anglais.</p>
                 </div>
             </div>
-            
-            
+
+
             </div>
         </div>
         <div class="pagination">
@@ -130,13 +71,4 @@
             </div>
         </div>
     </main>
-    <footer>
-        <p>Crée par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
-        <div class="reseau_social">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-    </footer>
-</body>
-</html>
+@endsection

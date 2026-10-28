@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
     <title>Document</title>
-    <link rel="stylesheet" href="../../Elements/style.css">
+    <link rel="stylesheet" href="{{asset('Elements/style.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
     <div class="dashboard_container">
         <section class="menu">
-            <img src="../../Elements/images/logo.png" alt="">
+            <img src="{{asset('Elements/images/logo.png')}}" alt="">
             <div class="sous_menu">
                 <p>MENU</p>
                 <ul>

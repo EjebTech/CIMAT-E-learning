@@ -27,7 +27,7 @@
 
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/cours/british-flag-union-3840x2160-9445.jpg" alt="Phraséologie Standardisée">
+                    <img src="{{asset('Elements/images/cours/british-flag-union-3840x2160-9445.jpg')}}" alt="Phraséologie Standardisée">
                     <p class="nom_cours">ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</p>
                 </div>
                 <div class="infos_cours">
@@ -46,7 +46,7 @@
 
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/cours/premium_photo-1718674394245-9f270c5fd2b3.avif" alt="Traitement du Fret">
+                    <img src="{{asset('Elements/images/cours/premium_photo-1718674394245-9f270c5fd2b3.avif')}}" alt="Traitement du Fret">
                     <p class="nom_cours">FRET AÉRIEN</p>
                 </div>
                 <div class="infos_cours">
@@ -65,7 +65,7 @@
 
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/cours/world-map-atlas-1920x1080-16642.jpg" alt="Calcul Tarifaire Fret">
+                    <img src="{{asset('Elements/images/cours/world-map-atlas-1920x1080-16642.jpg')}}" alt="Calcul Tarifaire Fret">
                     <p class="nom_cours">FRET AÉRIEN</p>
                 </div>
                 <div class="infos_cours">
@@ -84,7 +84,7 @@
 
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/cours/microsoft-office-1920x1080-12053.jpg" alt="Anglais Accueil Client">
+                    <img src="{{asset('Elements/images/cours/microsoft-office-1920x1080-12053.jpg')}}" alt="Anglais Accueil Client">
                     <p class="nom_cours">ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</p>
                 </div>
                 <div class="infos_cours">
@@ -103,7 +103,7 @@
 
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/cours/7407421c-8cb9-47ec-8f5f-86a2a94ca0cb.jpg" alt="Marchandises Dangereuses">
+                    <img src="{{asset('Elements/images/cours/7407421c-8cb9-47ec-8f5f-86a2a94ca0cb.jpg')}}" alt="Marchandises Dangereuses">
                     <p class="nom_cours">FRET AÉRIEN</p>
                 </div>
                 <div class="infos_cours">
@@ -122,7 +122,7 @@
 
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/cours/british-flag-union-3840x2160-9445.jpg" alt="Anglais Billetrie">
+                    <img src="{{asset('Elements/images/cours/british-flag-union-3840x2160-9445.jpg')}}" alt="Anglais Billetrie">
                     <p class="nom_cours">ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</p>
                 </div>
                 <div class="infos_cours">

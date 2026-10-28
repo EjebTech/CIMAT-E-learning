@@ -1,97 +1,37 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Dashboard - Espace Formateur</title>
-    <link rel="stylesheet" href="../../Elements/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <section>
-            <div class="logo">
-                <img src="../../Elements/images/logo.png" alt="CIMAT Logo">
-            </div>
-            <nav class="rubriques">
-                <ul>
-                    <li>
-                        <a class="rubrique" href="Dashboard.html">Dashboard</a>
-                    </li>
-                    <li>
-                        <a class="rubrique" href="#">Formation & Cours <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="menu_deroulant">
-                            <li><a href="../Formations et Cours/formations.html">Formations</a></li>
-                            <li><a href="../Formations et Cours/cours.html">Cours</a></li>
-                            <li><a href="../Formations et Cours/fichier_de_cours.html">Fichiers de Cours</a></li>
-                            <li><a href="../Formations et Cours/Video_de_cours.html">Vidéos de Cours</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="rubrique" href="#">Évaluation <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="menu_deroulant">
-                            <li><a href="../Evaluation/Exercice.html">Exercices</a></li>
-                            <li><a href="../Evaluation/Correction.html">Corrections d'exercices</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="rubrique" href="../Visioconférence/visio.html">Visioconférence</a></li>
-                    <li><a class="rubrique" href="../Groupes/groupes.html">Groupes</a></li>
-                </ul>
-            </nav>
-        </section>
-        <div class="profil">
-            <ul>
-                <li>
-                    <a href="" class="profil-btn">
-                        <i class="fa-solid fa-user"></i>
-                    </a>
-                    <div class="menu_deroulant_profil">
-                        <p class="statut">Vous êtes connecté en tant que :</p>
-                        <p class="nom-utilisateur">Barou Edmond</p>
-                        <hr>
-                        <a href=""><i class="fa-solid fa-gear"></i> Modifier mon profil</a>
-                        <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i> Se déconnecter</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </header>
-
+@extends('template-tecaher')
+@section('content-teacher')
     <main>
         <div class="grid_content_dashboard">
             <!-- BLOC STATISTIQUES EN HAUT -->
             <section class="statistiques">
                 <div class="stat">
                     <div class="chiffres">
-                        <i class="fa-solid fa-book"></i> 
+                        <i class="fa-solid fa-book"></i>
                     </div>
                     <div class="titre">
                         <h3>Nombre de cours</h3>
                         <p>7</p>
-                        <a href="">Parcourir</a>
+                        <a href="{{route('Teacher.courses')}}">Parcourir</a>
                     </div>
                 </div>
                 <div class="stat">
                     <div class="chiffres">
-                        <i class="fa-solid fa-book"></i> 
+                        <i class="fa-solid fa-book"></i>
                     </div>
                     <div class="titre">
                         <h3>Formations</h3>
                         <p>7</p>
-                        <a href="">Parcourir</a>
+                        <a href="{{route('Teacher.programs')}}">Parcourir</a>
                     </div>
                 </div>
                 <div class="stat">
                     <div class="chiffres">
-                        <i class="fa-solid fa-users-between-lines"></i> 
+                        <i class="fa-solid fa-users-between-lines"></i>
                     </div>
                     <div class="titre">
                         <h3>Groupes</h3>
                         <p>9</p>
-                        <a href="">Parcourir</a>
+                        <a href="{{route('Teacher.groups')}}">Parcourir</a>
                     </div>
                 </div>
                 <div class="stat">
@@ -101,7 +41,7 @@
                     <div class="titre">
                         <h3>Fichiers de cours</h3>
                         <p>13</p>
-                        <a href="">Parcourir</a>
+                        <a href="{{route('Teacher.course-file')}}">Parcourir</a>
                     </div>
                 </div>
                 <div class="stat">
@@ -159,7 +99,7 @@
                         <tr>
                             <th>N°</th>
                             <th>NOM DU GROUPE</th>
-                            
+
                             <th>PARTICIPANTS</th>
                         </tr>
                     </thead>
@@ -167,22 +107,22 @@
                         <tr>
                             <td>1</td>
                             <td>Groupe 1</td>
-                            
-                            
+
+
                             <td>3 participant(s)</td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Groupe 2</td>
-                            
-                            
+
+
                             <td>2 participant(s)</td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>Groupe 3</td>
-                            
-                            
+
+
                             <td>3 participant(s)</td>
                         </tr>
                     </tbody>
@@ -248,14 +188,4 @@
             </section>
         </div>
     </main>
-
-    <footer>
-        <p>Créé par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
-        <div class="reseau_social">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-    </footer>
-</body>
-</html>
+@endsection

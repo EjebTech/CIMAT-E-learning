@@ -28,7 +28,7 @@
                     </div>
                 </section>
                 <section class="bouton_visio">
-                    <img src="../../Elements/images/cours/premium_photo-1664297989345-f4ff2063b212.avif" alt="image du thème de la visio">
+                    <img src="{{asset('Elements/images/cours/premium_photo-1664297989345-f4ff2063b212.avif')}}" alt="image du thème de la visio">
                     <a href=""><i class="fa-solid fa-video"></i> Assister à la visio</a>
                 </section>
             </div>
@@ -42,7 +42,7 @@
                     </div>
                 </section>
                 <section class="bouton_visio">
-                    <img src="../../Elements/images/cours/photo-1530521954074-e64f6810b32d.avif" alt="image du thème de la visio">
+                    <img src="{{asset('Elements/images/cours/photo-1530521954074-e64f6810b32d.avif')}}" alt="image du thème de la visio">
                     <a href=""><i class="fa-solid fa-video"></i> Assister à la visio</a>
                 </section>
             </div>
@@ -56,7 +56,7 @@
                     </div>
                 </section>
                 <section class="bouton_visio">
-                    <img src="../../Elements/images/cours/british-flag-union-3840x2160-9445.jpg" alt="image du thème de la visio">
+                    <img src="{{asset('Elements/images/cours/british-flag-union-3840x2160-9445.jpg')}}" alt="image du thème de la visio">
                     <a href=""><i class="fa-solid fa-video"></i> Assister à la visio</a>
                 </section>
             </div>

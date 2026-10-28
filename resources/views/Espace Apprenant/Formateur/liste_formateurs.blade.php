@@ -27,7 +27,7 @@
         <div class="grid_content">
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/formateurs/photo-1783012039560-5690190a9b9b.avif" alt="image du module">
+                    <img src="{{asset('Elements/images/formateurs/photo-1783012039560-5690190a9b9b.avif')}}" alt="image du module">
 
                 </div>
                 <div class="infos_formateur">
@@ -48,7 +48,7 @@
             </div>
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/formateurs/istockphoto-2218333101-612x612.webp" alt="image du module">
+                    <img src="{{asset('Elements/images/formateurs/istockphoto-2218333101-612x612.webp')}}" alt="image du module">
 
                 </div>
                 <div class="infos_formateur">
@@ -69,7 +69,7 @@
             </div>
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/formateurs/photo-1632765854612-9b02b6ec2b15.avif" alt="image du module">
+                    <img src="{{asset('Elements/images/formateurs/photo-1632765854612-9b02b6ec2b15.avif')}}" alt="image du module">
 
                 </div>
                 <div class="infos_formateur">
@@ -90,7 +90,7 @@
             </div>
             <div class="element">
                 <div class="image">
-                    <img src="../../Elements/images/formateurs/istockphoto-2192499195-612x612.webp" alt="image du module">
+                    <img src="{{asset('Elements/images/formateurs/istockphoto-2192499195-612x612.webp')}}" alt="image du module">
 
                 </div>
                 <div class="infos_formateur">
