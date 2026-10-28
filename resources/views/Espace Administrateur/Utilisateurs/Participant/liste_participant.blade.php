@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Gestion des Participants - Groupe Komptech Cimat</title>
-    <link rel="stylesheet" href="../../../Elements/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="dashboard_container">
-        <section class="menu">
-<img src="../../../Elements/images/logo.png" alt="Logo CIMAT">
-            <div class="sous_menu">
-                <p>MENU</p>
-                <ul>
-                    <a href="../../Dashboard/dashboard.html"><li>DASHBOARD</li></a>
-                    <a href="../../Formation et cours/Formation.html"><li>FORMATIONS</li></a>
-                    <a href="../../Formation et cours/Cours.html"><li>COURS</li></a>
-                    <a href="../../Formation et cours/fichier_de_cours.html"><li>FICHIERS DE COURS</li></a>
-                </ul>
-            </div>
-            <div class="sous_menu">
-                <p>SESSION DE COURS</p>
-                <ul>
-                    <a href="../Visioconférence/visio.html"><li>VISIOCONFÉRENCE</li></a>
-                    <a href="../Exercice/Exercice.html"><li>EXERCICES</li></a>
-                    <a href="../../Exercice/Correction.html"><li>CORRECTIONS</li></a>
-                    <a href="../Groupe/liste_groupes.html"><li>GROUPES</li></a>
-                </ul>
-            </div>
-            <div class="sous_menu">
-                <p>CONNEXION</p>
-                <ul>
-                    <a href="../Administrateur/liste_administrateur.html"><li></i> ADMINISTRATEUR</li></a>
-                    <a href="../Formateur/liste_formateur.html"><li> FORMATEUR</li></a>
-                    <a href="../Participant/liste_participant.html"><li></i> PARTICIPANT</li></a>
-                </ul>
-            </div>
-        </section>
-        
+@extends('menu-admin')
+
+@section('content')
         <section class="dashboard">
             <div class="header_actions_container">
                 <div class="dashboard_header_top">
@@ -49,7 +8,7 @@
                     <p>Consultez la liste des apprenants inscrits et leurs informations de contact.</p>
                 </div>
                 <div class="boutons_action_groupe">
-                    <a href="Ajout.html" class="btn_ajout_unique"><i class="fa-solid fa-plus"></i> Inscrire un participant</a>
+                    <a href="{{route('Admin.insert-student')}}" class="btn_ajout_unique"><i class="fa-solid fa-plus"></i> Inscrire un participant</a>
                 </div>
             </div>
 
@@ -73,7 +32,7 @@
                             <td>jean.dupont@email.com</td>
                             <td>+225 0708091011</td>
                             <td>Groupe Web 2026</td>
-                            <td class="contenu_cours"><a href="Modification.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                            <td class="contenu_cours"><a href="{{route('Admin.update-student')}}"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
@@ -81,7 +40,7 @@
                             <td>alice.kouame@email.com</td>
                             <td>+225 0504030201</td>
                             <td>Groupe Anglais Débutant</td>
-                            <td class="contenu_cours"><a href="Modification.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                            <td class="contenu_cours"><a href="{{route('Admin.update-student')}}"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
                         </tr>
                         <tr>
                             <td>3</td>
@@ -89,7 +48,7 @@
                             <td>emmanuel.aka@email.com</td>
                             <td>+225 0102030405</td>
                             <td>Groupe Billetterie - Session 1</td>
-                            <td class="contenu_cours"><a href="Modification.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                            <td class="contenu_cours"><a href="{{route('Admin.update-student')}}"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -97,13 +56,4 @@
         </section>
     </div>
 
-   <footer>
-        <p>Crée par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
-        <div class="reseau_social">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-    </footer>
-</body>
-</html>
+@endsection
