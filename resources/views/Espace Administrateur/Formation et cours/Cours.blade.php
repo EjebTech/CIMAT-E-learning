@@ -1,4 +1,4 @@
-@extends('menu-admin')
+@extends('template-admin')
 
 @section('content')
         <section class="dashboard dashboard_tableaux_admin">

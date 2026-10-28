@@ -1,4 +1,4 @@
-@extends('menu-admin')
+@extends('template-admin')
 @section('content')
         <section class="dashboard">
             <div class="header_actions_container">

@@ -10,11 +10,13 @@ use Illuminate\Support\Facades\Route;
 
 
 
-
+// Authentification
 Route::get('/', [LoginController::class,'Connexion'])->name('Connexion');
 
 Route::get('Inscription', [LoginController::class,'Inscription'])->name('Inscription');
-//                                             **************Administrateur***********************//
+
+
+//**************Administrateur***********************//
 
 //Exercice
 Route::prefix('Admin')->name('Admin.')->group(function (){
@@ -96,64 +98,70 @@ Route::prefix('Admin')->name('Admin.')->group(function (){
 //      **************Apprenant***********************//
 
 //Cours
-Route::get('Student/Courses', [StudentController::class, 'Courses']);
+Route::prefix('Student')->name('Student.')->group(function(){
+    Route::get('/Courses', [StudentController::class, 'Courses'])->name('courses');
 
-Route::get('Student/Courses-file', [StudentController::class, 'CoursesFile']);
+    Route::get('/Courses-file', [StudentController::class, 'CoursesFile'])->name('courses-file');
 
-//Evaluation
-Route::get('Student/Exercise', [StudentController::class, 'Exercises']);
+    //Evaluation
+    Route::get('/Exercise', [StudentController::class, 'Exercises'])->name('exercise');
 
-Route::get('Student/Corrections', [StudentController::class, 'Corrections']);
+    Route::get('/Corrections', [StudentController::class, 'Corrections'])->name('corrections');
 
-//Formateur
-Route::get('Student/List-Teachers', [StudentController::class, 'Teachers']);
+    //Formateur
+    Route::get('/List-Teachers', [StudentController::class, 'Teachers'])->name('teachers');
 
-//Visioconférence
-Route::get('Student/Videoconference', [StudentController::class, 'Videoconference']);
+    //Visioconférence
+    Route::get('/Videoconference', [StudentController::class, 'Videoconference'])->name('videoconference');
+});
+
 
 
 
 //                                             **************Formateur***********************//
 
 //Evaluation
-Route::get('Teacher/Dashboard', [TeacherController::class, 'DashboardTeacher']);
+Route::prefix('Teacher')->name('Teacher.')->group(function(){
+    Route::get('/Dashboard', [TeacherController::class, 'DashboardTeacher'])->name('dashboard');
 
-Route::get('Teacher/Insert-correction', [TeacherController::class, 'ListCorrection']);
+    Route::get('/Insert-correction', [TeacherController::class, 'ListCorrection'])->name('list-correction');
 
-Route::get('Teacher/Insert-exercise', [TeacherController::class, 'InsertExercise']);
+    Route::get('/Insert-exercise', [TeacherController::class, 'InsertExercise'])->name('insert-exercise');
 
-//Evaluation
-Route::get('Teacher/Exercise', [TeacherController::class, 'ListExercise']);
+    //Evaluation
+    Route::get('/Exercise', [TeacherController::class, 'ListExercise'])->name('exercise');
 
-Route::get('Teacher/Corrections', [TeacherController::class, 'ListCorrection']);
-
-
-
-//Formation et cours
-
-Route::get('Teacher/Courses', [TeacherController::class, 'Courses']);
-
-Route::get('Teacher/Insert-courses', [TeacherController::class, 'InsertCourses']);
-
-Route::get('Teacher/Programs', [TeacherController::class, 'Programs']);
-
-Route::get('Teacher/Course-file', [TeacherController::class, 'CoursesFIle']);
-
-Route::get('Teacher/Insert-Courses-File', [TeacherController::class, 'InsertCoursesFile']);
-
-Route::get('Teacher/Video', [TeacherController::class, 'Video']);
-
-Route::get('Teacher/Insert-Video', [TeacherController::class, 'InsertVideo']);
+    Route::get('/Corrections', [TeacherController::class, 'ListCorrection'])->name('corrections');
 
 
 
-//Groupe
+    //Formation et cours
 
-Route::get('Teacher/Groups', [TeacherController::class, 'Groups']);
+    Route::get('/Courses', [TeacherController::class, 'Courses'])->name('courses');
+
+    Route::get('/Insert-courses', [TeacherController::class, 'InsertCourses'])->name('insert-courses');
+
+    Route::get('/Programs', [TeacherController::class, 'Programs'])->name('programs');
+
+    Route::get('/Course-file', [TeacherController::class, 'CoursesFIle'])->name('course-file');
+
+    Route::get('/Insert-Courses-File', [TeacherController::class, 'InsertCoursesFile'])->name('insert-course-file');
+
+    Route::get('/Video', [TeacherController::class, 'Video'])->name('video');
+
+    Route::get('/Insert-Video', [TeacherController::class, 'InsertVideo'])->name('insert-video');
 
 
-//Visioconférence
 
-Route::get('Teacher/Videoconference', [TeacherController::class, 'Videoconference']);
+    //Groupe
 
-Route::get('Teacher/Insert-Videoconference', [TeacherController::class, 'InsertVideoconference']);
+    Route::get('/Groups', [TeacherController::class, 'Groups'])->name('groups');
+
+
+    //Visioconférence
+
+    Route::get('/Videoconference', [TeacherController::class, 'Videoconference'])->name('videoconference');
+
+    Route::get('/Insert-Videoconference', [TeacherController::class, 'InsertVideoconference'])->name('insert-videoconference');
+
+});
