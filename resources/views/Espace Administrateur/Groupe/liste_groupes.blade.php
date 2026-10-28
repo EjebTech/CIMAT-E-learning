@@ -1,48 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Gestion des Groupes - Groupe Komptech Cimat</title>
-    <link rel="stylesheet" href="../../Elements/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="dashboard_container">
-        <!-- Menu latéral -->
-        <section class="menu">
-<img src="../../Elements/images/logo.png" alt="">
-            <div class="sous_menu">
-                <p>MENU</p>
-                <ul>
-                    <a href="{{route('Admin.dashboard')}}"><li>DASHBOARD</li></a>
-                    <a href="{{route('Admin.programs')}}"><li>FORMATIONS</li></a>
-                    <a href="{{route('Admin.courses')}}"><li>COURS</li></a>
-                    <a href="{{route('Admin.courses-file')}}"><li>FICHIERS DE COURS</li></a>
-                </ul>
-            </div>
-            <div class="sous_menu">
-                <p>SESSION DE COURS</p>
-                <ul>
-                    <a href="{{route('Admin.videoconference')}}"><li>VISIOCONFÉRENCE</li></a>
-                    <a href="{{route('Admin.list-exercise')}}"><li>EXERCICES</li></a>
-                    <a href="{{route('Admin.list-correction')}}"><li>CORRECTIONS</li></a>
-                    <a href="{{route('Admin.groups')}}"><li>GROUPES</li></a>
-                </ul>
-            </div>
-            <div class="sous_menu">
-                <p>CONNEXION</p>
-                <ul>
-                    <a href="{{route('Admin.list-admin')}}"><li></i> ADMINISTRATEUR</li></a>
-                    <a href="{{route('Admin.list-teacher')}}"><li> FORMATEUR</li></a>
-                    <a href="{{route('Admin.list-student')}}"><li></i> PARTICIPANT</li></a>
-                </ul>
-            </div>
-        </section>
+@extends('menu-admin')
 
+@section('content')
         <!-- Contenu principal -->
         <section class="dashboard dashboard_tableaux_admin">
             <div class="header_actions_container">
@@ -51,8 +9,8 @@
                     <p>Organisez les apprenants et attribuez-les aux différentes formations.</p>
                 </div>
                 <div class="boutons_action_groupe">
-                    <a href="ajout_groupe.html" class="btn_ajout_unique"><i class="fa-solid fa-plus"></i> Créer un groupe</a>
-                    <a href="liste_apprenants.html" class="btn_ajout_unique"><i class="fa-solid fa-plus"></i> AJouter un apprenant à un groupe</a>
+                    <a href="{{route('Admin.insert-groups')}}" class="btn_ajout_unique"><i class="fa-solid fa-plus"></i> Créer un groupe</a>
+                    <a href="{{route('Admin.assign-student')}}" class="btn_ajout_unique"><i class="fa-solid fa-plus"></i> AJouter un apprenant à un groupe</a>
                 </div>
             </div>
 
@@ -94,28 +52,28 @@
                             <td>Groupe Anglais de Spécialité - Promotion 2026</td>
                             <td>ANGLAIS DE SPÉCIALITÉ VOYAGE ET TOURISME</td>
                             <td>20 apprenants</td>
-                            <td class="contenu_cours"><a href="form_modif_groupe.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                            <td class="contenu_cours"><a href="{{route('Admin.update-groups')}}"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Groupe Fret Aérien - Session Intensif</td>
                             <td>FRET AÉRIEN</td>
                             <td>15 apprenants</td>
-                            <td class="contenu_cours"><a href="form_modif_groupe.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                            <td class="contenu_cours"><a href="{{route('Admin.update-groups')}}"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>Groupe Billetterie & Transport - Cohorte 1</td>
                             <td>BILLETERIE-TRANSPORT AÉRIEN ET TOURISME</td>
                             <td>12 apprenants</td>
-                            <td class="contenu_cours"><a href="form_modif_groupe.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                            <td class="contenu_cours"><a href="{{route('Admin.update-groups')}}"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>Groupe GDS Amadeus - Expert</td>
                             <td>LOGICIELS DE RESERVATION GDS AMADEUS / SABRE / GALILEO</td>
                             <td>18 apprenants</td>
-                            <td class="contenu_cours"><a href="form_modif_groupe.html"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
+                            <td class="contenu_cours"><a href="{{route('Admin.update-groups')}}"><i class="fa-solid fa-pen-to-square"></i> Modifier</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -130,15 +88,5 @@
                 </div>
             </div>
         </section>
-    </div>
 
-    <footer>
-        <p>Créé par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
-        <div class="reseau_social">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-    </footer>
-</body>
-</html>
+@endsection

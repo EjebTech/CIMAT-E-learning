@@ -1,182 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../Elements/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="dashboard_container">
-        <section class="menu">
-<img src="../../Elements/images/logo.png" alt="">
-            <div class="sous_menu">
-                <p>MENU</p>
-                <ul>
-                    <a href="{{route('Admin.dashboard')}}"><li>DASHBOARD</li></a>
-                    <a href="{{route('Admin.programs')}}"><li>FORMATIONS</li></a>
-                    <a href="{{route('Admin.courses')}}"><li>COURS</li></a>
+@extends('menu-admin')
 
-                    <a href="{{route('Admin.courses-file')}}"><li>FICHIERS DE COURS</li></a>
-                </ul>
-            </div>
-            <div class="sous_menu">
-                <p>SESSION DE COURS</p>
-                <ul>
-                    <a href="{{route('Admin.videoconference')}}"><li>VISIOCONFÉRENCE</li></a>
-                    <a href="{{route('Admin.list-exercise')}}"><li>EXERCICES</li></a>
-                    <a href="{{route('Admin.list-correction')}}"><li>CORRECTIONS</li></a>
-                    <a href="{{route('Admin.groups')}}"><li>GROUPES</li></a>
-                </ul>
-            </div>
-            <div class="sous_menu">
-                <p>CONNEXION</p>
-                <ul>
-                    <a href="{{route('Admin.list-admin')}}"><li> ADMINISTRATEUR</li></a>
-                    <a href="{{route('Admin.list-teacher')}}"><li>FORMATEUR</li></a>
-                    <a href="{{route('Admin.list-student')}}"><li> PARTICIPANT</li></a>
-                </ul>
-            </div>
-        </section>
-        <section class="dashboard dashboard_admin">
-            <div class="statistiques">
 
-                <div class="stat">
-                    <div class="chiffres">
-                        <i class="fa-solid fa-user-graduate"></i>
-                        <p>7</p>
-                    </div>
-                    <div class="titre">
-                        <h3>PARTICIPANTS INSCRITS</h3>
-                        <a href="{{route('Admin.list-student')}}">Parcourir</a>
-                    </div>
-                </div>
-                <div class="stat">
-                    <div class="chiffres">
-                        <i class="fa-solid fa-book"></i>
-                        <p>7</p>
-                    </div>
-                    <div class="titre">
-                        <h3>NOMBRE DE FORMATIONS</h3>
-                        <a href="{{route('Admin.programs')}}">Parcourir</a>
-                    </div>
-                </div>
-                <div class="stat">
-                    <div class="chiffres">
-                        <i class="fa-solid fa-book-open"></i>
-                        <p>4</p>
-                    </div>
-                    <div class="titre">
-                        <h3>NOMBRE DE COURS</h3>
-                        <a href="{{route('Admin.courses')}}">Parcourir</a>
-                    </div>
-                </div>
-                <div class="stat">
-                    <div class="chiffres">
-                        <i class="fa-solid fa-users-between-lines"></i>
-                        <p>9</p>
-                    </div>
-                    <div class="titre">
-                        <h3>GROUPES</h3>
-                        <a href="{{route('Admin.groups')}}">Parcourir</a>
-                    </div>
-                </div>
-                <div class="stat">
-                    <div class="chiffres">
-                        <i class="fa-solid fa-person-chalkboard"></i>
-                        <p>13</p>
-                    </div>
-                    <div class="titre">
-                        <h3>FORMATEURS INSCRITS</h3>
-                        <a href="{{route('Admin.list-teacher')}}">Parcourir</a>
-                    </div>
-                </div>
+@section('content')
+    <section class="dashboard dashboard_admin">
+        <div class="statistiques">
 
+            <div class="stat">
+                <div class="chiffres">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <p>7</p>
+                </div>
+                <div class="titre">
+                    <h3>PARTICIPANTS INSCRITS</h3>
+                    <a href="{{route('Admin.list-student')}}">Parcourir</a>
+                </div>
             </div>
-            <div class="flux_activite">
-                <div class="flux_header">
-                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Flux d'activités récents</h3>
+            <div class="stat">
+                <div class="chiffres">
+                    <i class="fa-solid fa-book"></i>
+                    <p>7</p>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Type d'événement</th>
-                            <th>Description</th>
-                            <th>Rôle</th>
-                            <th>Date & Heure</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <span class="event_inscription">
-                                    <i class="fa-solid fa-user-plus"></i> Inscription
-                                </span>
-                            </td>
-                            <td><strong>Jean Dupont</strong> s'est inscrit sur la plateforme</td>
-                            <td><span class="role_tag role_participant">Participant</span></td>
-                            <td>24 Fév 2026 - 14:32</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="event_cours">
-                                    <i class="fa-solid fa-file-circle-plus"></i> Contenu
-                                </span>
-                            </td>
-                            <td><strong>Marie Curie</strong> a publié un nouveau fichier de cours</td>
-                            <td><span class="role_tag role_formateur">Formateur</span></td>
-                            <td>24 Fév 2026 - 13:15</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="event_connexion">
-                                    <i class="fa-solid fa-right-to-bracket"></i> Connexion
-                                </span>
-                            </td>
-                            <td><strong>Komptech Admin</strong> s'est connecté au système</td>
-                            <td><span class="role_tag role_admin">Administrateur</span></td>
-                            <td>24 Fév 2026 - 11:00</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="event_cours">
-                                    <i class="fa-solid fa-graduation-cap"></i> Formation
-                                </span>
-                            </td>
-                            <td>Création de la formation <strong>"Développement Web Avancé"</strong></td>
-                            <td><span class="role_tag role_admin">Administrateur</span></td>
-                            <td>23 Fév 2026 - 16:45</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="event_connexion">
-                                    <i class="fa-solid fa-right-to-bracket"></i> Connexion
-                                </span>
-                            </td>
-                            <td><strong>Alexandre Martin</strong> s'est connecté</td>
-                            <td><span class="role_tag role_participant">Participant</span></td>
-                            <td>23 Fév 2026 - 10:20</td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                <div class="titre">
+                    <h3>NOMBRE DE FORMATIONS</h3>
+                    <a href="{{route('Admin.programs')}}">Parcourir</a>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="chiffres">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>4</p>
+                </div>
+                <div class="titre">
+                    <h3>NOMBRE DE COURS</h3>
+                    <a href="{{route('Admin.courses')}}">Parcourir</a>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="chiffres">
+                    <i class="fa-solid fa-users-between-lines"></i>
+                    <p>9</p>
+                </div>
+                <div class="titre">
+                    <h3>GROUPES</h3>
+                    <a href="{{route('Admin.groups')}}">Parcourir</a>
+                </div>
+            </div>
+            <div class="stat">
+                <div class="chiffres">
+                    <i class="fa-solid fa-person-chalkboard"></i>
+                    <p>13</p>
+                </div>
+                <div class="titre">
+                    <h3>FORMATEURS INSCRITS</h3>
+                    <a href="{{route('Admin.list-teacher')}}">Parcourir</a>
+                </div>
             </div>
 
-        </section>
-
-    </div>
-
-   <footer>
-        <p>Crée par <a href="https://cimat-ci.net/">@CIMAT IATA </a> | 2026 Tous droits réservés.</p>
-        <div class="reseau_social">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href=""><i class="fa-brands fa-youtube"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
         </div>
-    </footer>
-</body>
-</html>
+        <div class="flux_activite">
+            <div class="flux_header">
+                <h3><i class="fa-solid fa-clock-rotate-left"></i> Flux d'activités récents</h3>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Type d'événement</th>
+                        <th>Description</th>
+                        <th>Rôle</th>
+                        <th>Date & Heure</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="event_inscription">
+                                <i class="fa-solid fa-user-plus"></i> Inscription
+                            </span>
+                        </td>
+                        <td><strong>Jean Dupont</strong> s'est inscrit sur la plateforme</td>
+                        <td><span class="role_tag role_participant">Participant</span></td>
+                        <td>24 Fév 2026 - 14:32</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="event_cours">
+                                <i class="fa-solid fa-file-circle-plus"></i> Contenu
+                            </span>
+                        </td>
+                        <td><strong>Marie Curie</strong> a publié un nouveau fichier de cours</td>
+                        <td><span class="role_tag role_formateur">Formateur</span></td>
+                        <td>24 Fév 2026 - 13:15</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="event_connexion">
+                                <i class="fa-solid fa-right-to-bracket"></i> Connexion
+                            </span>
+                        </td>
+                        <td><strong>Komptech Admin</strong> s'est connecté au système</td>
+                        <td><span class="role_tag role_admin">Administrateur</span></td>
+                        <td>24 Fév 2026 - 11:00</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="event_cours">
+                                <i class="fa-solid fa-graduation-cap"></i> Formation
+                            </span>
+                        </td>
+                        <td>Création de la formation <strong>"Développement Web Avancé"</strong></td>
+                        <td><span class="role_tag role_admin">Administrateur</span></td>
+                        <td>23 Fév 2026 - 16:45</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="event_connexion">
+                                <i class="fa-solid fa-right-to-bracket"></i> Connexion
+                            </span>
+                        </td>
+                        <td><strong>Alexandre Martin</strong> s'est connecté</td>
+                        <td><span class="role_tag role_participant">Participant</span></td>
+                        <td>23 Fév 2026 - 10:20</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+@endsection

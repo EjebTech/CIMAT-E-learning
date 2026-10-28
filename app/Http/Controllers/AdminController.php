@@ -82,7 +82,7 @@ class AdminController extends Controller
         return view("Espace Administrateur.Utilisateurs.Administrateur.liste_administrateur");
     }
     public function UpdateAdmin(){
-        return view("Espace Administrateur.Utilisateurs.Formateur.Modification");
+        return view("Espace Administrateur.Utilisateurs.Administrateur.Modification");
     }
     public function InsertTeacher(){
         return view("Espace Administrateur.Utilisateurs.Formateur.Ajout");
