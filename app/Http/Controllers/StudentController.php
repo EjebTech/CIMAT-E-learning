@@ -11,6 +11,9 @@ class StudentController extends Controller
     public function Courses(){
         return view("Espace Apprenant.Cours.index");
     }
+    public function Dashboard(){
+        return view("Espace Apprenant.index");
+    }
     public function CoursesFile(){
         return view("Espace Apprenant.Cours.Mes_fichiers_de_cours");
     }

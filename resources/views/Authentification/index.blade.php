@@ -42,6 +42,6 @@
             </div>
         </div>
     </div>
-
+<script src="{{asset('Elements/app.js')}}"></script>
 </body>
 </html>

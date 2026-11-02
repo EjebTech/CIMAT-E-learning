@@ -99,7 +99,9 @@ Route::prefix('Admin')->name('Admin.')->group(function (){
 
 //Cours
 Route::prefix('Student')->name('Student.')->group(function(){
-    Route::get('/', [StudentController::class, 'Courses'])->name('courses');
+    Route::get('/', [StudentController::class, 'Dashboard'])->name('dashboard');
+
+    Route::get('/Courses', [StudentController::class, 'Courses'])->name('courses');
 
     Route::get('/Courses-file', [StudentController::class, 'CoursesFile'])->name('courses-file');
 
