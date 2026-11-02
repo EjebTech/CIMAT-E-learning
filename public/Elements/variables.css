@@ -23,8 +23,6 @@
   --color-warning: #f59e0b;        /* Cours en cours / Priorité */
   --color-danger: #ef4444;         /* Bouton supprimer / Erreur */
 
-  /*TYPOGRAPHIE (Tailles & Poids) */
-  --font-family: 'Poppins', system-ui, -apple-system, sans-serif;
 
   /* Tailles des Titres */
   --font-size-h1: 2.25rem;  /* 36px - Titres de page / Dashboard */

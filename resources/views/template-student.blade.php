@@ -16,6 +16,9 @@
                 <div class="logo_presentation">
                     <img src="{{ asset('Elements/images/logo.png') }}" alt="Logo CIMAT">
                 </div>
+                <button class="open_close" id="toggleBtn">
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                </button>
             </div>
 
             <div class="sidebar">
@@ -48,18 +51,29 @@
                     <h3>Annonces / Évènements</h3>
                 </a>
                 <a href="#" class="link">
-                    <span><i class="fa-solid fa-gear"></i></span>
-                    <h3>Paramètres</h3>
+                    <span><i class="fa-solid fa-calendar"></i></span>
+                    <h3>Calendrier</h3>
                 </a>
-                <a href="#" class="link logout">
-                    <span><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
-                    <h3>Déconnexion</h3>
+                <a href="#" class="link">
+                    <span><i class="fa-solid fa-bullhorn"></i></span>
+                    <h3>Annonces / Évènements</h3>
                 </a>
+                <div class="footer_sidebar">
+                    <a href="#" class="link">
+                        <span><i class="fa-solid fa-gear"></i></span>
+                        <h3>Paramètres</h3>
+                    </a>
+                    <a href="#" class="link logout">
+                        <span><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                        <h3>Déconnexion</h3>
+                    </a>
+                </div>
             </div>
         </nav>
+        <div></div>
 
-        @yield('content')
     </div>
+
     <script src="{{asset('Elements/app.js')}}"></script>
 </body>
 </html>

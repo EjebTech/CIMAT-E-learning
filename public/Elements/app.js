@@ -29,3 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.querySelector('.open_close');
+    const menuSection = document.querySelector('.menu_section');
+    const mainContainer = document.querySelector('.container.student');
+
+    if (toggleBtn && menuSection) {
+        toggleBtn.addEventListener('click', () => {
+            menuSection.classList.toggle('close');
+            if (mainContainer) {
+                mainContainer.classList.toggle('sidebar-closed');
+            }
+        });
+    }
+
+})
