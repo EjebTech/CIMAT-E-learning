@@ -1,47 +1,45 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIMAT E-learning - Connexion</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../Elements/style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{asset('Elements/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 </head>
-<body >
-
-    <div class="conteneur-authentification">
-        <div class="carte-authentification">
-
-            <div class="entete-authentification">
-                <h2>CIMAT E-learning</h2>
-                <p>Connectez-vous à votre espace</p>
+<body>
+    <div class="container_authentification">
+        <div class="authentification">
+            <div class="form-login">
+                <div class="top">
+                    <h3>BIENVENUE À</h3>
+                    <div class="logo">
+                        <img src="{{asset('Elements/images/logo.png')}}" alt="">
+                    </div>
+                    <span>Connectez-vous pour accéder à votre espace.</span>
+                </div>
+                <form action="">
+                    <div class="input-box">
+                        <span><i class="fa-regular fa-user"></i></span>
+                        <input type="text" placeholder="Nom d'utilisateur...">
+                    </div>
+                    <div class="input-box">
+                        <span><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" placeholder="Mot de passe...">
+                        <span><i class="fa-regular fa-circle-question"></i></span>
+                    </div>
+                    <button class="submit">CONNECTEZ-VOUS</button>
+                </form>
             </div>
-
-            <form action="#" method="POST" class="formulaire-authentification">
-                <div class="form-group">
-                    <label for="email">Adresse Email</label>
-                    <input type="email"  name="email" required autofocus placeholder="votre.email@cimat.com">
+            <div class="presentation">
+                <div class="logo_presentation">
+                    <img src="{{asset('Elements/images/logo.png')}}" alt="">
                 </div>
-
-                <div class="form-group">
-                    <label for="mot_de_passe">Mot de passe</label>
-                    <input type="password"  name="mot_de_passe" required placeholder="••••••••">
+                <div class="presentation_text">
+                    <p>Bénéficiez de notre formation de qualité sur cette plateforme</p>
                 </div>
-
-                <div class="actions-alignees">
-                    <label class="option-souvenir">
-                        <input type="checkbox" name="se_souvenir"> Se souvenir de moi
-                    </label>
-                    <a href="#" class="mot_de_passe">Mot de passe oublié ?</a>
-                </div>
-
-                <button type="submit">Se connecter</button>
-            </form>
-
-            <div class="footer-authentification">
-                <p>Pas encore de compte ? <a href="{{route('Inscription')}}">Inscrivez-vous</a></p>
             </div>
-
         </div>
     </div>
 

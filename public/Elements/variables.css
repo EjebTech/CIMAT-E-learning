@@ -1,0 +1,58 @@
+:root {
+
+  /* Couleurs Principales */
+  --color-primary: #0f4c81;        /* Bleu Aviation profond */
+  --color-primary-hover: #0b3962;  /* Bleu sombre au survol */
+  --color-primary-light: #eef5fc;  /* Bleu très clair (fonds de cartes / badges) */
+
+  /* Couleurs d'Accentuation (Action) */
+  --color-accent: #ff6b35;         /* Orange dynamique (Boutons d'action ) */
+  --color-accent-hover: #e05320;   /* Orange au survol */
+  --color-accent-light: #fff0eb;   /* Orange très clair (alertes / mises en avant) */
+
+  /* Couleurs Neutres (Fond & Textes) */
+  --color-bg-main: #f8fafc;        /* Fond général de la page */
+  --color-bg-surface: #ffffff;     /* Fond des cartes, modales et sidebar */
+
+  --color-text-main: #1e293b;      /* Texte principal */
+  --color-text-muted: #64748b;     /* Texte secondaire (dates, sous-titres) */
+  --color-border: #e2e8f0;         /* Bordures douces */
+
+  /* Couleurs d'État */
+  --color-success: #10b981;        /* Cours terminé / Leçon validée */
+  --color-warning: #f59e0b;        /* Cours en cours / Priorité */
+  --color-danger: #ef4444;         /* Bouton supprimer / Erreur */
+
+  /*TYPOGRAPHIE (Tailles & Poids) */
+  --font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+
+  /* Tailles des Titres */
+  --font-size-h1: 2.25rem;  /* 36px - Titres de page / Dashboard */
+  --font-size-h2: 1.75rem;  /* 28px - Titres de sections / Modules */
+  --font-size-h3: 1.25rem;  /* 20px - Titres de cartes / Leçons */
+
+  /* Tailles de Texte */
+  --font-size-body: 1rem;      /* 16px - Paragraphes principaux */
+  --font-size-small: 0.875rem; /* 14px - Boutons, légendes, badges */
+  --font-size-xs: 0.75rem;    /* 12px - Timestamps, détails */
+
+  /* Epaisseurs de Police */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* RAYONS DE BORDURE (Border Radius) */
+  --radius-sm: 6px;     /* Petits éléments : boutons, inputs, badges */
+  --radius-md: 12px;    /* Éléments moyens : cartes de cours, modales */
+  --radius-lg: 20px;    /* Grands conteneurs / Bannières */
+  --radius-full: 9999px;/* Boutons pill / Avatars */
+
+  /*4. OMBRES & TRANSITIONS */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 76, 129, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 76, 129, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease-in-out;
+}
