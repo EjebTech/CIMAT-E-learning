@@ -17,9 +17,9 @@
                     <div class="logo">
                         <img src="{{asset('Elements/images/logo.png')}}" alt="">
                     </div>
-                    <span>Connectez-vous pour accéder à votre espace.</span>
+                    <span>Authentifiez-vous pour accéder à votre espace.</span>
                 </div>
-                <form action="">
+                <form action="{{ route('Student.dashboard') }}">
                     <div class="input-box">
                         <span><i class="fa-regular fa-user"></i></span>
                         <input type="text" placeholder="Nom d'utilisateur...">
@@ -29,7 +29,11 @@
                         <input type="password" placeholder="Mot de passe...">
                         <span><i class="fa-regular fa-circle-question"></i></span>
                     </div>
-                    <button class="submit">CONNECTEZ-VOUS</button>
+                    <div class="forgot_password">
+                        <p>Vous avez oublié votre mot de passe ?</p>
+                        <a href="">Mot de passe oublié</a>
+                    </div>
+                    <button type="submit" class="submit">CONNECTEZ-VOUS</button>
                 </form>
             </div>
             <div class="presentation">

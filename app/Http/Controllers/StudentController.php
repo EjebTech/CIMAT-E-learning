@@ -17,9 +17,10 @@ class StudentController extends Controller
     public function CoursesFile(){
         return view("Espace Apprenant.Cours.Mes_fichiers_de_cours");
     }
+    
     //Exercices
 
-    public function Exercises(){
+    public function Homeworks(){
         return view("Espace Apprenant.Evaluation.Exercices");
     }
     public function Corrections(){

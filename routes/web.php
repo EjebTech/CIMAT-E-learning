@@ -101,12 +101,12 @@ Route::prefix('Admin')->name('Admin.')->group(function (){
 Route::prefix('Student')->name('Student.')->group(function(){
     Route::get('/', [StudentController::class, 'Dashboard'])->name('dashboard');
 
-    Route::get('/Courses', [StudentController::class, 'Courses'])->name('courses');
+    Route::get('/Programs&Courses', [StudentController::class, 'Courses'])->name('programs&courses');
 
     Route::get('/Courses-file', [StudentController::class, 'CoursesFile'])->name('courses-file');
 
     //Evaluation
-    Route::get('/Exercise', [StudentController::class, 'Exercises'])->name('exercise');
+    Route::get('/Homework&Corrections', [StudentController::class, 'Homeworks'])->name('homework&correction');
 
     Route::get('/Corrections', [StudentController::class, 'Corrections'])->name('corrections');
 
@@ -137,8 +137,6 @@ Route::prefix('Teacher')->name('Teacher.')->group(function(){
 
     Route::get('/Insert-correction', [TeacherController::class, 'InsertCorrection'])->name('insert-correction');
 
-
-
     //Formation et cours
 
     Route::get('/Courses', [TeacherController::class, 'Courses'])->name('courses');
@@ -154,8 +152,6 @@ Route::prefix('Teacher')->name('Teacher.')->group(function(){
     Route::get('/Video', [TeacherController::class, 'Video'])->name('video');
 
     Route::get('/Insert-Video', [TeacherController::class, 'InsertVideo'])->name('insert-video');
-
-
 
     //Groupe
 
