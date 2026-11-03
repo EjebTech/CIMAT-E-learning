@@ -23,7 +23,7 @@
 
             <div class="sidebar">
                 <a href="{{route('Student.dashboard')}}" class="link {{request()->routeIs('Student.dashboard') ? 'active' : ''}}">
-                    <span><i class="fa-solid fa-house"></i></span>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#e3e3e3"><path d="M13,9V3h8V9H13ZM3,13V3h8V13H3Zm10,8V11h8V21H13ZM3,21V15h8v6H3ZM5,11H9V5H5v6Zm10,8h4V13H15v6ZM15,7h4V5H15V7ZM5,19H9V17H5v2Zm4-8Zm6-4Zm0,6ZM9,17Z"/></svg></span>
                     <h3>Dashboard</h3>
                 </a>
                 <a href="{{route('Student.programs&courses')}}" class="link {{request()->routeIs('Student.programs&courses') ? 'active' : ''}}">
@@ -56,8 +56,8 @@
                     <h3>Calendrier</h3>
                 </a>
                 <a href="" class="link ">
-                    <span><i class="fa-solid fa-bullhorn"></i></span>
-                    <h3>Annonces / Évènements</h3>
+                    <span><i class="fa-solid fa-chart-line"></i></span>
+                    <h3>Mes Résultats</h3>
                 </a>
                 <div class="footer_sidebar">
                     <a href="" class="link">
@@ -66,7 +66,7 @@
                     </a>
                     <a href="" class="link logout">
                         <span><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
-                        <h3>keyDéconnexion</h3>
+                        <h3>Déconnexion</h3>
                     </a>
                 </div>
             </div>

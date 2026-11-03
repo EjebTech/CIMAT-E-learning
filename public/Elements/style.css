@@ -14,6 +14,7 @@ body{
     height: 100vh;
     width: 100%;
     font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-bg-main);
 }
 
 /* Authentification */
@@ -170,7 +171,6 @@ background: linear-gradient(50deg, rgba(16, 104, 181, 1) 48%, rgba(11, 57, 98, 1
 }
 .logo_presentation img {
     height: 60px;
-
     filter: brightness(0) invert(1);
     object-fit: contain;
 
@@ -202,7 +202,7 @@ background: linear-gradient(50deg, rgba(16, 104, 181, 1) 48%, rgba(11, 57, 98, 1
 
 
 .container.student > *:not(.menu_section) {
-    animation: fadeInContent 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeInContent 0.2s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 @keyframes fadeInContent {
@@ -217,25 +217,23 @@ background: linear-gradient(50deg, rgba(16, 104, 181, 1) 48%, rgba(11, 57, 98, 1
 }
 /* Sidebar */
 
-.container.student{
+.container.student {
     display: grid;
-    grid-template-columns: 18rem auto;
-    margin-left: 18rem;
-    transition: margin-left 0.3s ease-in-out;
+    grid-template-columns: 18rem 1fr;
     min-height: 100vh;
+    transition: grid-template-columns 0.3s ease-in-out;
 }
 
 .container.student.sidebar-closed {
-    margin-left: 5rem;
+    grid-template-columns: 5rem 1fr;
 }
 
 
-.menu_section{
+.menu_section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #1068b5;
-background: linear-gradient(50deg, rgba(16, 104, 181, 1) 37%, rgba(11, 57, 98, 1) 50%);
+    background: linear-gradient(50deg, rgba(16, 104, 181, 1) 37%, rgba(11, 57, 98, 1) 50%);
     height: 100vh;
     padding: 14px;
     position: fixed;
@@ -244,7 +242,7 @@ background: linear-gradient(50deg, rgba(16, 104, 181, 1) 37%, rgba(11, 57, 98, 1
     width: 18rem;
     transition: width 0.3s ease-in-out;
     overflow: hidden;
-
+    z-index: 100;
 }
 .logo_presentation {
     transition: all 0.2s ease-in-out;
@@ -305,7 +303,7 @@ background: linear-gradient(50deg, rgba(16, 104, 181, 1) 37%, rgba(11, 57, 98, 1
     bottom: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 7px;
     width: 100%;
 }
 
@@ -318,7 +316,7 @@ background: linear-gradient(50deg, rgba(16, 104, 181, 1) 37%, rgba(11, 57, 98, 1
     display: none;
 }
 .menu_section.close .top .logo_presentation,
-.menu_secton.close .top img
+.menu_section.close .top img
 {
     opacity: 0;
     display: none;
@@ -378,3 +376,126 @@ background: linear-gradient(50deg, rgba(16, 104, 181, 1) 37%, rgba(11, 57, 98, 1
 .no-transition * {
     transition: none;
 }
+
+
+
+/* Contenu dashboard etudiant */
+
+.notification-icon{
+    color: black;
+}
+
+
+.main_content_dashboard_student {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(8, minmax(80px, auto));
+    gap: 16px;
+    width: 100%;
+}
+
+/* greetings */
+.greetings {
+  grid-area: 1 / 1 / 2 / 8;
+  background: #638bf133;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  border-radius: var(--radius-lg);
+  max-height: 180px;
+}
+
+.greetings img{
+    width: 300px;
+    height: 210px;
+    object-fit: contain;
+}
+
+.greetings h2{
+    color: var(--color-text-main);
+    font-size: var(--font-size-h3);
+}
+.main_content_dashboard_student .greetings_text{
+    line-height: 35px;
+}
+.greetings span{
+    color: var(--color-text-muted);
+    font-weight: 430;
+}
+.greetings p{
+    font-size: var(--font-size-h2);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+}
+
+/* top dashboard */
+
+
+.item2 {
+  grid-area: 2 / 1 / 3 / 8;
+  background: #ec489933;
+  border: 2px solid #ec4899;
+}
+
+.item3 {
+  grid-area: 3 / 1 / 6 / 6;
+  background: #14b8a633;
+  border: 2px solid #14b8a6;
+}
+
+.item4 {
+  grid-area: 3 / 6 / 6 / 8;
+  background: #f59e0b33;
+  border: 2px solid #f59e0b;
+}
+
+.item5 {
+  grid-area: 6 / 1 / 9 / 4;
+  background: #8b5cf633;
+  border: 2px solid #8b5cf6;
+}
+
+.item6 {
+  grid-area: 6 / 4 / 9 / 6;
+  background: #ef444433;
+  border: 2px solid #ef4444;
+}
+
+.item7 {
+  grid-area: 6 / 6 / 9 / 8;
+  background: #0ea5e933;
+  border: 2px solid #0ea5e9;
+}
+
+.contenu_dashboard {
+    grid-column: 2;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.container.student.sidebar-closed .contenu_dashboard {
+    margin-left: 1rem;
+    width: calc(100% - 2rem);
+}
+
+.top_dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-bg-surface);
+    padding: 15px 20px;
+    width: 100%;
+}
+
+/* Message de bienvenue*/
+
+/* mini statistiques dashboard */
+
+
