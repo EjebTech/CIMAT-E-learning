@@ -46,6 +46,6 @@
             </div>
         </div>
     </div>
-<script src="{{asset('Elements/app.js')}}"></script>
+<script src="{{asset('Elements/js/navigation.js')}}"></script>
 </body>
 </html>

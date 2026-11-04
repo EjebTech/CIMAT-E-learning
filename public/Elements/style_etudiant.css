@@ -177,12 +177,8 @@ body {
 
 .presentation {
     flex: 1;
-    background: #1068b5;
-    background: linear-gradient(
-        50deg,
-        rgba(16, 104, 181, 1) 48%,
-        rgba(11, 57, 98, 1) 63%
-    );
+    background: #1186ed;
+    background: linear-gradient(50deg, rgba(17, 134, 237, 1) 0%, rgba(11, 57, 98, 1) 75%);
     color: #ffffff;
     padding: 40px;
     display: flex;
@@ -256,11 +252,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(
-        50deg,
-        rgba(16, 104, 181, 1) 37%,
-        rgba(11, 57, 98, 1) 50%
-    );
+    background: #1186ed;
+    background: linear-gradient(50deg, rgba(17, 134, 237, 1) 0%, rgba(11, 57, 98, 1) 75%);
     height: 100vh;
     padding: 14px;
     position: fixed;
@@ -1011,12 +1004,9 @@ body {
 }
 
 .btn_submit_hw:hover {
-    text-decoration: none;
+    text-decoration: underline;
     transform: translateX(2px);
-    padding: 4px 8px;
-    border-radius: var(--radius-sm);
-    background-color: var(--color-accent);
-    color: white;
+    color: var(--color-primary-dark);
 }
 
 /* ==========================================
