@@ -582,7 +582,6 @@ body {
 .item2,
 .item3,
 .item4,
-.item5,
 .item6,
 .item7 {
     background: var(--color-bg-surface);
@@ -594,7 +593,6 @@ body {
     flex-direction: column;
     gap: 16px;
 }
-
 .item_header {
     display: flex;
     justify-content: space-between;
@@ -651,18 +649,15 @@ body {
     grid-area: 3 / 6 / 6 / 8;
 }
 
-.item5 {
-    grid-area: 6 / 1 / 9 / 4;
-}
+/* On supprime .item5 et on étend .item6 et .item7 */
 
 .item6 {
-    grid-area: 6 / 4 / 9 / 6;
+    grid-area: 6 / 1 / 9 / 4; /* Prend 3 colonnes à gauche (l'ancienne place du calendrier) */
 }
 
 .item7 {
-    grid-area: 6 / 6 / 9 / 8;
+    grid-area: 6 / 4 / 9 / 8; /* Prend les 4 colonnes restantes à droite pour les devoirs */
 }
-
 .item2 .stat {
     display: flex;
     align-items: center;

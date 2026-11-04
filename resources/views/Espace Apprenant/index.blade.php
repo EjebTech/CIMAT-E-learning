@@ -165,26 +165,6 @@
                 </div>
             </div>
 
-            <!-- ITEM 5 : Calendrier Dynamique -->
-            <div class="item5">
-                <div class="item_header">
-                    <h3><i class="fa-solid fa-calendar-days"></i> Calendrier Pédagogique</h3>
-                    <a href="#" class="see_more">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="mini_calendar">
-                    <div class="calendar_header">
-                        <button id="prevMonth"><i class="fa-solid fa-chevron-left"></i></button>
-                        <h4 id="calendarMonth">Septembre 2026</h4>
-                        <button id="nextMonth"><i class="fa-solid fa-chevron-right"></i></button>
-                    </div>
-                    <div class="calendar_weekdays">
-                        <span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
-                    </div>
-                    <div class="calendar_days" id="calendarDays">
-                        <!-- Généré en JS -->
-                    </div>
-                </div>
-            </div>
 
             <!-- ITEM 6 : Annonces et Événements -->
             <div class="item6">
