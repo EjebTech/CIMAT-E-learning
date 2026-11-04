@@ -15,10 +15,8 @@ a {
 body {
     height: 100vh;
     width: 100%;
-    font-size: 0.95rem;
     font-family: 'Poppins', system-ui, -apple-system, sans-serif;
     background-color: var(--color-bg-main);
-    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -30,11 +28,6 @@ body {
     width: 200px;
     height: 60px;
     margin: 10px 0;
-}
-
-.logo h1{
-    color: var(--color-primary);
-    font-style: italic;
 }
 
 .container_authentification {
@@ -91,7 +84,6 @@ body {
 
 .form-login .top {
     margin-bottom: 24px;
-    line-height: 2.4rem;
 }
 
 .form-login h3 {
@@ -128,15 +120,14 @@ body {
     align-items: center;
     background-color: var(--color-bg-main);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
     margin-bottom: 16px;
     transition: border-color var(--transition-normal);
 }
 
 .input-box:focus-within {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(16, 104, 181, 0.1);
 }
 
 .input-box input {
@@ -214,7 +205,7 @@ body {
 }
 
 .container.student > *:not(.menu_section) {
-    animation: fadeInContent 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    animation: fadeInContent 0.2s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 @keyframes fadeInContent {
@@ -301,11 +292,11 @@ body {
 .sidebar .link span {
     min-width: 24px;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .sidebar .link h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
 }
 
@@ -444,19 +435,15 @@ body {
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.contenu_dashboard .top.dashboard .nav .profile_student{
-    background-color: var(--color-primary-hover);
-}
-
 .contenu_dashboard .top.dashboard .nav .profile_student:hover {
     transform: translateY(-3px);
     background-color: var(--color-primary-hover);
     box-shadow: var(--shadow-sm);
 }
 
-.contenu_dashboard .top.dashboard .nav .profile_student .name p{
+.contenu_dashboard .top.dashboard .nav .profile_student:hover p:first-child,
+.contenu_dashboard .top.dashboard .nav .profile_student:hover p:last-child {
     color: white;
-    font-size: 0.95rem;
 }
 
 .contenu_dashboard .top.dashboard .nav .profile_student img {
@@ -470,6 +457,7 @@ body {
 }
 
 .contenu_dashboard .top.dashboard .nav .profile_student p:first-child {
+    color: var(--color-primary-hover);
     font-weight: var(--font-weight-bold);
     transition: color 0.3s ease;
 }
@@ -482,27 +470,27 @@ body {
     border-radius: var(--radius-full);
     border: 1px solid transparent;
     transition: all 0.3s ease;
-    background-color: var(--color-primary-light);
 }
 
 .notif:hover {
-    background-color: var(--color-primary-hover);
+    background-color: var(--color-bg-main);
     border-color: var(--color-border);
     transform: translateY(-2px);
 }
 
 .notification-icon {
-    font-size: 1.2rem;
+    color: var(--color-text-main, black);
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
-    color: var(--color-bg-main);
 }
 
 .search {
     background-color: var(--color-bg-main);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    padding: 10px 16px !important;
+    border-radius: var(--radius-sm);
+    padding: 10px 14px !important;
+    box-shadow: var(--shadow-sm);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -523,7 +511,7 @@ body {
     outline: none;
     width: 100%;
     margin: 0 10px;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     color: var(--color-text-main);
 }
 
@@ -572,7 +560,6 @@ body {
 .greetings span {
     color: var(--color-text-muted);
     font-weight: 430;
-    font-size: 1rem;
 }
 
 .greetings p {
@@ -606,7 +593,7 @@ body {
 }
 
 .item_header h3 {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--color-text-main);
     display: flex;
@@ -624,7 +611,7 @@ body {
 }
 
 .see_more {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--color-primary);
     display: flex;
@@ -691,7 +678,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -702,19 +689,19 @@ body {
 }
 
 .info_stat p:first-child {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--color-text-muted);
 }
 
 .info_stat .stat_num {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--color-text-main);
     margin: 2px 0;
 }
 
 .info_stat .stat_period {
-    font-size: 0.82rem;
+    font-size: 0.72rem;
     color: #10b981;
     font-weight: 600;
 }
@@ -741,7 +728,7 @@ body {
 }
 
 .visio_date {
-    width: 45px;
+    width: 42px;
     text-align: center;
     background: var(--color-primary);
     color: white;
@@ -755,13 +742,13 @@ body {
 }
 
 .visio_date .day {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     display: block;
 }
 
 .visio_date .month {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
 }
 
@@ -770,18 +757,18 @@ body {
 }
 
 .visio_info h4 {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
 }
 
 .visio_info p {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--color-text-muted);
 }
 
 .visio_badge {
-    font-size: 0.8rem;
-    padding: 4px 10px;
+    font-size: 0.7rem;
+    padding: 3px 8px;
     border-radius: var(--radius-full);
     background: #e2e8f0;
     color: #475569;
@@ -824,7 +811,7 @@ body {
 }
 
 .calendar_header h4 {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
 }
 
@@ -837,13 +824,13 @@ body {
 }
 
 .calendar_weekdays span {
-    font-size: 0.82rem;
+    font-size: 0.72rem;
     color: var(--color-text-muted);
     font-weight: 600;
 }
 
 .calendar_days span {
-    font-size: 0.88rem;
+    font-size: 0.78rem;
     padding: 6px 0;
     border-radius: var(--radius-sm);
     cursor: pointer;
@@ -876,10 +863,10 @@ body {
 .announcement_card {
     display: flex;
     gap: 10px;
-    padding: 12px;
+    padding: 10px;
     background: var(--color-bg-main);
     border-radius: var(--radius-md);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
@@ -889,24 +876,24 @@ body {
 }
 
 .announcement_card.highlight {
-    border-left: 5px solid var(--color-accent);
+    border-left: 3px solid var(--color-accent);
 }
 
 .announcement_card .icon_announcement {
     color: var(--color-accent);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .announcement_card .icon_event {
     color: var(--color-primary);
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .announcement_txt span {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--color-text-muted);
     display: block;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .assignment_list {
@@ -937,12 +924,12 @@ body {
 }
 
 .assignment_meta h4 {
-    font-size: 0.95rem;
+    font-size: 0.88rem;
     font-weight: 600;
 }
 
 .deadline {
-    font-size: 0.82rem;
+    font-size: 0.72rem;
     color: var(--color-text-muted);
 }
 
@@ -952,13 +939,13 @@ body {
 }
 
 .assignment_item .subject {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--color-text-muted);
 }
 
 .btn_submit_hw {
     align-self: flex-end;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--color-primary);
     font-weight: 600;
     text-decoration: none;
@@ -1000,13 +987,13 @@ body {
 }
 
 .course_icon {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     border-radius: var(--radius-sm);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     transition: transform 0.3s ease;
 }
 
@@ -1029,19 +1016,19 @@ body {
 }
 
 .course_info h4 {
-    font-size: 1rem;
+    font-size: 0.92rem;
     font-weight: 600;
     color: var(--color-text-main);
 }
 
 .course_info p {
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     color: var(--color-text-muted);
     margin: 2px 0;
 }
 
 .course_info .meta {
-    font-size: 0.82rem;
+    font-size: 0.73rem;
     color: var(--color-text-muted);
 }
 
@@ -1050,7 +1037,7 @@ body {
     padding: 8px 14px;
     border-radius: var(--radius-sm);
     border: none;
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
@@ -1112,13 +1099,13 @@ body {
 }
 
 .section_header_text h1 {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 6px;
 }
 
 .section_header_text p {
-    font-size: 1rem;
+    font-size: 0.92rem;
     opacity: 0.88;
     max-width: 600px;
 }
@@ -1128,7 +1115,7 @@ body {
     backdrop-filter: blur(4px);
     padding: 6px 14px;
     border-radius: var(--radius-full);
-    font-size: 0.88rem;
+    font-size: 0.8rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -1172,7 +1159,7 @@ body {
     outline: none;
     width: 100%;
     margin-left: 10px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .filter_categories {
@@ -1186,7 +1173,7 @@ body {
     border: 1px solid var(--color-border);
     padding: 8px 16px;
     border-radius: var(--radius-full);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
     color: var(--color-text-muted);
     cursor: pointer;
@@ -1243,13 +1230,19 @@ body {
 }
 
 .category_tag {
-    background: rgba(15, 76, 129, 0.1);
-    color: var(--color-primary);
-    font-size: 0.78rem;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--color-accent);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+    font-size: 0.72rem;
     font-weight: 600;
-    padding: 3px 10px;
+    padding: 4px 12px;
     border-radius: var(--radius-full);
     text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .play_overlay {
@@ -1295,7 +1288,7 @@ body {
 }
 
 .course_title {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 600;
     color: var(--color-text-main);
     margin-bottom: 8px;
@@ -1303,7 +1296,7 @@ body {
 }
 
 .course_description {
-    font-size: 0.92rem;
+    font-size: 0.84rem;
     color: var(--color-text-muted);
     line-height: 1.5;
     margin-bottom: 16px;
@@ -1316,7 +1309,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     color: var(--color-text-muted);
     padding-top: 12px;
     border-top: 1px solid var(--color-border);
@@ -1336,16 +1329,17 @@ body {
 }
 
 .btn_action {
-    padding: 8px 14px;
+    flex: 1;
+    padding: 10px 12px;
     border-radius: var(--radius-sm);
-    font-size: 0.88rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    font-size: 0.82rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 8px;
+    cursor: pointer;
+    transition: var(--transition-normal);
     border: none;
 }
 
@@ -1357,7 +1351,7 @@ body {
 
 .btn_pdf:hover {
     background-color: #e2e8f0;
-    transform: translateY(-2px);
+    color: var(--color-primary-dark);
 }
 
 .btn_video {
@@ -1367,10 +1361,8 @@ body {
 }
 
 .btn_video:hover {
-    background-color: var(--color-primary-light);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(99, 139, 241, 0.3);
+    background-color: var(--color-primary-dark);
+    box-shadow: 0 5px 12px rgba(11, 57, 98, 0.35);
 }
 
 
@@ -1421,6 +1413,7 @@ body {
     flex-shrink: 0;
 }
 
+/* Distinguer visuellement Devoir et Exercice */
 .hw_type_icon.devoir {
     background: rgba(255, 107, 53, 0.12);
     color: var(--color-accent);
@@ -1549,7 +1542,7 @@ body {
 }
 
 .modal_header h3 {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -1597,7 +1590,7 @@ body {
     padding: 16px 24px;
     background: #1e293b;
     color: #94a3b8;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1628,7 +1621,7 @@ body {
 }
 
 .student_footer p {
-    font-size: 0.92rem;
+    font-size: 0.85rem;
     color: var(--color-text-muted);
 }
 
@@ -1653,7 +1646,7 @@ body {
     color: var(--color-text-muted);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-full);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -1720,6 +1713,20 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .homework_item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hw_actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .top.dashboard .search {
+        display: none;
+    }
+
     .student_footer {
         padding: 20px 15px;
     }
@@ -1728,170 +1735,4 @@ body {
         flex-direction: column;
         text-align: center;
     }
-}
-
-
-/* ==========================================
-   SECTION VISIOCONFÉRENCES (SOUS FORME DE CARTES)
-   ========================================== */
-
-.visio_container {
-    padding: 0 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.visio_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 24px;
-}
-
-.visio_card {
-    background: var(--color-bg-surface);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-border);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    flex-direction: column;
-    transition: var(--transition-normal);
-    position: relative; /
-}
-
-.visio_card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--color-primary-light);
-}
-
-.visio_card_banner {
-    position: relative;
-    height: 160px;
-    overflow: hidden; 
-    background: #0f172a;
-}
-
-.visio_card_banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.visio_card:hover .visio_card_banner img {
-    transform: scale(1.06);
-}
-
-/* Tag de catégorie sur la bannière */
-.visio_category_tag {
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(4px);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: var(--radius-full);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 2;
-}
-
-/* Badge Direct clignotant */
-.live_badge_pulse {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background: #ef4444;
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
-    z-index: 2;
-}
-
-.live_badge_pulse i {
-    font-size: 0.5rem;
-    animation: pulseAnimation 1.2s infinite;
-}
-
-@keyframes pulseAnimation {
-    0% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.3; transform: scale(1.3); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
-.visio_badge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    font-size: 0.78rem;
-    padding: 4px 10px;
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    z-index: 2;
-}
-
-.visio_badge.urgent { background: #fee2e2; color: #ef4444; }
-.visio_badge.normal { background: #e2e8f0; color: #475569; }
-.visio_badge.replay { background: #dbeafe; color: #1e40af; }
-
-.visio_card_body {
-    padding: 18px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 10px;
-}
-
-.visio_time_info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.82rem;
-    color: var(--color-primary);
-    font-weight: 600;
-}
-
-.visio_title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--color-text-main);
-    line-height: 1.4;
-}
-
-.visio_description {
-    font-size: 0.88rem;
-    color: var(--color-text-muted);
-    line-height: 1.5;
-}
-
-.visio_instructor {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    margin-top: auto;
-    padding-top: 10px;
-    border-top: 1px solid var(--color-border);
-}
-
-.visio_card_actions {
-    padding: 14px 18px;
-    background: var(--color-bg-main);
-    border-top: 1px solid var(--color-border);
-    display: flex;
-    gap: 10px;
-}
-
-.visio_card_actions .btn_action {
-    flex: 1;
 }
