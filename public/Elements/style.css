@@ -19,8 +19,9 @@ body {
     background-color: var(--color-bg-main);
 }
 
+
 /* ==========================================
-   AUTHENTIFICATION
+   SECTION AUTHENTIFICATION
    ========================================== */
 
 .logo img {
@@ -185,7 +186,6 @@ body {
     opacity: 0.9;
 }
 
-/* Authentification responsive */
 @media (max-width: 768px) {
     .authentification {
         flex-direction: column;
@@ -204,7 +204,6 @@ body {
     }
 }
 
-/* Animations de transition générale */
 .container.student > *:not(.menu_section) {
     animation: fadeInContent 0.2s cubic-bezier(0.42, 0, 0.58, 1);
 }
@@ -220,8 +219,9 @@ body {
     }
 }
 
+
 /* ==========================================
-   SIDEBAR LATÉRALE
+   SECTION SIDEBAR LATÉRALE
    ========================================== */
 
 .container.student {
@@ -369,14 +369,14 @@ body {
     transform: rotate(180deg);
 }
 
-/* Annuler la transition si la sidebar reste fermée */
 .no-transition,
 .no-transition * {
     transition: none !important;
 }
 
+
 /* ==========================================
-   CONTENU GENERAL DU DASHBOARD
+   SECTION DASHBOARD
    ========================================== */
 
 .contenu_dashboard {
@@ -387,16 +387,12 @@ body {
     gap: 20px;
     width: 100%;
     box-sizing: border-box;
-    padding-bottom: 40px;
+    min-height: 100vh;
 }
 
 .container.student.sidebar-closed .contenu_dashboard {
     width: 100%;
 }
-
-/* ==========================================
-   TOP DASHBOARD HEADER
-   ========================================== */
 
 .top.dashboard {
     display: flex;
@@ -517,10 +513,6 @@ body {
     color: var(--color-text-main);
 }
 
-/* ==========================================
-   GRILLE PRINCIPALE DU DASHBOARD (ITEMS 1 A 7)
-   ========================================== */
-
 .main_content_dashboard_student {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -530,7 +522,6 @@ body {
     padding: 0 20px;
 }
 
-/* Item 1 : Salutations (Fixe, seuls les éléments internes bougent) */
 .greetings {
     grid-area: 1 / 1 / 2 / 8;
     background: #638bf133;
@@ -575,7 +566,6 @@ body {
     font-weight: var(--font-weight-bold);
 }
 
-/* Configuration commune des conteneurs d'items (Items 2 à 7) - FIXES SANS MOUVEMENT */
 .item2,
 .item3,
 .item4,
@@ -590,10 +580,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    /* Le conteneur reste parfaitement immobile */
 }
 
-/* En-tête des blocs d'items */
 .item_header {
     display: flex;
     justify-content: space-between;
@@ -635,7 +623,6 @@ body {
     color: var(--color-primary-dark);
 }
 
-/* Positionnement Grid des items */
 .item2 {
     grid-area: 2 / 1 / 3 / 8;
     display: grid;
@@ -663,9 +650,6 @@ body {
     grid-area: 6 / 6 / 9 / 8;
 }
 
-/* --- ÉLÉMENTS INTERNES ANIMÉS (SEuls les enfants bougent) --- */
-
-/* Item 2 : Cartes de Statistiques internes */
 .item2 .stat {
     display: flex;
     align-items: center;
@@ -720,7 +704,263 @@ body {
     font-weight: 600;
 }
 
-/* Item 3 : Liste des Formations et Cours interne */
+.visio_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.visio_item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: var(--color-bg-main);
+    border-radius: var(--radius-md);
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.visio_item:hover {
+    transform: translateX(4px);
+    background-color: var(--color-bg-surface);
+}
+
+.visio_date {
+    width: 42px;
+    text-align: center;
+    background: var(--color-primary);
+    color: white;
+    padding: 4px;
+    border-radius: var(--radius-sm);
+    transition: transform 0.3s ease;
+}
+
+.visio_item:hover .visio_date {
+    transform: scale(1.05);
+}
+
+.visio_date .day {
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+}
+
+.visio_date .month {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+}
+
+.visio_info {
+    flex: 1;
+}
+
+.visio_info h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.visio_info p {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.visio_badge {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: var(--radius-full);
+    background: #e2e8f0;
+    color: #475569;
+    transition: transform 0.2s ease;
+}
+
+.visio_item:hover .visio_badge {
+    transform: scale(1.05);
+}
+
+.visio_badge.urgent {
+    background: #fee2e2;
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.mini_calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calendar_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar_header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.calendar_header button:hover {
+    color: var(--color-primary);
+    transform: scale(1.2);
+}
+
+.calendar_header h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.calendar_weekdays,
+.calendar_days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 4px;
+}
+
+.calendar_weekdays span {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+}
+
+.calendar_days span {
+    font-size: 0.78rem;
+    padding: 6px 0;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.calendar_days span:hover {
+    background-color: var(--color-bg-main);
+    transform: scale(1.1);
+}
+
+.calendar_days span.today {
+    background: var(--color-primary);
+    color: white;
+    font-weight: 700;
+}
+
+.calendar_days span.event {
+    font-weight: 700;
+    color: var(--color-accent);
+    position: relative;
+}
+
+.announcement_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement_card {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: var(--color-bg-main);
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.announcement_card:hover {
+    transform: translateX(4px);
+    background-color: var(--color-bg-surface);
+}
+
+.announcement_card.highlight {
+    border-left: 3px solid var(--color-accent);
+}
+
+.announcement_card .icon_announcement {
+    color: var(--color-accent);
+    font-size: 1rem;
+}
+
+.announcement_card .icon_event {
+    color: var(--color-primary);
+    font-size: 1rem;
+}
+
+.announcement_txt span {
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+    display: block;
+    margin-top: 2px;
+}
+
+.assignment_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.assignment_item {
+    padding: 12px;
+    background: var(--color-bg-main);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.assignment_item:hover {
+    transform: translateX(4px);
+    background-color: var(--color-bg-surface);
+}
+
+.assignment_meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assignment_meta h4 {
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.deadline {
+    font-size: 0.72rem;
+    color: var(--color-text-muted);
+}
+
+.deadline.urgent {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+.assignment_item .subject {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.btn_submit_hw {
+    align-self: flex-end;
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.btn_submit_hw:hover {
+    text-decoration: underline;
+    transform: translateX(2px);
+    color: var(--color-primary-dark);
+}
+
+
+/* ==========================================
+   SECTION COURS ET FORMATIONS
+   ========================================== */
+
 .courses_list {
     display: flex;
     flex-direction: column;
@@ -807,9 +1047,10 @@ body {
 }
 
 .btn_view_course:hover {
-    background: var(--color-primary-dark);
+    background: var(--color-primary-light);
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(16, 104, 181, 0.25);
+    color: white;
+    box-shadow: 0 4px 10px rgba(99, 139, 241, 0.3);
 }
 
 .btn_download_course {
@@ -822,266 +1063,6 @@ body {
     background: var(--color-border);
     transform: translateY(-2px);
 }
-
-/* Item 4 : Prochaines Visios interne */
-.visio_list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.visio_item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 12px;
-    background: var(--color-bg-main);
-    border-radius: var(--radius-md);
-    transition: transform 0.25s ease, background-color 0.25s ease;
-}
-
-.visio_item:hover {
-    transform: translateX(4px);
-    background-color: var(--color-bg-surface);
-}
-
-.visio_date {
-    width: 42px;
-    text-align: center;
-    background: var(--color-primary);
-    color: white;
-    padding: 4px;
-    border-radius: var(--radius-sm);
-    transition: transform 0.3s ease;
-}
-
-.visio_item:hover .visio_date {
-    transform: scale(1.05);
-}
-
-.visio_date .day {
-    font-size: 1rem;
-    font-weight: 700;
-    display: block;
-}
-
-.visio_date .month {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-}
-
-.visio_info {
-    flex: 1;
-}
-
-.visio_info h4 {
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.visio_info p {
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
-}
-
-.visio_badge {
-    font-size: 0.7rem;
-    padding: 3px 8px;
-    border-radius: var(--radius-full);
-    background: #e2e8f0;
-    color: #475569;
-    transition: transform 0.2s ease;
-}
-
-.visio_item:hover .visio_badge {
-    transform: scale(1.05);
-}
-
-.visio_badge.urgent {
-    background: #fee2e2;
-    color: #ef4444;
-    font-weight: 600;
-}
-
-/* Item 5 : Mini Calendrier interne */
-.mini_calendar {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.calendar_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.calendar_header button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--color-text-muted);
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.calendar_header button:hover {
-    color: var(--color-primary);
-    transform: scale(1.2);
-}
-
-.calendar_header h4 {
-    font-size: 0.85rem;
-    font-weight: 600;
-}
-
-.calendar_weekdays,
-.calendar_days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-    gap: 4px;
-}
-
-.calendar_weekdays span {
-    font-size: 0.72rem;
-    color: var(--color-text-muted);
-    font-weight: 600;
-}
-
-.calendar_days span {
-    font-size: 0.78rem;
-    padding: 6px 0;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-}
-
-.calendar_days span:hover {
-    background-color: var(--color-bg-main);
-    transform: scale(1.1);
-}
-
-.calendar_days span.today {
-    background: var(--color-primary);
-    color: white;
-    font-weight: 700;
-}
-
-.calendar_days span.event {
-    font-weight: 700;
-    color: var(--color-accent);
-    position: relative;
-}
-
-/* Item 6 : Annonces et Événements interne (Remplacé) */
-.announcement_list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.announcement_card {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    background: var(--color-bg-main);
-    border-radius: var(--radius-md);
-    font-size: 0.8rem;
-    transition: transform 0.25s ease, background-color 0.25s ease;
-}
-
-.announcement_card:hover {
-    transform: translateX(4px);
-    background-color: var(--color-bg-surface);
-}
-
-.announcement_card.highlight {
-    border-left: 3px solid var(--color-accent);
-}
-
-.announcement_card .icon_announcement {
-    color: var(--color-accent);
-    font-size: 1rem;
-}
-
-.announcement_card .icon_event {
-    color: var(--color-primary);
-    font-size: 1rem;
-}
-
-.announcement_txt span {
-    font-size: 0.7rem;
-    color: var(--color-text-muted);
-    display: block;
-    margin-top: 2px;
-}
-
-/* Item 7 : Devoirs à soumettre interne */
-.assignment_list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.assignment_item {
-    padding: 12px;
-    background: var(--color-bg-main);
-    border-radius: var(--radius-md);
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    transition: transform 0.25s ease, background-color 0.25s ease;
-}
-
-.assignment_item:hover {
-    transform: translateX(4px);
-    background-color: var(--color-bg-surface);
-}
-
-.assignment_meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.assignment_meta h4 {
-    font-size: 0.88rem;
-    font-weight: 600;
-}
-
-.deadline {
-    font-size: 0.72rem;
-    color: var(--color-text-muted);
-}
-
-.deadline.urgent {
-    color: #ef4444;
-    font-weight: 600;
-}
-
-.assignment_item .subject {
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
-}
-
-.btn_submit_hw {
-    align-self: flex-end;
-    font-size: 0.75rem;
-    color: var(--color-primary);
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.btn_submit_hw:hover {
-    text-decoration: underline;
-    transform: translateX(2px);
-    color: var(--color-primary-dark);
-}
-
-/* ==========================================
-   SECTION FORMATIONS ET COURS (PAGE SÉPARÉE)
-   ========================================== */
 
 .courses_container {
     padding: 0 30px;
@@ -1158,7 +1139,7 @@ body {
     align-items: center;
     background-color: var(--color-bg-main);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-md);
     padding: 10px 16px;
     flex: 1;
     min-width: 280px;
@@ -1382,8 +1363,9 @@ body {
     box-shadow: 0 5px 12px rgba(11, 57, 98, 0.35);
 }
 
+
 /* ==========================================
-   FENÊTRE MODALE VIDÉO
+   SECTION MODALE VIDÉO
    ========================================== */
 
 .modal_video_overlay {
@@ -1491,8 +1473,71 @@ body {
     align-items: center;
 }
 
+
 /* ==========================================
-   RESPONSIVE DESIGN
+   SECTION FOOTER
+   ========================================== */
+
+.student_footer {
+    width: 100%;
+    background-color: var(--color-bg-surface);
+    border-top: 1px solid var(--color-border);
+    padding: 20px 30px;
+    margin-top: auto;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.student_footer .footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.student_footer p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.student_footer p a {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.footer_socials {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.footer_socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-bg-main);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.footer_socials a:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(16, 104, 181, 0.25);
+}
+
+
+/* ==========================================
+   SECTION RESPONSIVE DESIGN GLOBAL
    ========================================== */
 
 @media (max-width: 1024px) {
@@ -1530,5 +1575,14 @@ body {
 
     .top.dashboard .search {
         display: none;
+    }
+
+    .student_footer {
+        padding: 20px 15px;
+    }
+
+    .student_footer .footer_content {
+        flex-direction: column;
+        text-align: center;
     }
 }

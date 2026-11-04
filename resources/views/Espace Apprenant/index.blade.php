@@ -5,7 +5,7 @@
         <!-- Top Dashboard Header -->
         <header class="top dashboard">
             <div class="title-section">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#e3e3e3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="currentColor">
                     <path d="M13,9V3h8V9H13ZM3,13V3h8V13H3Zm10,8V11h8V21H13ZM3,21V15h8v6H3ZM5,11H9V5H5v6Zm10,8h4V13H15v6ZM15,7h4V5H15V7ZM5,19H9V17H5v2Zm4-8Zm6-4Zm0,6ZM9,17Z"/>
                 </svg>
                 <h3>Dashboard</h3>
@@ -89,7 +89,7 @@
             <div class="item3">
                 <div class="item_header">
                     <h3><i class="fa-solid fa-book-open"></i> Formations et cours récents</h3>
-                    <a href="" class="see_more">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="{{route('Student.programs&courses')}}" class="see_more">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="courses_list">
                     <!-- Support Vidéo avec déclencheur de modale -->
@@ -235,6 +235,17 @@
                 </div>
             </div>
         </section>
+
+        <footer class="student_footer">
+            <div class="footer_content">
+                <p>&copy; 2026 <a href="">Groupe Komptech Cimat</a>. Tous droits réservés.</p>
+                <div class="footer_socials">
+                    <a href="#" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <!-- Modale Vidéo -->
