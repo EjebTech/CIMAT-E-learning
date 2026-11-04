@@ -225,3 +225,68 @@ if (hwModal) {
         }
     });
 }
+
+
+
+/* ==========================================
+   GESTION DES VISIOCONFÉRENCES (CARTES & DYNAMISME)
+   ========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const visioFilterBtns = document.querySelectorAll('.visio_container .filter_btn');
+    const visioCards = document.querySelectorAll('.visio_card');
+
+    // Filtrage dynamique des cartes
+    if (visioFilterBtns.length > 0 && visioCards.length > 0) {
+        visioFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                visioFilterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                visioCards.forEach(card => {
+                    const cardStatus = card.getAttribute('data-status');
+                    if (filterValue === 'all' || cardStatus === filterValue) {
+                        card.style.display = "flex";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
+        });
+    }
+});
+
+// Modale de visioconférence
+const visioModal = document.getElementById('visioModal');
+const modalVisioTitle = document.getElementById('modalVisioTitle');
+
+function joinLiveSession(sessionTitle) {
+    if (visioModal && modalVisioTitle) {
+        modalVisioTitle.textContent = `En Direct : ${sessionTitle}`;
+        visioModal.classList.add('active');
+    }
+}
+
+function closeVisioModal() {
+    if (visioModal) {
+        visioModal.classList.remove('active');
+    }
+}
+
+function setReminder(sessionTitle) {
+    alert(`Un rappel pour la visioconférence "${sessionTitle}" a été ajouté à votre calendrier PNC.`);
+}
+
+function downloadMaterials(filename) {
+    alert(`Téléchargement du support de cours : "${filename}"`);
+}
+
+if (visioModal) {
+    visioModal.addEventListener('click', (e) => {
+        if (e.target === visioModal) {
+            closeVisioModal();
+        }
+    });
+}
