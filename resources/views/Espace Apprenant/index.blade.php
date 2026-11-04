@@ -92,7 +92,7 @@
                     <a href="{{route('Student.programs&courses')}}" class="see_more">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="courses_list">
-                    <!-- Support Vidéo avec déclencheur de modale -->
+
                     <div class="course_item">
                         <div class="course_icon video"><i class="fa-solid fa-circle-play"></i></div>
                         <div class="course_info">
@@ -129,8 +129,8 @@
                 <div class="visio_list">
                     <div class="visio_item">
                         <div class="visio_date">
-                            <span class="day">14</span>
-                            <span class="month">SEP</span>
+                            <span class="day">09</span>
+                            <span class="month">DEC</span>
                         </div>
                         <div class="visio_info">
                             <h4>Briefing Secourisme Aérien</h4>
@@ -142,7 +142,7 @@
                     <div class="visio_item">
                         <div class="visio_date">
                             <span class="day">16</span>
-                            <span class="month">SEP</span>
+                            <span class="month">JAN</span>
                         </div>
                         <div class="visio_info">
                             <h4>Gestion des Passagers VIP</h4>
@@ -178,10 +178,16 @@
                         <button id="nextMonth"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
                     <div class="calendar_weekdays">
-                        <span>Lun</span><span>Mar</span><span>Mer</span><span>Jeu</span><span>Ven</span><span>Sam</span><span>Dim</span>
+                        <span>Lun</span>
+                        <span>Mar</span>
+                        <span>Mer</span>
+                        <span>Jeu</span>
+                        <span>Ven</span>
+                        <span>Sam</span>
+                        <span>Dim</span>
                     </div>
                     <div class="calendar_days" id="calendarDays">
-                        <!-- Généré en JS -->
+
                     </div>
                 </div>
             </div>
@@ -248,7 +254,7 @@
         </footer>
     </div>
 
-    <!-- Modale Vidéo -->
+
     <div class="modal_video_overlay" id="videoModal">
         <div class="modal_content">
             <div class="modal_header">

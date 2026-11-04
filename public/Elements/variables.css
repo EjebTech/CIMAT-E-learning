@@ -29,10 +29,10 @@
   --font-size-h2: 1.75rem;  /* 28px - Titres de sections / Modules */
   --font-size-h3: 1.25rem;  /* 20px - Titres de cartes / Leçons */
 
-  /* Tailles de Texte */
-  --font-size-body: 1rem;      /* 16px - Paragraphes principaux */
-  --font-size-small: 0.875rem; /* 14px - Boutons, légendes, badges */
-  --font-size-xs: 0.75rem;    /* 12px - Timestamps, détails */
+  /* Tailles de Texte (Augmentées pour plus de lisibilité) */
+  --font-size-body: 1.1rem;      /* ~17.6px - Paragraphes principaux agrandis */
+  --font-size-small: 0.95rem; /* ~15.2px - Boutons, légendes, badges agrandis */
+  --font-size-xs: 0.85rem;    /* ~13.6px - Anciens petits timestamps agrandis */
 
   /* Epaisseurs de Police */
   --font-weight-regular: 400;

@@ -15,7 +15,7 @@
                 <div class="top">
                     <h3>BIENVENUE À</h3>
                     <div class="logo">
-                        <img src="{{asset('Elements/images/logo.png')}}" alt="">
+                        <h1>CIMAT E-LEARNING</h1>
                     </div>
                     <span>Authentifiez-vous pour accéder à votre espace.</span>
                 </div>

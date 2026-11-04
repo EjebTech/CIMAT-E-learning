@@ -93,9 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* ==========================================
+    /*
        3. GÉNÉRATION DYNAMIQUE DU MINI-CALENDRIER (ITEM 5)
-       ========================================== */
+        */
 
     const calendarDays = document.getElementById('calendarDays');
     const calendarMonth = document.getElementById('calendarMonth');
@@ -119,9 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/* ==========================================
+/*
    4. GESTION DE LA FENÊTRE MODALE VIDÉO
-   ========================================== */
+    */
 
 const videoModal = document.getElementById('videoModal');
 const modalCourseTitle = document.getElementById('modalCourseTitle');
@@ -151,10 +151,77 @@ if (videoModal) {
     });
 }
 
-/* ==========================================
+/*
    5. TÉLÉCHARGEMENT FACTICE DE FICHIER PDF
-   ========================================== */
+    */
 
 function downloadPdf(filename) {
     alert(`Le téléchargement du document "${filename}" a démarré avec succès.`);
+}
+
+
+
+/* ==========================================
+   GESTION DES DEVOIRS ET EXERCICES (LISTE & FILTRES)
+   ========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hwFilterBtns = document.querySelectorAll('.homework_container .filter_btn');
+    const hwItems = document.querySelectorAll('.homework_item');
+
+    // Filtrage dynamique par date d'échéance
+    if (hwFilterBtns.length > 0 && hwItems.length > 0) {
+        hwFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                hwFilterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                hwItems.forEach(item => {
+                    const itemDate = item.getAttribute('data-date');
+                    if (filterValue === 'all' || itemDate === filterValue) {
+                        item.style.display = "flex";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+    }
+});
+
+// Téléchargement du sujet
+function downloadHwSubject(filename) {
+    alert(`Téléchargement du sujet : "${filename}"`);
+}
+
+// Gestion de la modale de soumission
+const hwModal = document.getElementById('homeworkModal');
+const modalHwTitle = document.getElementById('modalHwTitle');
+
+function openSubmitModal(title) {
+    if (hwModal && modalHwTitle) {
+        modalHwTitle.textContent = `Soumission : ${title}`;
+        hwModal.classList.add('active');
+    }
+}
+
+function closeSubmitModal() {
+    if (hwModal) {
+        hwModal.classList.remove('active');
+    }
+}
+
+function submitHomeworkAction() {
+    alert("Votre travail a été transmis avec succès à l'instructeur !");
+    closeSubmitModal();
+}
+
+if (hwModal) {
+    hwModal.addEventListener('click', (e) => {
+        if (e.target === hwModal) {
+            closeSubmitModal();
+        }
+    });
 }
