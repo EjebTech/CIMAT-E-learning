@@ -1,74 +1,160 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const authBox = document.querySelector(".authentification");
 
+    /* ==========================================
+       1. GESTION DU RECHARGEMENT & TOGGLE SIDEBAR
+       ========================================== */
+
+
+    const authBox = document.querySelector('.authentification');
     if (authBox) {
+        // Petit délai optionnel pour laisser le navigateur souffler
         setTimeout(() => {
-            authBox.classList.add("is-visible");
+            authBox.classList.add('is-visible');
         }, 50);
     }
+    const toggleBtn = document.getElementById('toggleBtn');
+    const menuSection = document.getElementById('menuSection');
+    const studentContainer = document.getElementById('studentContainer');
 
-    const btn_submit = document.querySelector('.submit');
-    if (btn_submit) {
-        const form = btn_submit.closest('form');
-        btn_submit.addEventListener('click', (e) => {
-            e.preventDefault();
-            btn_submit.textContent = 'CONNEXION EN COURS...';
-            setTimeout(() => {
-                if (form) {
-                    form.submit();
-                    btn_submit.textContent = "CONNECTÉ"
-                }
-            }, 1000);
-
-            setTimeout(() => {
-                btn_submit.textContent = "CONNECTEZ-VOUS"
-            }, 1100);
-        });
-    }
-
-
-});
-
-// Application de la classe close de la sidebar
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtnOpenClose = document.querySelector('.open_close');
-    const menuSection = document.querySelector('.menu_section');
-    const mainContainer = document.querySelector('.container.student');
-
-   if (toggleBtnOpenClose && menuSection) {
-        //couper l'animation
-        document.body.classList.add('no-transition');
-        // Restaure l'état de la sidebar dès le chargement de la page
+    if (toggleBtn && menuSection && studentContainer) {
+        // Restauration de l'état de la sidebar sans transition au chargement
         const sidebarState = localStorage.getItem('sidebarState');
         if (sidebarState === 'closed') {
-            menuSection.classList.add('close');
-            menuSection.classList.add('no-transition');
+            document.body.classList.add('no-transition');
+            menuSection.classList.add('close', 'no-transition');
+            studentContainer.classList.add('sidebar-closed');
 
-            if (mainContainer) {
-                mainContainer.classList.add('sidebar-closed');
-            }
+            setTimeout(() => {
+                document.body.classList.remove('no-transition');
+                menuSection.classList.remove('no-transition');
+            }, 50);
         }
 
-        setTimeout(() => {
+        // Clic sur le bouton de bascule de la sidebar
+        toggleBtn.addEventListener('click', () => {
+            menuSection.classList.remove('no-transition');
             document.body.classList.remove('no-transition');
-        }, 50);
 
-        // Alterne l'état au clic sur le bouton
-        toggleBtnOpenClose.addEventListener('click', () => {
             menuSection.classList.toggle('close');
-            if (mainContainer) {
-                mainContainer.classList.toggle('sidebar-closed');
-            }
+            studentContainer.classList.toggle('sidebar-closed');
 
-            // Enregistre le choix dans le navigateur
-            if (menuSection.classList.contains('close')) {
-                localStorage.setItem('sidebarState', 'closed');
+            const isClosed = menuSection.classList.contains('close');
+            localStorage.setItem('sidebarState', isClosed ? 'closed' : 'open');
+        });
+    }
+
+    /* ==========================================
+       2. RECHERCHE & FILTRAGE DES COURS
+       ========================================== */
+
+    const searchInput = document.getElementById('courseSearchInput');
+    const filterBtns = document.querySelectorAll('.filter_btn');
+    const courseCards = document.querySelectorAll('.course_card');
+
+    // Filtrage par catégories au clic sur les boutons
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+            filterCourses(filterValue, searchInput ? searchInput.value : '');
+        });
+    });
+
+    // Recherche par mot-clé dans l'input
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const activeFilterElement = document.querySelector('.filter_btn.active');
+            const activeFilter = activeFilterElement ? activeFilterElement.getAttribute('data-filter') : 'all';
+            filterCourses(activeFilter, e.target.value);
+        });
+    }
+
+    function filterCourses(category, searchText) {
+        const searchLower = searchText.toLowerCase().trim();
+
+        courseCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            const titleElement = card.querySelector('.course_title');
+            const descElement = card.querySelector('.course_description');
+
+            const cardTitle = titleElement ? titleElement.textContent.toLowerCase() : '';
+            const cardDesc = descElement ? descElement.textContent.toLowerCase() : '';
+
+            const matchesCategory = (category === 'all' || cardCategory === category);
+            const matchesSearch = (cardTitle.includes(searchLower) || cardDesc.includes(searchLower));
+
+            if (matchesCategory && matchesSearch) {
+                card.style.display = "flex";
             } else {
-                localStorage.setItem('sidebarState', 'open');
+                card.style.display = "none";
             }
         });
     }
-})
 
+    /* ==========================================
+       3. GÉNÉRATION DYNAMIQUE DU MINI-CALENDRIER (ITEM 5)
+       ========================================== */
 
+    const calendarDays = document.getElementById('calendarDays');
+    const calendarMonth = document.getElementById('calendarMonth');
 
+    if (calendarDays) {
+        const today = new Date();
+        const currentDay = today.getDate();
+
+        // Remplissage des jours du mois en cours (exemple 30 jours)
+        let daysHTML = '';
+        for (let i = 1; i <= 30; i++) {
+            if (i === currentDay) {
+                daysHTML += `<span class="today">${i}</span>`;
+            } else if (i === 14 || i === 18) {
+                daysHTML += `<span class="event" title="Événement prévu">${i}</span>`;
+            } else {
+                daysHTML += `<span>${i}</span>`;
+            }
+        }
+        calendarDays.innerHTML = daysHTML;
+    }
+});
+
+/* ==========================================
+   4. GESTION DE LA FENÊTRE MODALE VIDÉO
+   ========================================== */
+
+const videoModal = document.getElementById('videoModal');
+const modalCourseTitle = document.getElementById('modalCourseTitle');
+const modalVideoFrame = document.getElementById('modalVideoFrame');
+
+function openVideoModal(title, videoUrl) {
+    if (videoModal && modalCourseTitle && modalVideoFrame) {
+        modalCourseTitle.innerHTML = `<i class="fa-solid fa-circle-play" style="color: var(--color-accent);"></i> ${title}`;
+        modalVideoFrame.src = videoUrl + "?autoplay=1";
+        videoModal.classList.add('active');
+    }
+}
+
+function closeVideoModal() {
+    if (videoModal && modalVideoFrame) {
+        videoModal.classList.remove('active');
+        modalVideoFrame.src = ""; // Stoppe la lecture de la vidéo à la fermeture
+    }
+}
+
+// Fermeture de la modale en cliquant à l'extérieur du contenu
+if (videoModal) {
+    videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) {
+            closeVideoModal();
+        }
+    });
+}
+
+/* ==========================================
+   5. TÉLÉCHARGEMENT FACTICE DE FICHIER PDF
+   ========================================== */
+
+function downloadPdf(filename) {
+    alert(`Le téléchargement du document "${filename}" a démarré avec succès.`);
+}

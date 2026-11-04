@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <div class="container student">
-        <nav class="menu_section">
+    <div class="container student" id="studentContainer">
+        <nav class="menu_section" id="menuSection">
             <div class="top">
                 <div class="logo_presentation">
                     <img src="{{ asset('Elements/images/logo.png') }}" alt="Logo CIMAT">
@@ -51,10 +51,7 @@
                     <span><i class="fa-solid fa-bullhorn"></i></span>
                     <h3>Annonces / Évènements</h3>
                 </a>
-                <a href="" class="link ">
-                    <span><i class="fa-solid fa-calendar"></i></span>
-                    <h3>Calendrier</h3>
-                </a>
+
                 <a href="" class="link ">
                     <span><i class="fa-solid fa-chart-line"></i></span>
                     <h3>Mes Résultats</h3>
