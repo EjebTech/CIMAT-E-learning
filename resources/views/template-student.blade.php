@@ -34,7 +34,7 @@
                     <span><i class="fa-solid fa-book-open"></i></span>
                     <h3>Devoirs et exercices</h3>
                 </a>
-                <a href="" class="link">
+                <a href="{{route('Student.profile')}}" class="link {{request()->routeIs('Student.profile') ? 'active' : ''}}">
                     <span><i class="fa-regular fa-circle-user"></i></span>
                     <h3>Profil</h3>
                 </a>
@@ -69,7 +69,7 @@
             </div>
         </nav>
         @yield('content')
-        
+
     </div>
 
     <script src="{{asset('Elements/app.js')}}"></script>

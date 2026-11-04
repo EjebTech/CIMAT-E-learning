@@ -17,7 +17,10 @@
                 <input type="text" id="visioSearchInput" placeholder="Rechercher une visio...">
             </div>
             <div class="notif">
-                <i class="fa-regular fa-bell notification-icon"></i>
+                <a href="#" class="notification-icon">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
             </div>
             <div class="profile_student">
                 <div class="image">

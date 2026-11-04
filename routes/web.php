@@ -115,6 +115,10 @@ Route::prefix('Student')->name('Student.')->group(function(){
 
     //Visioconférence
     Route::get('/Videoconference', [StudentController::class, 'Videoconference'])->name('videoconference');
+
+    //Profil
+    Route::get('/Profile', [StudentController::class, 'Profile'])->name('profile');
+    Route::put('/Profile', [StudentController::class, 'UpdateProfile'])->name('profile.update');
 });
 
 

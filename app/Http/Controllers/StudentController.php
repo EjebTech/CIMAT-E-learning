@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class StudentController extends Controller
 {
     //Cours
@@ -17,7 +15,7 @@ class StudentController extends Controller
     public function CoursesFile(){
         return view("Espace Apprenant.Cours.Mes_fichiers_de_cours");
     }
-    
+
     //Exercices
 
     public function Homeworks(){
@@ -36,5 +34,14 @@ class StudentController extends Controller
     //Visioconférence
     public function Videoconference(){
         return view("Espace Apprenant.Visioconférence.visio");
+    }
+
+    //Profil
+    public function Profile(){
+        return view("Espace Apprenant.Apprenant.Profil_apprenant");
+    }
+
+    public function UpdateProfile(){
+        return redirect()->route('Student.profile');
     }
 }

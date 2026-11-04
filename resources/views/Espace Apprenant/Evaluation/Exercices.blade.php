@@ -17,13 +17,18 @@
                 <input type="text" id="hwSearchInput" placeholder="Rechercher un travail...">
             </div>
             <div class="notif">
-                <i class="fa-regular fa-bell notification-icon"></i>
+                <a href="#" class="notification-icon">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="badge">3</span>
+                </a>
             </div>
             <div class="profile_student">
-                <img src="{{ asset('Elements/images/profile.jpg') }}" alt="Profil">
+                <div class="image">
+                    <img src="/Elements/images/OIP-2658464322.jpg" alt="Photo de profil">
+                </div>
                 <div class="name">
-                    <p>Jean Emmanuel</p>
-                    <p style="font-size: 0.85rem; opacity: 0.8;">Élève PNC</p>
+                    <p>Edmond Barou</p>
+                    <p>PNC - 2e Année</p>
                 </div>
             </div>
         </div>

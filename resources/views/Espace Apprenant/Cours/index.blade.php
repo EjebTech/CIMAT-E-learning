@@ -18,7 +18,7 @@
                 <div class="notif">
                     <a href="#" class="notification-icon">
                         <i class="fa-solid fa-bell"></i>
-                        <span class="badge"></span>
+                        <span class="badge">3</span>
                     </a>
                 </div>
 

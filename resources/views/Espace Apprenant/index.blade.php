@@ -17,10 +17,8 @@
                 </div>
                 <div class="notif">
                     <a href="#" class="notification-icon">
-                        <span>
-                            <i class="fa-solid fa-bell"></i>
-                            <span class="badge">3</span>
-                        </span>
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="badge">3</span>
                     </a>
                 </div>
                 <div class="profile_student">
@@ -95,27 +93,39 @@
                     <!-- Support Vidéo avec déclencheur de modale -->
                     <div class="course_item">
                         <div class="course_icon video"><i class="fa-solid fa-circle-play"></i></div>
-                        <div class="course_info">
+                        <div class="course_title">
                             <h4>Procédures de Sécurité & Évacuation cabine</h4>
+                        </div>
+                        <div class="course_description">
                             <p>Gestes d'urgence, ouverture des portes et gestion du stress en vol.</p>
+                        </div>
+                        <div class="course_meta">
                             <span class="meta"><i class="fa-regular fa-clock"></i> 45 min • Module Sécurité</span>
                         </div>
-                        <button class="btn_view_course" onclick="openVideoModal('Procédures de Sécurité & Évacuation cabine', 'https://www.youtube.com/embed/dQw4w9WgXcQ')">
-                            Visionner
-                        </button>
+                        <div class="course_action">
+                            <button class="btn_view_course" onclick="openVideoModal('Procédures de Sécurité & Évacuation cabine', 'https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                                Visionner
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Support Document PDF avec téléchargement -->
                     <div class="course_item">
                         <div class="course_icon pdf"><i class="fa-solid fa-file-pdf"></i></div>
-                        <div class="course_info">
+                        <div class="course_title">
                             <h4>Protocoles de Service en Cabine Premium</h4>
+                        </div>
+                        <div class="course_description">
                             <p>Guide complet des normes de service trolley et prise en charge des passagers VIP.</p>
+                        </div>
+                        <div class="course_meta">
                             <span class="meta"><i class="fa-regular fa-file"></i> PDF • 3.4 Mo</span>
                         </div>
-                        <button class="btn_download_course" onclick="downloadPdf('Protocoles_Service_Premium.pdf')">
-                            Télécharger
-                        </button>
+                        <div class="course_action">
+                            <button class="btn_download_course" onclick="downloadPdf('Protocoles_Service_Premium.pdf')">
+                                Télécharger
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,7 +212,7 @@
                             <span class="deadline urgent"><i class="fa-regular fa-clock"></i> Dans 2 jours</span>
                         </div>
                         <p class="subject">Matière : Sécurité & Urgence</p>
-                        <a href="#" class="btn_submit_hw"><i class="fa-solid fa-upload"></i> Soumettre</a>
+                        <a href="#" onclick="openSubmitModal('Rapport de Sécurité Cabine (Devoir)'); return false;" class="btn_submit_hw"><i class="fa-solid fa-upload"></i> Soumettre</a>
                     </div>
                     <div class="assignment_item">
                         <div class="assignment_meta">
@@ -210,7 +220,7 @@
                             <span class="deadline"><i class="fa-regular fa-clock"></i> Dans 5 jours</span>
                         </div>
                         <p class="subject">Matière : Service à bord</p>
-                        <a href="#" class="btn_submit_hw"><i class="fa-solid fa-upload"></i> Soumettre</a>
+                        <a href="#" onclick="openSubmitModal('Étude de Cas Protocole VIP (Devoir)'); return false;" class="btn_submit_hw"><i class="fa-solid fa-upload"></i> Soumettre</a>
                     </div>
                 </div>
             </div>
@@ -237,6 +247,29 @@
             </div>
             <div class="video_wrapper">
                 <iframe id="modalVideoFrame" src="" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale de Soumission de Devoir -->
+    <div class="modal_video_overlay" id="homeworkModal">
+        <div class="modal_content">
+            <div class="modal_header">
+                <h3><i class="fa-solid fa-cloud-arrow-up" style="color: var(--color-accent);"></i> Soumettre votre travail</h3>
+                <button class="close_modal_btn" onclick="closeSubmitModal()">&times;</button>
+            </div>
+            <div style="padding: 24px; display: flex; flex-direction: column; gap: 16px; background: var(--color-bg-surface);">
+                <p id="modalHwTitle" style="font-weight: 600; color: var(--color-text-main); font-size: 1.05rem;"></p>
+                <div style="border: 2px dashed var(--color-border); padding: 30px; text-align: center; border-radius: var(--radius-md); background: var(--color-bg-main);">
+                    <i class="fa-solid fa-plane-departure" style="font-size: 2.2rem; color: var(--color-primary); margin-bottom: 10px; display: block;"></i>
+                    <p style="font-size: 0.95rem; color: var(--color-text-muted);">Glissez votre fichier ici ou <label for="hwFileBrowse" style="color: var(--color-accent); cursor: pointer; font-weight: 600; text-decoration: underline;">parcourez vos documents</label></p>
+                    <input type="file" id="hwFileBrowse" style="display: none;">
+                </div>
+                <textarea placeholder="Commentaire optionnel pour l'instructeur..." style="width: 100%; padding: 12px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); outline: none; resize: none; height: 90px; font-family: inherit; font-size: 0.95rem; color: var(--color-text-main);"></textarea>
+            </div>
+            <div class="modal_footer">
+                <button class="btn_action btn_pdf" onclick="closeSubmitModal()">Annuler</button>
+                <button class="btn_action btn_video" onclick="submitHomeworkAction()">Confirmer l'envoi</button>
             </div>
         </div>
     </div>
