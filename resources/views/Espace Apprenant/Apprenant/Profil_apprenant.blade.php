@@ -97,12 +97,4 @@
         </footer>
     </div>
 
-    <script>
-        document.getElementById('photo').addEventListener('change', function () {
-            const [file] = this.files;
-            if (file) {
-                document.getElementById('profilePhotoPreview').src = URL.createObjectURL(file);
-            }
-        });
-    </script>
 @endsection

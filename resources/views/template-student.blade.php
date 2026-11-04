@@ -67,6 +67,11 @@
 
     </div>
 
-    <script src="{{asset('Elements/app.js')}}"></script>
+    <script src="{{ asset('Elements/js/navigation.js') }}"></script>
+    <script src="{{ asset('Elements/js/courses.js') }}"></script>
+    <script src="{{ asset('Elements/js/video-modal.js') }}"></script>
+    <script src="{{ asset('Elements/js/homework.js') }}"></script>
+    <script src="{{ asset('Elements/js/videoconference.js') }}"></script>
+    <script src="{{ asset('Elements/js/profile-preview.js') }}"></script>
 </body>
 </html>
