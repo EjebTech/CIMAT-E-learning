@@ -37,7 +37,7 @@
 
         <!-- Grille principale du contenu -->
         <section class="main_content_dashboard_student">
-            <!-- ITEM 1 : Salutations -->
+
             <div class="greetings">
                 <div class="greetings_text">
                     <h2>Bienvenue, 👋</h2>
@@ -219,7 +219,7 @@
             <div class="item7">
                 <div class="item_header">
                     <h3><i class="fa-solid fa-file-pen"></i> Devoirs à rendre</h3>
-                    <a href="#" class="see_more">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="{{route('Student.homework&correction')}}" class="see_more">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="assignment_list">
                     <div class="assignment_item">
