@@ -160,7 +160,6 @@ function downloadPdf(filename) {
 }
 
 
-
 /* ==========================================
    GESTION DES DEVOIRS ET EXERCICES (LISTE & FILTRES)
    ========================================== */
@@ -225,3 +224,5 @@ if (hwModal) {
         }
     });
 }
+
+
