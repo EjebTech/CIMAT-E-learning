@@ -36,6 +36,16 @@ class StudentController extends Controller
         return view("Espace Apprenant.Visioconférence.visio");
     }
 
+    //Résultats
+    public function Results(){
+        return view("Espace Apprenant.Résultats.index");
+    }
+
+    //Annonces et événements
+    public function Announcements(){
+        return view("Espace Apprenant.Annonces & evenements.index");
+    }
+
     //Profil
     public function Profile(){
         return view("Espace Apprenant.Apprenant.Profil_apprenant");

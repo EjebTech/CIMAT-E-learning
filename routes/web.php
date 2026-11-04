@@ -116,6 +116,12 @@ Route::prefix('Student')->name('Student.')->group(function(){
     //Visioconférence
     Route::get('/Videoconference', [StudentController::class, 'Videoconference'])->name('videoconference');
 
+    //Résultats
+    Route::get('/Results', [StudentController::class, 'Results'])->name('results');
+
+    //Annonces et événements
+    Route::get('/Announcements', [StudentController::class, 'Announcements'])->name('announcements');
+
     //Profil
     Route::get('/Profile', [StudentController::class, 'Profile'])->name('profile');
     Route::put('/Profile', [StudentController::class, 'UpdateProfile'])->name('profile.update');

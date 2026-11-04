@@ -134,7 +134,7 @@
             <div class="item4">
                 <div class="item_header">
                     <h3><i class="fa-solid fa-tower-broadcast"></i> Prochaines Visios</h3>
-                    <a href="#" class="see_more">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="{{route('Student.videoconference')}}" class="see_more">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="visio_list">
                     <div class="visio_item">
@@ -180,7 +180,7 @@
             <div class="item6">
                 <div class="item_header">
                     <h3><i class="fa-solid fa-bullhorn"></i> Annonces & Événements</h3>
-                    <a href="#" class="see_more">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="{{route('Student.announcements')}}" class="see_more">Voir plus <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="announcement_list">
                     <div class="announcement_card highlight">
