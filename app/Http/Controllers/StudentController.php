@@ -10,7 +10,7 @@ class StudentController extends Controller
         return view("Espace Apprenant.Cours.index");
     }
     public function Dashboard(){
-        return view("Espace Apprenant.index");
+        return view("Espace Apprenant.Dashboard.index");
     }
     public function CoursesFile(){
         return view("Espace Apprenant.Cours.Mes_fichiers_de_cours");

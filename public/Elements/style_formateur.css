@@ -1,15 +1,19 @@
 @import url("variables.css");
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: "Merriweather", serif;
 }
 
 a {
-    color: white;
+    color: black;
 }
 
 body {
@@ -24,6 +28,8 @@ body {
     background-color: var(--color-bg-main);
     -webkit-font-smoothing: antialiased;
 }
+
+/* Sidebar formateur */
 
 .logo_presentation img {
     height: 60px;
@@ -40,6 +46,17 @@ body {
 
 .container.teacher.sidebar-closed {
     grid-template-columns: 5rem 1fr;
+}
+
+.dashboard_teacher {
+    grid-column: 2;
+    width: 100%;
+    min-width: 0;
+    padding-inline: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .menu_section {
@@ -222,4 +239,234 @@ body {
 .no-transition,
 .no-transition * {
     transition: none !important;
+}
+
+/* content dashboard */
+.top_dashboard_teacher{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 15px;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+    margin-inline: -30px;
+    width: calc(100% + 60px);
+    box-sizing: border-box;
+    box-shadow: var(--shadow-lg);
+}
+
+.right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: var(--radius-md);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: var(--color-bg-main);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 10px 16px !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.search:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: var(--color-primary-light);
+}
+
+.search:focus-within {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    margin: 0 10px;
+    font-size: 1rem;
+    color: var(--color-text-main);
+}
+
+.notif {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    border-radius: var(--radius-full);
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+.notification-icon {
+    position: relative;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+}
+
+.notification-icon:hover{
+    transform: scale(1.1);
+}
+
+.notification-icon .badge {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: var(--radius-full);
+    background: #ef4444;
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.right .profile_teacher a{
+    background-color: var(--color-primary-hover);
+    color: white;
+    padding: 10px 12px;
+    border-radius: var(--radius-full);
+}
+
+.right .profile_teacher{
+    transition: transform 0.3s ease;
+}
+
+.right .profile_teacher:hover{
+    transform: scale(1.1);
+}
+
+
+
+.dashboard_teacher .banner_welcome{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+    background-color: var(--color-bg-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+
+.dashboard_teacher .banner_welcome .banner_left{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+}
+
+.dashboard_teacher .banner_welcome .banner_left .session_ac span{
+    padding: 0px 10px;
+    background-color: var(--color-primary-light);
+    border-radius: var(--radius-full);
+}
+
+.dashboard_teacher .banner_welcome .banner_left h1{
+    color: var(--color-text-main);
+}
+
+.dashboard_teacher .banner_welcome .banner_left p{
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-bold);
+}
+
+.dashboard_teacher .banner_welcome .banner_right{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-primary-light);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    line-height: 1.5em;
+    transition: transform var(--transition-normal);
+}
+.dashboard_teacher .banner_welcome .banner_right:hover{
+    transform: translateY(-2.6px);
+}
+
+.dashboard_teacher .banner_welcome .banner_right .icon_visio{
+    padding: 13px;
+    background-color: var(--color-accent);
+    color: var(--color-bg-surface) ;
+    border-radius: var(--radius-sm);
+    position: relative;
+}
+
+.dashboard_teacher .banner_welcome .banner_right .icon_visio .badge{
+    position: absolute;
+    border-radius: var(--radius-full);
+    background: #d91515;
+    top: -8px;
+    right: -7px;
+    min-width: 13px;
+    content: "";
+    height: 13px;
+
+}
+.dashboard_teacher .banner_welcome .banner_right .icon_visio .badge {
+    font-size: 0.5rem;
+    animation: pulseAnimation 1.2s infinite;
+}
+
+@keyframes pulseAnimation {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.dashboard_teacher .banner_welcome .banner_right .description .time{
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.dashboard_teacher .banner_welcome .banner_right .description .class_name{
+    font-weight: bold;
+}
+
+.dashboard_teacher .statistics{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard_teacher .statistics .stat{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    background-color: var(--color-bg-surface);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-normal);
+}
+
+
+.dashboard_teacher .statistics .stat:hover{
+    box-shadow: var(--shadow-lg);
 }

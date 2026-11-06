@@ -25,8 +25,8 @@
                 <div class="group-selector">
                     <label for="teacher-group">Groupe actif</label>
                     <select id="teacher-group" name="teacher-group" aria-label="Choisir le groupe actif">
-                        <option value="developpement-web">Développement Web</option>
-                        <option value="bureautique">Bureautique</option>
+                        <option value="developpement-web">PNC-1ère année</option>
+                        <option value="bureautique">Fret Aérien</option>
                     </select>
                 </div>
                 <a href="{{route('Teacher.dashboard')}}" class="link {{request()->routeIs('Teacher.dashboard') ? 'active' : ''}}">
@@ -34,7 +34,7 @@
                     <h3>Dashboard</h3>
                 </a>
                 <a href="{{route('Teacher.groups')}}" class="link {{request()->routeIs('Teacher.groups') ? 'active' : ''}}">
-                    <span><i class="fa-regular fa-file"></i></span>
+                    <span><i class="fa-solid fa-users"></i></span>
                     <h3>Mes groupes</h3>
                 </a>
                 <a href="{{route('Teacher.resources')}}" class="link {{request()->routeIs('Teacher.resources*', 'Teacher.programs') ? 'active' : ''}}">
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </nav>
-        @yield('content')
+        @yield('content-teacher')
 
     </div>
 

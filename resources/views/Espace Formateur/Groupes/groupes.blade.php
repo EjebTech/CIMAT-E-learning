@@ -1,3 +1,4 @@
-@extends('template-tecaher')
+@extends('template-teacher')
 @section('content-teacher')
+
 @endsection
