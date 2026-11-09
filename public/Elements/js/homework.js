@@ -35,22 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     homeworkModal = document.getElementById('homeworkModal');
     homeworkModalTitle = document.getElementById('modalHwTitle');
 
-    const filterButtons = document.querySelectorAll('.homework_container .filter_btn');
-    const homeworkItems = document.querySelectorAll('.homework_item');
-
-    filterButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach((item) => item.classList.remove('active'));
-            button.classList.add('active');
-            const filterValue = button.getAttribute('data-filter');
-
-            homeworkItems.forEach((item) => {
-                const itemDate = item.getAttribute('data-date');
-                item.style.display = filterValue === 'all' || itemDate === filterValue ? 'flex' : 'none';
-            });
-        });
-    });
-
     homeworkModal?.addEventListener('click', (event) => {
         if (event.target === homeworkModal) {
             closeSubmitModal();

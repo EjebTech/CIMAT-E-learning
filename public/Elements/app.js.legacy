@@ -39,58 +39,6 @@
         });
     }
 
-
-
-
-    const searchInput = document.getElementById('courseSearchInput');
-    const filterBtns = document.querySelectorAll('.filter_btn');
-    const courseCards = document.querySelectorAll('.course_card');
-
-    // Filtrage par catégories au clic sur les boutons
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const filterValue = btn.getAttribute('data-filter');
-            filterCourses(filterValue, searchInput ? searchInput.value : '');
-        });
-    });
-
-    // Recherche par mot-clé dans l'input
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const activeFilterElement = document.querySelector('.filter_btn.active');
-            const activeFilter = activeFilterElement ? activeFilterElement.getAttribute('data-filter') : 'all';
-            filterCourses(activeFilter, e.target.value);
-        });
-    }
-
-    function filterCourses(category, searchText) {
-        const searchLower = searchText.toLowerCase().trim();
-
-        courseCards.forEach(card => {
-            const cardCategory = card.getAttribute('data-category');
-            const titleElement = card.querySelector('.course_title');
-            const descElement = card.querySelector('.course_description');
-
-            const cardTitle = titleElement ? titleElement.textContent.toLowerCase() : '';
-            const cardDesc = descElement ? descElement.textContent.toLowerCase() : '';
-
-            const matchesCategory = (category === 'all' || cardCategory === category);
-            const matchesSearch = (cardTitle.includes(searchLower) || cardDesc.includes(searchLower));
-
-            if (matchesCategory && matchesSearch) {
-                card.style.display = "flex";
-            } else {
-                card.style.display = "none";
-            }
-        });
-    }
-
-
-
-
     const calendarDays = document.getElementById('calendarDays');
     const calendarMonth = document.getElementById('calendarMonth');
 
@@ -154,32 +102,6 @@ function downloadPdf(filename) {
 
 
 
-
-document.addEventListener("DOMContentLoaded", () => {
-    const hwFilterBtns = document.querySelectorAll('.homework_container .filter_btn');
-    const hwItems = document.querySelectorAll('.homework_item');
-
-    // Filtrage dynamique par date d'échéance
-    if (hwFilterBtns.length > 0 && hwItems.length > 0) {
-        hwFilterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                hwFilterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filterValue = btn.getAttribute('data-filter');
-
-                hwItems.forEach(item => {
-                    const itemDate = item.getAttribute('data-date');
-                    if (filterValue === 'all' || itemDate === filterValue) {
-                        item.style.display = "flex";
-                    } else {
-                        item.style.display = "none";
-                    }
-                });
-            });
-        });
-    }
-});
 
 // Téléchargement du sujet
 function downloadHwSubject(filename) {

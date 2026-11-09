@@ -26,7 +26,7 @@
 
 		<header class="groups_page_header">
 			<div>
-				<p class="groups_overline">ESPACE FORMATEUR</p>
+				<p class="groups_overline"></p>
 				<h1>Mes groupes</h1>
 				<p>Suivi des apprenants de la formation Personnel Navigant Commercial</p>
 			</div>

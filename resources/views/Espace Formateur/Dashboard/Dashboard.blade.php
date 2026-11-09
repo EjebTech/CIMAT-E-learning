@@ -228,13 +228,13 @@
                         <div class="schedule_time"><span>10:15 – 11:45</span><span class="panel_badge panel_badge-alert">Imminent</span></div>
                         <h3>Procédures de sécurité et évacuation</h3>
                         <p>Groupe PNC</p>
-                        <div class="schedule_meta"><a href="{{ route('Teacher.videoconference') }}">Rejoindre <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+                        
                     </li>
                     <li class="schedule_item">
                         <div class="schedule_time"><span>14:00 – 16:00</span><span>Présentiel</span></div>
                         <h3>Service à bord et relation passager</h3>
                         <p>Groupe PNC</p>
-                        <div class="schedule_meta"><a href="{{ route('Teacher.groups') }}">Fiche séance</a></div>
+
                     </li>
                     <li class="schedule_item">
                         <div class="schedule_time"><span>16:30 – 17:30</span><span class="panel_badge">Conseil</span></div>
