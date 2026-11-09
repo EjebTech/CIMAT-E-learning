@@ -2182,3 +2182,290 @@ body {
     .grading_submit:hover { transform: none; }
 }
 
+.visio_page {
+    grid-column: 2;
+    display: grid;
+    align-content: start;
+    gap: 18px;
+    width: 100%;
+    min-width: 0;
+    padding-inline: 30px;
+}
+
+.visio_heading,
+.visio_section_header,
+.visio_live_content,
+.visio_session_card_top,
+.visio_session_card_footer,
+.visio_replay_card {
+    display: flex;
+    align-items: center;
+}
+
+.visio_heading {
+    justify-content: space-between;
+    gap: 18px;
+    background-color: var(--color-bg-surface);
+    padding: 18px 20px;
+    border-radius: var(--radius-md);
+}
+
+.visio_heading h1 { color: var(--color-primary-hover2); font-size: 1.5rem; }
+.visio_heading > div > p:last-child { margin-top: 5px; color: var(--color-text-muted); font-size: 0.82rem; }
+
+.visio_heading_actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.visio_search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: min(300px, 100%);
+    min-width: 220px;
+    padding: 6px 7px 6px 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--color-text-muted);
+}
+.visio_search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--color-text-main); font: inherit; font-size: 0.76rem; }
+.visio_search button { display: grid; place-items: center; width: 30px; height: 30px; border: 0; border-radius: 4px; background: #e9f1ff; color: var(--color-primary); cursor: pointer; }
+
+.visio_summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.visio_summary article {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+}
+
+.visio_summary article > div { display: grid; gap: 3px; }
+.visio_summary article strong { color: var(--color-primary-hover2); font-size: 1.2rem; }
+.visio_summary article > div > span { color: var(--color-text-muted); font-size: 0.76rem; }
+
+.visio_summary_icon {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 7px;
+}
+
+.visio-icon-live { background: #ffe4d8; color: #b42318; }
+.visio-icon-upcoming { background: #e2edff; color: #0c4778; }
+.visio-icon-replay { background: #d7f6e8; color: #08734d; }
+
+.visio_live_panel,
+.visio_section {
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+}
+
+.visio_live_panel { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; }
+
+.visio_live_signal {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #b42318;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.visio_live_signal span { width: 8px; height: 8px; border-radius: 50%; background: #dc2626; box-shadow: 0 0 0 4px #fee2e2; }
+
+.visio_live_content {
+    grid-column: 1 / -1;
+    gap: 14px;
+    min-width: 0;
+}
+
+.visio_live_icon {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #e2edff;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.visio_live_content > div:nth-child(2) { flex: 1; min-width: 0; }
+.visio_session_group { margin-bottom: 4px; color: var(--color-primary); font-size: 0.68rem; font-weight: 700; }
+.visio_live_content h2 { color: var(--color-text-main); font-size: 1rem; }
+.visio_live_content > div:nth-child(2) > p:last-child { margin-top: 4px; color: var(--color-text-muted); font-size: 0.76rem; }
+.visio_live_time { display: grid; gap: 4px; text-align: right; white-space: nowrap; }
+.visio_live_time strong { color: var(--color-text-main); font-size: 0.82rem; }
+.visio_live_time span { color: var(--color-text-muted); font-size: 0.7rem; }
+
+.visio_join_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    justify-self: end;
+    min-height: 36px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.74rem;
+    font-weight: 700;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.visio_join_button:hover { transform: translateY(-1px); background: var(--color-primary-hover); }
+
+.visio_section_header {
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.visio_section_header h2 { color: var(--color-primary-hover2); font-size: 1rem; }
+.visio_section_header p { margin-top: 4px; color: var(--color-text-muted); font-size: 0.76rem; }
+.visio_section_count { color: var(--color-text-muted); font-size: 0.7rem; white-space: nowrap; }
+.visio_session_grid,
+.visio_replay_grid { display: grid; gap: 12px; }
+.visio_session_grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.visio_replay_grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.visio_session_card,
+.visio_replay_card {
+    display: grid;
+    align-content: start;
+    gap: 12px;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    background: #fff;
+    transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.visio_session_card:hover,
+.visio_replay_card:hover { transform: translateY(-2px); border-color: #c7d9f8; background: #f8faff; box-shadow: var(--shadow-sm); }
+
+.visio_session_card_top { align-items: flex-start; justify-content: space-between; gap: 8px; }
+.visio_session_card_top .visio_session_title { justify-content: flex-end; }
+.visio_session_card h3 { color: var(--color-text-main); font-size: 0.86rem; line-height: 1.4; overflow-wrap: anywhere; }
+.visio_session_card > p { color: var(--color-text-muted); font-size: 0.74rem; line-height: 1.4; }
+.visio_session_card_footer { justify-content: space-between; flex-wrap: wrap; gap: 10px; padding-top: 10px; border-top: 1px solid #edf0f5; }
+
+.visio_date_block {
+    display: grid;
+    justify-items: center;
+    gap: 2px;
+    width: 48px;
+    padding: 6px 4px;
+    border-radius: 6px;
+    background: #edf3ff;
+    color: var(--color-primary);
+}
+
+.visio_date_block strong { font-size: 1.1rem; }
+.visio_date_block span { font-size: 0.62rem; font-weight: 700; }
+.visio_session_title { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 4px; }
+
+.visio_tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 6px;
+    border-radius: 4px;
+    background: #eef2fa;
+    color: #40516f;
+    font-size: 0.64rem;
+    font-weight: 700;
+}
+
+.tag-today { background: #fff0dc; color: #965414; }
+.tag-security { background: #e2edff; color: #0c4778; }
+.tag-service { background: #d7f6e8; color: #08734d; }
+.tag-crew { background: #f0e9ff; color: #60449a; }
+.visio_session_time { display: grid; gap: 4px; }
+.visio_session_time strong { color: var(--color-text-main); font-size: 0.76rem; }
+.visio_session_time span { color: var(--color-text-muted); font-size: 0.68rem; }
+
+.visio_session_actions { display: flex; justify-content: flex-end; gap: 6px; }
+.visio_session_actions button {
+    padding: 6px 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    background: #fff;
+    color: var(--color-primary);
+    font: inherit;
+    font-size: 0.68rem;
+    cursor: pointer;
+    transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.visio_session_actions button:hover { border-color: #c7d9f8; background: #e9f1ff; }
+.visio_session_actions .visio_cancel_button { color: #b42318; }
+.visio_session_actions .visio_cancel_button:hover { border-color: #f1b5b1; background: #fff1f0; }
+
+.visio_replay_icon { display: grid; flex: 0 0 auto; place-items: center; width: 34px; height: 34px; border-radius: 6px; background: #d7f6e8; color: #08734d; }
+.visio_replay_card { grid-template-columns: 34px minmax(0, 1fr) auto; align-items: center; }
+.visio_replay_card > div { min-width: 0; }
+.visio_replay_card h3 { color: var(--color-text-main); font-size: 0.82rem; line-height: 1.4; overflow-wrap: anywhere; }
+.visio_replay_card p { margin-top: 4px; color: var(--color-text-muted); font-size: 0.72rem; }
+.visio_replay_card > a { display: inline-flex; align-items: center; gap: 6px; color: var(--color-primary); font-size: 0.74rem; white-space: nowrap; }
+.visio_replay_card > a:hover { color: var(--color-accent-hover); }
+
+.visio_page .teacher_footer { margin-inline: -30px; width: calc(100% + 60px); }
+
+@media (max-width: 1100px) {
+    .visio_session_grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 820px) {
+    .visio_page { padding-inline: 18px; }
+    .visio_page .top_dashboard_teacher,
+    .visio_page .teacher_footer { margin-inline: -18px; width: calc(100% + 36px); }
+    .visio_heading { align-items: flex-start; flex-direction: column; }
+    .visio_heading_actions { justify-content: flex-start; width: 100%; }
+}
+
+@media (max-width: 560px) {
+    .visio_page { padding-inline: 12px; }
+    .visio_page .top_dashboard_teacher,
+    .visio_page .teacher_footer { margin-inline: -12px; width: calc(100% + 24px); }
+    .visio_summary { grid-template-columns: minmax(0, 1fr); }
+    .visio_live_panel { grid-template-columns: minmax(0, 1fr); }
+    .visio_live_content { align-items: flex-start; flex-wrap: wrap; }
+    .visio_live_time { margin-left: 62px; text-align: left; }
+    .visio_join_button { justify-self: stretch; }
+    .visio_search { width: 100%; min-width: 0; }
+    .visio_heading_actions { align-items: stretch; flex-direction: column; }
+    .visio_heading_actions .primary_button { width: 100%; }
+    .visio_session_grid,
+    .visio_replay_grid { grid-template-columns: minmax(0, 1fr); }
+    .visio_session_card_top { justify-content: flex-start; }
+    .visio_session_card_top .visio_session_title { justify-content: flex-start; }
+    .visio_session_actions { flex-wrap: wrap; }
+    .visio_replay_card { grid-template-columns: 34px minmax(0, 1fr); }
+    .visio_replay_card > a { grid-column: 2; justify-self: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .visio_join_button,
+    .visio_session_card,
+    .visio_session_actions button,
+    .visio_replay_card { transition: none; }
+    .visio_join_button:hover { transform: none; }
+}
+

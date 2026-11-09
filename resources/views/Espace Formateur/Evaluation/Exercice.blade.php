@@ -91,7 +91,7 @@
 				</article>
 
 				<article class="submission_row">
-					<span class="submission_avatar avatar-coral" aria-hidden="true">SB</span>
+					<span class="submission_avatar avatar-blue aria-hidden="true">SB</span>
 					<div class="submission_student"><h3>Sarah Benali</h3><span>PNC-015 · Groupe PNC</span></div>
 					<div class="submission_assignment"><strong>Quiz : premiers secours en cabine</strong><span>Rendu le 16 mars 2026</span></div>
 					<span class="submission_status status-pending">À corriger</span>
@@ -107,7 +107,7 @@
 				</article>
 
 				<article class="submission_row">
-					<span class="submission_avatar avatar-orange" aria-hidden="true">TG</span>
+					<span class="submission_avatar avatar-blue" aria-hidden="true">TG</span>
 					<div class="submission_student"><h3>Thomas Garnier</h3><span>PNC-019 · Groupe PNC</span></div>
 					<div class="submission_assignment"><strong>Accueil et embarquement des passagers</strong><span>Rendu le 15 mars 2026</span></div>
 					<span class="submission_status status-corrected">Corrigé · 18/20</span>
@@ -123,7 +123,7 @@
 				</article>
 
 				<article class="submission_row">
-					<span class="submission_avatar avatar-violet" aria-hidden="true">EL</span>
+					<span class="submission_avatar avatar-blue" aria-hidden="true">EL</span>
 					<div class="submission_student"><h3>Emma Laurent</h3><span>PNC-024 · Groupe PNC</span></div>
 					<div class="submission_assignment"><strong>Gestion des situations difficiles</strong><span>Rendu le 14 mars 2026</span></div>
 					<span class="submission_status status-pending">À corriger</span>
