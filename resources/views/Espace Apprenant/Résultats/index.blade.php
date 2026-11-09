@@ -35,7 +35,7 @@
         <section class="section_header results_banner">
             <div class="section_header_text">
                 <h1>Résultats Académiques PNC</h1>
-                <p>Consultez vos notes, suivez votre progression et analysez vos performances par matière tout au long du trimestre.</p>
+                <p>Consultez vos notes, suivez votre progression et analysez vos performances par matière tout au long de la session.</p>
             </div>
             <div class="badge_pnc">
                 <i class="fa-solid fa-plane-departure"></i> Académie PNC
@@ -46,7 +46,7 @@
 
             <button class="results_period" type="button">
                 <i class="fa-solid fa-calendar-days"></i>
-                Trimestre en cours
+                Session en cours
                 <i class="fa-solid fa-chevron-down"></i>
             </button>
         </section>
@@ -57,7 +57,7 @@
                 <div class="info_stat">
                     <p>Moyenne générale</p>
                     <p class="stat_num">16,2 / 20</p>
-                    <p class="stat_period"><i class="fa-solid fa-arrow-trend-up"></i> +1,4 pts ce trimestre</p>
+                    <p class="stat_period"><i class="fa-solid fa-arrow-trend-up"></i> +1,4 pts cette session</p>
                 </div>
             </article>
             <article class="stat result_stat_card">
@@ -143,7 +143,7 @@
             <div class="results_side">
                 <article class="results_panel subject_panel">
                     <div class="results_panel_header">
-                        <div><h2>Moyennes par matière</h2><p>Sur le trimestre actuel</p></div>
+                        <div><h2>Moyennes par matière</h2><p>Sur la session actuelle</p></div>
                     </div>
                     <div class="subject_grades">
                         <div class="subject_grade">
@@ -177,12 +177,12 @@
                         <div class="progress_gain">
                             <i class="fa-solid fa-arrow-trend-up"></i>
                             <strong>+1,4 point</strong>
-                            <span>depuis le début du trimestre</span>
+                            <span>depuis le début de la session</span>
                         </div>
                     </div>
                     <div class="progress_goal">
                         <div class="progress_goal_header">
-                            <span>Objectif trimestriel</span>
+                            <span>Objectif de session</span>
                             <strong>81%</strong>
                         </div>
                         <div class="progress_goal_track"><span></span></div>

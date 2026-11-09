@@ -73,8 +73,8 @@
                     <div class="announcement_date"><strong>08</strong><span>NOV</span></div>
                     <div class="announcement_card_content">
                         <div class="announcement_labels"><span class="announcement_label academic">Académique</span><span>Il y a 2 heures</span></div>
-                        <h2>Calendrier des évaluations du deuxième trimestre</h2>
-                        <p>Les dates des devoirs, exercices pratiques et examens de fin de trimestre sont maintenant disponibles.</p>
+                        <h2>Calendrier des évaluations de la deuxième session</h2>
+                        <p>Les dates des devoirs, exercices pratiques et examens de fin de session sont maintenant disponibles.</p>
                     </div>
                     <a href="#" class="announcement_open" aria-label="Ouvrir l'annonce"><i class="fa-solid fa-arrow-right"></i></a>
                 </article>

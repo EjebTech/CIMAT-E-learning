@@ -484,7 +484,7 @@ body {
     border-radius: var(--radius-full);
     border: 1px solid transparent;
     transition: all 0.3s ease;
-    background-color: var(--color-primary-light);
+    background-color: var(--color-primary);
 }
 
 .notif:hover {
@@ -1021,10 +1021,8 @@ body {
 
 .course_item {
     display: grid;
-    grid-template-columns: 45px minmax(180px, 1.15fr) minmax(
-            220px,
-            1.45fr
-        ) minmax(150px, 0.8fr) auto;
+    grid-template-columns:
+        45px minmax(180px, 1.15fr) minmax(220px, 1.45fr) 165px 120px;
     align-items: center;
     gap: 16px;
     padding: 12px 14px;
@@ -1035,6 +1033,19 @@ body {
         transform 0.25s ease,
         background-color 0.25s ease,
         box-shadow 0.25s ease;
+}
+
+.course_item .course_icon,
+.course_item .course_title,
+.course_item .course_description,
+.course_item .course_meta,
+.course_item .course_action {
+    align-self: center;
+}
+
+.course_item .course_title h4,
+.course_item .course_description p {
+    margin: 0;
 }
 
 .course_item:hover {
@@ -1091,12 +1102,27 @@ body {
 .course_meta {
     display: flex;
     align-items: center;
+    grid-column: 4;
+    width: 100%;
+    min-width: 150px;
+    justify-self: start;
 }
 
 .course_meta .meta {
+    display: inline-flex;
+    align-items: center;
+    width: 165px;
     font-size: 0.82rem;
     line-height: 1.35;
     color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.course_meta .meta i {
+    width: 16px;
+    margin-right: 4px;
+    text-align: center;
+    flex: 0 0 16px;
 }
 
 .course_action {
@@ -1934,12 +1960,27 @@ body {
     border: 1px solid var(--color-border);
     background: transparent;
     color: var(--color-text-main);
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.student_profile_reset:hover {
+    border-color: #f59e0b;
+    background: #fff7ed;
+    color: #c2410c;
+    transform: translateY(-2px);
 }
 
 .student_profile_save {
     border: none;
-    background: var(--color-primary);
+    background: #15803d;
     color: white;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.student_profile_save:hover {
+    background: #166534;
+    box-shadow: 0 8px 18px rgba(21, 128, 61, 0.22);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 1024px) {

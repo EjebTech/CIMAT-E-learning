@@ -62,7 +62,7 @@
                     <div class="info_stat">
                         <p>Devoirs Complétés</p>
                         <p class="stat_num">7</p>
-                        <p class="stat_period">Ce trimestre</p>
+                        <p class="stat_period">Cette session</p>
                     </div>
                 </div>
                 <div class="stat">
@@ -70,7 +70,7 @@
                     <div class="info_stat">
                         <p>Présence</p>
                         <p class="stat_num">92%</p>
-                        <p class="stat_period">Ce trimestre</p>
+                        <p class="stat_period">Cette session</p>
                     </div>
                 </div>
                 <div class="stat">
@@ -78,7 +78,7 @@
                     <div class="info_stat">
                         <p>Moyenne Générale</p>
                         <p class="stat_num">16.5 / 20</p>
-                        <p class="stat_period">Trimestre en cours</p>
+                        <p class="stat_period">Session en cours</p>
                     </div>
                 </div>
             </div>

@@ -193,7 +193,7 @@
     <!-- Footer Solidaire -->
     <footer class="student_footer">
         <div class="footer_content">
-            <p>&copy; 2026 <a href="#">Groupe Comtec Cimat</a>. Tous droits réservés.</p>
+            <p>&copy; 2026 <a href="#">Groupe Komptech Cimat</a>. Tous droits réservés.</p>
             <div class="footer_socials">
                 <a href="#" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#" aria-label="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
