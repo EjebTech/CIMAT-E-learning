@@ -48,7 +48,7 @@
 		</section>
 
 		<section class="visio_live_panel" aria-labelledby="visio-live-title">
-			<div class="visio_live_signal"><span></span> EN DIRECT MAINTENANT</div>
+			<div class="visio_live_signal"><span class="visio_live_signal"></span> EN DIRECT MAINTENANT</div>
 			<div class="visio_live_content">
 				<div class="visio_live_icon"><i class="fa-solid fa-video" aria-hidden="true"></i></div>
 				<div>

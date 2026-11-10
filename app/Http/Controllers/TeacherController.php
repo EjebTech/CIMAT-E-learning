@@ -74,4 +74,10 @@ class TeacherController extends Controller
     public function InsertVideoconference(){
         return view("Espace Formateur.Visioconférence.form_ajout_visio");
     }
+
+    //profil
+    public function Profil(){
+        return view("Espace Formateur.profil.mon_profil");
+    }
 }
+

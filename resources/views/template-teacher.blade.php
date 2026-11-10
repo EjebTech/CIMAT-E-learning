@@ -45,7 +45,7 @@
                     <span><i class="fa-solid fa-book-open"></i></span>
                     <h3>Devoirs et evaluations</h3>
                 </a>
-                <a href="" class="link {{request()->routeIs('Teacher.profile') ? 'active' : ''}}">
+                <a href="{{route('Teacher.profil')}}" class="link {{request()->routeIs('Teacher.profile') ? 'active' : ''}}">
                     <span><i class="fa-regular fa-circle-user"></i></span>
                     <h3>Profil</h3>
                 </a>

@@ -53,7 +53,7 @@
 						<label for="evaluation-search">Rechercher un élève, un devoir ou un exercice</label>
 						<div><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="evaluation-search" type="search" name="search" placeholder="Nom ou titre..."><button type="submit">Rechercher</button></div>
 					</form>
-					<span class="evaluation_count">3 à corriger</span>
+					
 				</div>
 			</header>
 
@@ -63,7 +63,7 @@
 					<div class="submission_student"><h3>Lucas Moreau</h3><span>PNC-042 · Groupe PNC</span></div>
 					<div class="submission_assignment"><strong>Procédures de sécurité cabine</strong><span>Rendu le 18 mars 2026</span></div>
 					<span class="submission_status status-pending">À corriger</span>
-					<button class="submission_view_button" type="button" data-submission-view="PNC-042-security"><i class="fa-regular fa-eye" aria-hidden="true"></i> Voir le rendu</button>
+					<button class="submission_view_button" type="button" data-submission-view="PNC-042-security"><i class="fa-regular fa-eye" aria-hidden="true"></i> </button>
 					<details class="grading_disclosure">
 						<summary><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Corriger &amp; commenter</summary>
 						<form class="grading_form">
@@ -79,7 +79,7 @@
 					<div class="submission_student"><h3>Camille Dupuis</h3><span>PNC-011 · Groupe PNC</span></div>
 					<div class="submission_assignment"><strong>Service à bord et relation passager</strong><span>Rendu le 17 mars 2026</span></div>
 					<span class="submission_status status-corrected">Corrigé · 16/20</span>
-					<button class="submission_view_button" type="button" data-submission-view="PNC-011-service"><i class="fa-regular fa-eye" aria-hidden="true"></i> Voir le rendu</button>
+					<button class="submission_view_button" type="button" data-submission-view="PNC-011-service"><i class="fa-regular fa-eye" aria-hidden="true"></i> </button>
 					<details class="grading_disclosure">
 						<summary><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Voir la correction</summary>
 						<form class="grading_form">
@@ -95,7 +95,7 @@
 					<div class="submission_student"><h3>Sarah Benali</h3><span>PNC-015 · Groupe PNC</span></div>
 					<div class="submission_assignment"><strong>Quiz : premiers secours en cabine</strong><span>Rendu le 16 mars 2026</span></div>
 					<span class="submission_status status-pending">À corriger</span>
-					<button class="submission_view_button" type="button" data-submission-view="PNC-015-first-aid"><i class="fa-regular fa-eye" aria-hidden="true"></i> Voir le rendu</button>
+					<button class="submission_view_button" type="button" data-submission-view="PNC-015-first-aid"><i class="fa-regular fa-eye" aria-hidden="true"></i> </button>
 					<details class="grading_disclosure">
 						<summary><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Corriger &amp; commenter</summary>
 						<form class="grading_form">
@@ -111,7 +111,7 @@
 					<div class="submission_student"><h3>Thomas Garnier</h3><span>PNC-019 · Groupe PNC</span></div>
 					<div class="submission_assignment"><strong>Accueil et embarquement des passagers</strong><span>Rendu le 15 mars 2026</span></div>
 					<span class="submission_status status-corrected">Corrigé · 18/20</span>
-					<button class="submission_view_button" type="button" data-submission-view="PNC-019-boarding"><i class="fa-regular fa-eye" aria-hidden="true"></i> Voir le rendu</button>
+					<button class="submission_view_button" type="button" data-submission-view="PNC-019-boarding"><i class="fa-regular fa-eye" aria-hidden="true"></i> </button>
 					<details class="grading_disclosure">
 						<summary><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Voir la correction</summary>
 						<form class="grading_form">
@@ -127,7 +127,7 @@
 					<div class="submission_student"><h3>Emma Laurent</h3><span>PNC-024 · Groupe PNC</span></div>
 					<div class="submission_assignment"><strong>Gestion des situations difficiles</strong><span>Rendu le 14 mars 2026</span></div>
 					<span class="submission_status status-pending">À corriger</span>
-					<button class="submission_view_button" type="button" data-submission-view="PNC-024-difficult-situation"><i class="fa-regular fa-eye" aria-hidden="true"></i> Voir le rendu</button>
+					<button class="submission_view_button" type="button" data-submission-view="PNC-024-difficult-situation"><i class="fa-regular fa-eye" aria-hidden="true"></i> </button>
 					<details class="grading_disclosure">
 						<summary><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i> Corriger &amp; commenter</summary>
 						<form class="grading_form">

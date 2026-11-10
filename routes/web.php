@@ -158,4 +158,7 @@ Route::prefix('Teacher')->name('Teacher.')->group(function(){
     Route::get('/Visioconferences', [TeacherController::class, 'Videoconference'])->name('videoconference');
     Route::get('/Visioconferences/Ajouter', [TeacherController::class, 'InsertVideoconference'])->name('videoconference.create');
 
+    //profil
+
+    Route::get('/Profil', [TeacherController::class, 'Profil'])->name('profil');
 });

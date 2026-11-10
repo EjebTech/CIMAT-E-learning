@@ -10,7 +10,7 @@
             </div>
             <div class="right">
                 <div class="date_header">
-                    <p>Jeudi, 12 Novembre 2026 - 9h27</p>
+                    <p>Jeudi, 12 Novembre 2026</p>
                 </div>
                 <div class="notif">
                     <a href="#" class="notification-icon">
@@ -212,7 +212,7 @@
                             <span class="panel_badge panel_badge-success">17.5 / 20</span>
                             <small>Noté ce matin</small>
                         </div>
-                        <a class="secondary_button" href="{{ route('Teacher.evaluations') }}"><i class="fa-regular fa-eye" aria-hidden="true"></i> Réviser</a>
+                        <a class="secondary_button" href="{{ route('Teacher.evaluations') }}"><i class="fa-regular fa-eye" aria-hidden="true"></i></a>
                     </article>
                 </div>
                 <a class="panel_footer-link" href="{{ route('Teacher.evaluations') }}">Ouvrir l'atelier de correction global (11 restants) <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
@@ -228,7 +228,7 @@
                         <div class="schedule_time"><span>10:15 – 11:45</span><span class="panel_badge panel_badge-alert">Imminent</span></div>
                         <h3>Procédures de sécurité et évacuation</h3>
                         <p>Groupe PNC</p>
-                        
+
                     </li>
                     <li class="schedule_item">
                         <div class="schedule_time"><span>14:00 – 16:00</span><span>Présentiel</span></div>
