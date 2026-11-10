@@ -1470,7 +1470,11 @@ body {
     display: flex;
     align-items: center;
 }
-
+.course_row_title img{
+    width: 90px;
+    height: 88px;
+    object-fit: contain
+}
 .courses_heading {
     justify-content: space-between;
     gap: 20px;

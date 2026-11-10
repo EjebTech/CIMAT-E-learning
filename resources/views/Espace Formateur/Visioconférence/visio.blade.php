@@ -130,4 +130,55 @@
 			</form>
 		</section>
 	</div>
+    <script>
+        // Fonctions universelles pour ouvrir et fermer n'importe quelle modale par son ID
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.removeAttribute('hidden');
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.setAttribute('hidden', 'true');
+
+                // Réinitialise le formulaire si l'utilisateur annule la saisie
+                const form = modal.querySelector('form');
+                if (form) form.reset();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Gestion de l'ouverture (Bouton "Planifier une session")
+            const openButtons = document.querySelectorAll('[data-modal-open]');
+            openButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modalId = button.getAttribute('data-modal-open');
+                    openModal(modalId);
+                });
+            });
+
+            // 2. Gestion de la fermeture (Croix et boutons "Annuler")
+            const closeButtons = document.querySelectorAll('.course_modal_close, .course_form_cancel');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modalId = button.getAttribute('data-modal-close');
+                    closeModal(modalId);
+                });
+            });
+
+            // 3. Fermeture en cliquant sur l'arrière-plan sombre (overlay)
+            const allModals = document.querySelectorAll('.course_modal');
+            allModals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        const modalId = modal.getAttribute('id');
+                        closeModal(modalId);
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

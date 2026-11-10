@@ -206,4 +206,55 @@
 			</form>
 		</section>
 	</div>
+    <script>
+        // Fonctions universelles pour ouvrir et fermer n'importe quelle modale par son ID
+        function openEvaluationModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.removeAttribute('hidden');
+            }
+        }
+
+        function closeEvaluationModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.setAttribute('hidden', 'true');
+
+                // Réinitialise le formulaire si l'utilisateur annule la saisie
+                const form = modal.querySelector('form');
+                if (form) form.reset();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Gestion de l'ouverture (Boutons "Créer un exercice" et "Créer un devoir")
+            const openButtons = document.querySelectorAll('.evaluation_create_actions button');
+            openButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modalId = button.getAttribute('data-modal-open');
+                    openEvaluationModal(modalId);
+                });
+            });
+
+            // 2. Gestion de la fermeture (Croix et boutons "Annuler")
+            const closeButtons = document.querySelectorAll('.course_modal_close, .course_form_cancel');
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modalId = button.getAttribute('data-modal-close');
+                    closeEvaluationModal(modalId);
+                });
+            });
+
+            // 3. Fermeture en cliquant sur l'arrière-plan sombre (overlay)
+            const allModals = document.querySelectorAll('.course_modal');
+            allModals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        const modalId = modal.getAttribute('id');
+                        closeEvaluationModal(modalId);
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

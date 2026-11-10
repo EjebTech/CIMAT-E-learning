@@ -32,7 +32,7 @@
 			</div>
 			<div class="courses_heading_actions">
 				<button class="secondary_button" type="button" data-modal-open="pdfCourseModal">
-					<i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Ajouter un cours PDF
+					<i class="fa-regular fa-file-pdf" aria-hidden="true" ></i> Ajouter un cours PDF
 				</button>
 				<button class="primary_button" type="button" data-modal-open="videoCourseModal">
 					<i class="fa-solid fa-video" aria-hidden="true"></i> Ajouter une vidéo
@@ -67,64 +67,69 @@
 			</div>
 
 			<div class="course_list_table" role="table" aria-label="Liste des cours et ressources">
-				
+
 				<div class="course_list_rows" role="rowgroup">
 					<article class="course_row" role="row" data-course-row data-type="pdf" data-title="procédures de sécurité cabine">
-						<div class="course_row_title" role="cell"><span class="course_type_icon type-pdf"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i></span><div><h3>Procédures de sécurité cabine</h3><p>Consignes de sécurité, issues et équipements de bord</p></div></div>
+						<div class="course_row_title" role="cell">
+                            <img src="{{ asset('Elements/images/logo.png') }}" alt="CIMAT">
+                            <div>
+                                <h3>Procédures de sécurité cabine</h3><p>Consignes de sécurité, issues et équipements de bord</p>
+                            </div>
+                        </div>
 						<div class="course_row_type" role="cell"><span class="course_type_badge">PDF</span></div>
 						<time class="course_row_date" role="cell" datetime="2026-03-18">18 mars 2026</time>
 						<div class="course_row_actions" role="cell"><button type="button" class="course_action_button"><i class="fa-regular fa-eye" aria-hidden="true"></i><span>Consulter</span></button><button type="button" class="course_delete_button" aria-label="Supprimer Procédures de sécurité cabine"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
 					</article>
 					<article class="course_row" role="row" data-course-row data-type="pdf-video" data-title="service à bord et relation passager">
-						<div class="course_row_title" role="cell"><span class="course_type_icon type-combined"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span><div><h3>Service à bord et relation passager</h3><p>Étapes du service, posture et communication avec les passagers</p></div></div>
+						<div class="course_row_title" role="cell"><img src="{{asset('Elements/images/Air hostess-rafiki.png')}}" alt=""><div><h3>Service à bord et relation passager</h3><p>Étapes du service, posture et communication avec les passagers</p></div></div>
 						<div class="course_row_type" role="cell"><span class="course_type_badge">PDF + vidéo</span></div>
 						<time class="course_row_date" role="cell" datetime="2026-03-15">15 mars 2026</time>
 						<div class="course_row_actions" role="cell"><button type="button" class="course_action_button"><i class="fa-regular fa-eye" aria-hidden="true"></i><span>Consulter</span></button><button type="button" class="course_delete_button" aria-label="Supprimer Service à bord et relation passager"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
 					</article>
 					<article class="course_row" role="row" data-course-row data-type="video" data-title="premiers secours en milieu aéronautique">
-						<div class="course_row_title" role="cell"><span class="course_type_icon type-video"><i class="fa-solid fa-circle-play" aria-hidden="true"></i></span><div><h3>Premiers secours en milieu aéronautique</h3><p>Gestes d’urgence et prise en charge d’un passager</p></div></div>
+						<div class="course_row_title" role="cell"><img src="{{ asset('Elements/images/logo.png') }}" alt="CIMAT"><div><h3>Premiers secours en milieu aéronautique</h3><p>Gestes d’urgence et prise en charge d’un passager</p></div></div>
 						<div class="course_row_type" role="cell"><span class="course_type_badge">Vidéo</span></div>
 						<time class="course_row_date" role="cell" datetime="2026-03-12">12 mars 2026</time>
 						<div class="course_row_actions" role="cell"><button type="button" class="course_action_button"><i class="fa-regular fa-eye" aria-hidden="true"></i><span>Consulter</span></button><button type="button" class="course_delete_button" aria-label="Supprimer Premiers secours en milieu aéronautique"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
 					</article>
 					<article class="course_row" role="row" data-course-row data-type="pdf" data-title="accueil et embarquement des passagers">
-						<div class="course_row_title" role="cell"><span class="course_type_icon type-pdf"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i></span><div><h3>Accueil et embarquement des passagers</h3><p>Contrôle des documents et accompagnement à bord</p></div></div>
+						<div class="course_row_title" role="cell"><img src="{{ asset('Elements/images/logo.png') }}" alt="CIMAT"><div><h3>Accueil et embarquement des passagers</h3><p>Contrôle des documents et accompagnement à bord</p></div></div>
 						<div class="course_row_type" role="cell"><span class="course_type_badge">PDF</span></div>
 						<time class="course_row_date" role="cell" datetime="2026-03-10">10 mars 2026</time>
 						<div class="course_row_actions" role="cell"><button type="button" class="course_action_button"><i class="fa-regular fa-eye" aria-hidden="true"></i><span>Consulter</span></button><button type="button" class="course_delete_button" aria-label="Supprimer Accueil et embarquement des passagers"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
 					</article>
 					<article class="course_row" role="row" data-course-row data-type="pdf-video" data-title="gestion des situations difficiles">
-						<div class="course_row_title" role="cell"><span class="course_type_icon type-combined"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span><div><h3>Gestion des situations difficiles</h3><p>Prévention des conflits et mises en situation en cabine</p></div></div>
+						<div class="course_row_title" role="cell"><img src="{{ asset('Elements/images/logo.png') }}" alt="CIMAT"><div><h3>Gestion des situations difficiles</h3><p>Prévention des conflits et mises en situation en cabine</p></div></div>
 						<div class="course_row_type" role="cell"><span class="course_type_badge">PDF + vidéo</span></div>
 						<time class="course_row_date" role="cell" datetime="2026-03-08">8 mars 2026</time>
 						<div class="course_row_actions" role="cell"><button type="button" class="course_action_button"><i class="fa-regular fa-eye" aria-hidden="true"></i><span>Consulter</span></button><button type="button" class="course_delete_button" aria-label="Supprimer Gestion des situations difficiles"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
 					</article>
 					<article class="course_row" role="row" data-course-row data-type="video" data-title="annonces et démonstrations de sécurité">
-						<div class="course_row_title" role="cell"><span class="course_type_icon type-video"><i class="fa-solid fa-circle-play" aria-hidden="true"></i></span><div><h3>Annonces et démonstrations de sécurité</h3><p>Présentation des consignes aux passagers</p></div></div>
+						<div class="course_row_title" role="cell"><img src="{{ asset('Elements/images/logo.png') }}" alt="CIMAT"><div><h3>Annonces et démonstrations de sécurité</h3><p>Présentation des consignes aux passagers</p></div></div>
 						<div class="course_row_type" role="cell"><span class="course_type_badge">Vidéo</span></div>
 						<time class="course_row_date" role="cell" datetime="2026-03-06">6 mars 2026</time>
 						<div class="course_row_actions" role="cell"><button type="button" class="course_action_button"><i class="fa-regular fa-eye" aria-hidden="true"></i><span>Consulter</span></button><button type="button" class="course_delete_button" aria-label="Supprimer Annonces et démonstrations de sécurité"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
 					</article>
 					<article class="course_row" role="row" data-course-row data-type="pdf" data-title="marchandises dangereuses en cabine">
-						<div class="course_row_title" role="cell"><span class="course_type_icon type-pdf"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i></span><div><h3>Marchandises dangereuses en cabine</h3><p>Identification, signalement et procédures applicables</p></div></div>
+						<div class="course_row_title" role="cell"><img src="{{ asset('Elements/images/logo.png') }}" alt="CIMAT"><div><h3>Marchandises dangereuses en cabine</h3><p>Identification, signalement et procédures applicables</p></div></div>
 						<div class="course_row_type" role="cell"><span class="course_type_badge">PDF</span></div>
 						<time class="course_row_date" role="cell" datetime="2026-03-04">4 mars 2026</time>
 						<div class="course_row_actions" role="cell"><button type="button" class="course_action_button"><i class="fa-regular fa-eye" aria-hidden="true"></i><span>Consulter</span></button><button type="button" class="course_delete_button" aria-label="Supprimer Marchandises dangereuses en cabine"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
 					</article>
 					<article class="course_row" role="row" data-course-row data-type="video" data-title="préparation de la cabine avant le vol">
-						<div class="course_row_title" role="cell"><span class="course_type_icon type-video"><i class="fa-solid fa-circle-play" aria-hidden="true"></i></span><div><h3>Préparation de la cabine avant le vol</h3><p>Vérifications des équipements et de la cabine</p></div></div>
+						<div class="course_row_title" role="cell"><img src="{{ asset('Elements/images/logo.png') }}" alt="CIMAT"><div><h3>Préparation de la cabine avant le vol</h3><p>Vérifications des équipements et de la cabine</p></div></div>
 						<div class="course_row_type" role="cell"><span class="course_type_badge">Vidéo</span></div>
 						<time class="course_row_date" role="cell" datetime="2026-03-02">2 mars 2026</time>
 						<div class="course_row_actions" role="cell"><button type="button" class="course_action_button"><i class="fa-regular fa-eye" aria-hidden="true"></i><span>Consulter</span></button><button type="button" class="course_delete_button" aria-label="Supprimer Préparation de la cabine avant le vol"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
 					</article>
 					<article class="course_row" role="row" data-course-row data-type="pdf" data-title="protocoles de service premium">
-						<div class="course_row_title" role="cell"><span class="course_type_icon type-pdf"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i></span><div><h3>Protocoles de service premium</h3><p>Accueil personnalisé et standards de service à bord</p></div></div>
+						<div class="course_row_title" role="cell"><img src="{{ asset('Elements/images/logo.png') }}" alt="CIMAT"><div><h3>Protocoles de service premium</h3><p>Accueil personnalisé et standards de service à bord</p></div></div>
 						<div class="course_row_type" role="cell"><span class="course_type_badge">PDF</span></div>
 						<time class="course_row_date" role="cell" datetime="2026-02-27">27 févr. 2026</time>
 						<div class="course_row_actions" role="cell"><button type="button" class="course_action_button"><i class="fa-regular fa-eye" aria-hidden="true"></i><span>Consulter</span></button><button type="button" class="course_delete_button" aria-label="Supprimer Protocoles de service premium"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
 					</article>
 					<article class="course_row" role="row" data-course-row data-type="video" data-title="coordination de l'équipage en vol">
-						<div class="course_row_title" role="cell"><span class="course_type_icon type-video"><i class="fa-solid fa-circle-play" aria-hidden="true"></i></span><div><h3>Coordination de l’équipage en vol</h3><p>Communication et répartition des rôles au sein de l’équipage</p></div></div>
+						<div class="course_row_title" role="cell"><img src="{{ asset('Elements/images/logo.png') }}" alt="CIMAT"><div><h3>Coordination de l’équipage en vol</h3><p>Communication et répartition des rôles au sein de l’équipage</p></div></div>
 						<div class="course_row_type" role="cell"><span class="course_type_badge">Vidéo</span></div>
 						<time class="course_row_date" role="cell" datetime="2026-02-24">24 févr. 2026</time>
 						<div class="course_row_actions" role="cell"><button type="button" class="course_action_button"><i class="fa-regular fa-eye" aria-hidden="true"></i><span>Consulter</span></button><button type="button" class="course_delete_button" aria-label="Supprimer Coordination de l’équipage en vol"><i class="fa-regular fa-trash-can" aria-hidden="true"></i></button></div>
@@ -159,6 +164,7 @@
 				<label>Titre du cours<input type="text" name="title" required></label>
 				<label>Description<textarea name="description" rows="3"></textarea></label>
 				<label>Fichier PDF<input type="file" name="document" accept="application/pdf,.pdf" required></label>
+
 				<footer class="course_form_footer"><button class="course_form_cancel" type="button" data-modal-close="pdfCourseModal">Annuler</button><button class="course_form_submit" type="submit">Ajouter le cours</button></footer>
 			</form>
 		</section>
@@ -170,47 +176,54 @@
 			<form class="course_form" enctype="multipart/form-data">
 				<label>Titre de la vidéo<input type="text" name="title" required></label>
 				<label>Description<textarea name="description" rows="3"></textarea></label>
-				<label>Fichier vidéo<input type="file" name="video" accept="video/*" required></label>
+				<label>Fichier vidéo<input type="file" name="video" accept="video/*"  required></label>
+                ou
+				<label>Lien vidéo<input type="file" name="link-video" required></label>
 				<footer class="course_form_footer"><button class="course_form_cancel" type="button" data-modal-close="videoCourseModal">Annuler</button><button class="course_form_submit" type="submit">Ajouter la vidéo</button></footer>
 			</form>
 		</section>
 	</div>
+    <script src="{{asset('Elements/js/pdf-video-create-modal.js')}}"></script>
+    {{-- <script>
+        const openModal = document.querySelectorAll('.courses_heading_actions button');
+        // On cible à la fois les croix et les boutons "Annuler" en une seule ligne grâce au sélecteur multiple
+        const closeButtons = document.querySelectorAll('.course_modal_close, .course_form_cancel');
+        const modalpdf = document.getElementById('pdfCourseModal');
+        const modalvideo = document.getElementById('videoCourseModal');
+        const modals = document.querySelectorAll('.course_modal');
 
-	<script>
-		const courseRows = [...document.querySelectorAll('[data-course-row]')];
-		const courseCount = document.querySelector('[data-course-count]');
-		const pageStatus = document.querySelector('[data-page-status]');
-		const previousPageButton = document.querySelector('[data-page-previous]');
-		const nextPageButton = document.querySelector('[data-page-next]');
-		const pageSize = 8;
-		let currentPage = 1;
+        // 1. Ouverture des modales
+        openModal.forEach(open => {
+            open.addEventListener('click', () => {
+                const btn_attribute = open.getAttribute('data-modal-open');
+                if (btn_attribute === 'pdfCourseModal') {
+                    modalpdf.removeAttribute('hidden');
+                } else if (btn_attribute === 'videoCourseModal') {
+                    modalvideo.removeAttribute('hidden');
+                }
+            });
+        });
 
-		function updateCourseList() {
-			const pageCount = Math.max(1, Math.ceil(courseRows.length / pageSize));
-			currentPage = Math.min(currentPage, pageCount);
+        // 2. Fermeture via les boutons (croix et annuler)
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const btn_attribute = btn.getAttribute('data-modal-close');
+                if (btn_attribute === 'pdfCourseModal') {
+                    modalpdf.setAttribute('hidden', 'true');
+                } else if (btn_attribute === 'videoCourseModal') {
+                    modalvideo.setAttribute('hidden', 'true');
+                }
+            });
+        });
 
-			const startIndex = (currentPage - 1) * pageSize;
-			const visibleRows = new Set(courseRows.slice(startIndex, startIndex + pageSize));
-			courseRows.forEach((row) => { row.hidden = !visibleRows.has(row); });
+        // 3. Fermeture en cliquant sur l'arrière-plan sombre (overlay)
+        modals.forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.setAttribute('hidden', 'true'); // CORRIGÉ : On cache bien la modale !
+                }
+            });
+        });
+    </script> --}}
 
-			const visibleStart = courseRows.length ? startIndex + 1 : 0;
-			const visibleEnd = Math.min(startIndex + pageSize, courseRows.length);
-			courseCount.textContent = `Affichage de ${visibleStart} à ${visibleEnd} sur ${courseRows.length} supports`;
-			pageStatus.textContent = `Page ${currentPage} sur ${pageCount}`;
-			previousPageButton.disabled = currentPage === 1;
-			nextPageButton.disabled = currentPage === pageCount;
-		}
-
-		previousPageButton.addEventListener('click', () => {
-			currentPage -= 1;
-			updateCourseList();
-		});
-
-		nextPageButton.addEventListener('click', () => {
-			currentPage += 1;
-			updateCourseList();
-		});
-
-		updateCourseList();
-	</script>
 @endsection

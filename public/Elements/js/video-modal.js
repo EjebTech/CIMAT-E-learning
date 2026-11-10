@@ -1,6 +1,6 @@
-let videoModal;
-let modalCourseTitle;
-let modalVideoFrame;
+let videoModal; //Le conteneur de la fenêtre modale
+let modalCourseTitle; //le titre de la fenêtre (h3)
+let modalVideoFrame; //le iframe
 
 function openVideoModal(title, videoUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ') {
     videoModal ??= document.getElementById('videoModal');
