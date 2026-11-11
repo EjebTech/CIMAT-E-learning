@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('toggleBtn');
     const menuSection = document.getElementById('menuSection');
     const pageContainer = document.getElementById('studentContainer')
-        ?? document.getElementById('TeacherContainer');
+        ?? document.getElementById('TeacherContainer')
+        ?? document.getElementById('adminContainer');
 
     if (!toggleBtn || !menuSection || !pageContainer) {
         return;

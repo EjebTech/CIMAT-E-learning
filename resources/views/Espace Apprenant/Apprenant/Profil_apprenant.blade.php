@@ -36,7 +36,9 @@
             </div>
         </header>
 
-        <form class="student_profile_form" method="POST" action="#" enctype="multipart/form-data">
+        <form class="student_profile_form" method="POST" action="{{ route('Student.profile.update') }}" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
 
             <section class="student_profile_card student_profile_identity">
                 <div class="student_profile_avatar">
@@ -71,7 +73,7 @@
                         <label for="email">Adresse e-mail</label>
                         <input id="email" name="email" type="email" value="edmond.barou@example.com">
                     </div>
-                    <div class="student_profile_field">
+                     <div class="student_profile_field">
                         <label for="phone">Téléphone</label>
                         <input id="phone" name="phone" type="tel" value="" placeholder="+225 XX XX XX XX XX">
                     </div>

@@ -2,115 +2,148 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class AdminController extends Controller
 {
-    //Dashboard
-    public function DashboardAdmin(){
-        return view("Espace Administrateur.Dashboard.index");
+    // Dashboard
+    public function DashboardAdmin()
+    {
+        return view('Espace Administrateur.Dashboard.index');
     }
 
-    //Exercices
-    public function UpdateExercise(){
-        return view("Espace Administrateur.Exercice.modif_exercice");
-    }
-    public function InsertCorrection(){
-        return view("Espace Administrateur.Exercice.ajout_correction");
-    }
-    public function InsertExercise(){
-        return view("Espace Administrateur.Exercice.ajout_exercice");
-    }
-    public function ListExercise(){
-        return view("Espace Administrateur.Exercice.Exercice");
-    }
-    public function ListCorrection(){
-        return view("Espace Administrateur.Exercice.Correction");
+    // Exercices et évaluations
+    public function ListExercise()
+    {
+        return view('Espace Administrateur.Exercice.Exercice');
     }
 
-    //Cours et formations
-    public function Courses(){
-        return view("Espace Administrateur.Formation et cours.Cours");
-    }
-    public function InsertCourses(){
-        return view("Espace Administrateur.Formation et cours.form_ajout_cours");
-    }
-    public function UpdateCourses(){
-        return view("Espace Administrateur.Formation et cours.form_modif_cours");
+    public function InsertExercise()
+    {
+        return view('Espace Administrateur.Exercice.Exercice');
     }
 
-    public function Programs(){
-        return view("Espace Administrateur.Formation et cours.Formation");
-    }
-    public function InsertPrograms(){
-        return view("Espace Administrateur.Formation et cours.form_ajout_formation");
-    }
-    public function UpdatePrograms(){
-        return view("Espace Administrateur.Formation et cours.form_modif_formation");
+    public function UpdateExercise()
+    {
+        return view('Espace Administrateur.Exercice.Exercice');
     }
 
-    public function CoursesFile(){
-        return view("Espace Administrateur.Formation et cours.fichier_de_cours");
-    }
-    public function InsertCoursesFile(){
-        return view("Espace Administrateur.Formation et cours.form_ajout_fichier");
+    public function ListCorrection()
+    {
+        return view('Espace Administrateur.Exercice.Correction');
     }
 
-    //Groupes
-
-    public function Groups(){
-        return view("Espace Administrateur.Groupe.liste_groupes");
-    }
-    public function InsertGroups(){
-        return view("Espace Administrateur.Groupe.ajout_groupe");
-    }
-    public function UpdateGroups(){
-        return view("Espace Administrateur.Groupe.modif_groupe");
-    }
-    public function AssignStudents(){
-        return view("Espace Administrateur.Groupe.liste_apprenants");
+    public function InsertCorrection()
+    {
+        return view('Espace Administrateur.Exercice.Correction');
     }
 
-
-
-    //Utilisateurs
-
-    public function InsertAdmin(){
-        return view("Espace Administrateur.Utilisateurs.Administrateur.Ajout");
-    }
-    public function ListAdmin(){
-        return view("Espace Administrateur.Utilisateurs.Administrateur.liste_administrateur");
-    }
-    public function UpdateAdmin(){
-        return view("Espace Administrateur.Utilisateurs.Administrateur.Modification");
-    }
-    public function InsertTeacher(){
-        return view("Espace Administrateur.Utilisateurs.Formateur.Ajout");
-    }
-    public function ListTeacher(){
-        return view("Espace Administrateur.Utilisateurs.Formateur.liste_formateur");
-    }
-    public function UpdateTeacher(){
-        return view("Espace Administrateur.Utilisateurs.Formateur.Modification");
-    }
-    public function InsertStudent(){
-        return view("Espace Administrateur.Utilisateurs.Participant.Ajout");
-    }
-    public function ListStudent(){
-        return view("Espace Administrateur.Utilisateurs.Participant.liste_participant");
-    }
-    public function UpdateStudent(){
-        return view("Espace Administrateur.Utilisateurs.Participant.Modification");
+    // Cours et formations
+    public function Courses()
+    {
+        return view('Espace Administrateur.Formation et cours.Cours');
     }
 
-
-    //Visioconférence
-
-    public function VideoConference(){
-        return view("Espace Administrateur.Visioconférence.visio");
+    public function InsertCourses()
+    {
+        return view('Espace Administrateur.Formation et cours.Cours');
     }
-    public function InsertVideoConference(){
-        return view("Espace Administrateur.Visioconférence.ajout_visio");
 
+    public function UpdateCourses()
+    {
+        return view('Espace Administrateur.Formation et cours.Cours');
+    }
+
+    public function Programs()
+    {
+        return view('Espace Administrateur.Formation et cours.Formation');
+    }
+
+    public function InsertPrograms()
+    {
+        return view('Espace Administrateur.Formation et cours.Formation');
+    }
+
+    public function UpdatePrograms()
+    {
+        return view('Espace Administrateur.Formation et cours.Formation');
+    }
+
+    // Groupes
+    public function Groups()
+    {
+        return view('Espace Administrateur.Groupe.liste_groupes');
+    }
+
+    public function InsertGroups()
+    {
+        return view('Espace Administrateur.Groupe.liste_groupes');
+    }
+
+    public function UpdateGroups()
+    {
+        return view('Espace Administrateur.Groupe.liste_groupes');
+    }
+
+    public function AssignStudents()
+    {
+        return view('Espace Administrateur.Groupe.liste_apprenants');
+    }
+
+    // Utilisateurs : Administrateurs
+    public function ListAdmin()
+    {
+        return view('Espace Administrateur.Utilisateurs.Administrateur.liste_administrateur');
+    }
+
+    public function InsertAdmin()
+    {
+        return view('Espace Administrateur.Utilisateurs.Administrateur.liste_administrateur');
+    }
+
+    public function UpdateAdmin()
+    {
+        return view('Espace Administrateur.Utilisateurs.Administrateur.liste_administrateur');
+    }
+
+    // Utilisateurs : Formateurs
+    public function ListTeacher()
+    {
+        return view('Espace Administrateur.Utilisateurs.Formateur.liste_formateur');
+    }
+
+    public function InsertTeacher()
+    {
+        return view('Espace Administrateur.Utilisateurs.Formateur.liste_formateur');
+    }
+
+    public function UpdateTeacher()
+    {
+        return view('Espace Administrateur.Utilisateurs.Formateur.liste_formateur');
+    }
+
+    // Utilisateurs : Apprenants
+    public function ListStudent()
+    {
+        return view('Espace Administrateur.Utilisateurs.Participant.liste_participant');
+    }
+
+    public function InsertStudent()
+    {
+        return view('Espace Administrateur.Utilisateurs.Participant.liste_participant');
+    }
+
+    public function UpdateStudent()
+    {
+        return view('Espace Administrateur.Utilisateurs.Participant.liste_participant');
+    }
+
+    // Visioconférence
+    public function VideoConference()
+    {
+        return view('Espace Administrateur.Visioconférence.visio');
+    }
+
+    public function InsertVideoConference()
+    {
+        return view('Espace Administrateur.Visioconférence.visio');
     }
 }

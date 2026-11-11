@@ -2,82 +2,95 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class TeacherController extends Controller
 {
-    //Dashboard
-    public function DashboardTeacher(){
-        return view("Espace Formateur.Dashboard.Dashboard");
+    // Dashboard
+    public function DashboardTeacher()
+    {
+        return view('Espace Formateur.Dashboard.Dashboard');
 
     }
 
-    //Evaluation
+    // Evaluation
 
-    public function InsertExercise(){
-        return view("Espace Formateur.Evaluation.form_ajout_exercice");
-    }
-    public function InsertCorrection(){
-        return view("Espace Formateur.Evaluation.form_ajout_correction");
-    }
-    public function ListExercise(){
-        return view("Espace Formateur.Evaluation.Exercice");
-    }
-    public function ListCorrection(){
-        return view("Espace Formateur.Evaluation.Correction");
+    public function InsertExercise()
+    {
+        return view('Espace Formateur.Evaluation.form_ajout_exercice');
     }
 
-
-    //Cours et formations
-    public function Courses(){
-        return view("Espace Formateur.Formations et Cours.cours");
-    }
-    public function InsertCourses(){
-        return view("Espace Formateur.Formations et Cours.form_ajout_cours");
+    public function InsertCorrection()
+    {
+        return view('Espace Formateur.Evaluation.form_ajout_correction');
     }
 
-    public function Programs(){
-        return view("Espace Formateur.Formations et Cours.formations");
+    public function ListExercise()
+    {
+        return view('Espace Formateur.Evaluation.Exercice');
     }
 
-    public function CoursesFile(){
-        return view("Espace Formateur.Formations et Cours.fichier_de_cours");
+    public function ListCorrection()
+    {
+        return view('Espace Formateur.Evaluation.Correction');
     }
 
-    public function InsertCoursesFile(){
-        return view("Espace Formateur.Formations et Cours.form_ajout_fichier_cours");
+    // Cours et formations
+    public function Courses()
+    {
+        return view('Espace Formateur.Formations et Cours.cours');
     }
 
-
-    public function Video(){
-        return view("Espace Formateur.Formations et Cours.Video_de_cours");
+    public function InsertCourses()
+    {
+        return view('Espace Formateur.Formations et Cours.form_ajout_cours');
     }
 
-
-    public function InsertVideo(){
-        return view("Espace Formateur.Formations et Cours.form_ajout_video_cours");
+    public function Programs()
+    {
+        return view('Espace Formateur.Formations et Cours.formations');
     }
 
-
-    //Groupes
-
-    public function Groups(){
-        return view("Espace Formateur.Groupes.groupes");
+    public function CoursesFile()
+    {
+        return view('Espace Formateur.Formations et Cours.fichier_de_cours');
     }
 
-
-    //Visioconférence
-
-    public function Videoconference(){
-        return view("Espace Formateur.Visioconférence.visio");
-    }
-    public function InsertVideoconference(){
-        return view("Espace Formateur.Visioconférence.form_ajout_visio");
+    public function InsertCoursesFile()
+    {
+        return view('Espace Formateur.Formations et Cours.form_ajout_fichier_cours');
     }
 
-    //profil
-    public function Profil(){
-        return view("Espace Formateur.profil.mon_profil");
+    public function Video()
+    {
+        return view('Espace Formateur.Formations et Cours.Video_de_cours');
+    }
+
+    public function InsertVideo()
+    {
+        return view('Espace Formateur.Formations et Cours.form_ajout_video_cours');
+    }
+
+    // Groupes
+
+    public function Groups()
+    {
+        return view('Espace Formateur.Groupes.groupes');
+    }
+
+    // Visioconférence
+
+    public function Videoconference()
+    {
+        return view('Espace Formateur.Visioconférence.visio');
+    }
+
+    public function InsertVideoconference()
+    {
+        return view('Espace Formateur.Visioconférence.form_ajout_visio');
+    }
+
+    // profil
+    public function Profil()
+    {
+        return view('Espace Formateur.profil.mon_profil');
     }
 }
-

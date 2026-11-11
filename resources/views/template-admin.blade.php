@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Administration CIMAT')</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@yield('title', 'Administration') - CIMAT E-learning</title>
     <link rel="stylesheet" href="{{ asset('Elements/style_admin.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,98 +12,182 @@
     <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="admin_shell">
-        <aside class="admin_sidebar">
-            <a class="admin_brand" href="{{ route('Admin.dashboard') }}">
-                <img src="{{ asset('Elements/images/logo.png') }}" alt="CIMAT">
-                <span>
-                    CIMAT
-                    <small>ESPACE ADMINISTRATION</small>
-                </span>
-            </a>
-
-            <nav class="admin_navigation" aria-label="Navigation administration">
-                <p class="admin_nav_label">PILOTAGE</p>
-                <a class="{{ request()->routeIs('Admin.dashboard') ? 'active' : '' }}" href="{{ route('Admin.dashboard') }}">
-                    <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
-                    <span>Vue d’ensemble</span>
-                </a>
-
-                <p class="admin_nav_label">PÉDAGOGIE</p>
-                <a class="{{ request()->routeIs('Admin.programs*') ? 'active' : '' }}" href="{{ route('Admin.programs') }}">
-                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-                    <span>Formations</span>
-                </a>
-                <a class="{{ request()->routeIs('Admin.courses*') ? 'active' : '' }}" href="{{ route('Admin.courses') }}">
-                    <i class="fa-solid fa-book-open" aria-hidden="true"></i>
-                    <span>Cours</span>
-                </a>
-                <a href="{{ route('Admin.courses-file') }}">
-                    <i class="fa-regular fa-folder-open" aria-hidden="true"></i>
-                    <span>Fichiers de cours</span>
-                </a>
-                <a class="{{ request()->routeIs('Admin.list-exercise', 'Admin.list-correction') ? 'active' : '' }}" href="{{ route('Admin.list-exercise') }}">
-                    <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
-                    <span>Devoirs &amp; corrections</span>
-                </a>
-                <a class="{{ request()->routeIs('Admin.videoconference*') ? 'active' : '' }}" href="{{ route('Admin.videoconference') }}">
-                    <i class="fa-solid fa-video" aria-hidden="true"></i>
-                    <span>Visioconférences</span>
-                </a>
-
-                <p class="admin_nav_label">ORGANISATION</p>
-                <a class="{{ request()->routeIs('Admin.groups*') ? 'active' : '' }}" href="{{ route('Admin.groups') }}">
-                    <i class="fa-solid fa-people-group" aria-hidden="true"></i>
-                    <span>Groupes</span>
-                </a>
-                <a class="{{ request()->routeIs('Admin.assign-student') ? 'active' : '' }}" href="{{ route('Admin.assign-student') }}">
-                    <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
-                    <span>Affectations</span>
-                </a>
-
-                <p class="admin_nav_label">COMPTES</p>
-                <a class="{{ request()->routeIs('Admin.list-student*') ? 'active' : '' }}" href="{{ route('Admin.list-student') }}">
-                    <i class="fa-solid fa-user-graduate" aria-hidden="true"></i>
-                    <span>Apprenants</span>
-                </a>
-                <a class="{{ request()->routeIs('Admin.list-teacher*') ? 'active' : '' }}" href="{{ route('Admin.list-teacher') }}">
-                    <i class="fa-solid fa-person-chalkboard" aria-hidden="true"></i>
-                    <span>Formateurs</span>
-                </a>
-                <a class="{{ request()->routeIs('Admin.list-admin*') ? 'active' : '' }}" href="{{ route('Admin.list-admin') }}">
-                    <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
-                    <span>Administrateurs</span>
-                </a>
-            </nav>
-
-            <div class="admin_sidebar_footer">
-                <span class="admin_status_dot"></span>
-                Session académique 2026–2027
-            </div>
-        </aside>
-
-        <div class="admin_workspace">
-            <header class="admin_topbar">
-                <div>
-                    <span>ESPACE ADMINISTRATEUR</span>
-                    <strong>@yield('title', 'Vue d’ensemble')</strong>
+    <div class="container admin" id="adminContainer">
+        <!-- Sidebar Administrateur : Modèle distinct et moderne -->
+        <nav class="menu_section" id="menuSection">
+            <div class="top admin_top_card">
+                <div class="logo_presentation">
+                    <img src="{{ asset('Elements/images/logo.png') }}" alt="Logo CIMAT">
+                    <div class="brand_text">
+                        <h2>CIMAT <span class="badge_console">ADMIN</span></h2>
+                        <small>CONSOLE DE GESTION</small>
+                    </div>
                 </div>
-                <a class="admin_profile" href="{{ route('Admin.list-admin') }}">
-                    <span class="admin_profile_avatar">AD</span>
-                    <span>
-                        Administration
-                        <small>Gestion CIMAT</small>
+                <button class="open_close" id="toggleBtn" type="button" aria-label="Réduire ou agrandir le menu">
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                </button>
+            </div>
+
+            <div class="sidebar">
+                <a href="{{ route('Admin.dashboard') }}" class="link admin_nav_item {{ request()->routeIs('Admin.dashboard') ? 'active' : '' }}">
+                    <span class="admin_nav_icon"><i class="fa-solid fa-chart-pie"></i></span>
+                    <span class="admin_nav_text">
+                        <h3>Dashboard</h3>
+                        <small>Vue synthétique</small>
                     </span>
                 </a>
+
+                <div class="admin_section_heading">
+                    <span class="heading_dot"></span>
+                    <span>PÉDAGOGIE</span>
+                </div>
+
+                <a href="{{ route('Admin.programs') }}" class="link admin_nav_item {{ request()->routeIs('Admin.programs*') ? 'active' : '' }}">
+                    <span class="admin_nav_icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <span class="admin_nav_text">
+                        <h3>Formations</h3>
+                        <small>Filières &amp; Cursus</small>
+                    </span>
+                </a>
+                <a href="{{ route('Admin.courses') }}" class="link admin_nav_item {{ request()->routeIs('Admin.courses*') ? 'active' : '' }}">
+                    <span class="admin_nav_icon"><i class="fa-solid fa-book-open"></i></span>
+                    <span class="admin_nav_text">
+                        <h3>Cours &amp; Vidéos</h3>
+                        <small>Modules de formation</small>
+                    </span>
+                </a>
+                <a href="{{ route('Admin.list-exercise') }}" class="link admin_nav_item {{ request()->routeIs('Admin.list-exercise*', 'Admin.list-correction*') ? 'active' : '' }}">
+                    <span class="admin_nav_icon"><i class="fa-solid fa-clipboard-check"></i></span>
+                    <span class="admin_nav_text">
+                        <h3>Devoirs &amp; Examens</h3>
+                        <small>Évaluations &amp; Notes</small>
+                    </span>
+                </a>
+                <a href="{{ route('Admin.videoconference') }}" class="link admin_nav_item {{ request()->routeIs('Admin.videoconference*') ? 'active' : '' }}">
+                    <span class="admin_nav_icon"><i class="fa-solid fa-tower-broadcast"></i></span>
+                    <span class="admin_nav_text">
+                        <h3>Visioconférences</h3>
+                        <small>Classes virtuelles</small>
+                    </span>
+                </a>
+
+                <div class="admin_section_heading">
+                    <span class="heading_dot"></span>
+                    <span>ORGANISATION</span>
+                </div>
+
+                <a href="{{ route('Admin.groups') }}" class="link admin_nav_item {{ request()->routeIs('Admin.groups*') ? 'active' : '' }}">
+                    <span class="admin_nav_icon"><i class="fa-solid fa-people-group"></i></span>
+                    <span class="admin_nav_text">
+                        <h3>Groupes</h3>
+                        <small>Promotions &amp; Classes</small>
+                    </span>
+                </a>
+                <a href="{{ route('Admin.assign-student') }}" class="link admin_nav_item {{ request()->routeIs('Admin.assign-student*') ? 'active' : '' }}">
+                    <span class="admin_nav_icon"><i class="fa-solid fa-user-plus"></i></span>
+                    <span class="admin_nav_text">
+                        <h3>Affectations</h3>
+                        <small>Assigner les élèves</small>
+                    </span>
+                </a>
+
+                <div class="admin_section_heading">
+                    <span class="heading_dot"></span>
+                    <span>COMPTES &amp; ACCÈS</span>
+                </div>
+
+                <a href="{{ route('Admin.list-student') }}" class="link admin_nav_item {{ request()->routeIs('Admin.list-student*') ? 'active' : '' }}">
+                    <span class="admin_nav_icon"><i class="fa-solid fa-user-graduate"></i></span>
+                    <span class="admin_nav_text">
+                        <h3>Apprenants</h3>
+                        <small>Gestion des élèves</small>
+                    </span>
+                </a>
+                <a href="{{ route('Admin.list-teacher') }}" class="link admin_nav_item {{ request()->routeIs('Admin.list-teacher*') ? 'active' : '' }}">
+                    <span class="admin_nav_icon"><i class="fa-solid fa-person-chalkboard"></i></span>
+                    <span class="admin_nav_text">
+                        <h3>Formateurs</h3>
+                        <small>Corps enseignant</small>
+                    </span>
+                </a>
+                <a href="{{ route('Admin.list-admin') }}" class="link admin_nav_item {{ request()->routeIs('Admin.list-admin*') ? 'active' : '' }}">
+                    <span class="admin_nav_icon"><i class="fa-solid fa-user-shield"></i></span>
+                    <span class="admin_nav_text">
+                        <h3>Administrateurs</h3>
+                        <small>Gestion des rôles</small>
+                    </span>
+                </a>
+
+                <div class="footer_sidebar">
+                    <a href="{{ route('Admin.list-admin') }}" class="link admin_nav_item">
+                        <span class="admin_nav_icon"><i class="fa-solid fa-gear"></i></span>
+                        <span class="admin_nav_text">
+                            <h3>Paramètres</h3>
+                        </span>
+                    </a>
+                    <a href="#" class="link admin_nav_item logout">
+                        <span class="admin_nav_icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                        <span class="admin_nav_text">
+                            <h3>Déconnexion</h3>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Espace de travail de l'administrateur -->
+        <div class="admin_workspace">
+            <header class="admin_topbar">
+                <div class="admin_topbar_left">
+                    <span class="admin_badge_role"><i class="fa-solid fa-shield-halved"></i> Espace Administrateur</span>
+                    <strong>@yield('title', 'Vue d’ensemble')</strong>
+                </div>
+
+                <div class="admin_topbar_center">
+                    <div class="admin_search_bar">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <input type="search" placeholder="Recherche globale (cours, élève, groupe, visio...)" aria-label="Recherche">
+                    </div>
+                </div>
+
+                <div class="admin_topbar_right">
+                    <div class="admin_date_pill">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>{{ now()->translatedFormat('d M Y') }}</span>
+                    </div>
+
+                    <div class="admin_notif_wrap">
+                        <a href="#" class="admin_notif_btn" aria-label="Notifications">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="admin_notif_count">5</span>
+                        </a>
+                    </div>
+
+                    <a class="admin_profile_pill" href="{{ route('Admin.list-admin') }}" title="Gérer le profil admin">
+                        <span class="admin_profile_avatar">AD</span>
+                        <div class="admin_profile_meta">
+                            <strong>Super Admin</strong>
+                            <small>Direction CIMAT</small>
+                        </div>
+                    </a>
+                </div>
             </header>
+
             <div class="admin_content">
                 @yield('content')
             </div>
+
             <footer class="admin_footer">
-                <span>&copy; {{ date('Y') }} Groupe Komptech Cimat</span>
-                <span>Administration pédagogique</span>
+                <p>&copy; {{ date('Y') }} <a href="#">Groupe Komptech CIMAT</a>. Tous droits réservés.</p>
+                <div class="admin_footer_links">
+                    <span>Plateforme d'Enseignement &amp; de Gestion Académique</span>
+                </div>
             </footer>
         </div>
     </div>
+
+    <!-- Scripts : Navigation/Toggle de la sidebar & Modales Admin -->
+    <script src="{{ asset('Elements/js/navigation.js') }}"></script>
+    <script src="{{ asset('Elements/js/admin-modal.js') }}"></script>
 </body>
 </html>

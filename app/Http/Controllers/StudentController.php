@@ -4,54 +4,67 @@ namespace App\Http\Controllers;
 
 class StudentController extends Controller
 {
-    //Cours
+    // Cours
 
-    public function Courses(){
-        return view("Espace Apprenant.Cours.index");
-    }
-    public function Dashboard(){
-        return view("Espace Apprenant.Dashboard.index");
-    }
-    public function CoursesFile(){
-        return view("Espace Apprenant.Cours.Mes_fichiers_de_cours");
+    public function Courses()
+    {
+        return view('Espace Apprenant.Cours.index');
     }
 
-    //Exercices
-
-    public function Homeworks(){
-        return view("Espace Apprenant.Evaluation.Exercices");
-    }
-    public function Corrections(){
-        return view("Espace Apprenant.Evaluation.Corrections");
+    public function Dashboard()
+    {
+        return view('Espace Apprenant.Dashboard.index');
     }
 
-
-    //Formateur
-    public function Teachers(){
-        return view("Espace Apprenant.Formateur.liste_formateurs");
+    public function CoursesFile()
+    {
+        return view('Espace Apprenant.Cours.Mes_fichiers_de_cours');
     }
 
-    //Visioconférence
-    public function Videoconference(){
-        return view("Espace Apprenant.Visioconférence.visio");
+    // Exercices
+
+    public function Homeworks()
+    {
+        return view('Espace Apprenant.Evaluation.Exercices');
     }
 
-    //Résultats
-    public function Results(){
-        return view("Espace Apprenant.Résultats.index");
+    public function Corrections()
+    {
+        return view('Espace Apprenant.Evaluation.Corrections');
     }
 
-    //Annonces et événements
-    public function Announcements(){
-        return view("Espace Apprenant.Annonces & evenements.index");
+    // Formateur
+    public function Teachers()
+    {
+        return view('Espace Apprenant.Formateur.liste_formateurs');
     }
 
-    //Profil
-    public function Profile(){
-        return view("Espace Apprenant.Apprenant.Profil_apprenant");
+    // Visioconférence
+    public function Videoconference()
+    {
+        return view('Espace Apprenant.Visioconférence.visio');
     }
 
-    public function UpdateProfile(){
+    // Résultats
+    public function Results()
+    {
+        return view('Espace Apprenant.Résultats.index');
+    }
+
+    // Annonces et événements
+    public function Announcements()
+    {
+        return view('Espace Apprenant.Annonces & evenements.index');
+    }
+
+    // Profil
+    public function Profile()
+    {
+        return view('Espace Apprenant.Apprenant.Profil_apprenant');
+    }
+
+    public function UpdateProfile()
+    {
         return redirect()->route('Student.profile');
     }
 }
