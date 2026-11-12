@@ -8,20 +8,27 @@
 					<input type="search" aria-label="Recherche globale" placeholder="Recherche un élève, un cours, un devoir...">
 				</div>
 			</div>
-			<div class="right">
-				<div class="date_header"><p>Jeudi, 12 Novembre 2026 - 9h27</p></div>
-				<div class="notif">
-					<a href="#" class="notification-icon" aria-label="Notifications, 3 nouvelles">
-						<i class="fa-regular fa-bell" aria-hidden="true"></i>
-						<span class="badge">3</span>
-					</a>
-				</div>
-				<div class="profile_teacher">
-					<a href="#" class="profile_icon" aria-label="Profil formateur">
-						<i class="fa-regular fa-user" aria-hidden="true"></i>
-					</a>
-				</div>
-			</div>
+			<div class="admin_topbar_right">
+                <div class="admin_date_pill">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span>{{ now()->translatedFormat('d M Y') }}</span>
+                </div>
+
+                <div class="admin_notif_wrap">
+                    <a href="#" class="admin_notif_btn" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="admin_notif_count">5</span>
+                    </a>
+                </div>
+
+                <a class="admin_profile_pill" href="{{ route('Admin.list-admin') }}" title="Gérer le profil admin">
+                    <span class="admin_profile_avatar"></span>
+                    <div class="admin_profile_meta">
+                        <strong>Edmond Barou</strong>
+                        <small>Direction CIMAT</small>
+                    </div>
+                </a>
+            </div>
 		</header>
 
 		<section class="evaluations_heading">
@@ -53,7 +60,7 @@
 						<label for="evaluation-search">Rechercher un élève, un devoir ou un exercice</label>
 						<div><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="evaluation-search" type="search" name="search" placeholder="Nom ou titre..."><button type="submit">Rechercher</button></div>
 					</form>
-					
+
 				</div>
 			</header>
 

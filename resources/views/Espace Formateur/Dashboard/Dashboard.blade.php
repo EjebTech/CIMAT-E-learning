@@ -8,21 +8,26 @@
                     <input type="search" placeholder="Recherche un elève, un cours, un devoir...">
                 </div>
             </div>
-            <div class="right">
-                <div class="date_header">
-                    <p>Jeudi, 12 Novembre 2026</p>
+            <div class="admin_topbar_right">
+                <div class="admin_date_pill">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span>{{ now()->translatedFormat('d M Y') }}</span>
                 </div>
-                <div class="notif">
-                    <a href="#" class="notification-icon">
+
+                <div class="admin_notif_wrap">
+                    <a href="#" class="admin_notif_btn" aria-label="Notifications">
                         <i class="fa-regular fa-bell"></i>
-                        <span class="badge">3</span>
+                        <span class="admin_notif_count">5</span>
                     </a>
                 </div>
-                <div class="profile_teacher">
-                    <a href="" class="profile_icon">
-                        <i class="fa-regular fa-user"></i>
-                    </a>
-                </div>
+
+                <a class="admin_profile_pill" href="{{ route('Admin.list-admin') }}" title="Gérer le profil admin">
+                    <span class="admin_profile_avatar"></span>
+                    <div class="admin_profile_meta">
+                        <strong>Edmond Barou</strong>
+                        <small>Direction CIMAT</small>
+                    </div>
+                </a>
             </div>
         </header>
 

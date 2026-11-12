@@ -27,7 +27,7 @@
             <div class="admin_stat_icon stat_green"><i class="fa-solid fa-user-check"></i></div>
             <div class="admin_stat_content">
                 <span class="admin_stat_val">138</span>
-                <span class="admin_stat_lbl">Comptes</span>
+                <span class="admin_stat_lbl">Comptes actifs</span>
             </div>
         </div>
         <div class="admin_stat_card">
@@ -65,7 +65,7 @@
                     <tr>
                         <th>Étudiant</th>
                         <th>Téléphone</th>
-                        <th>Filière &amp; Groupe</th>
+                        <th>Formation &amp; Groupe</th>
                         <th>Date d'inscription</th>
                         <th>Statut</th>
                         <th style="text-align: right;">Actions</th>
@@ -199,7 +199,7 @@
                             <input type="tel" id="std_phone" name="phone" placeholder="+225 XX XX XX XX XX">
                         </div>
                         <div class="admin_form_group">
-                            <label for="std_program">Filière d'inscription</label>
+                            <label for="std_program">Formation d'inscription</label>
                             <select id="std_program" name="program" required>
                                 <option value="pnc">Personnel Navigant Commercial (PNC)</option>
                                 <option value="escale">Agent d'Escale Aéroportuaire</option>

@@ -31,7 +31,7 @@
 
             <div class="admin_filter_search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" placeholder="Filtrer un étudiant..." data-admin-search=".assign_student_row">
+                <input type="search" placeholder="Rechercher un étudiant..." data-admin-search=".assign_student_row">
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
                         <th style="width: 40px; text-align: center;"><input type="checkbox" id="selectAllCheckbox" onclick="document.querySelectorAll('.student_checkbox').forEach(c => c.checked = this.checked);"></th>
                         <th>Apprenant</th>
                         <th>E-mail</th>
-                        <th>Filière actuelle</th>
+                        <th>Formation actuelle</th>
                         <th>Groupe actuel</th>
                         <th>Statut</th>
                     </tr>

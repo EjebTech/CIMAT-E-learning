@@ -206,12 +206,7 @@
                         </div>
                         <div class="admin_form_group col_full">
                             <label>Joindre un sujet ou document ressource (Optionnel)</label>
-                            <div class="admin_file_dropzone">
-                                <i class="fa-solid fa-paperclip"></i>
-                                <p>Cliquez ou glissez le sujet PDF ici</p>
-                                <small>Format PDF, Word (max 50 Mo)</small>
-                                <input type="file" name="hw_file" style="display: none;">
-                            </div>
+                            <input type="file" name="video_file" accept="video/*">
                         </div>
                     </div>
                 </div>

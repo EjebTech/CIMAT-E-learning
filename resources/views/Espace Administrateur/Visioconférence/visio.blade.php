@@ -4,7 +4,7 @@
 @section('content')
     <div class="admin_page_header">
         <div class="admin_page_header_info">
-            <h1>Classes Virtuelles &amp; Visioconférences</h1>
+            <h1> Visioconférences</h1>
             <p>Supervisez, lancez et planifiez les cours interactifs en direct avec les formateurs et les étudiants.</p>
         </div>
         <div class="admin_page_actions">

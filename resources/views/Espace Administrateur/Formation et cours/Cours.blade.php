@@ -78,7 +78,7 @@
                     <tr class="course_item_row" data-category="pdf">
                         <td>
                             <div class="table_user_cell">
-                                <span class="table_avatar" style="background: #fee2e2; color: #dc2626;"><i class="fa-regular fa-file-pdf"></i></span>
+                                <span class="table_avatar" style="background: #e0f2fe; color: #0284c7;"><i class="fa-regular fa-file-pdf"></i></span>
                                 <div>
                                     <strong>Procédures de sécurité cabine et évacuation</strong>
                                     <small>Consignes d'urgence, issues de secours et équipements</small>
@@ -86,7 +86,7 @@
                             </div>
                         </td>
                         <td>PNC - 2026</td>
-                        <td><span class="badge_status badge_danger">PDF (4.2 Mo)</span></td>
+                        <td><span class="badge_status badge_info">PDF (4.2 Mo)</span></td>
                         <td>Alain N'Dri</td>
                         <td>10 Nov 2026</td>
                         <td>
@@ -120,7 +120,7 @@
                     <tr class="course_item_row" data-category="video">
                         <td>
                             <div class="table_user_cell">
-                                <span class="table_avatar" style="background: #dcfce7; color: #16a34a;"><i class="fa-solid fa-play"></i></span>
+                                <span class="table_avatar" style="background: #e0f2fe; color: #0284c7;"><i class="fa-solid fa-play"></i></span>
                                 <div>
                                     <strong>Premiers secours &amp; gestes d'urgence aéronautique</strong>
                                     <small>Massage cardiaque, utilisation du DAE et trousse médicale</small>
@@ -128,7 +128,7 @@
                             </div>
                         </td>
                         <td>PNC &amp; Escale</td>
-                        <td><span class="badge_status badge_success">Vidéo (24 min)</span></td>
+                        <td><span class="badge_status badge_info">Vidéo (24 min)</span></td>
                         <td>Dr. Kouassi</td>
                         <td>04 Nov 2026</td>
                         <td>
@@ -141,7 +141,7 @@
                     <tr class="course_item_row" data-category="pdf">
                         <td>
                             <div class="table_user_cell">
-                                <span class="table_avatar" style="background: #fee2e2; color: #dc2626;"><i class="fa-regular fa-file-pdf"></i></span>
+                                <span class="table_avatar" style="background: #e0f2fe; color: #0284c7;"><i class="fa-regular fa-file-pdf"></i></span>
                                 <div>
                                     <strong>Réglementation internationale du transport aérien (IATA)</strong>
                                     <small>Conventions de Chicago et de Montréal, libertés de l'air</small>
@@ -149,7 +149,7 @@
                             </div>
                         </td>
                         <td>Agent d'Escale</td>
-                        <td><span class="badge_status badge_danger">PDF (7.8 Mo)</span></td>
+                        <td><span class="badge_status badge_info">PDF (7.8 Mo)</span></td>
                         <td>Administration</td>
                         <td>01 Nov 2026</td>
                         <td>
@@ -186,7 +186,7 @@
                             <input type="text" id="pdf_course_title" name="title" placeholder="Ex: Manuel de sécurité sauvetage cabine" required>
                         </div>
                         <div class="admin_form_group">
-                            <label for="pdf_course_program">Filière / Programme</label>
+                            <label for="pdf_course_program">Formation / Programme</label>
                             <select id="pdf_course_program" name="program" required>
                                 <option value="pnc">Personnel Navigant Commercial (PNC)</option>
                                 <option value="escale">Agent d'Escale Aéroportuaire</option>
@@ -209,12 +209,7 @@
                         </div>
                         <div class="admin_form_group col_full">
                             <label>Sélectionner le document PDF</label>
-                            <div class="admin_file_dropzone">
-                                <i class="fa-solid fa-file-pdf"></i>
-                                <p>Cliquez ou déposez votre fichier PDF ici</p>
-                                <small>Format .PDF uniquement (Taille maximale : 100 Mo)</small>
-                                <input type="file" name="pdf_file" accept=".pdf" style="display: none;">
-                            </div>
+                            <input type="file" name="video_file" accept="video/*" >
                         </div>
                     </div>
                 </div>
@@ -248,7 +243,7 @@
                             <input type="text" id="video_course_title" name="title" placeholder="Ex: Démonstration pratique des masques à oxygène" required>
                         </div>
                         <div class="admin_form_group">
-                            <label for="video_course_program">Filière concernée</label>
+                            <label for="video_course_program">Formation concernée</label>
                             <select id="video_course_program" name="program" required>
                                 <option value="pnc">Personnel Navigant Commercial (PNC)</option>
                                 <option value="escale">Agent d'Escale Aéroportuaire</option>
@@ -274,12 +269,7 @@
                         </div>
                         <div class="admin_form_group col_full">
                             <label>Ou téléversez un fichier vidéo local</label>
-                            <div class="admin_file_dropzone">
-                                <i class="fa-solid fa-film"></i>
-                                <p>Cliquez ou déposez votre vidéo MP4 / WebM ici</p>
-                                <small>Formats : MP4, WEBM, MOV (max 250 Mo)</small>
-                                <input type="file" name="video_file" accept="video/*" style="display: none;">
-                            </div>
+                            <input type="file" name="video_file" accept="video/*" >
                         </div>
                     </div>
                 </div>

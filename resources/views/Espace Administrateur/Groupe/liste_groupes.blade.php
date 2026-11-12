@@ -5,7 +5,7 @@
     <div class="admin_page_header">
         <div class="admin_page_header_info">
             <h1>Groupes &amp; Promotions d'Étudiants</h1>
-            <p>Structurez les cohortes par filière académique, année de formation et formateur référent.</p>
+            <p>Structurez les cohortes par formation académique, année de formation et formateur référent.</p>
         </div>
         <div class="admin_page_actions">
             <a href="{{ route('Admin.assign-student') }}" class="btn_admin_secondary">
@@ -25,7 +25,7 @@
                     <div class="content_card_icon" style="background: #e0f2fe; color: #0284c7;">
                         <i class="fa-solid fa-people-group"></i>
                     </div>
-                    <span class="badge_status badge_success">En cours</span>
+
                 </div>
                 <div style="margin-top: 14px;">
                     <h3 style="font-size: 1.1rem; margin: 0 0 6px;">PNC - Promotion 2026-A</h3>
@@ -37,16 +37,12 @@
             <div>
                 <div class="content_card_meta">
                     <span><i class="fa-solid fa-user-graduate"></i> 42 apprenants</span>
-                    <span><i class="fa-solid fa-person-chalkboard"></i> M. Alain N'Dri</span>
-                </div>
-                <div class="content_card_footer" style="margin-top: 14px;">
-                    <span style="font-size: 0.78rem; color: #64748b;">Année 2026–2027</span>
                     <div class="table_actions">
                         <button class="action_icon_btn" title="Modifier le groupe"><i class="fa-regular fa-pen-to-square"></i></button>
                         <a href="{{ route('Admin.assign-student') }}" class="action_icon_btn" title="Voir les membres"><i class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
-            </div>
+
         </article>
 
         <article class="admin_content_card">
@@ -55,7 +51,7 @@
                     <div class="content_card_icon" style="background: #ffedd5; color: #ea580c;">
                         <i class="fa-solid fa-people-group"></i>
                     </div>
-                    <span class="badge_status badge_success">En cours</span>
+
                 </div>
                 <div style="margin-top: 14px;">
                     <h3 style="font-size: 1.1rem; margin: 0 0 6px;">PNC - Promotion 2026-B</h3>
@@ -67,15 +63,12 @@
             <div>
                 <div class="content_card_meta">
                     <span><i class="fa-solid fa-user-graduate"></i> 42 apprenants</span>
-                    <span><i class="fa-solid fa-person-chalkboard"></i> Mme. Claire Diop</span>
-                </div>
-                <div class="content_card_footer" style="margin-top: 14px;">
-                    <span style="font-size: 0.78rem; color: #64748b;">Année 2026–2027</span>
                     <div class="table_actions">
                         <button class="action_icon_btn" title="Modifier le groupe"><i class="fa-regular fa-pen-to-square"></i></button>
                         <a href="{{ route('Admin.assign-student') }}" class="action_icon_btn" title="Voir les membres"><i class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
+
             </div>
         </article>
 
@@ -85,27 +78,24 @@
                     <div class="content_card_icon" style="background: #f3e8ff; color: #9333ea;">
                         <i class="fa-solid fa-people-group"></i>
                     </div>
-                    <span class="badge_status badge_info">Session ouverte</span>
+
                 </div>
                 <div style="margin-top: 14px;">
                     <h3 style="font-size: 1.1rem; margin: 0 0 6px;">Agent d'Escale - Promo 2026</h3>
                     <p style="color: #64748b; font-size: 0.84rem; margin: 0;">
-                        Filière sol aéroportuaire, logiciel DCS Altea et relations passagers.
+                        formation sol aéroportuaire, logiciel DCS Altea et relations passagers.
                     </p>
                 </div>
             </div>
             <div>
                 <div class="content_card_meta">
                     <span><i class="fa-solid fa-user-graduate"></i> 36 apprenants</span>
-                    <span><i class="fa-solid fa-person-chalkboard"></i> M. Robert Kouassi</span>
-                </div>
-                <div class="content_card_footer" style="margin-top: 14px;">
-                    <span style="font-size: 0.78rem; color: #64748b;">Année 2026</span>
                     <div class="table_actions">
                         <button class="action_icon_btn" title="Modifier le groupe"><i class="fa-regular fa-pen-to-square"></i></button>
                         <a href="{{ route('Admin.assign-student') }}" class="action_icon_btn" title="Voir les membres"><i class="fa-regular fa-eye"></i></a>
                     </div>
                 </div>
+
             </div>
         </article>
     </div>
@@ -132,21 +122,14 @@
                             <input type="text" id="grp_name" name="name" placeholder="Ex: PNC - Promotion 2026-C" required>
                         </div>
                         <div class="admin_form_group">
-                            <label for="grp_filiere">Filière associée</label>
+                            <label for="grp_filiere">formation associée</label>
                             <select id="grp_filiere" name="program" required>
                                 <option value="pnc">Personnel Navigant Commercial</option>
                                 <option value="escale">Agent d'Escale Aéroportuaire</option>
                                 <option value="fret">Fret &amp; DGR</option>
                             </select>
                         </div>
-                        <div class="admin_form_group">
-                            <label for="grp_teacher">Formateur référent</label>
-                            <select id="grp_teacher" name="teacher">
-                                <option value="1">M. Alain N'Dri</option>
-                                <option value="2">Mme. Claire Diop</option>
-                                <option value="3">M. Robert Kouassi</option>
-                            </select>
-                        </div>
+
                         <div class="admin_form_group">
                             <label for="grp_year">Année académique</label>
                             <input type="text" id="grp_year" name="academic_year" value="{{ date('Y') }}–{{ date('Y') + 1 }}">

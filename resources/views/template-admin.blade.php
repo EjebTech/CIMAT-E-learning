@@ -53,7 +53,7 @@
                     <span class="admin_nav_icon"><i class="fa-solid fa-graduation-cap"></i></span>
                     <span class="admin_nav_text">
                         <h3>Formations</h3>
-                        <small>Filières &amp; Cursus</small>
+                        <small>Formations &amp; Cursus</small>
                     </span>
                 </a>
                 <a href="{{ route('Admin.courses') }}" class="link admin_nav_item {{ request()->routeIs('Admin.courses*') ? 'active' : '' }}">
@@ -186,8 +186,10 @@
 
             <footer class="admin_footer">
                 <p>&copy; {{ date('Y') }} <a href="#">Groupe Komptech CIMAT</a>. Tous droits réservés.</p>
-                <div class="admin_footer_links">
-                    <span>Plateforme d'Enseignement &amp; de Gestion Académique</span>
+                <div class="footer_socials">
+                    <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </footer>
         </div>

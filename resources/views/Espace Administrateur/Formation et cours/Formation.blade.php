@@ -4,7 +4,7 @@
 @section('content')
     <div class="admin_page_header">
         <div class="admin_page_header_info">
-            <h1>Formations &amp; Filières Aéronautiques</h1>
+            <h1>Formations dispensées</h1>
             <p>Gérez les parcours de formation certifiants dispensés au sein du CIMAT.</p>
         </div>
         <div class="admin_page_actions">
@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <!-- Grille des filières de formation -->
+    <!-- Grille des Formations de formation -->
     <div class="admin_grid_cards">
         <article class="admin_content_card">
             <div>
@@ -38,7 +38,7 @@
                     <span><i class="fa-regular fa-clock"></i> 9 mois</span>
                 </div>
                 <div class="content_card_footer" style="margin-top: 14px;">
-                    <span style="font-size: 0.78rem; color: #64748b;">Promo 2026–2027</span>
+
                     <div class="table_actions">
                         <button class="action_icon_btn" title="Modifier"><i class="fa-regular fa-pen-to-square"></i></button>
                         <button class="action_icon_btn" title="Voir les cours"><i class="fa-regular fa-eye"></i></button>
@@ -69,7 +69,7 @@
                     <span><i class="fa-regular fa-clock"></i> 6 mois</span>
                 </div>
                 <div class="content_card_footer" style="margin-top: 14px;">
-                    <span style="font-size: 0.78rem; color: #64748b;">Promo 2026</span>
+
                     <div class="table_actions">
                         <button class="action_icon_btn" title="Modifier"><i class="fa-regular fa-pen-to-square"></i></button>
                         <button class="action_icon_btn" title="Voir les cours"><i class="fa-regular fa-eye"></i></button>
@@ -84,7 +84,7 @@
                     <div class="content_card_icon" style="background: #f3e8ff; color: #9333ea;">
                         <i class="fa-solid fa-boxes-packing"></i>
                     </div>
-                    
+
                 </div>
                 <div style="margin-top: 14px;">
                     <h3 style="font-size: 1.1rem; margin: 0 0 6px;">Fret &amp; Marchandises Dangereuses (DGR)</h3>
@@ -100,7 +100,7 @@
                     <span><i class="fa-regular fa-clock"></i> 3 mois</span>
                 </div>
                 <div class="content_card_footer" style="margin-top: 14px;">
-                    <span style="font-size: 0.78rem; color: #64748b;">Session continue</span>
+
                     <div class="table_actions">
                         <button class="action_icon_btn" title="Modifier"><i class="fa-regular fa-pen-to-square"></i></button>
                         <button class="action_icon_btn" title="Voir les cours"><i class="fa-regular fa-eye"></i></button>
@@ -117,7 +117,7 @@
                 <div class="modal_header_title">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <div>
-                        <h2>Créer une nouvelle filière de formation</h2>
+                        <h2>Créer une nouvelle Formation de formation</h2>
                         <p>Définissez un nouveau cursus pédagogique au sein du centre.</p>
                     </div>
                 </div>
@@ -135,10 +135,7 @@
                             <label for="program_duration">Durée globale</label>
                             <input type="text" id="program_duration" name="duration" placeholder="Ex: 6 mois (400 heures)" required>
                         </div>
-                        <div class="admin_form_group">
-                            <label for="program_code">Code de la filière</label>
-                            <input type="text" id="program_code" name="code" placeholder="Ex: AOA-2026">
-                        </div>
+
                         <div class="admin_form_group col_full">
                             <label for="program_desc">Objectifs &amp; Présentation</label>
                             <textarea id="program_desc" name="description" placeholder="Compétences visées, certifications obtenues, prérequis d'admission..."></textarea>
@@ -147,7 +144,7 @@
                 </div>
                 <footer class="admin_modal_footer">
                     <button type="button" class="admin_modal_cancel" data-modal-close="createProgramModal">Annuler</button>
-                    <button type="submit" class="btn_admin_primary"><i class="fa-solid fa-plus"></i> Enregistrer la filière</button>
+                    <button type="submit" class="btn_admin_primary"><i class="fa-solid fa-plus"></i> Enregistrer la Formation</button>
                 </footer>
             </form>
         </div>

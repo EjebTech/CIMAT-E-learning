@@ -86,7 +86,7 @@
                     <thead>
                         <tr>
                             <th>Apprenant</th>
-                            <th>Filière &amp; Groupe</th>
+                            <th>Formation &amp; Groupe</th>
                             <th>Statut</th>
                             <th>Date</th>
                             <th style="text-align: right;">Action</th>

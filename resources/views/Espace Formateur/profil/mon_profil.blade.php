@@ -10,19 +10,26 @@
                     <input type="search" aria-label="Recherche globale" placeholder="Rechercher un élève, un cours, un devoir...">
                 </div>
             </div>
-            <div class="right">
-                <div class="date_header"><p>{{ now()->translatedFormat('l, d F Y - H\hi') }}</p></div>
-                <div class="notif">
-                    <a href="#" class="notification-icon" aria-label="Notifications">
-                        <i class="fa-solid fa-bell" aria-hidden="true"></i>
-                        <span class="badge">3</span>
+            <div class="admin_topbar_right">
+                <div class="admin_date_pill">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span>{{ now()->translatedFormat('d M Y') }}</span>
+                </div>
+
+                <div class="admin_notif_wrap">
+                    <a href="#" class="admin_notif_btn" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="admin_notif_count">5</span>
                     </a>
                 </div>
-                <div class="profile_teacher">
-                    <a href="#" class="profile_icon" aria-label="Mon profil formateur">
-                        <i class="fa-regular fa-user" aria-hidden="true"></i>
-                    </a>
-                </div>
+
+                <a class="admin_profile_pill" href="{{ route('Admin.list-admin') }}" title="Gérer le profil admin">
+                    <span class="admin_profile_avatar"></span>
+                    <div class="admin_profile_meta">
+                        <strong>Edmond Barou</strong>
+                        <small>Direction CIMAT</small>
+                    </div>
+                </a>
             </div>
         </header>
 

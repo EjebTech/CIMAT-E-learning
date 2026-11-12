@@ -467,6 +467,7 @@ button, input, select, textarea {
     display: flex;
     align-items: center;
     gap: 16px;
+    
 }
 
 .admin_date_pill {
@@ -598,6 +599,32 @@ button, input, select, textarea {
     font-weight: 600;
 }
 
+.admin_footer .footer_socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.admin_footer .footer_socials a {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-bg-main);
+    color: var(--color-text-muted);
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.admin_footer .footer_socials a:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: #fff;
+
+}
 /* ==========================================================================
    EN-TÊTES DE PAGES ET ACTIONS
    ========================================================================== */
@@ -1052,9 +1079,9 @@ button, input, select, textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--color-border, #e2e8f0);
+    border: 1px solid var(--color-border);
     background: #ffffff;
-    color: var(--color-text-muted, #64748b);
+    color: var(--color-text-muted,);
     cursor: pointer;
     font-size: 0.85rem;
     transition: all 160ms ease;
@@ -1062,8 +1089,15 @@ button, input, select, textarea {
 
 .action_icon_btn:hover {
     border-color: var(--color-primary, #0f4c81);
-    color: var(--color-primary, #0f4c81);
+    color: var(--color-primary, green);
     background: #f8fafc;
+}
+
+.action_icon_btn[title="Modifier"]:hover,
+.action_icon_btn[title="Modifier le groupe"]:hover {
+    border-color: var(--color-primary, #0f4c81);
+    color: white;
+    background: green;
 }
 
 .action_icon_btn.btn_delete:hover {
@@ -1137,6 +1171,7 @@ button, input, select, textarea {
 .content_card_meta {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 14px;
     color: var(--color-text-muted, #64748b);
     font-size: 0.78rem;

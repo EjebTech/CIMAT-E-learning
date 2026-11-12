@@ -147,12 +147,7 @@
                         </div>
                         <div class="admin_form_group col_full">
                             <label>Fichier du corrigé type (PDF)</label>
-                            <div class="admin_file_dropzone">
-                                <i class="fa-solid fa-file-pdf"></i>
-                                <p>Cliquez ou déposez le PDF du corrigé</p>
-                                <small>Format PDF (max 50 Mo)</small>
-                                <input type="file" name="corr_file" accept=".pdf" style="display: none;">
-                            </div>
+                            <input type="file" name="video_file" accept="video/*" >
                         </div>
                     </div>
                 </div>
