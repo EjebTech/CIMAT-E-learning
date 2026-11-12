@@ -22,7 +22,7 @@
                     <div class="content_card_icon" style="background: #e0f2fe; color: #0284c7;">
                         <i class="fa-solid fa-plane-departure"></i>
                     </div>
-                    <span class="badge_status badge_success">Active</span>
+
                 </div>
                 <div style="margin-top: 14px;">
                     <h3 style="font-size: 1.1rem; margin: 0 0 6px;">Personnel Navigant Commercial (PNC)</h3>
@@ -53,7 +53,7 @@
                     <div class="content_card_icon" style="background: #ffedd5; color: #ea580c;">
                         <i class="fa-solid fa-id-card-clip"></i>
                     </div>
-                    <span class="badge_status badge_success">Active</span>
+
                 </div>
                 <div style="margin-top: 14px;">
                     <h3 style="font-size: 1.1rem; margin: 0 0 6px;">Agent d'Escale Aéroportuaire</h3>
@@ -84,7 +84,7 @@
                     <div class="content_card_icon" style="background: #f3e8ff; color: #9333ea;">
                         <i class="fa-solid fa-boxes-packing"></i>
                     </div>
-                    <span class="badge_status badge_info">Session ouverte</span>
+                    
                 </div>
                 <div style="margin-top: 14px;">
                     <h3 style="font-size: 1.1rem; margin: 0 0 6px;">Fret &amp; Marchandises Dangereuses (DGR)</h3>

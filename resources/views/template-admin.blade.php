@@ -18,14 +18,21 @@
             <div class="top admin_top_card">
                 <div class="logo_presentation">
                     <img src="{{ asset('Elements/images/logo.png') }}" alt="Logo CIMAT">
-                    <div class="brand_text">
-                        <h2>CIMAT </h2>
+                    {{-- <div class="brand_text">
                         <small>ESPACE ADMINISTRATEUR</small>
-                    </div>
+                    </div> --}}
                 </div>
-                <button class="open_close" id="toggleBtn" type="button" aria-label="Réduire ou agrandir le menu">
+                <div>
+                    <div class="brand_text">
+                        <p>ESPACE ADMINISTRATEUR</p>
+                    </div>
+                    <button class="open_close" id="toggleBtn" type="button" aria-label="Réduire ou agrandir le menu">
+                        <i class="fa-solid fa-circle-chevron-left"></i>
+                    </button>
+                </div>
+                {{-- <button class="open_close" id="toggleBtn" type="button" aria-label="Réduire ou agrandir le menu">
                     <i class="fa-solid fa-circle-chevron-left"></i>
-                </button>
+                </button> --}}
             </div>
 
             <div class="sidebar">
