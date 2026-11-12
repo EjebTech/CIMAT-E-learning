@@ -10,7 +10,7 @@
         <div class="nav">
             <div class="search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="search" placeholder="Rechercher une annonce...">
+                <input type="search" id="announcementSearchInput" placeholder="Rechercher une annonce...">
             </div>
             <div class="notif">
                 <a href="#" class="notification-icon">
@@ -40,36 +40,41 @@
                 <h1>À ne pas manquer</h1>
             </div>
             <div class="announcement_filters" aria-label="Filtres des annonces">
-                <button class="announcement_filter active" type="button">Toutes</button>
-                <button class="announcement_filter" type="button">Urgent</button>
-                <button class="announcement_filter" type="button">Académique</button>
-                <button class="announcement_filter" type="button">Événements</button>
+                <button class="announcement_filter active" type="button" data-filter="all">Toutes</button>
+                <button class="announcement_filter" type="button" data-filter="urgent">Urgent</button>
+                <button class="announcement_filter" type="button" data-filter="academic">Académique</button>
+                <button class="announcement_filter" type="button" data-filter="event">Événements</button>
             </div>
         </section>
 
         <section class="announcements_layout">
-            <div class="announcements_feed">
-                <article class="announcement_featured">
-                    <div class="announcement_featured_image">
-                        <img src="/Elements/images/Air%20hostess-rafiki.png" alt="Information académique">
-                    </div>
-                    <div class="announcement_featured_body">
-                        <div class="announcement_labels">
-                            <span class="announcement_label urgent"><i class="fa-solid fa-circle-exclamation"></i> Urgent</span>
-                            <span>Publié aujourd'hui</span>
+            <div class="announcements_feed" id="announcementsFeed">
+
+                <!-- Article 1 : Urgent -->
+                <article class="announcement_card_wrap" data-category="urgent">
+                    <div class="announcement_featured">
+                        <div class="announcement_featured_image">
+                            <img src="/Elements/images/Air%20hostess-rafiki.png" alt="Information académique">
                         </div>
-                        <h2>Session de rattrapage de sécurité cabine</h2>
-                        <p>Une session de rattrapage est organisée vendredi prochain pour les apprenants ayant un accompagnement à effectuer sur les procédures d'évacuation.</p>
-                        <div class="announcement_meta">
-                            <span><i class="fa-solid fa-calendar-day"></i> Vendredi 13 novembre</span>
-                            <span><i class="fa-solid fa-clock"></i> 14h00 - 16h00</span>
-                            <span><i class="fa-solid fa-location-dot"></i> Salle simulateur 2</span>
+                        <div class="announcement_featured_body">
+                            <div class="announcement_labels">
+                                <span class="announcement_label urgent"><i class="fa-solid fa-circle-exclamation"></i> Urgent</span>
+                                <span>Publié aujourd'hui</span>
+                            </div>
+                            <h2>Session de rattrapage de sécurité cabine</h2>
+                            <p>Une session de rattrapage est organisée vendredi prochain pour les apprenants ayant un accompagnement à effectuer sur les procédures d'évacuation.</p>
+                            <div class="announcement_meta">
+                                <span><i class="fa-solid fa-calendar-day"></i> Vendredi 13 novembre</span>
+                                <span><i class="fa-solid fa-clock"></i> 14h00 - 16h00</span>
+                                <span><i class="fa-solid fa-location-dot"></i> Salle simulateur 2</span>
+                            </div>
+                            <a href="#" class="announcement_action">Voir les détails <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
-                        <a href="#" class="announcement_action">Voir les détails <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
 
-                <article class="announcement_card_item">
+                <!-- Article 2 : Académique -->
+                <article class="announcement_card_item" data-category="academic">
                     <div class="announcement_date"><strong>08</strong><span>NOV</span></div>
                     <div class="announcement_card_content">
                         <div class="announcement_labels"><span class="announcement_label academic">Académique</span><span>Il y a 2 heures</span></div>
@@ -79,7 +84,8 @@
                     <a href="#" class="announcement_open" aria-label="Ouvrir l'annonce"><i class="fa-solid fa-arrow-right"></i></a>
                 </article>
 
-                <article class="announcement_card_item">
+                <!-- Article 3 : Événement -->
+                <article class="announcement_card_item" data-category="event">
                     <div class="announcement_date"><strong>12</strong><span>NOV</span></div>
                     <div class="announcement_card_content">
                         <div class="announcement_labels"><span class="announcement_label event">Événement</span><span>Hier</span></div>
@@ -89,7 +95,8 @@
                     <a href="#" class="announcement_open" aria-label="Ouvrir l'événement"><i class="fa-solid fa-arrow-right"></i></a>
                 </article>
 
-                <article class="announcement_card_item">
+                <!-- Article 4 : Académique -->
+                <article class="announcement_card_item" data-category="academic">
                     <div class="announcement_date"><strong>15</strong><span>NOV</span></div>
                     <div class="announcement_card_content">
                         <div class="announcement_labels"><span class="announcement_label academic">Académique</span><span>Il y a 3 jours</span></div>
@@ -122,6 +129,57 @@
             </aside>
         </section>
     </main>
+
+    <!-- Script JavaScript pour le filtrage et la recherche -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.announcement_filter');
+            const announcementItems = document.querySelectorAll('.announcements_feed > article');
+            const searchInput = document.getElementById('announcementSearchInput');
+
+            let currentFilter = 'all';
+
+            // 1. Filtrage par catégorie au clic sur les boutons
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    currentFilter = btn.getAttribute('data-filter');
+                    applyFilterAndSearch();
+                });
+            });
+
+            // 2. Recherche en temps réel
+            if (searchInput) {
+                searchInput.addEventListener('input', () => {
+                    applyFilterAndSearch();
+                });
+            }
+
+            // Fonction combinée filtre + recherche
+            function applyFilterAndSearch() {
+                const searchValue = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+                announcementItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    const textContent = item.textContent.toLowerCase();
+
+                    // Vérification du filtre par bouton
+                    const matchesFilter = (currentFilter === 'all' || category === currentFilter);
+
+                    // Vérification de la recherche textuelle
+                    const matchesSearch = (searchValue === '' || textContent.includes(searchValue));
+
+                    if (matchesFilter && matchesSearch) {
+                        item.style.display = item.classList.contains('announcement_card_wrap') ? 'block' : 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
 
     <footer class="student_footer">
         <div class="footer_content">

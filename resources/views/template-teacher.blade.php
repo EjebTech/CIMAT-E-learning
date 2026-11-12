@@ -22,13 +22,7 @@
             </div>
 
             <div class="sidebar">
-                <div class="group-selector">
-                    <label for="teacher-group">Groupe actif</label>
-                    <select id="teacher-group" name="teacher-group" aria-label="Choisir le groupe actif">
-                        <option value="developpement-web">PNC-1ère année</option>
-                        <option value="bureautique">Fret Aérien</option>
-                    </select>
-                </div>
+
                 <a href="{{route('Teacher.dashboard')}}" class="link {{request()->routeIs('Teacher.dashboard') ? 'active' : ''}}">
                     <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="currentColor"><path d="M13,9V3h8V9H13ZM3,13V3h8V13H3Zm10,8V11h8V21H13ZM3,21V15h8v6H3ZM5,11H9V5H5v6Zm10,8h4V13H15v6ZM15,7h4V5H15V7ZM5,19H9V17H5v2Zm4-8Zm6-4Zm0,6ZM9,17Z"/></svg></span>
                     <h3>Dashboard</h3>
@@ -55,10 +49,7 @@
                 </a>
 
                 <div class="footer_sidebar">
-                    <a href="" class="link">
-                        <span><i class="fa-solid fa-gear"></i></span>
-                        <h3>Paramètres</h3>
-                    </a>
+
                     <a href="" class="link logout">
                         <span><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
                         <h3>Déconnexion</h3>
@@ -66,6 +57,7 @@
                 </div>
             </div>
         </nav>
+        
         @yield('content-teacher')
 
     </div>

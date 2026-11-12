@@ -30,10 +30,19 @@
                 </a>
             </div>
 		</header>
-
+        <div class="global-group-banner">
+            <label for="teacher-group">
+                <i class="fa-solid fa-layer-group"></i>
+                Cliquez pour sélectionner les groupes que vous gérez :
+            </label>
+            <select id="teacher-group" name="teacher-group" aria-label="Choisir le groupe actif">
+                <option value="developpement-web">PNC-1ère année</option>
+                <option value="bureautique">Fret Aérien</option>
+            </select>
+        </div>
 		<section class="visio_heading">
 			<div>
-				<p class="groups_overline">ESPACE FORMATEUR</p>
+
 				<h1>Visioconférences</h1>
 				<p>Organisez les briefings, ateliers et débriefings de la formation PNC.</p>
 			</div>

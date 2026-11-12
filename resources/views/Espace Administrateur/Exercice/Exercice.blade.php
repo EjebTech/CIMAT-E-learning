@@ -45,15 +45,15 @@
     <!-- Filtres & Recherche -->
     <div class="admin_filter_bar">
         <div class="admin_filter_group">
-            <button class="admin_filter_pill active" type="button" data-admin-filter="all" data-filter-target=".exercise_item_row">Tous les devoirs</button>
-            <button class="admin_filter_pill" type="button" data-admin-filter="active" data-filter-target=".exercise_item_row">En cours</button>
-            <button class="admin_filter_pill" type="button" data-admin-filter="exam" data-filter-target=".exercise_item_row">Évaluations / Examens</button>
-            <button class="admin_filter_pill" type="button" data-admin-filter="finished" data-filter-target=".exercise_item_row">Clôturés</button>
+            <button class="admin_filter_pill active" type="button" data-filter="all">Tous les devoirs</button>
+            <button class="admin_filter_pill" type="button" data-filter="active">En cours</button>
+            <button class="admin_filter_pill" type="button" data-filter="exam">Évaluations / Examens</button>
+            <button class="admin_filter_pill" type="button" data-filter="finished">Clôturés</button>
         </div>
 
         <div class="admin_filter_search">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" placeholder="Rechercher une évaluation..." data-admin-search=".exercise_item_row">
+            <input type="search" id="exerciseSearchInput" placeholder="Rechercher une évaluation...">
         </div>
     </div>
 
@@ -67,6 +67,7 @@
                 <thead>
                     <tr>
                         <th>Intitulé du devoir</th>
+                        <th>Module / Type</th>
                         <th>Groupe cible</th>
                         <th>Date limite de rendu</th>
                         <th>Copies rendues</th>
@@ -85,6 +86,7 @@
                                 </div>
                             </div>
                         </td>
+                        <td><span class="badge_status" style="background: #eef2f6; color: #334155; font-weight: 600;">PNC</span></td>
                         <td>PNC - Promotion 2026-A</td>
                         <td><strong>18 Nov 2026 à 23h59</strong></td>
                         <td>28 / 32 apprenants</td>
@@ -107,6 +109,7 @@
                                 </div>
                             </div>
                         </td>
+                        <td><span class="badge_status" style="background: #eef2f6; color: #334155; font-weight: 600;">Anglais</span></td>
                         <td>PNC - Tous les groupes</td>
                         <td><strong>22 Nov 2026 à 14h00</strong></td>
                         <td>-- / 84 apprenants</td>
@@ -129,6 +132,7 @@
                                 </div>
                             </div>
                         </td>
+                        <td><span class="badge_status" style="background: #eef2f6; color: #334155; font-weight: 600;">Informatique</span></td>
                         <td>PNC - Promotion 2026-B</td>
                         <td>02 Nov 2026</td>
                         <td>30 / 30 apprenants</td>
@@ -164,6 +168,15 @@
                         <div class="admin_form_group col_full">
                             <label for="hw_title">Titre du devoir ou de l'épreuve</label>
                             <input type="text" id="hw_title" name="title" placeholder="Ex: Devoir de synthèse : Anglais aéronautique et annonces bord" required>
+                        </div>
+                        <div class="admin_form_group">
+                            <label for="hw_module">Module</label>
+                            <select id="hw_module" name="module" required>
+                                <option value="anglais">Anglais</option>
+                                <option value="informatique">Informatique</option>
+                                <option value="PNC">PNC</option>
+
+                            </select>
                         </div>
                         <div class="admin_form_group">
                             <label for="hw_group">Groupe concerné</label>
@@ -217,4 +230,46 @@
             </form>
         </div>
     </div>
+
+    <!-- Script de filtrage et recherche dynamique -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterPills = document.querySelectorAll('.admin_filter_pill');
+            const exerciseRows = document.querySelectorAll('.exercise_item_row');
+            const searchInput = document.getElementById('exerciseSearchInput');
+
+            let currentFilter = 'all';
+
+            function filterExercises() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+
+                exerciseRows.forEach(row => {
+                    const category = row.getAttribute('data-category');
+                    const textContent = row.textContent.toLowerCase();
+
+                    const matchesCategory = (currentFilter === 'all' || category === currentFilter);
+                    const matchesSearch = textContent.includes(searchTerm);
+
+                    if (matchesCategory && matchesSearch) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+
+            filterPills.forEach(pill => {
+                pill.addEventListener('click', function () {
+                    filterPills.forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.getAttribute('data-filter');
+                    filterExercises();
+                });
+            });
+
+            if (searchInput) {
+                searchInput.addEventListener('input', filterExercises);
+            }
+        });
+    </script>
 @endsection

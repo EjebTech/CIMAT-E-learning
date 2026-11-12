@@ -42,20 +42,20 @@
     <!-- Filtres & Recherche -->
     <div class="admin_filter_bar">
         <div class="admin_filter_group">
-            <button class="admin_filter_pill active" type="button" data-admin-filter="all" data-filter-target=".visio_item_row">Toutes les sessions</button>
-            <button class="admin_filter_pill" type="button" data-admin-filter="live" data-filter-target=".visio_item_row">En direct</button>
-            <button class="admin_filter_pill" type="button" data-admin-filter="upcoming" data-filter-target=".visio_item_row">À venir</button>
-            <button class="admin_filter_pill" type="button" data-admin-filter="past" data-filter-target=".visio_item_row">Historique</button>
+            <button class="admin_filter_pill active" type="button" data-filter="all">Toutes les sessions</button>
+            <button class="admin_filter_pill" type="button" data-filter="live">En direct</button>
+            <button class="admin_filter_pill" type="button" data-filter="upcoming">À venir</button>
+            <button class="admin_filter_pill" type="button" data-filter="past">Historique</button>
         </div>
 
         <div class="admin_filter_search">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" placeholder="Rechercher une session ou un formateur..." data-admin-search=".visio_item_row">
+            <input type="search" id="visioSearchInput" placeholder="Rechercher une session ou un formateur...">
         </div>
     </div>
 
     <!-- Grille des réunions -->
-    <div class="admin_grid_cards">
+    <div class="admin_grid_cards" id="visioGrid">
         <!-- Session en direct (Rouge avec pulse) -->
         <article class="admin_content_card visio_item_row visio_live_card_red" data-category="live">
             <div>
@@ -235,4 +235,46 @@
             </form>
         </div>
     </div>
+
+    <!-- Script de filtrage et recherche des visioconférences -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterPills = document.querySelectorAll('.admin_filter_pill');
+            const visioCards = document.querySelectorAll('.visio_item_row');
+            const searchInput = document.getElementById('visioSearchInput');
+
+            let currentFilter = 'all';
+
+            function filterVisios() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+
+                visioCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const textContent = card.textContent.toLowerCase();
+
+                    const matchesCategory = (currentFilter === 'all' || category === currentFilter);
+                    const matchesSearch = textContent.includes(searchTerm);
+
+                    if (matchesCategory && matchesSearch) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            filterPills.forEach(pill => {
+                pill.addEventListener('click', function () {
+                    filterPills.forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.getAttribute('data-filter');
+                    filterVisios();
+                });
+            });
+
+            if (searchInput) {
+                searchInput.addEventListener('input', filterVisios);
+            }
+        });
+    </script>
 @endsection

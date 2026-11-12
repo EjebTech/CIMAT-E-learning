@@ -84,6 +84,10 @@
                             <label for="phone">Téléphone</label>
                             <input id="phone" name="phone" type="tel" value="+225 07 89 00 00 00" placeholder="+225 XX XX XX XX XX">
                         </div>
+                        <div class="student_profile_field">
+                            <label for="phone">Mot de passe</label>
+                            <input id="phone" name="phone" type="password" value="+225 07 89 00 00 00" placeholder="XX XX XX XX">
+                        </div>
                     </div>
 
                     <div class="student_profile_actions">

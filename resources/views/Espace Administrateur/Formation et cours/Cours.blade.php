@@ -45,15 +45,15 @@
     <!-- Barre de filtre et de recherche -->
     <div class="admin_filter_bar">
         <div class="admin_filter_group">
-            <button class="admin_filter_pill active" type="button" data-admin-filter="all" data-filter-target=".course_item_row">Tous (36)</button>
-            <button class="admin_filter_pill" type="button" data-admin-filter="pdf" data-filter-target=".course_item_row">PDF</button>
-            <button class="admin_filter_pill" type="button" data-admin-filter="video" data-filter-target=".course_item_row">Vidéos</button>
-            <button class="admin_filter_pill" type="button" data-admin-filter="combo" data-filter-target=".course_item_row">PDF + Vidéo</button>
+            <button class="admin_filter_pill active" type="button" data-filter="all">Tous (36)</button>
+            <button class="admin_filter_pill" type="button" data-filter="pdf">PDF</button>
+            <button class="admin_filter_pill" type="button" data-filter="video">Vidéos</button>
+            <button class="admin_filter_pill" type="button" data-filter="combo">PDF + Vidéo</button>
         </div>
 
         <div class="admin_filter_search">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" placeholder="Rechercher un cours par titre..." data-admin-search=".course_item_row">
+            <input type="search" id="courseSearchInput" placeholder="Rechercher un cours par titre...">
         </div>
     </div>
 
@@ -280,4 +280,46 @@
             </form>
         </div>
     </div>
+
+    <!-- Script de filtrage interactif -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterPills = document.querySelectorAll('.admin_filter_pill');
+            const courseRows = document.querySelectorAll('.course_item_row');
+            const searchInput = document.getElementById('courseSearchInput');
+
+            let currentFilter = 'all';
+
+            function filterCourses() {
+                const searchTerm = searchInput.value.toLowerCase().trim();
+
+                courseRows.forEach(row => {
+                    const category = row.getAttribute('data-category');
+                    const textContent = row.textContent.toLowerCase();
+
+                    const matchesCategory = (currentFilter === 'all' || category === currentFilter);
+                    const matchesSearch = textContent.includes(searchTerm);
+
+                    if (matchesCategory && matchesSearch) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+
+            filterPills.forEach(pill => {
+                pill.addEventListener('click', function () {
+                    filterPills.forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+                    currentFilter = this.getAttribute('data-filter');
+                    filterCourses();
+                });
+            });
+
+            if (searchInput) {
+                searchInput.addEventListener('input', filterCourses);
+            }
+        });
+    </script>
 @endsection

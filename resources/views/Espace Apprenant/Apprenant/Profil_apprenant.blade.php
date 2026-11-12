@@ -75,7 +75,11 @@
                     </div>
                      <div class="student_profile_field">
                         <label for="phone">Téléphone</label>
-                        <input id="phone" name="phone" type="tel" value="" placeholder="+225 XX XX XX XX XX">
+                        <input id="phone" name="phone" type="tel" value="" placeholder="+225 000000000">
+                    </div>
+                     <div class="student_profile_field">
+                        <label for="phone">Mot de passe</label>
+                        <input id="phone" name="phone" type="password" value="" placeholder="XX XX XX XX.">
                     </div>
                 </div>
 

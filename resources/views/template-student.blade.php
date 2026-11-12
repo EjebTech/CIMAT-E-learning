@@ -52,10 +52,7 @@
                     <h3>Mes Résultats</h3>
                 </a>
                 <div class="footer_sidebar">
-                    <a href="" class="link">
-                        <span><i class="fa-solid fa-gear"></i></span>
-                        <h3>Paramètres</h3>
-                    </a>
+                    
                     <a href="" class="link logout">
                         <span><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
                         <h3>Déconnexion</h3>

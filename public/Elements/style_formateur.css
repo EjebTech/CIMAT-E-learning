@@ -269,11 +269,11 @@ body {
 .top_dashboard_teacher{
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: 700px auto;
-    gap: 15px;
+    grid-template-columns: 1fr auto; /* Passe la colonne de gauche en fluide et la droite en auto */
+    gap: 30px; /* Augmente l'espace entre la gauche et la droite (anciennement 15px) */
     align-items: center;
     background-color: white;
-    padding: 15px 20px;
+    padding: 18px 25px; /* Légèrement plus d'espace intérieur */
     margin-inline: -30px;
     width: calc(100% + 60px);
     box-sizing: border-box;
@@ -1888,6 +1888,11 @@ body {
     display: flex;
 }
 
+.submission_assignment .evaluation_type{
+    max-width: 20%;
+    text-align: center;
+}
+
 .evaluations_heading {
     align-items: center;
     justify-content: space-between;
@@ -2984,4 +2989,83 @@ body {
 .admin_profile_meta small {
     font-size: 0.68rem;
     color: var(--color-text-muted, #64748b);
+}
+
+
+/* Bandeau global de sélection de groupe sous le header */
+.global-group-banner {
+    grid-column: 1 / -1; /* Prend toute la largeur sur les grilles multi-colonnes (comme le dashboard) */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 20px;
+    background-color: var(--color-bg-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-left: 5px solid var(--color-primary, #0f4c81);
+    border-radius: var(--radius-md, 8px);
+    box-shadow: var(--shadow-sm);
+    box-sizing: border-box;
+}
+
+.global-group-banner label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text-main, #1e293b);
+    font-size: 0.92rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.global-group-banner label i {
+    color: var(--color-primary, #0f4c81);
+    font-size: 1.05rem;
+}
+
+.global-group-banner select {
+    flex: 1; /* Prend tout l'espace restant en largeur */
+    min-width: 220px;
+    min-height: 44px;
+    padding: 0 36px 0 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    color: var(--color-primary-hover2, #0f172a);
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.global-group-banner select:hover {
+    border-color: var(--color-primary, #0f4c81);
+    background-color: #ffffff;
+}
+
+.global-group-banner select:focus {
+    border-color: var(--color-primary, #0f4c81);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Adaptation mobile / tablette */
+@media (max-width: 768px) {
+    .global-group-banner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .global-group-banner label {
+        white-space: normal;
+    }
+
+    .global-group-banner select {
+        width: 100%;
+    }
 }

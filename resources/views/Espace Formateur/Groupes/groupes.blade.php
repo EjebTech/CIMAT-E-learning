@@ -30,7 +30,16 @@
                 </a>
             </div>
 		</header>
-
+        <div class="global-group-banner">
+            <label for="teacher-group">
+                <i class="fa-solid fa-layer-group"></i>
+                Cliquez pour sélectionner les groupes que vous gérez :
+            </label>
+            <select id="teacher-group" name="teacher-group" aria-label="Choisir le groupe actif">
+                <option value="developpement-web">PNC-1ère année</option>
+                <option value="bureautique">Fret Aérien</option>
+            </select>
+        </div>
 		<header class="groups_page_header">
 			<div>
 				<p class="groups_overline"></p>

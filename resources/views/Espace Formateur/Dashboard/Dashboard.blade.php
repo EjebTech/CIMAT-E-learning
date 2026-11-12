@@ -5,7 +5,7 @@
             <div class="left">
                 <div class="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="search" placeholder="Recherche un elève, un cours, un devoir...">
+                    <input type="search" placeholder="Recherche un élève, un cours, un devoir...">
                 </div>
             </div>
             <div class="admin_topbar_right">
@@ -22,7 +22,7 @@
                 </div>
 
                 <a class="admin_profile_pill" href="{{ route('Admin.list-admin') }}" title="Gérer le profil admin">
-                    <span class="admin_profile_avatar"></span>
+                    <span class="admin_profile_avatar">EB</span>
                     <div class="admin_profile_meta">
                         <strong>Edmond Barou</strong>
                         <small>Direction CIMAT</small>
@@ -30,7 +30,16 @@
                 </a>
             </div>
         </header>
-
+        <div class="global-group-banner">
+            <label for="teacher-group">
+                <i class="fa-solid fa-layer-group"></i>
+                Cliquez pour sélectionner les groupes que vous gérez :
+            </label>
+            <select id="teacher-group" name="teacher-group" aria-label="Choisir le groupe actif">
+                <option value="developpement-web">PNC-1ère année</option>
+                <option value="bureautique">Fret Aérien</option>
+            </select>
+        </div>
         <div class="banner_welcome">
             <div class="banner_left">
                 <div class="session_ac">
@@ -51,6 +60,7 @@
                 </div>
             </div>
         </div>
+
         <div class="statistics">
             <div class="stat1">
                 <div class="top_stat">
@@ -87,18 +97,8 @@
                 </div>
                 <div class="bottom_stat"></div>
             </div>
-            {{-- <div class="stat4">
-                <div class="top_stat">
-                    <h3>Effectifs du groupe</h3>
-                    <i class="fa-solid fa-users"></i>
-                </div>
-                <div class="main_stat">
-                    <div class="chiffre">17</div>
-                    <div class="description">élèves inscrits</div>
-                </div>
-                <div class="bottom_stat"></div>
-            </div> --}}
         </div>
+
         <div class="list_groups">
             <div class="top">
                 <h2>Groupes sous responsabilité</h2>
@@ -166,7 +166,6 @@
                             <option>Fret Aérien</option>
                             <option>PNC-1ère année</option>
                         </select>
-
                     </div>
                 </div>
 
@@ -233,13 +232,11 @@
                         <div class="schedule_time"><span>10:15 – 11:45</span><span class="panel_badge panel_badge-alert">Imminent</span></div>
                         <h3>Procédures de sécurité et évacuation</h3>
                         <p>Groupe PNC</p>
-
                     </li>
                     <li class="schedule_item">
                         <div class="schedule_time"><span>14:00 – 16:00</span><span>Présentiel</span></div>
                         <h3>Service à bord et relation passager</h3>
                         <p>Groupe PNC</p>
-
                     </li>
                     <li class="schedule_item">
                         <div class="schedule_time"><span>16:30 – 17:30</span><span class="panel_badge">Conseil</span></div>
@@ -263,8 +260,8 @@
                         <span class="resource_icon resource_icon-pdf"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i></span>
                         <div class="resource_content">
                             <div class="resource_meta"><span class="panel_badge">PDF · 4.2 Mo</span><span><i class="fa-solid fa-download" aria-hidden="true"></i> 28 télécharg.</span></div>
-                                <h3>Guide des procédures de sécurité cabine</h3>
-                                <p>Distribué au groupe PNC · Procédures d'urgence</p>
+                            <h3>Guide des procédures de sécurité cabine</h3>
+                            <p>Distribué au groupe PNC · Procédures d'urgence</p>
                             <div class="resource_actions"><a href="{{ route('Teacher.resources') }}"><i class="fa-regular fa-eye" aria-hidden="true"></i> Consulter</a></div>
                         </div>
                     </article>
@@ -279,8 +276,8 @@
                     </article>
                 </div>
             </section>
-
         </div>
+
         <footer class="teacher_footer">
             <p>&copy; {{ date('Y') }} <a href="{{ route('Teacher.dashboard') }}">Groupe Komptech Cimat</a>. Tous droits réservés.</p>
             <div class="footer_socials">
@@ -289,6 +286,5 @@
                 <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
             </div>
         </footer>
-
     </div>
 @endsection
