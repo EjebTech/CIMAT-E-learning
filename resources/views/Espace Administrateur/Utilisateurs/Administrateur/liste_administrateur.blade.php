@@ -30,13 +30,7 @@
                 <span class="admin_stat_lbl">Super Administrateur</span>
             </div>
         </div>
-        <div class="admin_stat_card">
-            <div class="admin_stat_icon stat_green"><i class="fa-solid fa-lock-open"></i></div>
-            <div class="admin_stat_content">
-                <span class="admin_stat_val">2</span>
-                <span class="admin_stat_lbl">Gestionnaires pédagogiques</span>
-            </div>
-        </div>
+
     </section>
 
     <!-- Tableau des administrateurs -->
@@ -73,7 +67,7 @@
                         <td><span class="badge_status badge_success"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Actif</span></td>
                         <td>
                             <div class="table_actions">
-                                <button class="action_icon_btn" title="Modifier mot de passe"><i class="fa-solid fa-key"></i></button>
+                                <button class="action_icon_btn" title="Modifier mot de passe"><i class="fa-solid fa-lock"></i></button>
                             </div>
                         </td>
                     </tr>
@@ -88,7 +82,7 @@
                             </div>
                         </td>
                         <td>f.konan@cimat-ci.net</td>
-                        <td><span class="badge_status badge_info">Coordinateur Pédagogique</span></td>
+                        <td><span class="badge_status badge_info">Administrateur</span></td>
                         <td>Hier à 17h12</td>
                         <td><span class="badge_status badge_success"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Actif</span></td>
                         <td>
@@ -109,7 +103,7 @@
                             </div>
                         </td>
                         <td>y.soro@cimat-ci.net</td>
-                        <td><span class="badge_status badge_info">Gestionnaire Scolarité</span></td>
+                        <td><span class="badge_status badge_info">Administrateur</span></td>
                         <td>08 Nov 2026</td>
                         <td><span class="badge_status badge_success"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Actif</span></td>
                         <td>

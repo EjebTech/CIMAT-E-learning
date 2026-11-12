@@ -19,8 +19,8 @@
                 <div class="logo_presentation">
                     <img src="{{ asset('Elements/images/logo.png') }}" alt="Logo CIMAT">
                     <div class="brand_text">
-                        <h2>CIMAT <span class="badge_console">ADMIN</span></h2>
-                        <small>CONSOLE DE GESTION</small>
+                        <h2>CIMAT </h2>
+                        <small>ESPACE ADMINISTRATEUR</small>
                     </div>
                 </div>
                 <button class="open_close" id="toggleBtn" type="button" aria-label="Réduire ou agrandir le menu">
@@ -139,7 +139,7 @@
         <div class="admin_workspace">
             <header class="admin_topbar">
                 <div class="admin_topbar_left">
-                    <span class="admin_badge_role"><i class="fa-solid fa-shield-halved"></i> Espace Administrateur</span>
+
                     <strong>@yield('title', 'Vue d’ensemble')</strong>
                 </div>
 

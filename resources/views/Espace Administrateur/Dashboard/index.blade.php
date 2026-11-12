@@ -14,9 +14,7 @@
             <button class="btn_admin_secondary" type="button" data-modal-open="quickVisioModal">
                 <i class="fa-solid fa-video" aria-hidden="true"></i> Programmer visio
             </button>
-            <button class="btn_admin_primary" type="button" data-modal-open="quickUserModal">
-                <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Inscrire un utilisateur
-            </button>
+
         </div>
     </div>
 
@@ -144,7 +142,7 @@
                                 </div>
                             </td>
                             <td>Agent d'Escale - 2026</td>
-                            <td><span class="badge_status badge_warning"><i class="fa-solid fa-clock" style="font-size: 0.5rem;"></i> En attente</span></td>
+                            <td><span class="badge_status badge_danger"><i class="fa-solid fa-clock" style="font-size: 0.5rem;"></i> Inactif</span></td>
                             <td>05 Nov 2026</td>
                             <td>
                                 <div class="table_actions">
@@ -349,58 +347,5 @@
         </div>
     </div>
 
-    <!-- Modale Rapide : Inscription Utilisateur -->
-    <div class="admin_modal" id="quickUserModal" hidden>
-        <div class="admin_modal_dialog">
-            <header class="admin_modal_header">
-                <div class="modal_header_title">
-                    <i class="fa-solid fa-user-plus"></i>
-                    <div>
-                        <h2>Inscrire un nouvel utilisateur</h2>
-                        <p>Créez un compte pour un apprenant, un formateur ou un administrateur.</p>
-                    </div>
-                </div>
-                <button type="button" class="admin_modal_close" data-modal-close="quickUserModal" aria-label="Fermer">&times;</button>
-            </header>
-            <form method="POST" action="#">
-                @csrf
-                <div class="admin_modal_body">
-                    <div class="admin_form_grid">
-                        <div class="admin_form_group col_full">
-                            <label for="user_role">Rôle sur la plateforme</label>
-                            <select id="user_role" name="role" required>
-                                <option value="student">Apprenant (Élève)</option>
-                                <option value="teacher">Formateur (Professeur)</option>
-                                <option value="admin">Administrateur</option>
-                            </select>
-                        </div>
-                        <div class="admin_form_group">
-                            <label for="user_first_name">Prénom</label>
-                            <input type="text" id="user_first_name" name="first_name" placeholder="Ex: Jean" required>
-                        </div>
-                        <div class="admin_form_group">
-                            <label for="user_last_name">Nom</label>
-                            <input type="text" id="user_last_name" name="last_name" placeholder="Ex: Kouamé" required>
-                        </div>
-                        <div class="admin_form_group col_full">
-                            <label for="user_email">Adresse e-mail</label>
-                            <input type="email" id="user_email" name="email" placeholder="utilisateur@cimat-ci.net" required>
-                        </div>
-                        <div class="admin_form_group">
-                            <label for="user_phone">Téléphone</label>
-                            <input type="tel" id="user_phone" name="phone" placeholder="+225 XX XX XX XX XX">
-                        </div>
-                        <div class="admin_form_group">
-                            <label for="user_group">Groupe / Spécialité</label>
-                            <input type="text" id="user_group" name="group_or_specialty" placeholder="Ex: PNC 2026-A ou Sécurité Aérienne">
-                        </div>
-                    </div>
-                </div>
-                <footer class="admin_modal_footer">
-                    <button type="button" class="admin_modal_cancel" data-modal-close="quickUserModal">Annuler</button>
-                    <button type="submit" class="btn_admin_primary"><i class="fa-solid fa-check"></i> Créer le compte</button>
-                </footer>
-            </form>
-        </div>
-    </div>
+
 @endsection

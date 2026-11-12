@@ -61,46 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. Recherche dynamique dans les tableaux et cartes
-    const searchInputs = document.querySelectorAll('[data-admin-search]');
-    searchInputs.forEach((input) => {
-        const targetSelector = input.getAttribute('data-admin-search');
-        input.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase().trim();
-            const items = document.querySelectorAll(targetSelector);
-            items.forEach((item) => {
-                const text = item.textContent.toLowerCase();
-                if (!query || text.includes(query)) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    });
 
-    // 5. Filtres par catégorie / statut (pills)
-    const filterButtons = document.querySelectorAll('[data-admin-filter]');
-    filterButtons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const filterValue = btn.getAttribute('data-admin-filter');
-            const targetSelector = btn.getAttribute('data-filter-target') || '[data-filter-item]';
-            const groupName = btn.getAttribute('data-filter-group') || 'default';
 
-            document.querySelectorAll(`[data-admin-filter][data-filter-group="${groupName}"]`).forEach((b) => {
-                b.classList.remove('active');
-            });
-            btn.classList.add('active');
-
-            const items = document.querySelectorAll(targetSelector);
-            items.forEach((item) => {
-                const itemCategory = item.getAttribute('data-category') || '';
-                if (filterValue === 'all' || itemCategory === filterValue) {
-                    item.style.display = '';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    });
+    
 });

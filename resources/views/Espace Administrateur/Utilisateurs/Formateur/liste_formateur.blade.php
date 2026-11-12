@@ -34,7 +34,7 @@
             <div class="admin_stat_icon stat_green"><i class="fa-solid fa-circle-check"></i></div>
             <div class="admin_stat_content">
                 <span class="admin_stat_val">16</span>
-                <span class="admin_stat_lbl">Disponibles ce semestre</span>
+                <span class="admin_stat_lbl">Disponibles </span>
             </div>
         </div>
     </section>
@@ -66,7 +66,6 @@
                         <th>Instructeur</th>
                         <th>Téléphone</th>
                         <th>Spécialité principale</th>
-                        <th>Modules / Cours</th>
                         <th>Statut</th>
                         <th style="text-align: right;">Actions</th>
                     </tr>
@@ -84,7 +83,7 @@
                         </td>
                         <td>+225 07 10 20 30 40</td>
                         <td><span class="badge_status badge_danger">Sécurité Sauvetage Cabine</span></td>
-                        <td><strong>6 modules</strong> assignés</td>
+
                         <td><span class="badge_status badge_success"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Actif</span></td>
                         <td>
                             <div class="table_actions">
@@ -106,7 +105,7 @@
                         </td>
                         <td>+225 05 99 88 77 66</td>
                         <td><span class="badge_status badge_info">Service en Cabine &amp; Protocole</span></td>
-                        <td><strong>4 modules</strong> assignés</td>
+
                         <td><span class="badge_status badge_success"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Actif</span></td>
                         <td>
                             <div class="table_actions">
@@ -128,7 +127,7 @@
                         </td>
                         <td>+225 01 23 45 67 89</td>
                         <td><span class="badge_status badge_accent">Réglementation IATA &amp; DGR</span></td>
-                        <td><strong>5 modules</strong> assignés</td>
+
                         <td><span class="badge_status badge_success"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Actif</span></td>
                         <td>
                             <div class="table_actions">
@@ -181,20 +180,12 @@
                             <input type="text" id="tch_specialty" name="specialty" placeholder="Ex: Sécurité cabine, Anglais ICAO, DGR..." required>
                         </div>
                         <div class="admin_form_group">
-                            <label for="tch_contract">Type d'engagement</label>
-                            <select id="tch_contract" name="contract_type">
-                                <option value="fulltime">Formateur permanent (Temps plein)</option>
-                                <option value="parttime">Instructeur vacataire / Expert externe</option>
-                            </select>
+                            <label for="tch_contract">Mot de passe</label>
+                            <input type="password" name="Password" placeholder=".....">
                         </div>
                         <div class="admin_form_group col_full">
                             <label>Photo de profil de l'instructeur</label>
-                            <div class="admin_file_dropzone">
-                                <i class="fa-solid fa-camera"></i>
-                                <p>Cliquez ou déposez le portrait photo ici</p>
-                                <small>Format JPG, PNG (max 5 Mo)</small>
-                                <input type="file" name="avatar" accept="image/*" style="display: none;">
-                            </div>
+                            <input type="file" name="avatar" accept="image/*" >
                         </div>
                     </div>
                 </div>

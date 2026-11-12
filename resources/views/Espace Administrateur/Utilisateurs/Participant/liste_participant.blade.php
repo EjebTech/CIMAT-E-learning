@@ -27,7 +27,7 @@
             <div class="admin_stat_icon stat_green"><i class="fa-solid fa-user-check"></i></div>
             <div class="admin_stat_content">
                 <span class="admin_stat_val">138</span>
-                <span class="admin_stat_lbl">Comptes actifs</span>
+                <span class="admin_stat_lbl">Comptes</span>
             </div>
         </div>
         <div class="admin_stat_card">
@@ -50,7 +50,7 @@
 
         <div class="admin_filter_search">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="search" placeholder="Rechercher un apprenant par nom ou e-mail..." data-admin-search=".student_row">
+            <input type="search" placeholder="Rechercher par nom ou e-mail..." data-admin-search=".student_row">
         </div>
     </div>
 
@@ -216,12 +216,7 @@
                         </div>
                         <div class="admin_form_group col_full">
                             <label>Photo de profil (Optionnel)</label>
-                            <div class="admin_file_dropzone">
-                                <i class="fa-solid fa-camera"></i>
-                                <p>Cliquez ou déposez la photo d'identité ici</p>
-                                <small>Format JPG, PNG (max 5 Mo)</small>
-                                <input type="file" name="avatar" accept="image/*" style="display: none;">
-                            </div>
+                            <input type="file" name="avatar" accept="image/*" >
                         </div>
                     </div>
                 </div>

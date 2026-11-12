@@ -31,90 +31,74 @@
         </div>
     </div>
 
-    <!-- Tableau des soumissions -->
+    <!-- Liste des copies soumises (même présentation que l'espace formateur) -->
     <div class="admin_card">
         <div class="admin_card_header">
             <h2><i class="fa-solid fa-clipboard-check"></i> Copies soumises par les étudiants</h2>
         </div>
-        <div class="admin_table_wrapper">
-            <table class="admin_table">
-                <thead>
-                    <tr>
-                        <th>Apprenant</th>
-                        <th>Intitulé du devoir</th>
-                        <th>Date de soumission</th>
-                        <th>Fichier remis</th>
-                        <th>Note</th>
-                        <th>Statut</th>
-                        <th style="text-align: right;">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="submission_row" data-category="pending">
-                        <td>
-                            <div class="table_user_cell">
-                                <span class="table_avatar">EB</span>
-                                <div>
-                                    <strong>Edmond Barou</strong>
-                                    <small>PNC 2026-A</small>
-                                </div>
-                            </div>
-                        </td>
-                        <td>Étude de cas : Dépressurisation cabine</td>
-                        <td>10 Nov 2026 à 18h24</td>
-                        <td><a href="#" style="color: var(--color-primary); font-weight: 600;"><i class="fa-regular fa-file-pdf"></i> Copie-EBarou.pdf</a></td>
-                        <td><strong>-- / 20</strong></td>
-                        <td><span class="badge_status badge_warning"><i class="fa-solid fa-clock"></i> À noter</span></td>
-                        <td>
-                            <div class="table_actions">
-                                <button class="action_icon_btn" title="Attribuer une note et un feedback"><i class="fa-solid fa-marker"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="submission_row" data-category="graded">
-                        <td>
-                            <div class="table_user_cell">
-                                <span class="table_avatar" style="background: #ffedd5; color: #ea580c;">SK</span>
-                                <div>
-                                    <strong>Sarah Koné</strong>
-                                    <small>PNC 2026-A</small>
-                                </div>
-                            </div>
-                        </td>
-                        <td>Étude de cas : Dépressurisation cabine</td>
-                        <td>09 Nov 2026 à 11h15</td>
-                        <td><a href="#" style="color: var(--color-primary); font-weight: 600;"><i class="fa-regular fa-file-pdf"></i> Copie-SKone.pdf</a></td>
-                        <td><strong style="color: var(--color-success);">17.5 / 20</strong></td>
-                        <td><span class="badge_status badge_success"><i class="fa-solid fa-check"></i> Noté</span></td>
-                        <td>
-                            <div class="table_actions">
-                                <button class="action_icon_btn" title="Consulter la note"><i class="fa-regular fa-eye"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="submission_row" data-category="graded">
-                        <td>
-                            <div class="table_user_cell">
-                                <span class="table_avatar" style="background: #dcfce7; color: #15803d;">AY</span>
-                                <div>
-                                    <strong>Amina Yapi</strong>
-                                    <small>PNC 2026-B</small>
-                                </div>
-                            </div>
-                        </td>
-                        <td>Gestion de passager perturbateur</td>
-                        <td>01 Nov 2026 à 16h40</td>
-                        <td><a href="#" style="color: var(--color-primary); font-weight: 600;"><i class="fa-regular fa-file-pdf"></i> Rapport-AYapi.pdf</a></td>
-                        <td><strong style="color: var(--color-success);">16 / 20</strong></td>
-                        <td><span class="badge_status badge_success"><i class="fa-solid fa-check"></i> Noté</span></td>
-                        <td>
-                            <div class="table_actions">
-                                <button class="action_icon_btn" title="Consulter la note"><i class="fa-regular fa-eye"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="submission_list">
+            <article class="submission_row" data-category="pending">
+                <span class="submission_avatar avatar-blue" aria-hidden="true">EB</span>
+                <div class="submission_student"><h3>Edmond Barou</h3><span>PNC 2026-A</span></div>
+                <div class="submission_assignment">
+                    <strong>Étude de cas : Dépressurisation cabine</strong>
+                    <span>Rendu le 10 Nov 2026 à 18h24</span>
+                    <a class="submission_file" href="#"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Copie-EBarou.pdf</a>
+                </div>
+                <span class="submission_status status-pending">À noter</span>
+                <button class="submission_view_button" type="button" aria-label="Consulter la copie de Edmond Barou"><i class="fa-regular fa-eye" aria-hidden="true"></i></button>
+                <details class="grading_disclosure">
+                    <summary><i class="fa-solid fa-marker" aria-hidden="true"></i> Noter &amp; commenter</summary>
+                    <form class="grading_form" method="POST" action="#">
+                        @csrf
+                        <label>Note sur 20<input type="number" name="grade" min="0" max="20" step="0.5" placeholder="Ex. 16"></label>
+                        <label>Commentaire<textarea name="comment" rows="3" placeholder="Votre retour à l’apprenant..."></textarea></label>
+                        <button class="grading_submit" type="submit">Enregistrer la note</button>
+                    </form>
+                </details>
+            </article>
+
+            <article class="submission_row" data-category="graded">
+                <span class="submission_avatar avatar-orange" aria-hidden="true">SK</span>
+                <div class="submission_student"><h3>Sarah Koné</h3><span>PNC 2026-A</span></div>
+                <div class="submission_assignment">
+                    <strong>Étude de cas : Dépressurisation cabine</strong>
+                    <span>Rendu le 09 Nov 2026 à 11h15</span>
+                    <a class="submission_file" href="#"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Copie-SKone.pdf</a>
+                </div>
+                <span class="submission_status status-corrected">Noté · 17.5/20</span>
+                <button class="submission_view_button" type="button" aria-label="Consulter la copie de Sarah Koné"><i class="fa-regular fa-eye" aria-hidden="true"></i></button>
+                <details class="grading_disclosure">
+                    <summary><i class="fa-solid fa-marker" aria-hidden="true"></i> Voir la note</summary>
+                    <form class="grading_form" method="POST" action="#">
+                        @csrf
+                        <label>Note sur 20<input type="number" name="grade" min="0" max="20" step="0.5" value="17.5"></label>
+                        <label>Commentaire<textarea name="comment" rows="3" placeholder="Votre retour à l’apprenant..."></textarea></label>
+                        <button class="grading_submit" type="submit">Modifier la note</button>
+                    </form>
+                </details>
+            </article>
+
+            <article class="submission_row" data-category="graded">
+                <span class="submission_avatar avatar-green" aria-hidden="true">AY</span>
+                <div class="submission_student"><h3>Amina Yapi</h3><span>PNC 2026-B</span></div>
+                <div class="submission_assignment">
+                    <strong>Gestion de passager perturbateur</strong>
+                    <span>Rendu le 01 Nov 2026 à 16h40</span>
+                    <a class="submission_file" href="#"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Rapport-AYapi.pdf</a>
+                </div>
+                <span class="submission_status status-corrected">Noté · 16/20</span>
+                <button class="submission_view_button" type="button" aria-label="Consulter la copie de Amina Yapi"><i class="fa-regular fa-eye" aria-hidden="true"></i></button>
+                <details class="grading_disclosure">
+                    <summary><i class="fa-solid fa-marker" aria-hidden="true"></i> Voir la note</summary>
+                    <form class="grading_form" method="POST" action="#">
+                        @csrf
+                        <label>Note sur 20<input type="number" name="grade" min="0" max="20" step="0.5" value="16"></label>
+                        <label>Commentaire<textarea name="comment" rows="3" placeholder="Votre retour à l’apprenant..."></textarea></label>
+                        <button class="grading_submit" type="submit">Modifier la note</button>
+                    </form>
+                </details>
+            </article>
         </div>
     </div>
 
