@@ -2731,6 +2731,7 @@ body {
     justify-content: center;
     border-radius: var(--radius-sm);
     background: var(--color-bg-main);
+    padding: 7px;
 }
 .announcement_date strong {
     font-size: 1.35rem;

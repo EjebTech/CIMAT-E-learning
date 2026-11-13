@@ -172,7 +172,7 @@
                     const matchesSearch = (searchValue === '' || textContent.includes(searchValue));
 
                     if (matchesFilter && matchesSearch) {
-                        item.style.display = item.classList.contains('announcement_card_wrap') ? 'block' : 'flex';
+                        item.style.display = item.classList.contains('announcement_card_wrap') ? 'block' : 'grid';
                     } else {
                         item.style.display = 'none';
                     }
