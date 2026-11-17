@@ -467,7 +467,7 @@ button, input, select, textarea {
     display: flex;
     align-items: center;
     gap: 16px;
-    
+
 }
 
 .admin_date_pill {
@@ -1702,4 +1702,85 @@ button, input, select, textarea {
     .grading_disclosure summary,
     .grading_submit { transition: none; }
     .grading_submit:hover { transform: none; }
+}
+
+
+
+/* Conteneur global de la pagination */
+.admin-pagination-nav {
+    display: flex;
+    justify-content: space-between; /* Sépare le texte (à gauche) et les boutons (à droite) */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 0px 20px;
+}
+
+.pagination-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 4px;
+}
+
+/* Style de base de chaque bouton/page */
+.page-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* Effet au survol des liens cliquables */
+a.page-item:hover {
+    background-color: #f3f4f6;
+    border-color: #cbd5e1;
+    color: #111;
+}
+
+/* Style de la page active actuelle */
+.page-item.active {
+    background-color: #4f46e5; /* Remplacez par votre couleur principale d'administration */
+    color: #fff;
+    border-color: #4f46e5;
+}
+
+/* Style des boutons désactivés (début ou fin de liste) */
+.page-item.disabled {
+    color: #9ca3af;
+    background-color: #f9fafb;
+    border-color: #e5e7eb;
+    cursor: not-allowed;
+}
+
+.page-item.dots {
+    border: none;
+    background: transparent;
+    cursor: default;
+}
+
+
+.pagination-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+.pagination-info .font-medium {
+    font-weight: 600;
+    color: #111;
 }

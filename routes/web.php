@@ -70,7 +70,7 @@ Route::prefix('Admin')->name('Admin.')->group(function () {
 
     Route::get('/Insert-student', [AdminController::class, 'InsertStudent'])->name('insert-student');
 
-    Route::get('/List-student', [AdminController::class, 'ListStudent'])->name('list-student');
+    Route::get('/List-student', [AdminController::class, 'index'])->name('list-student');
 
     Route::get('/Update-student', [AdminController::class, 'UpdateStudent'])->name('update-student');
 

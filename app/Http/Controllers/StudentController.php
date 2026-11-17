@@ -79,4 +79,6 @@ class StudentController extends Controller
         Student::deleteStudent();
         return 'Etudiant(e) supprimé avec succès';
     }
+
+    
 }

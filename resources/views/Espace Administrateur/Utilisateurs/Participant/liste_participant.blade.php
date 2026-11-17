@@ -72,96 +72,41 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="student_row" data-category="pnc">
-                        <td>
-                            <div class="table_user_cell">
-                                <span class="table_avatar">EB</span>
-                                <div>
-                                    <strong>Edmond Barou</strong>
-                                    <small>edmond.barou@example.com</small>
+                    @forelse ($students as $student)
+                        <tr class="student_row" data-category="pnc">
+                            <td>
+                                <div class="table_user_cell">
+                                    <span class="table_avatar" style="background: #ffedd5; color: #ea580c;">SK</span>
+                                    <div>
+                                        <strong>{{$student->LNameStud}} {{$student->FNameStud}}</strong>
+                                        <small>{{$student->EmailStud}}</small>
+                                    </div>
                                 </div>
-                            </div>
-                        </td>
-                        <td>+225 07 89 00 00 01</td>
-                        <td><span class="badge_status badge_info">PNC · Promo 2026-A</span></td>
-                        <td>10 Nov 2026</td>
-                        <td><span class="badge_status badge_success"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Actif</span></td>
-                        <td>
-                            <div class="table_actions">
-                                <button class="action_icon_btn" title="Consulter"><i class="fa-regular fa-eye"></i></button>
-                                <button class="action_icon_btn" title="Modifier"><i class="fa-regular fa-pen-to-square"></i></button>
-                                <button class="action_icon_btn btn_delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="student_row" data-category="pnc">
-                        <td>
-                            <div class="table_user_cell">
-                                <span class="table_avatar" style="background: #ffedd5; color: #ea580c;">SK</span>
-                                <div>
-                                    <strong>Sarah Koné</strong>
-                                    <small>sarah.kone@example.com</small>
+                            </td>
+                            <td>{{$student->PhoneStud}}</td>
+                            <td><span class="badge_status badge_info">PNC · Promo 2026-A</span></td>
+                            <td>{{$student->created_at}}</td>
+                            <td><span class="badge_status badge_success"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> {{$student->StatusStud}}</span></td>
+                            <td>
+                                <div class="table_actions">
+                                    <button class="action_icon_btn" title="Consulter"><i class="fa-regular fa-eye"></i></button>
+                                    <button class="action_icon_btn" title="Modifier"><i class="fa-regular fa-pen-to-square"></i></button>
+                                    <button class="action_icon_btn btn_delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
                                 </div>
-                            </div>
-                        </td>
-                        <td>+225 05 12 34 56 78</td>
-                        <td><span class="badge_status badge_info">PNC · Promo 2026-A</span></td>
-                        <td>08 Nov 2026</td>
-                        <td><span class="badge_status badge_success"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Actif</span></td>
-                        <td>
-                            <div class="table_actions">
-                                <button class="action_icon_btn" title="Consulter"><i class="fa-regular fa-eye"></i></button>
-                                <button class="action_icon_btn" title="Modifier"><i class="fa-regular fa-pen-to-square"></i></button>
-                                <button class="action_icon_btn btn_delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="student_row" data-category="escale">
-                        <td>
-                            <div class="table_user_cell">
-                                <span class="table_avatar" style="background: #e0e7ff; color: #4338ca;">MT</span>
-                                <div>
-                                    <strong>Marc Touré</strong>
-                                    <small>marc.toure@example.com</small>
-                                </div>
-                            </div>
-                        </td>
-                        <td>+225 01 44 55 66 77</td>
-                        <td><span class="badge_status badge_accent">Escale · Promo 2026</span></td>
-                        <td>05 Nov 2026</td>
-                        <td><span class="badge_status badge_warning"><i class="fa-solid fa-clock" style="font-size: 0.5rem;"></i> En attente</span></td>
-                        <td>
-                            <div class="table_actions">
-                                <button class="action_icon_btn" title="Consulter"><i class="fa-regular fa-eye"></i></button>
-                                <button class="action_icon_btn" title="Modifier"><i class="fa-regular fa-pen-to-square"></i></button>
-                                <button class="action_icon_btn btn_delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="student_row" data-category="pnc">
-                        <td>
-                            <div class="table_user_cell">
-                                <span class="table_avatar" style="background: #dcfce7; color: #15803d;">AY</span>
-                                <div>
-                                    <strong>Amina Yapi</strong>
-                                    <small>amina.yapi@example.com</small>
-                                </div>
-                            </div>
-                        </td>
-                        <td>+225 07 77 88 99 00</td>
-                        <td><span class="badge_status badge_info">PNC · Promo 2026-B</span></td>
-                        <td>03 Nov 2026</td>
-                        <td><span class="badge_status badge_success"><i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Actif</span></td>
-                        <td>
-                            <div class="table_actions">
-                                <button class="action_icon_btn" title="Consulter"><i class="fa-regular fa-eye"></i></button>
-                                <button class="action_icon_btn" title="Modifier"><i class="fa-regular fa-pen-to-square"></i></button>
-                                <button class="action_icon_btn btn_delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
-                            </div>
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
+
+                    @empty
+                        <h3>Aucun étudiant n'a encore été enregistré</h3>
+                    @endforelse
+
                 </tbody>
+
             </table>
+
+        </div>
+        <div class="mt-6 flex justify-center">
+            {{$students->links()}}
         </div>
     </div>
 
@@ -192,7 +137,7 @@
                         </div>
                         <div class="admin_form_group">
                             <label for="std_email">Adresse e-mail</label>
-                            <input type="email" id="std_email" name="email" placeholder="apprenant@example.com" required>
+                            <input type="email" id="std_email" name="email_stud" placeholder="apprenant@example.com" required>
                         </div>
                         <div class="admin_form_group">
                             <label for="std_phone">Numéro de téléphone</label>

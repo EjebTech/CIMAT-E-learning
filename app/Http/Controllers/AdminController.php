@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreStudentRequest;
+use App\Models\Student;
 use App\Models\Teacher;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\View\View;
 
 class AdminController extends Controller
 {
@@ -149,5 +153,16 @@ class AdminController extends Controller
         return view('Espace Administrateur.Visioconférence.visio');
     }
 
-   
+
+
+    //Fonction permettant de lister les différents utilisateurs présent dans la bdd. compact sert à transformer la variable $students en un tableau associatif
+    public function index(StoreStudentRequest $request):View{
+
+
+        $students = Student::paginate(6);
+        return view('Espace Administrateur.Utilisateurs.Participant.liste_participant', compact('students'));
+
+    }
+
+
 }
