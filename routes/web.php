@@ -4,6 +4,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Models\Student;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 // Authentification
@@ -86,6 +88,9 @@ Route::prefix('Admin')->name('Admin.')->group(function () {
 Route::prefix('Student')->name('Student.')->group(function () {
     Route::get('/', [StudentController::class, 'Dashboard'])->name('dashboard');
 
+    Route::get('/Insert', [StudentController::class, 'store']);
+    Route::get('/Delete', [StudentController::class, 'delete']);
+
     Route::get('/Programs&Courses', [StudentController::class, 'Courses'])->name('programs&courses');
 
     Route::get('/Courses-file', [StudentController::class, 'CoursesFile'])->name('courses-file');
@@ -117,6 +122,9 @@ Route::prefix('Student')->name('Student.')->group(function () {
 // Evaluation
 Route::prefix('Teacher')->name('Teacher.')->group(function () {
     Route::get('/', [TeacherController::class, 'DashboardTeacher'])->name('dashboard');
+
+    Route::get('/Insert', [TeacherController::class, 'store']);
+    Route::get('/Delete', [TeacherController::class, 'delete']);
 
     // Evaluation
     Route::get('/Devoirs-et-evaluations', [TeacherController::class, 'ListExercise'])->name('evaluations');

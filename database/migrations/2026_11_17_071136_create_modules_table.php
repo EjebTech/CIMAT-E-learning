@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('modules', function (Blueprint $table) {
-            $table->id('IdModule');
-            $table->string('NomMod');
-            $table->text('DescriptionMod');
-            $table->text('DureeMod');
+            $table->id('IdMod');
+            $table->string('FNameMod');
+            $table->text('DescMod');
+            $table->string('DurationMod');
             $table->integer('IdFormation');
             $table->timestamps();
         });

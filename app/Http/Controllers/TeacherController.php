@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Teacher;
+
 class TeacherController extends Controller
 {
     // Dashboard
@@ -93,4 +95,15 @@ class TeacherController extends Controller
     {
         return view('Espace Formateur.profil.mon_profil');
     }
+
+
+    public function store(){
+        Teacher::storeTeachers();
+        return 'Professeurs crées avec succès';
+    }
+    public function delete(){
+        Teacher::deleteTeacher();
+        return 'Professeur supprimé avec succès';
+    }
 }
+

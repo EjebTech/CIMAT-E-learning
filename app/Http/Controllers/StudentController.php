@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
+
 class StudentController extends Controller
 {
     // Cours
@@ -66,5 +68,15 @@ class StudentController extends Controller
     public function UpdateProfile()
     {
         return redirect()->route('Student.profile');
+    }
+
+    public function store(){
+        Student::storeStudents();
+        return 'Etudiants crée avec succès';
+    }
+
+    public function delete(){
+        Student::deleteStudent();
+        return 'Etudiant(e) supprimé avec succès';
     }
 }

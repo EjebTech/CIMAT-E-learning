@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Teacher;
+
 class AdminController extends Controller
 {
     // Dashboard
@@ -146,4 +148,6 @@ class AdminController extends Controller
     {
         return view('Espace Administrateur.Visioconférence.visio');
     }
+
+   
 }

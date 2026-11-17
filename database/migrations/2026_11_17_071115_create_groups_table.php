@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('formations', function (Blueprint $table) {
-            $table->id('IdFormation');
-            $table->string('NomFormation');
-            $table->text('DescFormation');
-
+        Schema::create('groups', function (Blueprint $table) {
+            $table->id('IdGroup');
+            $table->string('nomGroup');
+            $table->string('niveauGroup');
+            $table->string('SchoolTime');
+            $table->integer('IdFormation');
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('formations');
+        Schema::dropIfExists('groups');
     }
 };
