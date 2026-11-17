@@ -81,7 +81,7 @@
                         <p class="course_description">Prise en charge des urgences médicales en vol, réanimation cardiorespiratoire et utilisation du défibrillateur (DSA).</p>
                         <div class="course_info">
                             <span><i class="fa-regular fa-clock"></i> 4h 30m</span>
-                            <span><i class="fa-regular fa-user"></i> Dr. M. Coulibaly</span>
+                            <span><i class="fa-regular fa-user"></i> Dr.Coulibaly</span>
                         </div>
                         <div class="card_actions">
                             <button class="btn_action btn_pdf" onclick="downloadPdf('Secourisme_Aeronautique.pdf')">
@@ -174,7 +174,7 @@
 
                 <article class="course_card" data-category="PNC">
                     <div class="card_banner">
-                        <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&q=80&w=600" alt="Lutte contre les Incendies" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&q=80&w=600" alt="" loading="lazy">
                         <span class="category_tag">Sécurité Sauvetage</span>
                         <div class="play_overlay" onclick="openVideoModal('Gestion des Incendies & Équipements Respiratoires', 'https://www.youtube.com/embed/dQw4w9WgXcQ')">
                             <div class="play_btn_icon"><i class="fa-solid fa-play"></i></div>

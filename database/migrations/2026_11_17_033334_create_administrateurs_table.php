@@ -1,0 +1,33 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('administrateurs', function (Blueprint $table) {
+            $table->id('MatAdmin');
+            $table->string('NomAdmin');
+            $table->string('PrenomAdmin');
+            $table->string('EmailAdmin')->unique();
+            $table->string('TelAdmin')->nullable();
+            $table->string('MdpAdmin');
+            $table->string('StatutAdmin')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('administrateurs');
+    }
+};
