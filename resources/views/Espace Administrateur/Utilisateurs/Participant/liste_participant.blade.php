@@ -123,7 +123,7 @@
                 </div>
                 <button type="button" class="admin_modal_close" data-modal-close="createStudentModal" aria-label="Fermer">&times;</button>
             </header>
-            <form method="POST" action="#" enctype="multipart/form-data">
+            <form method="POST" action="{{route('Admin.create-student')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="admin_modal_body">
                     <div class="admin_form_grid">
@@ -141,15 +141,11 @@
                         </div>
                         <div class="admin_form_group">
                             <label for="std_phone">Numéro de téléphone</label>
-                            <input type="tel" id="std_phone" name="phone" placeholder="+225 XX XX XX XX XX">
+                            <input type="tel" id="std_phone" name="phone_stud" placeholder="+225 XX XX XX XX XX">
                         </div>
                         <div class="admin_form_group">
-                            <label for="std_program">Formation d'inscription</label>
-                            <select id="std_program" name="program" required>
-                                <option value="pnc">Personnel Navigant Commercial (PNC)</option>
-                                <option value="escale">Agent d'Escale Aéroportuaire</option>
-                                <option value="fret">Fret Aérien (DGR)</option>
-                            </select>
+                            <label for="std_program">Mot de passe</label>
+                            <input type="password" name="password_stud" id="std_password">
                         </div>
                         <div class="admin_form_group">
                             <label for="std_group">Groupe / Promotion</label>

@@ -25,31 +25,7 @@ class Student extends Model
 
 
     public static function storeStudents(){
-        // Student::create([
-        // 'LNameStud'    => 'Koné',
-        // 'FNameStud'    => 'Aicha',
-        // 'EmailStud'    => 'aicha.kone@gmail.com',
-        //     'PasswordStud' => uniqid('kn'),
-        // ]);
 
-
-        // Student::create([
-        //     'LNameStud'    => 'Traoré',
-        //     'FNameStud'    => 'Ibrahim',
-        //     'EmailStud'    => 'ibrahim.traore@gmail.com',
-        //     'PasswordStud' => uniqid('tr'),
-        // ]);
-
-
-
-        // Student::create([
-        //     'LNameStud'    => 'Diallo',
-        //     'FNameStud'    => 'Fatou',
-        //     'EmailStud'    => 'fatou.diallo@gmail.com',
-        //     'PasswordStud' => uniqid('dl'),
-        // ]);
-
-        // return 'Les 3 étudiants ont été créés avec succès !';
     }
 
     public static function deleteStudent(){
