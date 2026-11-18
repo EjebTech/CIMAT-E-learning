@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    
+
 
 </head>
 <body>
@@ -182,7 +182,27 @@
                     </a>
                 </div>
             </header>
+            @if (session('success'))
+                <!-- On met le message directement dans la div pour qu'il soit présent dès le départ -->
+                <div class="alert_success" id="flashMessage" style="background: #d1fae5; color: #065f46; padding: 1rem; border-radius: 8px; margin: 1rem 1.5rem; font-weight: 500; transition: opacity 0.5s ease;">
+                    <i class="fa-solid fa-circle-check"></i> {{ session('success') }}
+                </div>
 
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const alertDiv = document.getElementById('flashMessage');
+                        if (alertDiv) {
+                            // On attend 3 secondes (3000 millisecondes) avant de faire disparaître la div
+                            setTimeout(() => {
+                                alertDiv.style.opacity = '0'; // Effet visuel de fondu
+                                setTimeout(() => {
+                                    alertDiv.remove(); // Supprime complètement la div du HTML après le fondu
+                                }, 500); // Laisse le temps au fondu de se terminer (0.5s)
+                            }, 3000);
+                        }
+                    });
+                </script>
+            @endif
             <div class="admin_content">
                 @yield('content')
             </div>

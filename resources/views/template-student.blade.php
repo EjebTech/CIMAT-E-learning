@@ -52,7 +52,7 @@
                     <h3>Mes Résultats</h3>
                 </a>
                 <div class="footer_sidebar">
-                    
+
                     <a href="" class="link logout">
                         <span><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
                         <h3>Déconnexion</h3>
@@ -60,6 +60,7 @@
                 </div>
             </div>
         </nav>
+        
         @yield('content')
 
     </div>

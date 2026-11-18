@@ -70,11 +70,13 @@ Route::prefix('Admin')->name('Admin.')->group(function () {
 
     Route::get('/Insert-student', [AdminController::class, 'InsertStudent'])->name('insert-student');
 
-    Route::get('/List-student', [AdminController::class, 'index'])->name('list-student');
+    Route::get('/List-student', [AdminController::class, 'index'])->name('list-student'); //afficher les etudiants
 
-    Route::post('/List-student', [AdminController::class, 'store'])->name('create-student');
+    Route::post('/List-student', [AdminController::class, 'store'])->name('create-student');//créer un etudiant
 
-    Route::get('/Update-student', [AdminController::class, 'UpdateStudent'])->name('update-student');
+    Route::post('/Update-student/{student}', [AdminController::class, 'update'])->name('update-student');//Modifier un etudiant
+
+
 
     // Visioconférece
 

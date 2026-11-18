@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FormStudentRequest;
 use App\Http\Requests\StoreStudentRequest;
 use App\Models\Student;
 use App\Models\Teacher;
@@ -138,10 +139,7 @@ class AdminController extends Controller
         return view('Espace Administrateur.Utilisateurs.Participant.liste_participant');
     }
 
-    public function UpdateStudent()
-    {
-        return view('Espace Administrateur.Utilisateurs.Participant.liste_participant');
-    }
+
 
     // Visioconférence
     public function VideoConference()
@@ -158,23 +156,22 @@ class AdminController extends Controller
 
     //Fonction permettant de lister les différents utilisateurs présent dans la bdd. compact sert à transformer la variable $students en un tableau associatif
     public function index():View{
-
-
-        $students = Student::paginate(6);
-        return view('Espace Administrateur.Utilisateurs.Participant.liste_participant', compact('students'));
+        $students = Student::orderByDesc('MatStud')->paginate(6);
+        $total_students = Student::count();
+        return view('Espace Administrateur.Utilisateurs.Participant.liste_participant', compact('students','total_students'));
 
     }
+    //créer un étudiant
+    public function store(FormStudentRequest $request){
 
-    public function store(Request $request){
-        $new_student = Student::create([
-        'LNameStud'    => $request->input('last_name'),
-        'FNameStud'    => $request->input('first_name'),
-        'EmailStud'    => $request->input('email_stud'),
-        'PhoneStud'    => $request->input('phone_stud'),
-        'PasswordStud' => uniqid($request->input('password_stud')),
-        ]);
-        return to_route('Admin.create-student');
+        Student::create($request->validated());
+        return to_route('Admin.create-student')->with('success', "Etudiant(e) enregistré(e) avec succès");
     }
 
+
+    public function update(FormStudentRequest $request, Student $student){
+        $student->update($request->validated());
+        return to_route('Admin.list-student')->with('success', "Étudiant(e) modifié(e) avec succès");
+    }
 
 }
