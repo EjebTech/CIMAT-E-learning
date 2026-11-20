@@ -24,14 +24,6 @@ class Student extends Model
     ];
 
 
-    public static function storeStudents(){
-
-    }
-
-    public static function deleteStudent(){
-        $student = Student::where('MatStud', 6)->delete();
-
-        return $student;
-    }
+    
 
 }

@@ -76,6 +76,7 @@ Route::prefix('Admin')->name('Admin.')->group(function () {
 
     Route::post('/Update-student/{student}', [AdminController::class, 'update'])->name('update-student');//Modifier un etudiant
 
+    Route::delete('/Admin/Delete-student/{student}', [AdminController::class, 'destroy'])->name('delete-student');
 
 
     // Visioconférece

@@ -98,11 +98,18 @@
                                     data-email="{{ $student->EmailStud }}"
                                     data-password="{{ $student->PasswordStud }}"
                                     data-phone="{{ $student->PhoneStud }}"
+                                    data-photo="{{ $student->PhotoStud }}"
                                     class="action_icon_btn btn_edit"
                                     title="Modifier">
                                         <i class="fa-regular fa-pen-to-square"></i>
                                     </button>
-                                    <button class="action_icon_btn btn_delete" title="Supprimer"><i class="fa-regular fa-trash-can"></i></button>
+                                    <form action="{{ route('Admin.delete-student', $student->MatStud) }}" method="POST" style="display:inline;" onsubmit="return confirm('Voulez-vous vraiment supprimer cet étudiant ?');">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="action_icon_btn btn_delete" title="Supprimer">
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </button>
+                                </form>
                                 </div>
                             </td>
                         </tr>
@@ -187,7 +194,8 @@
                         </div>
                         <div class="admin_form_group col_full">
                             <label>Photo de profil (Optionnel)</label>
-                            <input type="file" accept="image/*" name="PhotoStud">
+                            <input id="std_photo" type="file" accept="image/*" name="PhotoStud">
+
                         </div>
                     </div>
                 </div>
@@ -264,7 +272,11 @@
                         </div>
                         <div class="admin_form_group col_full">
                             <label>Photo de profil (Optionnel)</label>
-                            <input type="file" accept="image/*" name="PhotoStud">
+                            <input id="edit_photo" type="file" accept="image/*" name="PhotoStud">
+                            <p>Image actuelle :</p>
+                            <img src="" id="edit_current_photo" style="width: 115px; height: 85px;object-fit:contain;"></img>
+                            <p id="title_file"></p>
+
                         </div>
                     </div>
                 </div>
@@ -289,6 +301,11 @@
             const btn_edit = document.querySelectorAll('.btn_edit'); //tous les boutons de modifications
             const edit_modal = document.getElementById('editStudentModal') //la modale
             const form = document.getElementById('editStudentForm'); //le formulaire de la modale
+            const photoImg = document.getElementById('edit_current_photo'); //l'image actuelle
+            const photoInfo = document.getElementById('title_file'); //le texte de l'image
+
+
+
 
             //au click de chaque bouton je récupère les différentes données passées dans les attributs data
             btn_edit.forEach(btn=>{
@@ -299,6 +316,7 @@
                     const email = this.dataset.email
                     const password = this.dataset.password
                     const phone = this.dataset.phone
+                    const photo = this.dataset.photo
 
                     //puis on les insère dans chaque champ de notre formulaire de modification
                     form.querySelector('#edit_first_name').value = fname
@@ -306,6 +324,12 @@
                     form.querySelector('#edit_email').value = email
                     form.querySelector('#edit_phone').value = phone
                     form.querySelector('#edit_password').value = password
+                    if(photo){
+                        photoImg.setAttribute('src', `/storage/${photo}`)
+                    }else{
+                        photoImg.src = ""
+                        photoInfo.textContent = "Aucune image enregistrée pour l'instant"
+                    }
 
 
                     form.action = `/Admin/Update-student/${id}` ; //Changer dynamiquement l'action du formulaire pour faire passer en paramètre l'id de l'article et effectuer la mise à jour

@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class FormStudentRequest extends FormRequest
 {
@@ -22,10 +23,16 @@ class FormStudentRequest extends FormRequest
      */
     public function rules(): array
     {
+        $student = $this->route('student'); //récuperer le paramètre student dans l'URL actuelle de la réquête
+
         return [
             'FNameStud'=>['required', 'string'],
             'LNameStud'=>['required', 'string'],
-            'EmailStud'=>['required','email','unique:students,EmailStud'],
+            'EmailStud'=>[
+                'required',
+                'email',
+                Rule::unique('students', 'EmailStud')->ignore($student, 'MatStud'), //L'email doit être unique sauf pour l'etudiant actuel qu'on doit modifier
+            ],
             'PasswordStud'=>['required','string'],
             'PhoneStud'=>['nullable','string'],
             'PhotoStud' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp', 'max:2048'],
