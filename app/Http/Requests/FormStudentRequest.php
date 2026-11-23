@@ -31,7 +31,7 @@ class FormStudentRequest extends FormRequest
             'EmailStud'=>[
                 'required',
                 'email',
-                Rule::unique('students', 'EmailStud')->ignore($student, 'MatStud'), //L'email doit être unique sauf pour l'etudiant actuel qu'on doit modifier
+                Rule::unique('students', 'EmailStud')->ignore($student, 'MatStud'), //L'email doit être unique sauf pour l'etudiant  qu'on doit modifier
             ],
             'PasswordStud'=>['required','string'],
             'PhoneStud'=>['nullable','string'],

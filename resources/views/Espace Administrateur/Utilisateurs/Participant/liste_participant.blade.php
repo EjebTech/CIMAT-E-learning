@@ -274,7 +274,7 @@
                             <label>Photo de profil (Optionnel)</label>
                             <input id="edit_photo" type="file" accept="image/*" name="PhotoStud">
                             <p>Image actuelle :</p>
-                            <img src="" id="edit_current_photo" style="width: 115px; height: 85px;object-fit:contain;"></img>
+                            <img src="" id="edit_current_photo" style="width: 115px; height: 85px;object-fit:contain;">
                             <p id="title_file"></p>
 
                         </div>
@@ -290,6 +290,7 @@
     {{-- S'il existe des erreurs alors on affiche toujours la modale car elle se ferme automatiquement --}}
     @if ($errors->any())
         <script>
+
             document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById('createStudentModal').removeAttribute('hidden');
             });

@@ -4,8 +4,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
-use App\Models\Student;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 // Authentification
@@ -38,11 +36,13 @@ Route::prefix('Admin')->name('Admin.')->group(function () {
 
     Route::get('/Update-courses', [AdminController::class, 'UpdateCourses'])->name('update-courses');
 
-    Route::get('/Programs', [AdminController::class, 'Programs'])->name('programs');
+    Route::get('/Programs', [AdminController::class, 'indexFormation'])->name('programs');
 
-    Route::get('/Insert-programs', [AdminController::class, 'InsertPrograms'])->name('insert-programs');
+    Route::post('/Programs', [AdminController::class, 'storeFormation'])->name('create-program');
 
-    Route::get('/Update-programs', [AdminController::class, 'UpdatePrograms'])->name('update-programs');
+    Route::post('/Update-programs/{formation}', [AdminController::class, 'updateFormation'])->name('update-program');
+
+    Route::delete('/Delete-programs/{formation}', [AdminController::class, 'destroyFormation'])->name('delete-program');
 
     // Groupes
 
@@ -64,20 +64,23 @@ Route::prefix('Admin')->name('Admin.')->group(function () {
 
     Route::get('/Insert-teacher', [AdminController::class, 'InsertTeacher'])->name('insert-teacher');
 
-    Route::get('/List-teacher', [AdminController::class, 'ListTeacher'])->name('list-teacher');
+    Route::get('/List-teacher', [AdminController::class, 'indexTeacher'])->name('list-teacher');
 
-    Route::get('/Update-teacher', [AdminController::class, 'UpdateTeacher'])->name('update-teacher');
+    Route::post('/List-teacher', [AdminController::class, 'storeTeacher'])->name('create-teacher');
+
+    Route::post('/Update-teacher/{teacher}', [AdminController::class, 'updateTeacher'])->name('update-teacher');
+
+    Route::delete('/Delete-teacher/{teacher}', [AdminController::class, 'destroyTeacher'])->name('delete-teacher');
 
     Route::get('/Insert-student', [AdminController::class, 'InsertStudent'])->name('insert-student');
 
-    Route::get('/List-student', [AdminController::class, 'index'])->name('list-student'); //afficher les etudiants
+    Route::get('/List-student', [AdminController::class, 'index'])->name('list-student'); // afficher les etudiants
 
-    Route::post('/List-student', [AdminController::class, 'store'])->name('create-student');//créer un etudiant
+    Route::post('/List-student', [AdminController::class, 'store'])->name('create-student'); // créer un etudiant
 
-    Route::post('/Update-student/{student}', [AdminController::class, 'update'])->name('update-student');//Modifier un etudiant
+    Route::post('/Update-student/{student}', [AdminController::class, 'update'])->name('update-student'); // Modifier un etudiant
 
     Route::delete('/Admin/Delete-student/{student}', [AdminController::class, 'destroy'])->name('delete-student');
-
 
     // Visioconférece
 
