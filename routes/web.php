@@ -48,11 +48,15 @@ Route::prefix('Admin')->name('Admin.')->group(function () {
 
     Route::get('/Groups', [AdminController::class, 'Groups'])->name('groups');
 
-    Route::get('/Insert-groups', [AdminController::class, 'InsertGroups'])->name('insert-groups');
+    Route::post('/Groups', [AdminController::class, 'InsertGroups'])->name('insert-groups');
+
+    Route::delete('/Groups/{group}', [AdminController::class, 'DeleteGroups'])->name('delete-groups');
 
     Route::get('/Update-groups', [AdminController::class, 'UpdateGroups'])->name('update-groups');
 
     Route::get('/Assign-student', [AdminController::class, 'AssignStudents'])->name('assign-student');
+
+
 
     // Utilisateurs
 
@@ -97,6 +101,7 @@ Route::prefix('Student')->name('Student.')->group(function () {
     Route::get('/', [StudentController::class, 'Dashboard'])->name('dashboard');
 
     Route::get('/Insert', [StudentController::class, 'store']);
+    
     Route::get('/Delete', [StudentController::class, 'delete']);
 
     Route::get('/Programs&Courses', [StudentController::class, 'Courses'])->name('programs&courses');
@@ -122,6 +127,7 @@ Route::prefix('Student')->name('Student.')->group(function () {
 
     // Profil
     Route::get('/Profile', [StudentController::class, 'Profile'])->name('profile');
+
     Route::put('/Profile', [StudentController::class, 'UpdateProfile'])->name('profile.update');
 });
 
@@ -136,17 +142,26 @@ Route::prefix('Teacher')->name('Teacher.')->group(function () {
 
     // Evaluation
     Route::get('/Devoirs-et-evaluations', [TeacherController::class, 'ListExercise'])->name('evaluations');
+
     Route::get('/Devoirs-et-evaluations/Ajouter', [TeacherController::class, 'InsertExercise'])->name('evaluations.create');
+
     Route::get('/Corrections', [TeacherController::class, 'ListCorrection'])->name('corrections');
+
     Route::get('/Insert-correction', [TeacherController::class, 'InsertCorrection'])->name('insert-correction');
 
     // Formation et cours
     Route::get('/Cours-et-ressources', [TeacherController::class, 'Courses'])->name('resources');
+
     Route::get('/Cours-et-ressources/Ajouter', [TeacherController::class, 'InsertCourses'])->name('resources.create');
+
     Route::get('/Formations', [TeacherController::class, 'Programs'])->name('programs');
+
     Route::get('/Cours-et-ressources/Fichiers', [TeacherController::class, 'CoursesFIle'])->name('resources.files');
+
     Route::get('/Cours-et-ressources/Fichiers/Ajouter', [TeacherController::class, 'InsertCoursesFile'])->name('resources.files.create');
+
     Route::get('/Cours-et-ressources/Videos', [TeacherController::class, 'Video'])->name('resources.videos');
+
     Route::get('/Cours-et-ressources/Videos/Ajouter', [TeacherController::class, 'InsertVideo'])->name('resources.videos.create');
 
     // Groupe
@@ -154,6 +169,7 @@ Route::prefix('Teacher')->name('Teacher.')->group(function () {
 
     // Visioconférence
     Route::get('/Visioconferences', [TeacherController::class, 'Videoconference'])->name('videoconference');
+
     Route::get('/Visioconferences/Ajouter', [TeacherController::class, 'InsertVideoconference'])->name('videoconference.create');
 
     // profil

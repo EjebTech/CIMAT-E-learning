@@ -14,12 +14,6 @@
         </div>
     </div>
 
-    {{-- Message de succès --}}
-    @if (session('success'))
-        <div class="admin_alert admin_alert_success">
-            <i class="fa-solid fa-circle-check"></i> {{ session('success') }}
-        </div>
-    @endif
 
     {{-- Statistiques rapides --}}
     <section class="admin_stats_grid">
@@ -90,7 +84,7 @@
         {{ $formations->links() }}
     </div>
 
-    {{-- ===== Modale : Créer une Formation ===== --}}
+    
     <div class="admin_modal" id="createProgramModal" hidden>
         <div class="admin_modal_dialog">
             <header class="admin_modal_header">

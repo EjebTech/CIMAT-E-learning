@@ -109,13 +109,13 @@
                                         <button type="submit" class="action_icon_btn btn_delete" title="Supprimer">
                                             <i class="fa-regular fa-trash-can"></i>
                                         </button>
-                                </form>
+                                    </form>
                                 </div>
                             </td>
                         </tr>
 
                     @empty
-                        <h3>Aucun étudiant n'a encore été enregistré</h3>
+                        <p style="padding: 5px; text-align:center">Aucun étudiant n'a encore été enregistré</p>
                     @endforelse
 
                 </tbody>

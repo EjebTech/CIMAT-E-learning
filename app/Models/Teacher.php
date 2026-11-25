@@ -22,5 +22,5 @@ class Teacher extends Model
 
     protected $primaryKey = 'MatTeacher';
 
-   
+
 }

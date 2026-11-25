@@ -19,85 +19,48 @@
 
     <!-- Grille des Groupes -->
     <div class="admin_grid_cards">
-        <article class="admin_content_card">
-            <div>
-                <div class="content_card_header">
-                    <div class="content_card_icon" style="background: #e0f2fe; color: #0284c7;">
-                        <i class="fa-solid fa-people-group"></i>
-                    </div>
+        @forelse ($group_list as $group)
+            <article class="admin_content_card">
+                <div>
+                    <div class="content_card_header">
+                        <div class="content_card_icon" style="background: #e0f2fe; color: #0284c7;">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
 
-                </div>
-                <div style="margin-top: 14px;">
-                    <h3 style="font-size: 1.1rem; margin: 0 0 6px;">PNC - Promotion 2026-A</h3>
-                    <p style="color: #64748b; font-size: 0.84rem; margin: 0;">
-                        Personnel Navigant Commercial · Session de rentrée d'octobre.
-                    </p>
-                </div>
-            </div>
-            <div>
-                <div class="content_card_meta">
-                    <span><i class="fa-solid fa-user-graduate"></i> 42 apprenants</span>
-                    <div class="table_actions">
-                        <button class="action_icon_btn" title="Modifier le groupe"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <a href="{{ route('Admin.assign-student') }}" class="action_icon_btn" title="Voir les membres"><i class="fa-regular fa-eye"></i></a>
+                    </div>
+                    <div style="margin-top: 14px;">
+                        <h3 style="font-size: 1.1rem; margin: 0 0 6px;">{{$group->nomGroup}}</h3>
+                        <p style="color: #64748b; font-size: 0.84rem; margin: 0;">
+                           {{ $group->DescGroup}}
+                        </p>
                     </div>
                 </div>
-
-        </article>
-
-        <article class="admin_content_card">
-            <div>
-                <div class="content_card_header">
-                    <div class="content_card_icon" style="background: #ffedd5; color: #ea580c;">
-                        <i class="fa-solid fa-people-group"></i>
+                <div>
+                    <div class="content_card_meta">
+                        <span><i class="fa-solid fa-user-graduate"></i> 42 apprenants</span>
+                        <div class="table_actions">
+                            <button
+                            data-id="{{$group->IdGroup}}"
+                            data-name="{{$group->nomGroup}}"
+                            data-desc="{{$group->DescGroup}}"
+                            class="action_icon_btn" title="Modifier le groupe"><i class="fa-regular fa-pen-to-square"></i></button>
+                            <form action="{{ route('Admin.delete-groups', $group->IdGroup) }}" method="POST" style="display:inline;" onsubmit="return confirm('Voulez-vous vraiment supprimer ce groupe ?');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="action_icon_btn btn_delete" title="Supprimer">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </form>
+                        </div>
                     </div>
 
-                </div>
-                <div style="margin-top: 14px;">
-                    <h3 style="font-size: 1.1rem; margin: 0 0 6px;">PNC - Promotion 2026-B</h3>
-                    <p style="color: #64748b; font-size: 0.84rem; margin: 0;">
-                        Personnel Navigant Commercial · Session de rentrée de novembre.
-                    </p>
-                </div>
-            </div>
-            <div>
-                <div class="content_card_meta">
-                    <span><i class="fa-solid fa-user-graduate"></i> 42 apprenants</span>
-                    <div class="table_actions">
-                        <button class="action_icon_btn" title="Modifier le groupe"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <a href="{{ route('Admin.assign-student') }}" class="action_icon_btn" title="Voir les membres"><i class="fa-regular fa-eye"></i></a>
-                    </div>
-                </div>
+            </article>
+        @empty
+            <p>Aucun groupe pour l'instant</p>
+        @endforelse
 
-            </div>
-        </article>
 
-        <article class="admin_content_card">
-            <div>
-                <div class="content_card_header">
-                    <div class="content_card_icon" style="background: #f3e8ff; color: #9333ea;">
-                        <i class="fa-solid fa-people-group"></i>
-                    </div>
 
-                </div>
-                <div style="margin-top: 14px;">
-                    <h3 style="font-size: 1.1rem; margin: 0 0 6px;">Agent d'Escale - Promo 2026</h3>
-                    <p style="color: #64748b; font-size: 0.84rem; margin: 0;">
-                        formation sol aéroportuaire, logiciel DCS Altea et relations passagers.
-                    </p>
-                </div>
-            </div>
-            <div>
-                <div class="content_card_meta">
-                    <span><i class="fa-solid fa-user-graduate"></i> 36 apprenants</span>
-                    <div class="table_actions">
-                        <button class="action_icon_btn" title="Modifier le groupe"><i class="fa-regular fa-pen-to-square"></i></button>
-                        <a href="{{ route('Admin.assign-student') }}" class="action_icon_btn" title="Voir les membres"><i class="fa-regular fa-eye"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </article>
     </div>
 
     <!-- Modale : Créer un groupe -->
@@ -113,17 +76,17 @@
                 </div>
                 <button type="button" class="admin_modal_close" data-modal-close="createGroupModal" aria-label="Fermer">&times;</button>
             </header>
-            <form method="POST" action="#">
+            <form method="POST" action="">
                 @csrf
                 <div class="admin_modal_body">
                     <div class="admin_form_grid">
                         <div class="admin_form_group col_full">
-                            <label for="grp_name">Nom du groupe / Promotion</label>
-                            <input type="text" id="grp_name" name="name" placeholder="Ex: PNC - Promotion 2026-C" required>
+                            <label for="edit_grp_name">Nom du groupe / Promotion</label>
+                            <input type="text" id="edit_grp_name" name="nomGroup" placeholder="Ex: PNC - Promotion 2026-C" required>
                         </div>
                         <div class="admin_form_group">
-                            <label for="grp_filiere">formation associée</label>
-                            <select id="grp_filiere" name="program" required>
+                            <label for="edit_grp_filiere">Formation associée</label>
+                            <select id="edit_grp_filiere" name="IdFormation" required>
                                 <option value="pnc">Personnel Navigant Commercial</option>
                                 <option value="escale">Agent d'Escale Aéroportuaire</option>
                                 <option value="fret">Fret &amp; DGR</option>
@@ -131,17 +94,58 @@
                         </div>
 
                         <div class="admin_form_group">
-                            <label for="grp_year">Année académique</label>
-                            <input type="text" id="grp_year" name="academic_year" value="{{ date('Y') }}–{{ date('Y') + 1 }}">
-                        </div>
-                        <div class="admin_form_group">
-                            <label for="grp_max_capacity">Capacité maximale</label>
-                            <input type="number" id="grp_max_capacity" name="capacity" value="45" min="5" max="100">
+                            <label for="edit_grp_year">Description du groupe</label>
+                            <input type="text" id="edit_grp_year" name="DescGroup" value="">
                         </div>
                     </div>
                 </div>
                 <footer class="admin_modal_footer">
                     <button type="button" class="admin_modal_cancel" data-modal-close="createGroupModal">Annuler</button>
+                    <button type="submit" class="btn_admin_primary"><i class="fa-solid fa-check"></i> Créer le groupe</button>
+                </footer>
+            </form>
+        </div>
+    </div>
+
+    {{-- Modifier un groupe --}}
+    <div class="admin_modal" id="editGroupModal" hidden>
+        <div class="admin_modal_dialog">
+            <header class="admin_modal_header">
+                <div class="modal_header_title">
+                    <i class="fa-solid fa-people-group"></i>
+                    <div>
+                        <h2>Modifier un groupe d'étudiants</h2>
+                        <p>Configurez une cohorte ou une classe pour la rentrée.</p>
+                    </div>
+                </div>
+                <button type="button" class="admin_modal_close" data-modal-close="editGroupModal" aria-label="Fermer">&times;</button>
+            </header>
+            <form method="POST" action="">
+                @csrf
+                <div class="admin_modal_body">
+                    <div class="admin_form_grid">
+                        <div class="admin_form_group col_full">
+                            <label for="grp_name">Nom du groupe / Promotion</label>
+                            <input type="text" id="grp_name" name="nomGroup" placeholder="Ex: PNC - Promotion 2026-C" required>
+                        </div>
+                        <div class="admin_form_group">
+                            <label for="grp_filiere">formation associée</label>
+                            <select id="grp_filiere" name="IdFormation" required>
+                                <option value="pnc">Personnel Navigant Commercial</option>
+                                <option value="escale">Agent d'Escale Aéroportuaire</option>
+                                <option value="fret">Fret &amp; DGR</option>
+                            </select>
+                        </div>
+
+                        <div class="admin_form_group">
+                            <label for="grp_year">Description du groupe</label>
+                            <input type="text" id="grp_year" name="DescGroup" value="">
+                        </div>
+
+                    </div>
+                </div>
+                <footer class="admin_modal_footer">
+                    <button type="button" class="admin_modal_cancel" data-modal-close="editGroupModal">Annuler</button>
                     <button type="submit" class="btn_admin_primary"><i class="fa-solid fa-check"></i> Créer le groupe</button>
                 </footer>
             </form>

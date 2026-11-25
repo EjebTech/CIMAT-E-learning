@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('groups', function (Blueprint $table) {
             $table->id('IdGroup');
             $table->string('nomGroup');
-            $table->string('niveauGroup');
-            $table->string('SchoolTime');
-            $table->integer('IdFormation');
+            $table->string('DescGroup');
+            $table->integer('IdFormation')->nullable();
             $table->timestamps();
         });
     }

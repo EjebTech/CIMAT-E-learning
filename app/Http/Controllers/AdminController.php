@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FormFormationRequest;
+use App\Http\Requests\FormGroupRequest;
 use App\Http\Requests\FormStudentRequest;
 use App\Http\Requests\FormTeacherRequest;
 use App\Models\Formation;
+use App\Models\Group;
 use App\Models\Student;
 use App\Models\Teacher;
 use Illuminate\Support\Facades\Storage;
@@ -110,18 +112,28 @@ class AdminController extends Controller
     // Groupes
     public function Groups()
     {
-        return view('Espace Administrateur.Groupe.liste_groupes');
+        $group_list = Group::OrderByDesc('IdGroup')->paginate(6);
+        $total_group = Group::count();
+        return view('Espace Administrateur.Groupe.liste_groupes', compact('group_list', 'total_group'));
     }
 
-    public function InsertGroups()
+    public function InsertGroups(FormGroupRequest $request)
     {
-        return view('Espace Administrateur.Groupe.liste_groupes');
+        $data_validated = $request->validated();
+        Group::create($data_validated);
+        return to_route('Admin.groups')->with('success', `Le groupe {$request->nomGroup} a été crée avec succès.`);
     }
 
     public function UpdateGroups()
     {
         return view('Espace Administrateur.Groupe.liste_groupes');
     }
+
+    public function DeleteGroups(Group $group){
+        $group->delete();
+        return to_route('Admin.groups')->with('success', `Le groupe {$group->nomGroup} a été supprimé avec succès.`);
+    }
+
 
     public function AssignStudents()
     {
@@ -155,7 +167,7 @@ class AdminController extends Controller
         return view('Espace Administrateur.Utilisateurs.Formateur.liste_formateur');
     }
 
-    // CRUD réel Teacher
+    // CRUD Teacher
     public function indexTeacher(): View
     {
         $teachers = Teacher::orderByDesc('MatTeacher')->paginate(6);
